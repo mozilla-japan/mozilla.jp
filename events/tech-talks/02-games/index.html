@@ -1,0 +1,187 @@
+<?php
+
+$page_title         = 'Open Web Game 開発技術実践講座 | Mozilla Japan エバンジェリストから学ぶウェブテクノロジー実践講座';
+$page_description   = '本講座では、ゲームプラットフォームとしてのウェブに注⽬し、「ウェブによって、何ができるのか」「ビルドパイプラインにはどのように影響するのか」といったテーマに沿って、詳しく解説します。';
+$body_class         = 'sand event';
+$body_id            = 'details';
+$page_image         = '/static/images/events/tech-talks/page-image.jpg';
+$css                = array('events/tech-talks');
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/tech-talks/' => 'ウェブテクノロジー実践講座',
+  '/events/tech-talks/02-games/' => 'Open Web Game 開発技術実践講座',
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+<main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+  <article itemscope itemtype="http://schema.org/Event">
+    <meta itemprop="url" content="<?php echo $canonical_url; ?>">
+    <meta itemprop="image" content="https://www.mozilla.jp<?php echo $page_image; ?>">
+    <div id="main-header" class="outer">
+      <div class="inner">
+        <header>
+          <h1>
+            <strong><span>終焉を迎えつつある</span> <span>Flash に代わる</span><span>新しいゲーム</span><span>プラットフォーム</span><span>としての</span><span>ウェブをじっくり学ぶ</span></strong>
+            <strong itemprop="name"><span>Open Web Game</span> <span>開発技術</span><span>実践講座</span></strong>
+          </h1>
+          <h2><a href="../"><span>Mozilla Japan</span> <span>エバンジェリストから学ぶ</span><span>ウェブテクノロジー</span><span>実践講座</span></a> <span class="vol">Vol. 2</span></h2>
+        </header>
+        <div>
+<?php /*
+          <p class="cta-wrapper"><a href="#reservation" class="cta">受講お申し込み</a></p>
+*/ ?>
+          <ul>
+            <li><strong>⽇時:</strong> <time itemprop="startDate" datetime="2016-11-17 14:00">2016 年 11 ⽉ 17 ⽇ (⽊) 14:00</time> 〜 <time itemprop="endDate" datetime="2016-11-17 18:00">18:00</time> (受付開始 <time itemprop="doorTime" datetime="2016-11-17 13:45">13:45</time> より)</li>
+            <li><strong>講師:</strong> 清⽔ 智公 (Mozilla Japan)</li>
+            <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>会場:</strong> <span itemprop="name"><a href="/about/contact/#office" itemprop="url">Mozilla Japan オフィス</a></span> (<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressRegion">東京都</span><span itemprop="addressLocality">港区</span><span itemprop="streetAddress">六本⽊ 7-5-6</span></span>)</li>
+            <li itemprop="offers" itemscope itemtype="http://schema.org/Offer"><strong>受講料:</strong> <del>40,000 円</del> → <ins>実践講座開設記念特別価格 <span itemprop="price" content="35000">35,000</span> <span itemprop="priceCurrency" content="JPY">円</span> (税込)</ins></li>
+            <li><strong>定員:</strong> 10 名 (先着順にてお申し込みを受け付けます)</li>
+            <li itemprop="organizer" itemscope itemtype="http://schema.org/Organization"><strong>主催:</strong> <span itemprop="name">⼀般社団法⼈ Mozilla Japan</span></li>
+            <li><strong>問い合わせ先:</strong> <a href="mailto:events@mozilla-japan.org">Mozilla Japan イベント受付担当</a></li>
+          </ul>
+        </div>
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+    <div id="overview-outer" class="outer">
+      <div class="inner">
+        <section id="overview">
+          <header>
+            <h2>講座概要</h2>
+          </header>
+          <div class="columns">
+            <div itemprop="description">
+              <p>今やウェブブラウザーは、実⾏速度の⾶躍的な向上に加え、機能⾯でもアプリケーションプラットフォームとしてのさまざまな条件が整い、Java やネイティブ環境と⽐較しても遜⾊ないアプリケーションランタイムまでに成熟しました。特に⽇本では、ゲームビジネスの分野においてもウェブの可能性に期待が⾼まっています。本講座では、ゲームプラットフォームとしてのウェブに注⽬し、</p>
+              <ul>
+                <li>ウェブによって、何ができるのか</li>
+                <li>ビルドパイプラインにはどのように影響するのか</li>
+                <li>現在までの利⽤例は何を⽬的とした施策なのか</li>
+                <li>これから想定されるウェブゲームの形にはどういうものがありうるのか</li>
+              </ul>
+              <p>といったテーマに沿って、詳しく解説します。以前より展開されている「ブラウザーゲーム」とは全く違うレベルのウェブ上でのゲーム体験の現状や展望について、技術⾯での理解を深めていただきます。</p>
+            </div>
+            <div>
+              <ul class="outline">
+                <li>Open Web Game Stack: Mozilla の考えるウェブゲームのための要素技術</li>
+                <li>ウェブとゲームの現在
+                  <ul>
+                    <li>ゲーム業界のウェブ利⽤</li>
+                    <li>HTML5 / ウェブ技術の成熟</li>
+                    <li>NPAPI プラグインの廃⽌</li>
+                  </ul>
+                </li>
+                <li>Open Web Game Stack: Mozilla の考えるウェブゲームのための要素技術
+                  <ul>
+                    <li>表現</li>
+                    <li>HCI</li>
+                    <li>⾼速化</li>
+                  </ul>
+                </li>
+                <li>ビルドパイプラインへの組み込み
+                  <ul>
+                    <li>Emscripten</li>
+                    <li>Unity / UnrealEngine の現状</li>
+                  </ul>
+                </li>
+                <li>Open Web Game の利⽤例</li>
+                <li>まとめと今後の展望</li>
+              </ul>
+            </div>
+          </div><!-- end .columns -->
+        </section><!-- end #overview -->
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+    <div id="background-outer" class="outer">
+      <div class="inner">
+        <section id="background">
+          <header>
+            <h2>背景</h2>
+          </header>
+          <div class="columns">
+            <p>近年、ウェブブラウザー上で動くアプリケーションのサイズは巨⼤化の⼀途を辿り、⾏数が 1 万⾏を超えるものも珍しくなくなりつつあります。この流れは 10 年ほど前のウェブサイト上での⾮同期通信⽅式 (AJAX) の再発⾒に端を発しています。</p>
+            <p>AJAX によって、ウェブには知識共有のプラットフォームという以外に、アプリケーションプラットフォームとしての役割が付け加わりました。こうした役割を果たすために、巨⼤なデータの保存、⾳声や動画の処理、3D グラフィックス、多様化する⼊⼒デバイスへの対応、リアルタイム通信や双⽅向通信の導⼊など、さまざまな機能がアプリケーションランタイムであるウェブブラウザーへと追加されました。</p>
+            <p>今やウェブブラウザーは、Java やネイティブ環境と⽐較しても遜⾊ないアプリケーションランタイムとなるまでに成熟しました。Flash に代表される NPAPI を利⽤するプラグインが廃⽌されてきたのは、この成熟の結果です。</p>
+            <p>機能⾯の成熟に留まらず、その実⾏スピードも⾼速化しています。 JavaScript の実⾏スピードが⼤きく向上したのに加えて、並列処理やベクトル演算の導⼊といった CPU の進化に合わせた機能の追加も⾏われています。JavaScript 処理系⾃⾝の⾼速化を⾏うのとは異なるアプローチで、アプリケーションの⾼速実⾏を可能にするための開発も進んでいます。</p>
+            <p>それは新しい仮想マシンと、その上で動く新しいプログラム形式の導⼊です。 まず asm.js と呼ばれるプログラミング⾔語が定義されました。これは単純化された JavaScript のサブセットで、ウェブブラウザー上での⾼速動作を可能にしつつも、JavaScript としても解釈できる点が特徴です。 これと同等の機能を持つ仮想マシンが新しくブラウザーに統合されつつあります。 この仮想マシンでは WASM (WebAssembly) と呼ばれるバイナリー形式のプログラムを動作させられます。 WASM と新しい仮想マシンによって、⾼速にアプリケーションを実⾏できるだけでなく、その起動も⾼速に⾏えるようになります。</p>
+          </div><!-- end .columns -->
+        </section><!-- end #background -->
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+    <div id="audiences-outer" class="outer">
+      <div class="inner">
+        <section id="audiences">
+          <header>
+            <h2>対象者</h2>
+          </header>
+          <p>最新ウェブテクノロジーでのゲーム開発に関⼼のある⽅やゲーム業界で企画や開発を担当されている⽅<br>※必須ではありませんが、ノート PC をご持参いただくと、より理解度が深まります。可能な⽅はぜひお持ちください</p>
+          <section>
+            <header>
+              <h3><span>以下のような⽅には</span><span>特におすすめの講座です</span></h3>
+            </header>
+            <ul>
+              <li>ネイティブコードでゲームを開発しているエンジニアの⽅</li>
+              <li>スマホゲームからブラウザーゲームへの展開を検討するプランナーの⽅</li>
+              <li>今後のゲームプラットフォームに関⼼のある⽅</li>
+            </ul>
+          </section>
+        </section><!-- end #audiences -->
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+    <div id="instructor-outer" class="outer">
+      <div class="inner">
+        <section id="instructor" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+          <header>
+            <h2><span>講師</span><span>プロフィール</span></h2>
+          </header>
+          <section class="columns">
+            <header>
+              <img itemprop="image" src="/static/images/events/tech-talks/instructor-shimizu.jpg" alt="" width="200" height="200">
+              <h3 itemprop="name">清⽔ 智公</h3>
+              <p itemprop="jobTitle"><span>⼀般社団法⼈ Mozilla Japan</span> <span>テクニカルマーケティング</span></p>
+              <p itemprop="jobTitle">慶應義塾⼤学⾮常勤講師</p>
+            </header>
+            <div itemprop="description">
+              <p>2001 年慶應義塾⼤学政策・メディア研究科前期博⼠課程終了。2009 年同後期博⼠課程単位取得退学。 在学中は機械学習を⽤いたウェブプログラミングの⽀援やコンテンツ解析、セマンティックウェブへの応⽤を研究。 慶應義塾インフォメーションテクノロジーセンター、嘉悦⼤学情報メディアセンターでの勤務を経て、2013 年より Mozilla Japan に参加。</p>
+              <p>Mozilla Japan では Rust、WebAssembly、開発ツールを使ったJavaScript のデバッグを中⼼に、 開発者向けの情報提供を通じて、オープンなウェブの拡⼤と、ウェブ標準技術の普及に従事。</p>
+              <p>並⾏して教育・研究活動にも従事。慶應義塾⼤学では⾮常勤講師としてプログラミングの講義を担当し、 セマンティックウェブ / Linked Open Data を中⼼にしたプログラミングとデータ作成に関する研究も⾏なっている。</p>
+              <p>Mozilla Japan では中央⼤学のオープンプロジェクト演習を担当し、ハードウェアとソフトウェア、ウェブを組み合わせた プロトタイピング⼿法を教授している。</p>
+              <p>プログラミング⾔語そのものと、型理論、サッカー、⾳楽、旅⾏が⼤好き。</p>
+            </div>
+          </section><!-- end .columns -->
+        </section><!-- end #instructor -->
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+    <div id="reservation-outer" class="outer">
+      <div class="inner">
+        <section id="reservation">
+          <header>
+            <h2><span>受講</span><span>お申し込み</span><span>⽅法</span></h2>
+          </header>
+          <p>本講座は終了しました。今後開催の講座は <a href="../">実践講座トップページ</a> をご覧ください。</p>
+<?php /*
+          <table>
+            <thead>
+              <tr>
+                <th>クレジットカード、コンビニ、PayPal で受講料をお⽀払いの場合</th>
+                <th>請求書にて受講料をお振り込みの場合</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong><a href="http://peatix.com/event/211018">Peatix</a> よりお申し込みください。</strong></td>
+                <td><a href="mailto:events@mozilla-japan.org">Mozilla Japan イベント担当</a> 宛にお名前、組織名、メールアドレス、ご請求書のお送り先住所を明記の上、メールにてお申し込みください。</td>
+              </tr>
+            </tbody>
+          </table>
+*/ ?>
+        </section><!-- end #reservation -->
+      </div><!-- end .inner -->
+    </div><!-- end .outer -->
+  </article>
+</main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

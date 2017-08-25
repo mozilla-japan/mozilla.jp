@@ -1,0 +1,169 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = 'ユーザが使える機能を制限したい | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/user-control/' => 'ユーザが使える機能を制限したい'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>ユーザが使える機能を制限したい</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>一部のキーボードショートカットを無効化したい <a name="disable-keyboard-shortcuts" class="anchor-substitution"></a></h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>Firefoxはキーボードショートカットを管理する機能を含んでいませんが、アドオンを使うことによって、キーボードショートカットの割り当てを変更したりショートカットを無効化したりできます。</p><p>本項では、管理者が行った設定を全体に展開する用途を想定して、<a href="https://addons.mozilla.org/firefox/addon/ui-text-overrider/">UI Text Overrider</a>を使った設定の手順を解説します。</p><h3 id="-">設定方法</h3><p>大まかな手順は以下の通りです。</p><ol>
+<li><a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a> をインストールします。</li>
+<li><code>ツール</code>→<code>Web開発</code>→<code>DOM Inspector</code>でDOM Inspectorを起動します。</li>
+<li><code>File</code>→<code>Inspect Chrome Document</code>を選択し、ブラウザのウィンドウのタイトルと同じ項目を選択します。</li>
+<li><code>&lt;window&gt;</code> 直下の<code>&lt;keyset id=&quot;devtoolsKeyset&quot;&gt;</code> や <code>&lt;keyset id=&quot;mainKeyset&quot;&gt;</code> を選択し、サブツリーを展開します。</li>
+<li><code>&lt;keyset&gt;</code> 直下に多数ある <code>&lt;key&gt;</code> から目的のショートカットを定義している物を見つけ出します。</li>
+<li><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を使用し、UI Text Overriderで当該ショートカットを無効化するための設定を行います。</li>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってUI Text Overriderを導入します。</li>
+</ol><p>Ctrl-T（新しいタブを開く）に対応する <code>&lt;key&gt;</code> を例として、4および5の詳細な手順を説明します。以下はCtrl-Tのショートカットを定義している <code>&lt;key&gt;</code> です。</p><pre><code>&lt;key id=&quot;key_newNavigatorTab&quot;
+     key=&quot;t&quot;
+     modifiers=&quot;accel&quot;
+     command=&quot;cmd_newNavigatorTab&quot;/&gt;
+</code></pre><p><code>&lt;key&gt;</code> は、 <code>key</code> または <code>keycode</code> のいずれかの属性を持ちます。アルファベットや記号など通常の文字入力用のキーを使うショートカットでは <code>key</code> 属性の値にそのキーの文字が指定されており、F1などのファンクションキーやTab、BackSpaceなどの特殊なキーを使うショートカットでは <code>keycode</code> 属性の値にそのキーの仮想キーコード名（ <code>VK_TAB</code> や <code>VK_BACK</code> など。一覧は<a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent#Virtual_key_codes">KeyboardEvent - Web API interfaces</a>を参照して下さい)が指定されています。</p><p>また、Ctrlキーなどの修飾キーを伴うショートカットでは、 <code>modifiers</code> 属性に修飾キーが指定されています。<code>modifiers</code> 属性の値は修飾キー名のカンマ区切りのリストで、 <code>alt</code>, <code>control</code>, <code>meta</code>（MacのCommandキーに対応）, <code>shift</code>, および <code>accel</code>（Macでは <code>meta</code> と見なされ、それ以外の環境では <code>control</code> と見なされる）のうちの1つ以上の組み合わせとなります。</p><p>上記の情報を手がかりにして、挙動を変えたいキーボードショートカットに対応する <code>&lt;key&gt;</code> を探します。見つかったら、それを無効化するための設定を<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>の設定ファイルに記述します。凡例は以下の通りです。</p><pre><code>lockPref(&quot;extensions.uitextoverrider@clear-code.com.&lt;定義名&gt;&quot;,
+  &quot;要素を特定するためのCSSセレクタ&quot;);
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.&lt;定義名&gt;.&lt;属性名1&gt;&quot;,
+  &quot;値&quot;);
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.&lt;定義名&gt;.&lt;属性名2&gt;&quot;,
+  &quot;値&quot;);
+...
+</code></pre><p>先のCtrl-Tを無効化する場合は、以下のようになります。</p><pre><code>lockPref(&quot;extensions.uitextoverrider@clear-code.com.newNavigatorTab&quot;,
+  &quot;#key_newNavigatorTab&quot;); // IDセレクタを使用
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.newNavigatorTab.disabled&quot;,
+  &quot;true&quot;); // disabled属性をtrueに設定し、ショートカットを無効化する
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.newNavigatorTab.command&quot;,
+  &quot;&quot;); // コマンドの割り当てを無くし、万が一にも動作しないようにする
+</code></pre><h3 id="-">注意事項</h3><p>UI Text Overriderを使った方法では、挙動を変更できるのはFirefoxのUI上で <code>&lt;key&gt;</code> が定義されているキーボートショートカットのみとなります。例えば以下のようなショートカットは挙動を変更できません。</p><ul>
+<li>Ctrl-←, →, ↑, ↓</li>
+<li>Ctrl-F4（ウィンドウまたはタブを閉じる）</li>
+<li>F7（キャレットブラウズモードを切り替える）</li>
+<li>Alt（メニューバーを表示する）</li>
+<li>F10（メニューバーにフォーカスする）</li>
+<li>Home（ページ先頭にスクロールする）</li>
+<li>End（ページ末尾にスクロールする）</li>
+</ul><p>このようなショートカットを無効化するためには、 userChrome.jsスクリプトや独自開発のアドオンなどを使う必要があります。</p>
+                    </article>
+                    <article id="faq2">
+                      <h2>一部のメニュー項目やツールバーボタンなどのUI要素を非表示にしたい <a name="hide-ui-elements" class="anchor-substitution"></a></h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>アドオンを使うことで、Firefoxの特定のUI要素を画面上に表示しないようにしてユーザによる操作を禁止することができます。</p><h3 id="-">設定方法</h3><p>UI要素を隠すためには、<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>などのアドオンを使ってUI要素を隠すスタイル指定を適用する必要があります。globalChrome.css を使う場合の手順は以下の通りです。</p><ol>
+<li><a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a> をインストールします。</li>
+<li><code>ツール</code>→<code>Web開発</code>→<code>DOM Inspector</code>でDOM Inspectorを起動します。</li>
+<li><code>File</code>→<code>Inspect Chrome Document</code>を選択し、ブラウザのウィンドウのタイトルと同じ項目を選択します。</li>
+<li>ツリーを展開していくか、もしくはツールバーの左端にある「Find a node to inspect by clicking on it」ボタンをクリックした後にブラウザウィンドウの非表示にしたいUI要素をクリックするかして、非表示にしたいUI要素の詳細を表示します。</li>
+<li>UI要素のIDもしくは他の要素と類似していない特徴を調べる。</li>
+<li><p>「メモ帳」などのテキストエディタを開き、4で調べた情報を使って項目を非表示にするスタイル指定を記述します。</p>
+<p>以下は メニューバーを非表示にする場合の例。</p>
+<pre><code>@-moz-document url-prefix(chrome://browser/content/browser.xul) {
+  #toolbar-menubar,
+  #toolbar-menubar * /* 子孫要素も同様に非表示および無効化する */ {
+    /* display:none はDOMツリーに変化を与えて挙動を壊す恐れがあるため、
+       単に非表示にするのみとする。 */
+    visibility: collapse !important;
+    -moz-user-focus: ignore !important;
+  }
+}
+</code></pre><p>（ <code>@-moz-document</code> は、特定のウィンドウに対してのみスタイル指定を反映させるための記述です。詳細は<a href="http://www.akatsukinishisu.net/wiki.cgi?%40-moz-document">@-moz-document について参考</a>を参照して下さい。）</p>
+</li>
+<li>5で作成した内容を <code>globalChrome.css</code> という名前のプレーンテキストファイルに保存します。</li>
+<li>6で作成したファイルをFirefox（Thunderbird）のインストール先の <code>chrome</code> フォルダに設置します。
+（Windows Vista以降の場合のファイルの設置場所は <code>C:\Program Files (x86)\Mozilla Firefox\chrome\globalChrome.css</code> となる。）</li>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従って<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を導入します。</li>
+</ol>
+                    </article>
+                    <article id="faq3">
+                      <h2>プライベートブラウジング機能を使わせたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></p><p>プライベートブラウジング機能へのアクセス経路を無効化することで、ユーザのプライベートブラウジング機能の利用を禁止できます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、プライベートブラウジング機能の利用を禁止する機能を含むアドオンを作成することができます。</p><h3 id="mcd-">MCD用設定ファイルでの実現</h3><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を使い、プライベートブラウジングモードで起動する機能を無効化します。設定は以下の通りです。</p><pre><code>lockPref(&quot;browser.privatebrowsing.autostart&quot;, false);
+</code></pre><p><a href="/business/faq/tech/user-control/#hide-ui-elements">一部のメニュー項目やツールバーボタンなどのUI要素を非表示にしたい</a>の手順に則り、プライベートブラウジングを開始するためのメニュー項目を非表示にします。<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を使う場合の設定は以下の通りです。</p><pre><code>@-moz-document url-prefix(chrome://browser/content/browser.xul) {
+  #menu_newPrivateWindow,
+  #privatebrowsing-button,
+  #wrapper-privatebrowsing-button,
+  #key_privatebrowsing,
+  #Tools\:PrivateBrowsing,
+  #context-openlinkprivate {
+    visibility: collapse !important;
+    -moz-user-focus: ignore !important;
+  }
+}
+</code></pre><p><a href="/business/faq/tech/user-control/#disable-keyboard-shortcuts">一部のキーボードショートカットを無効化したい</a>の手順に則り、プライベートブラウジングを開始するためのキーボードショートカットを無効化します。<a href="https://addons.mozilla.org/firefox/addon/ui-text-overrider/">UI Text Overrider</a>と<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を併用する場合の設定は以下の通りです。</p><pre><code>lockPref(&quot;extensions.uitextoverrider@clear-code.com.privateBrowsing&quot;,
+  &quot;#key_privatebrowsing&quot;);
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.privateBrowsing.disabled&quot;,
+  &quot;true&quot;);
+lockPref(&quot;extensions.uitextoverrider@clear-code.com.privateBrowsing.command&quot;,
+  &quot;&quot;);
+</code></pre><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>Firefox Syncを使わせたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>無用なトラブルや情報の流出を避けるため、ユーザが任意にFirefox Syncをセットアップできないよう設定することができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、Firefox Syncの利用を禁止する機能を含むアドオンを作成することができます。</p><h3 id="mcd-">MCD用設定ファイルでの実現</h3><p>CCK2 Wizard以外でFirefox Syncの利用を禁止する方法としては、アドオン <a href="https://github.com/clear-code/disablesync/releases">Disable Sync</a>を使う方法があります。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってDisable Syncを導入すると、以下の操作が完全に禁止されます。</p><ul>
+<li>ユーザがFirefox Syncの初期設定を行う。</li>
+<li>ユーザがFirefox Syncのツールバーボタンを追加する。</li>
+<li>ユーザが手動で情報を同期する。</li>
+<li>Firefoxが自動的に情報を同期する。</li>
+</ul><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p><p>また、単に通信を無効化するだけであれば、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使って以下の設定を反映することによっても実現可能です。</p><pre><code>lockPref(&quot;services.sync.serverURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.jpake.serverURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.termsURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.privacyURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.statusURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.syncKeyHelpURL&quot;, &quot;&quot;);
+</code></pre><h3 id="-">注意事項</h3><p>Disable Syncは、既に同期済みの設定を消去しません。
+既にユーザがFirefox Syncを利用しており、サーバおよび他のクライアントに設定を同期している場合、それらは別途削除する必要があります。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">一部のキーボードショートカットを無効化したい <a name="disable-keyboard-shortcuts" class="anchor-substitution"></a></a></li>
+                        <li><a href="#faq2">一部のメニュー項目やツールバーボタンなどのUI要素を非表示にしたい <a name="hide-ui-elements" class="anchor-substitution"></a></a></li>
+                        <li><a href="#faq3">プライベートブラウジング機能を使わせたくない</a></li>
+                        <li><a href="#faq4">Firefox Syncを使わせたくない</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

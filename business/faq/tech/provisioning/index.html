@@ -1,0 +1,101 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = 'カスタマイズ済みのFirefox・Thunderbirdの展開 | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/provisioning/' => 'カスタマイズ済みのFirefox・Thunderbirdの展開'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>カスタマイズ済みのFirefox・Thunderbirdの展開</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>アドオンを1つインストールするだけでカスタマイズが完了する、という形で複雑なカスタマイズ内容を展開したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>アドオン <a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使うと、当該アドオンのインストール1度だけで以下のようなカスタマイズを済ませることのできる「カスタマイズ用アドオン」を作成することができます。</p><ul>
+<li>ホームページの変更</li>
+<li>Firefox Syncの無効化</li>
+<li>アドオンマネージャからのアドオンのインストールの禁止</li>
+<li>その他、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>相当の設定変更</li>
+<li>Firefoxを既定のブラウザに自動設定する</li>
+<li>ヘルプメニューの変更</li>
+<li>ドメインごとの機能の利用許可の初期設定</li>
+<li>検索エンジンの変更・追加</li>
+<li>初期状態のブックマークの内容の変更</li>
+<li>Windowsレジストリの変更</li>
+<li>証明書の自動インポート</li>
+<li>about:configの利用禁止</li>
+<li>プライベートブラウジング機能の利用禁止</li>
+<li>アドオンの同梱</li>
+<li>プラグインの同梱</li>
+</ul>
+                    </article>
+                    <article id="faq2">
+                      <h2>Firefox・ThunderbirdにMCD（AutoConfig）の設定ファイルをバンドルして展開したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>実行ファイルを1つ実行するだけでFirefoxのインストールと設定ファイルの設置をすべて完了するソフトウェアの例としては、<a href="https://github.com/clear-code/fx-meta-installer">Fx Meta Installer</a>があります。
+Fx Meta Instlalerの使用方法については、開発元による<a href="http://www.clear-code.com/blog/2012/11/7.html">Fx Meta Installerのチュートリアル</a>などを参照して下さい。</p><p>Firefoxのインストール後に別途アドオンをインストールすることによってカスタマイズを完了する形態であれば、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>によってそのようなアドオンを作成することができます。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>Firefox・Thunderbirdにアドオンをバンドルして展開したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>実行ファイルを1つ実行するだけでFirefoxのインストールとアドオンのインストールをすべて完了するソフトウェアの例としては、<a href="https://github.com/clear-code/fx-meta-installer">Fx Meta Installer</a>があります。
+Fx Meta Instlalerの使用方法については、開発元による<a href="http://www.clear-code.com/blog/2012/11/7.html">Fx Meta Installerのチュートリアル</a>などを参照して下さい。</p><p>Firefoxのインストール後に別途アドオンをインストールすることによってカスタマイズを完了する形態であれば、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>によってそのようなアドオンを作成することができます。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>FirefoxにJavaやFlashなどのプラグインをバンドルして展開したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>実行ファイルを1つ実行するだけでFirefoxのインストールとプラグインのインストールをすべて完了するソフトウェアの例としては、<a href="https://github.com/clear-code/fx-meta-installer">Fx Meta Installer</a>があります。
+Fx Meta Instlalerの使用方法については、開発元による<a href="http://www.clear-code.com/blog/2012/11/7.html">Fx Meta Installerのチュートリアル</a>などを参照して下さい。</p><p>Firefoxのインストール後に別途アドオンをインストールすることによってカスタマイズを完了する形態であれば、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>によってそのようなアドオンを作成することができます。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">アドオンを1つインストールするだけでカスタマイズが完了する、という形で複雑なカスタマイズ内容を展開したい</a></li>
+                        <li><a href="#faq2">Firefox・ThunderbirdにMCD（AutoConfig）の設定ファイルをバンドルして展開したい</a></li>
+                        <li><a href="#faq3">Firefox・Thunderbirdにアドオンをバンドルして展開したい</a></li>
+                        <li><a href="#faq4">FirefoxにJavaやFlashなどのプラグインをバンドルして展開したい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,86 @@
+<?php
+
+$page_title         = 'Mozilla Developer Meeting 開催のご案内';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2006/mjseminar2/meeting' => 'Mozilla Developer Meeting'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature { width: auto; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      h3.hidden { position: absolute; left: -9999px; }
+      dl.data dd { margin-bottom: 0; }
+      .program { margin: 0; padding: 0; border-bottom: 1px dashed #ccc; padding: 0; }
+      .program dt { margin: .5em 0 0 0; padding: .5em 0 0 9em; border-top: 1px dashed #ccc; font-weight: bold; }
+      .program dt.first { margin: 0; border: 0; }
+      .program dd { margin: 0 0 .5em 9em; padding: 0; }
+      .program dd.time { margin: -1.6em 0 .5em 0; }
+      .program dd img { margin: -1.6em 0 .5em 1em; width: 100px; height: 100px; float: right; }
+      #mainContent em { font-style: normal; border-bottom: 1px solid #333; }
+      .box { margin: 1em 0; border: 1px solid #999; padding: 0 1em; color: #333; background: #f3f3f3; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">Mozilla Developer Meeting 開催のご案内</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <div class="box">
+                <p>本イベントは終了いたしました。多数のご参加ありがとうございました。セミナーと Developer Meeting の内容をまとめた <a href="report">レポート</a> を掲載しましたので、どうぞご覧ください。</p>
+              </div>
+              <p>Mozilla Japan では 3 月 2 日 (木) に、下記の通り開発者ミーティングを開催いたします。</p>
+              <p>Mike Schroepfer と John Lilly を囲み、Mozilla の現状や最新動向、Mozilla 開発での問題点、国際化の現状など、日本の OSS 開発者の皆様と一緒に討論していきます。また、Firefox で実現できる拡張機能や、サービスの話などオープンディスカッションで進めてまいります。</p>
+              <p>皆様のご参加をお待ちしております。</p>
+              <dl class="data">
+                <dt>日時</dt>
+                <dd>2006 年 3 日 2 日 (木) 18:30 - 21:00</dd>
+                <dt>会場</dt>
+                <dd>都市センターホテル 6F 601 会議室<br>東京都千代田区平河町 2-4-1 (<a href="http://www.toshicenter.co.jp/location/j_9000.htm" rel="nofollow">地図</a>)</dd>
+                <dt>主催</dt>
+                <dd>有限責任中間法人 Mozilla Japan</dd>
+              </dl>
+              <h2>プログラム</h2>
+              <dl class="program">
+                <dt class="first">受付</dt>
+                <dd class="time">18:15 - 18:30</dd>
+                <dt>「Firefox &amp; Mozilla 技術最新情報」</dt>
+                <dd class="time">18:30 - 19:15</dd>
+                <dd>Mozilla Corporation 技術担当バイスプレジデント<br>Mike Schroepfer (マイク・シュレーファー) (<a href="profiles#mike" title="講師略歴 - Mike Schroepfer">略歴</a>)</dd>
+                <dt>ディスカッション</dt>
+                <dd class="time">19:15 - 21:00</dd>
+                <dd><strong>「Mozilla プロジェクトとオープンソース開発」</strong><br>Mozilla 製品の開発現場が抱える課題を挙げて、開発者の本音や裏話を引き出しながら、その解決策を探ります。次に、国際化の現状や標準化の重要性について、最近の具体例を交えて議論を深めます。また、オープンソースソフトウェア (OSS) の普及、発展のため急務とされているエンジニアの育成について、どういった方向から取り組むべきか、コミュニティを越えて認識を共有します。</dd>
+                <dd><strong>「Firefox で実現できる、こんな拡張機能」</strong><br>Firefox の拡張機能システムは、アイデア次第で様々なツールを生み出すことができ、世界中のユーザーや開発者に注目、活用されています。最新のウェブサービスとの融合で広がる可能性や、オープンアーキテクチャをベースとすることの優位性などについて、著名な拡張機能開発者であり、昼間のセミナーで講師を務めていただくグッデイの下田洋志 (Piro) 氏を交えて話し合います。</dd>
+                <dd><strong>その他、フリーディスカッション</strong></dd>
+              </dl>
+              <h3 class="hidden">ご注意</h3>
+              <ul>
+                <li>逐次通訳をご用意しております。</li>
+                <li>ディスカッションの内容等プログラムは変更になる場合がございますのでご了承ください。</li>
+              </ul>
+              <h2>参加要領</h2>
+              <p class="note">本イベントは終了いたしました。多数のご参加ありがとうございました。</p>
+              <!--
+              <dl class="data">
+                <dt>定員</dt>
+                <dd>80 名 (定員に達し次第、受付を締切らせていただきます)</dd>
+                <dt>参加費用</dt>
+                <dd>1,000 円 (飲み物・軽食代として)<br>当日、会場受付にてお支払ください。</dd>
+                <dt>お申し込み</dt>
+                <dd>参加申し込みはウェブ上で受け付けています。<strong><a href="meeting-form">申し込みフォーム</a></strong> をご利用ください。<br>受付完了後、Developer Meeting 事務局より Email で参加証をお送りします。<br>※ <em>同日開催の <a href="seminar">セミナー</a> は別途お申し込みが必要となります</em>。</dd>
+                <dt>申し込み締切日</dt>
+                <dd>2006 年 3 月 1 日 (水)</dd>
+              </dl>
+              -->
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

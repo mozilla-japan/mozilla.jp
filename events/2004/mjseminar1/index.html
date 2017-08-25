@@ -1,0 +1,70 @@
+<?php
+
+$page_title         = 'Mozilla Japan 第 1 回 セミナー';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2004/mjseminar1/' => 'Mozilla Japan 第 1 回 セミナー'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen">
+      #main-feature { width: auto; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">Mozilla Japan 第 1 回 セミナー<br>〜 Firefox 1.0 リリースカウントダウン 〜</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>主催: Mozilla Japan</p>
+              <p>開催日: 2004 年 11 日 1 日 (月)　アルカディア市ヶ谷 (私学会館)</p>
+              <p>Mozilla Japan では Mozilla の次世代ウェブブラウザーとして注目される Firefox 1.0 の公式リリースを間近に控えた 11 月 1 日 (月) に、以下の内容でセミナーを開催しました。</p>
+              <p>本セミナーでは、米国 Mozilla Foundation 技術部門のディレクターである Chris Hofmann が、Firefox 1.0 の技術情報 および Mozilla 技術の最新動向について講演しました。また、東京工科大学 田胡 和哉 助教授をお招きし、Linux オープンソース・ソフトウェアセンターにおけるオープンソースへの取り組みについてご講演いただきました。</p>
+              <h2>プログラム</h2>
+              <pre>
+              --------------------------------------------------------------------
+              12:45 - 13:15    受付
+              --------------------------------------------------------------------
+              13:15 - 13:30    ご挨拶
+                               Mozilla Japan 代表理事　相磯 秀夫
+              --------------------------------------------------------------------
+              13:30 - 15:00    「Mozilla Firefox 1.0 / Mozilla 最新動向」
+              
+                               Chris Hofmann (<a href="profiles#chris">略歴</a>)
+                               Director of Engineering
+                               Mozilla Foundation　　　　　　　　* 逐次通訳付
+              --------------------------------------------------------------------
+              15:00 - 15:15    休憩
+              --------------------------------------------------------------------
+              15:15 - 16:15    オープンソースソフトウェア開発と大学教育
+                               〜東京工科大学 Linux オープンソースソフトウェアセンター〜
+              
+                               東京工科大学
+                               コンピューターサイエンス学部
+                               助教授 田胡 和哉 氏 (<a href="profiles#tago">略歴</a>)
+              --------------------------------------------------------------------
+              16:15 - 17:00    「Mozilla Japan 活動概要」
+              
+                               Mozilla Japan
+                               理事 瀧田 佐登子 (<a href="profiles#takita">略歴</a>)
+              ---------------------------------------------------------------------
+              </pre>
+              <h2>Chris Hofmann 講演概要</h2>
+              <p>Firefox Preview Release は、発表から 10 日間でダウンロード数が 200 万件を超え、11 月公開予定の公式リリースへの期待が高まっています。Firefox、Thunderbird など Mozilla 製品の技術責任者としての立場から、Firefox の技術情報および Mozilla 製品のロードマップなど、最新の動向についてお話しさせていただきます。</p>
+              <h2>田胡 和哉氏 講演概要</h2>
+              <p>Mozilla をはじめとするオープンソースソフトウェアの重要性が高まっている。その開発手法は従来と著しく異なっており、それに従事する者は、単にプログラミングが得意であるのに限らず、多数の人々に受け入れられるソフトウェアを企画、設計すること、世界の各地に分散する開発関係者の関心を引く技術提案を行い、共感を得ること等、広い分野にわたる技量と知識を必要としている。これは、ソフトウェア開発技術の根幹であると考えられ、そのようなスキル育成が大学における高度技術者教育課程における最も重要な課題の一つである。</p>
+              <p>東京工科大学 Linux オープンソースソフトウェアセンターにおける、ソフトウェア開発を通じた人材育成プログラムを例に、高度ソフトウェア技術者育成に対する取組みを紹介する。</p>
+              <h2>瀧田 佐登子 講演概要</h2>
+              <p>Mozilla Japan が活動を開始して約 2 ヶ月。今後どのような分野に取り組み、どのような活動に注力していくかなど、Mozilla Japan の最新動向をお話しさせていただきます。</p>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

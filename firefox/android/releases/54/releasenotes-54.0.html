@@ -1,0 +1,46 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'android';
+$_version = '54.0';
+$_desktop_version = '54.0';
+$_date = '2017-06-13';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="new">
+              <h4>新機能</h4>
+              <ul class="section-items">
+                <li id="note-787042">
+                  <p>ブルガリア語 (bg)、カビル語 (kab) ロケールを追加しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787153">
+                  <p>様々な <a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox.html#firefox54">セキュリティ問題</a> を修正しました。</p>
+                </li>
+                <li id="note-787006">
+                  <p>about:config 内の設定名など、右から左へ書く (RTL) 言語の書式を修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787132">
+                  <p>ブラウザー上での音声・動画再生を改善しました。</p>
+                </li>
+                <li id="note-787046">
+                  <p>ブックマークの同期パフォーマンスを改善しました。</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

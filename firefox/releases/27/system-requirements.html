@@ -1,0 +1,91 @@
+<?php
+
+$_version = 27;
+
+$page_title         = 'Firefox ' . $_version . ' システム要件 | Firefox';
+$body_id            = 'firefox-sysreq';
+$body_class         = 'sky firefox desktop sysreq';
+$css                = array('sandstone/product-sysreq'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/' . $_version . '.0/system-requirements/' => 'Firefox ' . $_version . ' システム要件'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>システム要件</em></h1>
+                <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">Firefox <?= $_version ?></span></span></h2>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <section id="sec-win">
+                <h2>Windows</h2>
+                <h3>オペレーティングシステム (OS)</h3>
+                <ul>
+                  <li>Windows XP SP2 または SP3</li>
+                  <li>Windows Server 2003 SP1 または SP2</li>
+                  <li>Windows Vista</li>
+                  <li>Windows 7</li>
+                  <li>Windows 8</li>
+                </ul>
+                <p>注: Firefox は今のところ 32 ビット版のみですが、Windows Vista や Windows 7 の 64 ビット版でも動作します。</p>
+                <h3>最小ハードウェア構成</h3>
+                <ul>
+                  <li>Pentium 4 もしくはそれより新しい SSE2 対応プロセッサー</li>
+                  <li>512 MB の RAM</li>
+                  <li>200 MB のハードディスク空き容量</li>
+                </ul>
+              </section>
+              <section id="sec-mac">
+                <h2>Mac</h2>
+                <h3>オペレーティングシステム (OS)</h3>
+                <ul>
+                  <li>Mac OS X v10.6 (Snow Leopard)</li>
+                  <li>Mac OS X v10.7 (Lion)</li>
+                  <li>Mac OS X v10.8 (Mountain Lion)</li>
+                  <li>Mac OS X v10.9 (Mavericks)</li>
+                </ul>
+                <h3>最小ハードウェア構成</h3>
+                <ul>
+                  <li>Intel x86 プロセッサー搭載の Macintosh コンピューター</li>
+                  <li>512 MB の RAM</li>
+                  <li>200 MB のハードディスク空き容量</li>
+                </ul>
+              </section>
+              <section id="sec-linux">
+                <h2>Linux</h2>
+                <h3>ソフトウェア要件</h3>
+                <p>注: 各 Linux ディストリビューターは、それぞれのディストリビューションに対して、システム要件が異なるパッケージを提供している場合もあります。</p>
+                <ul>
+                  <li>Firefox を利用するには、最低限以下のライブラリまたはパッケージが必要です。
+                    <ul>
+                      <li>GTK+ 2.18 以上</li>
+                      <li>GLib 2.22 以上</li>
+                      <li>Pango 1.14 以上</li>
+                      <li>X.Org 1.0 以上 (1.7 以上を推奨)</li>
+                      <li>libstdc++ 4.3 以上</li>
+                    </ul>
+                  </li>
+                  <li>最適な環境で利用するために、以下のライブラリまたはパッケージを推奨します。
+                    <ul>
+                      <li>NetworkManager 0.7 以上</li>
+                      <li>DBus 1.0 以上</li>
+                      <li>HAL 0.5.8 以上</li>
+                      <li>GNOME 2.16 以上</li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

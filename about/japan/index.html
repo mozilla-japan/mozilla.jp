@@ -1,0 +1,42 @@
+<?php
+
+$page_type          = 'AboutPage';
+$page_title         = 'Mozilla Japan について';
+$page_description   = '一般社団法人 Mozilla Japan は、Mozilla プロジェクトを代表する米国 Mozilla Foundation の日本支部として 2004 年 7 月に発足した非営利法人です。Mozilla 製品や関連技術の普及啓蒙を目的として、様々な活動を国内で展開しています。';
+$body_id            = 'japan';
+$body_class         = 'about japan sand';
+$css                = array('sandstone/about'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  '/about/' => 'Mozilla について',
+  '/about/japan/' => 'Mozilla Japan について'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <div id="main-feature" class="outer">
+              <div class="inner">
+                <header>
+                  <h1 itemprop="name">Mozilla Japan について</h1>
+                </header>
+              </div>
+            </div><!-- end #main-feature -->
+            <div id="main-content" class="outer">
+              <div class="inner">
+                <div id="announcement">
+                  <p>一般社団法人 Mozilla Japan は、2017 年 7 月より、一般社団法人 WebDINO Japan (ウェブディノジャパン) に社名を変更いたしました。</p>
+                  <div class="row tiles">
+                    <div class="col s3">
+                      <a href="https://www.webdino.org/"><img src="/static/images/global/webdino-logo.png" srcset="/static/images/global/webdino-logo@2x.png 1.5x" width="400" height="100" alt=""> <span>WebDINO Japan サイトへ »</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- end .inner -->
+            </div><!-- end #main-content -->
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

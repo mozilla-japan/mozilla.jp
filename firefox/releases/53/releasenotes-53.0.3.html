@@ -1,0 +1,43 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '53.0.3';
+$_android_version = '53.0.2';
+$_date = '2017-05-19';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787093">
+                  <p>NTLM 認証とともにプロキシを使用した際に生じるハングを修正しました。(<a href="https://bugzilla.mozilla.org/1360574">Bug 1360574</a>)</p>
+                </li>
+                <li id="note-787094">
+                  <p>キャプティブポータル判別サービスによる過度なリソース使用を修正しました。(<a href="https://bugzilla.mozilla.org/1359697">Bug 1359697</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787095">
+                  <p>組み込みセキュリティ情報の期限切れ時間を延長しました。(<a href="https://bugzilla.mozilla.org/1364240">Bug 1364240</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787075">
+                  <p>参考: <a href="/firefox/53.0.2/releasenotes/">53.0.2 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

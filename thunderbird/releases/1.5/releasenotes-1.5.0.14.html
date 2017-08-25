@@ -1,0 +1,165 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Thunderbird 1.5.0.14 リリースノート';
+$body_id            = 'thunderbird-relnotes';
+$body_class         = 'sky thunderbird relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.thunderbird.net/ja/' => 'メールソフト Thunderbird',
+  '/thunderbird/releases/' => 'リリースノート',
+  '/thunderbird/1.5.0.14/releasenotes/' => 'Thunderbird 1.5.0.14'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name">Thunderbird リリースノート</h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 1.5.0.14</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <p>Thunderbird はフル装備の E-メール / RSS / ニュースグループクライアントで、かつてないほど安全で素早く、そして簡単にメールを扱うことができます。Thunderbird についての <a href="https://www.thunderbird.net/ja/">より詳しい情報はこちら</a> を参照してください。</p>
+                <p>このリリースノートには、Thunderbird 1.5.0.14 に関する <a href="#new">最新情報</a>、<a href="#download">ダウンロード</a> と <a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#links">ユーザーサポートとフィードバック</a> などの情報が載っています。どんなバグでも Bugzilla にバグを報告する前にこのリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a>を読んでください。</p>
+                <p>Thunderbird に関するフィードバックを歓迎します。<a href="http://www.mozillazine.org/">MozillaZine</a> が快くホストしてくれている <a href="http://forums.mozillazine.org/viewforum.php?f=39">Mozilla Thunderbird サポートフォーラム</a> に参加してみてください。</p>
+                <p class="comment">【訳注: このページは、英語版のページを参考のために和訳したものです。】</p>
+                <h2><a name="new">Thunderbird 1.5.0.14 の新機能と改良点</a></h2>
+                <p>Thunderbird 1.5.0.14 は、ユーザーの皆さんにより安全なインターネット体験をお届けする私たちの取り組みの一環として提供される、安定性とセキュリティを向上させたアップデート版です。すべてのユーザーにこの最新版へのアップグレードを推奨します。</p>
+                <ul>
+                  <li>安定性の向上</li>
+                  <li><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/thunderbird15.html#thunderbird1.5.0.14">いくつかのセキュリティ問題の修正</a></li>
+                </ul>
+                <!-- <p><a href="http://weblogs.mozillazine.org/rumblingedge/archives/2007/07/tb_1-5-0-13.html">注目すべきバグの修正のより詳細なリスト</a> が The Rumbling Edge にあります。</p> -->
+                <p>リリース日: 2007/12/19</p>
+                <p><strong>注意: Thunderbird 1.5.0.14 は、Mozilla によって提供される Thunderbird 1.5 系列の最後のリリースとなります。今後も最新のセキュリティと安定性の向上を入手できるよう、すべてのユーザーに <a href="https://www.thunderbird.net/ja/">Thunderbird 2</a> へのアップグレードを強く推奨します。</strong></p>
+                <h2><a name="downloadandinstall">ダウンロードとインストール</a></h2>
+                <h3><a name="requirements">システム動作環境</a></h3>
+                <p>インストールする前にあなたのコンピューターが <a href="/thunderbird/1.5/system-requirements/">システム動作環境</a> を満たしているか確認してください。今回のバージョンより、Mac OS X では v10.2 以上が必要となります。</p>
+                <h3><a name="download">ダウンロード</a></h3>
+                <p>Mozilla Foundation では Windows、Linux、Mac OS X 用の Thunderbird を提供しています。Thunderbird を入手するには <a href="https://www.thunderbird.net/ja/all/">製品情報ページ</a> を訪れてください。Mozilla Foundation が提供していない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                <h3><a name="install">インストール</a></h3>
+                <p>Thunderbird のインストーラあるいは圧縮アーカイブをダウンロードしたら次の説明に従ってインストールしてください。</p>
+                <h4>Windows</h4>
+                <p>インストーラ <tt class="filename">Thunderbird Setup 1.5.0.14.exe</tt> をダブルクリックしてインストールを始めます。</p>
+                <h4>Mac OS X</h4>
+                <p>Thunderbird の圧縮ディスクイメージをダブルクリックしてマウントします。すでにブラウザーがこのディスクイメージを展開、マウントしているかもしれません。Thunderbird 1.5.0.14 ディスクイメージをダブルクリックして Thunderbird アプリケーションをハードディスクにドラッグします。Dock に追加したい場合は、Thunderbird のアイコンを Dock にドラッグしてください。</p>
+                <h4>その他のプラットフォーム</h4>
+                <p>圧縮されたアーカイブを展開し <tt>thunderbird</tt> を実行します。</p>
+                <h3><a name="uninstall">アンインストール</a></h3>
+                <p>Thunderbird をアンインストールするには次の手順に従ってください：</p>
+                <h4>Windows</h4>
+                <p><kbd>スタート</kbd> メニューから <kbd>コントロールパネル</kbd> を選択します。コントロールパネルが表示されたら <kbd>プログラムの追加と削除</kbd> をダブルクリックします。 リストの中の "Mozilla Thunderbird (1.5.0.14)" を見つけて <kbd>削除</kbd> をクリックしてアンインストールします。</p>
+                <h4>Mac OS X</h4>
+                <p><tt>Thunderbird</tt> アプリケーションをゴミ箱にドラッグします。</p>
+                <h4>その他のプラットフォーム</h4>
+                <p><tt>thunderbird</tt> ファルダを削除します。</p>
+                <p>これらの手順でアンインストールを完了しても、また次に Thunderbird をインストールする場合を考えて、あなたのプロファイルは削除されず、そのまま保存されます。Thunderbird のプロファイルを削除したい場合は、以下の「プロファイルフォルダー」の項目に書かれているフォルダーを削除してください。なお、一度プロファイルを削除してしまうと、ブックマークや保存されたパスワード、個人設定、その他のデータがすべで消去されてしまいますので、次に Thunderbird を使う場合は新しいプロファイルで起動することになります。</p>
+                <h2>その他の情報</h2>
+                <h3><a name="profilefolder">プロファイルフォルダー</a></h3>
+                <p>Thunderbird は、以下の場所にユーザーデータを保存します。</p>
+                <table border="1" cellspacing="0" style="font-size: smaller;">
+                  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows 2000/XP</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Thunderbird</td></tr>
+                  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows NT</td><td>WINNT&yen;Profiles&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Thunderbird</td></tr>
+                  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows 98/ME</td><td>Windows&yen;Application Data&yen;Thunderbird</td></tr>
+                  <tr><td><img src="/static/images/general/platforms/icon-mac.png" alt="" style="vertical-align:middle;"> Mac OS X</td><td>~/Library/Thunderbird</td></tr>
+                  <tr><td><img src="/static/images/general/platforms/icon-linux.png" alt="" style="vertical-align:middle;"> Linux/Unix</td><td>~/.thunderbird</td></tr>
+                </table>
+                <h2><a name="issues">既知の問題</a></h2>
+                <p>ここには、Thunderbird 1.5.0.14 に関する既知の問題の一部が載っています。新たにバグを報告する前にこのリストをご覧になり、今後も定期的にチェックするようにしてください (リリースに新しいバグが見つかった場合は更新されます)。</p>
+                <h3><a name="extensions">拡張機能とテーマ</a></h3>
+                <p>このベータ版では、新しい Extension Compatibility and Update 機構が備わっていますが、これに関する問題に遭遇する可能性があります。私たちが認識している 3 つの問題について、それぞれ簡単な回避策があります。</p>
+                <ul>
+                  <li>Thunderbird 1.5.0.14 インストーラの実行後、Extension Compatibility and Update ウィザードが表示されない場合は、Extension Manager を開いて手動で更新を確認してください。</li>
+                  <li>Extension Compatibility and Update ウィザードが表示されても完了しない場合は、何か他のウィンドウにフォーカスを移してから、再度ウィザードに戻ってください。これで問題が解決しない場合は、[Cancel] を選択し、Extension Manager を開いて手動で更新を確認してください。</li>
+                  <li>Extension Compatibility and Update ウィザードが拡張機能の更新をダウンロード・インストールしても、それらの更新が適用されない場合は、Extension Manager を開いて手動で更新を確認してください。</li>
+                  <li>Intel Mac では、PowerPC 専用のバイナリを含む拡張機能は、Intel ネイティブまたは Universal 版に更新するか、Rosetta を有効にしない限り、利用できません。Rosetta を有効にするには、Thunderbird のアイコンをクリックして [情報を見る] を選択し、[Rosetta を使って開く] にチェックを入れてください。</li>
+                </ul>
+                <p>Thunderbird 1.0 にインストールされている拡張機能は Thunderbird 1.5.0.14 と互換性がなく、アップデートが必要な場合があります。何か問題があった場合は、その拡張機能の作者に報告してください。Thunderbird 1.5.0.14 をインストールする際、お使いの拡張機能やテーマは、Thunderbird 1.5.0.14 と互換性があること、または、互換性のある新しい拡張機能やテーマが提供されていることが確認されるまで、すべて無効化されます。これは、Thunderbird がバージョンごとに変更点を含んでおり、その変更された部分の機能を統合した一部の拡張機能やテーマは、Thunderbird の新バージョンで使うと問題を引き起こす可能性があるためです。お気に入りの拡張機能やテーマがアップデートされておらず、Thunderbird の新バージョンと互換性がない場合は、作者に連絡を取ってアップデートを促してください。</p>
+                <h3>すべての OS</h3>
+                <ul>
+                  <li><p>一部のファイアウォールソフトが、Thunderbird の実行を静的にブロックしてしまう場合があります。たいていのファイアウォールは、プログラムによるインターネットへの接続を許可するかどうかを尋ねてきます。Thunderbird には常にアクセスを許可することが大切です。アクセスを拒否してしまった場合は、ファイアウォールの設定画面を開いて、アクセスを許可してください。ファイアウォールの中には、無効になっていてもアクセスが拒否されてしまうものもあります。<a href="http://kb.mozillazine.org/Error_loading_any_website#Firewalls">特定のファイアウォールに関する情報はこちらをご覧ください</a>。</p></li>
+                  <li><p>マルチユーザーシステムで、Thunderbird をアクセス制限のある場所にインストールした場合、その場所にアクセス可能なユーザーがまず最初に Thunderbird を起動する必要があります。そうすることで、初回起動ファイルがすべて生成されます。この作業を行わないと、インストールされた場所に書き込み権限を持たないユーザーが Thunderbird を起動しようとした場合、Thunderbird が必要とする初回起動ファイルが正しく生成されません。</p></li>
+                  <li><p>デフォルトのスペルチェック辞書は英語のみとなっています。英語以外の辞書を追加するには <a href="https://support.mozilla.org/ja/kb/how-install-and-use-another-language-dictionary">インストール方法</a> を参照してください。</p></li>
+                  <li><p>共通受信トレイと POP3 アカウント用受信トレイの使用を切り替える場合は、必ずメッセージを他のフォルダーにコピーしておいてください。</p></li>
+                  <li><p>ソフトウェアアップデートは、Thunderbird がインストールされている場所に書き込み権限のないユーザーが実行すると失敗します。これは、ソフトウェアアップデートがその場所にあるファイルを置き換え・作成する必要があるためです。</p></li>
+                </ul>
+                <h3>Windows</h3>
+                <ul>
+                  <li><p>共有マシンで、アクセス権の限られたユーザーが自分の書き込み権限のある場所に Thunderbird をインストールした場合でも、マイナスの副作用が発生する場合があります (既定のメールクライアントその他のキーが正しく設定されないなど)。それでも Thunderbird は使えます。アクセス権の限られたユーザーがインストールする場合、アクセス制限のある場所や共有の場所にインストールしてはいけません。インストールに失敗する可能性があります。</p></li>
+                  <li><p>Windows ユーザーは、Thunderbird 向け <a href="http://ftp.mozilla-japan.org/pub/mozilla.org/thunderbird/extensions/palmsync/1.5/palmsync.xpi">Palm Sync 拡張機能</a> をインストールすることで、Palm デバイスとアドレス帳を同期させることができます。ファイルをローカルに保存して、Thunderbird の拡張機能ダイアログからインストールしてください。この拡張機能は拡張機能一覧に���表示されません。拡張機能を使うには、インストール後 Thunderbird を再起動する必要があります。</p></li>
+                </ul>
+                <h3>Mac OS X</h3>
+                <ul>
+                  <li>Intel Core プロセッサー搭載した Macintosh コンピューターで、Rosetta 上で Thunderbird 1.5 または 1.5.0.2 をお使いの場合、自動アップデートシステムを通じて PowerPC 専用の Thunderbird 1.5.0.14 に更新されてしまいます。Intel Mac 向けのネイティブサポートを受けるには、製品情報ページから Universal 版の Thunderbird 1.5.0.14 をダウンロードしてください。</li>
+                  <li>Intel Mac では、ネイティブの場合も、Rosetta 上で実行している場合も、Talkback 機能は利用できません。アプリケーションがクラッシュした際には、Apple のクラッシュ報告プログラムが起動します。</li>
+                </ul>
+                <h3>Linux/Unix システム</h3>
+                <ul>
+                  <li><p>GNOME との統合は Fedora Core 3 では正しく機能しません。Fedora Core 3 ユーザーは、<a href="http://download.fedora.redhat.com/pub/fedora/linux/core/2/i386/os/Fedora/RPMS/linc-1.0.3-3.1.i386.rpm" rel="nofollow">linc-1.0.3-3.1.i386.rpm</a> をダウンロード・インストールする必要があります。この RPM をインストールしたら、Thunderbird をインストールしたディレクトリーで次のコマンドを実行してください (書き込み権限が必要です)。</p><p><code>touch .autoreg</code></p><p>次に Thunderbird を起動したときから GNOME 統合が有効になります。</p></li>
+                </ul>
+                <h2><a name="FAQ">よくある質問</a></h2>
+                <dl class="faq">
+                  <dt>どのような協力ができますか?</dt>
+                  <dd>私たちは少しでも多くの配布経路を必要としています。できる限り多くの友人や家族、同僚を Thunderbird に乗り換えさせることがあなたの使命です。もしあなたが学生なら、学校で Thunderbird を配布してください。リリースについて <a href="http://slashdot.org/" rel="nofollow">Slashdot</a> [<a href="http://slashdot.jp/" rel="nofollow">日本語版</a>] やその他のニュースサイトに記事を投稿してください。あなたのブログから情報を流してください。例えばあの Kazaa のように、インターネットを通じた大規模な配布が可能です。</dd>
+                  <dt>なぜ私が送ったメールに返事をくれないのですか?</dt>
+                  <dd><a href="http://forums.mozillazine.org/?c=10">フォーラム</a> をご利用ください。Thunderbird チームは常時このフォーラムをチェックしています。私たちは毎日多くのメールを受け取っているので、あなたが送ったメールは見過ごされる可能性もあります。</dd>
+                  <dt>テーマとアドオン (拡張機能) はどこで手に入りますか?</dt>
+                  <dd>テーマと拡張機能は <a href="https://addons.mozilla.org/ja/thunderbird/">Mozilla Update</a> からダウンロードできます。</dd>
+                  <dt>誰が Thunderbird の作業をしているのですか?</dt>
+                  <dd>非常に多くの人が関わっています。Thunderbird に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Thunderbird について] に書かれているクレジットをご覧ください。</dd>
+                </dl>
+                <h2><a name="links">その他の関連資料とリンク</a></h2>
+                <p>以下のリソースには、Thunderbird に関する役に立つ情報が載っています。</p>
+                <ul>
+                  <li><a href="http://opensourcearticles.com/articles/thunderbird_15/english/part_01" rel="nofollow">Mozilla Thunderbird 入門</a> (クイックガイド)</li>
+                  <li><a href="https://support.mozilla.org/ja/products/thunderbird">Mozilla Thunderbird Help</a> (よくある質問、使い方のヒントやその他カスタマイズ)</li>
+                  <li><a href="http://kb.mozillazine.org/Thunderbird">MozillaZine Knowledge Base</a> (よくある質問、使い方のヒントやその他有益な情報)</li>
+                  <li><a href="http://forums.mozillazine.org/?c=8">Mozilla Thunderbird forums</a> (一般的な話題、フィードバック、ユーザーサポート) <a href="http://www.mozillazine.org/">MozillaZine</a> によるホスト (訳注：<a href="http://mozillazine.jp/">MozillaZine.jp</a> にも <a href="http://mozillazine.jp/forums/viewforum.php?forum=3">Mozilla Thunderbird フォーラム</a>があります)</li>
+                </ul>
+                <h2 id="contributedbuilds">提供されたビルド</h2>
+                <p>これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。それぞれの説明をご覧ください。</p>
+                <!--
+                <h3 id="solarisbuilds">Solaris (SUN デスクトップ北京チーム提供)</h3>
+                <p><strong>Tarball 形式</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/README.txt">README</a>)</p>
+                <ul>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris10-i386.tar.bz2">thunderbird-1.5.0.14.en-US.solaris10-i386.tar.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris10-i386.tar.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris10-sparc.tar.bz2">thunderbird-1.5.0.14.en-US.solaris10-sparc.tar.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris10-sparc.tar.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1.tar.bz2">thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1.tar.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1.tar.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1.tar.bz2">thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1.tar.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_tarball/thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1.tar.bz2.cksum">cksum</a>)<br></li>
+                </ul>
+                <p><strong>Pkgadd 形式</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/README.txt">README</a>)</p>
+                <ul>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris10-i386-pkg.bz2">thunderbird-1.5.0.14.en-US.solaris10-i386-pkg.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris10-i386-pkg.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris10-sparc-pkg.bz2">thunderbird-1.5.0.14.en-US.solaris10-sparc-pkg.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris10-sparc-pkg.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1-pkg.bz2">thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1-pkg.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris8-i386-gtk1-pkg.bz2.cksum">cksum</a>)<br></li>
+                  <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1-pkg.bz2">thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1-pkg.bz2</a>
+                    (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/solaris_pkgadd/thunderbird-1.5.0.14.en-US.solaris8-sparc-gtk1-pkg.bz2.cksum">cksum</a>)<br></li>
+                </ul>
+                -->
+                <!--
+                <h3><a name="othersystems">その他のシステム</a></h3>
+                <p>mozilla.org によって公式に提供されている 3 種類以外のプラットフォーム向けビルドは <a href="http://ftp.mozilla-japan.org/pub/mozilla.org/thunderbird/releases/1.5.0.14/contrib/">FTP サイト</a> にあります。</p>
+                -->
+                <h3><a name="otherlanguages">ローカライズビルド</a></h3>
+                <p>多くのローカライズビルドが、<a href="https://www.mozilla.org/projects/l10n/mlp_otherproj.html#thunderbird" title="Mozilla Localization Project">協力者</a> を代表して、mozilla.org によって作成、配布されています。私たちが提供している公式ビルドの一覧は <a href="https://www.thunderbird.net/ja/all/">すべてのシステムと言語</a> を参照してください。</p>
+                <br><br>
+                <p><small>前バージョンのリリースノート: <a href="0.1">0.1</a> | <a href="0.2">0.2</a> | <a href="0.3">0.3</a> | <a href="0.4">0.4</a> | <a href="0.5">0.5</a> | <a href="0.6">0.6</a> | <a href="0.7">0.7</a> | <a href="0.8">0.8</a> | <a href="0.9">0.9</a> | <a href="1.0">1.0</a> | <a href="1.0.2">1.0.2</a> | <a href="1.0.5">1.0.5</a> | <a href="1.0.6">1.0.6</a> | <a href="1.0.7">1.0.7</a> | <a href="1.0.8">1.0.8</a> | <a href="1.5">1.5</a> | <a href="1.5.0.2">1.5.0.2</a> | <a href="1.5.0.4">1.5.0.4</a> | <a href="1.5.0.5">1.5.0.5</a> | <a href="1.5.0.7">1.5.0.7</a> | <a href="1.5.0.8">1.5.0.8</a> | <a href="1.5.0.9">1.5.0.9</a> | <a href="1.5.0.10">1.5.0.10</a> | <a href="1.5.0.12">1.5.0.12</a> | <a href="1.5.0.13">1.5.0.13</a></small></p>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,90 @@
+<?php
+
+$page_title         = '近未来ブラウザーの形を考える 60 分 -ユーザーエクスペリエンスの視点から- | レポート | Firefox Developers Conference 2008';
+$page_description   = 'このパネルディスカッションでは、Mozilla Labs でユーザーエクスペリエンスの研究を行っている Aza Raskin とインタラクティブメディア、ユーザーインタフェイスの研究をされている慶応義塾大学大学院の Adrian D. Cheok 先生、奈良先端科学技術大学院大学の加藤先生をお招きし、未来のブラウザーの形についてお話しいただきました。';
+$body_id            = 'events-devcon-2008-report';
+$body_class         = 'sand news events devcon';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/devcon/2008/' => 'Firefox Developers Conference 2008',
+  '/events/devcon/2008/reports/a2' => 'レポート: 近未来ブラウザーの形を考える 60 分 -ユーザーエクスペリエンスの視点から-'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      #sidebar { width: 400px; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name">Firefox Developers Conference 2008 Report</h1>
+                <h2 role="presentation">パネルディスカッション「近未来ブラウザーの形を考える 60 分 -ユーザーエクスペリエンスの視点から-」<br>〜技術とアイデアでブラウザーはどこまで進化できるか？〜</h2>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>パネルディスカッション「近未来ブラウザーの形を考える 60 分 -ユーザーエクスペリエンスの視点から-」では、Mozilla Labs でユーザーエクスペリエンスの研究を行っている Aza Raskin とインタラクティブメディア、ユーザーインタフェイスの研究をされている慶応義塾大学大学院の Adrian D. Cheok 先生、奈良先端科学技術大学院大学の加藤先生をお招きし、未来のブラウザーの形についてお話しいただきました。</p>
+              <p>&lt;参加パネリスト&gt;<br>Adrian D. Cheok 氏 (慶應義塾大学大学院 メディアデザイン研究科)<br>加藤 博一 氏 (奈良先端科学技術大学院大学 情報科学研究科)<br>Aza Raskin (Mozilla Labs)<br>&lt;モデレーター&gt;<br>砂原 秀樹 氏 (慶應義塾大学大学院 メディアデザイン研究科)</p>
+              <h4>膨大な情報量をどのようは方法でコントロールするのか</h4>
+              <p>まず最初にモデレーターの砂原秀樹氏よりブラウザーの現状に対し、インターネットが社会生活に浸透することによって、ブラウザーの使われ方や使われる場所、情報表現の幅は大きく拡がってきているといった考察が提示されました。</p>
+              <p>ブラウザーの利用シーンは、パソコンから携帯電話、さらに大きなものでは街角の大型ディスプレイにネットからリアルタイムで情報を表示するデジタルサイネージまであり、ニューヨークではバスの中に時間や位置情報で表示が変わる広告ディスプレイも登場しています。「今後はそうしたものも含めてブラウザーのひとつの形であると考えられようになってきており、それらに対してインタラクションとなるデバイスの在り方を考える必要も生じるでしょう」</p>
+              <p>　すでにマウスやタッチパネル以外に、デバイスの標準仕様になりつつあるカメラを使ってジェスチャーで動かしたり、RFID や加速度センサーといった新たな方法も採用されつつあります。それらを通じて膨大な情報にどうアクセスできるようにするかが、ブラウザーにとって大きな課題になっており、今回はそれらについても具体的な研究成果や提案が話し合われる場になりました。</p>
+              <h4>ユーザーの生活とかけはなれない発想が大切</h4>
+              <p>まず、パネリストの一人である Mozilla Labs の Aza Raskin からは、「ネットの情報過多にどう対応するかが大切であり、もっと他の発想で新しいインタフェイスを考えてもいいのではないか」という意見が出されました。技術的にはカメラを使ったり、目の動きをトラッキングしたりもできるが、絶対的な原則はユーザーが中心ということであり、使っているうちに疲れてしまうようなものであってはいけないとしています。</p>
+              <p>Raskin は自身がリーダーとなって開発を進めている、新しいブラウザーのインタフェイスである Ubiquity についても、「本当に必要なものをブラウザーを通じて最小限の作業で手に入れられるようにしたい」とコメント。小さいけれどユーザーの経験が積み重ねられることで、徐々にブラウザーに対する発想にも影響が与えられるようになるのではないかと考えています。「究極としては、ユーザーが考え途端に情報がおりてくるユビキタス的な状況を手に入れられるようになることが、将来のブラウザーのひとつのカタチになるのではないでしょうか」</p>
+              <p>奈良先端科学技術大学院の加藤博一氏は、オーディオビデオのインタフェイスを研究している中で、現在のタッチパッドではズームやローテーションぐらいは直感的にできても、他はどうすればいいのかがわかりにくいため、もっと汎用的な操作環境を作り出すべきだと考えるようになったと言います。ただし、何を標準とするのかが難しく、ユーザービリティの評価については、ブラウザーで情報を読む場合に画面をスクロールしながらかマウスを使うかといった、ユーザーの普段の操作状況も評価の対象に含めるほうがいいのではないかとしています。</p>
+              <p>全体的なユーザーインタフェイスデザインの方向性としては、文化包丁的な汎用ツールと、高性能な専門的ツールに分かれるだろうとし、「汎用性の高いものをカスタマイズする場合、カリスマユーザーの設定をパッケージやパラメーターで提供 (共有) するといった方法がユーザーには使いやすいのではないか」という意見も出されました。</p>
+              <p>さらに加藤氏は Raskin が紹介した Ubiquity について、「さらに機能が進化して、ブラウザーが過去の履歴を元にユーザーの求める情報を先読みし、秘書のように情報を提供してくれるようになればおもしろいだろう」とコメント。履歴以外にもユーザーが使っている時のマウスのクリックの仕方や、表情をカメラで保存するなど、ユーザーの行動や考えを分析する方法も幅広いものになっていくだろうとしています。</p>
+              <p>慶應義塾大学大学院でメディアデザインを研究されている Adrian D. Cheok 氏からは、大学で開発中のユーザーインタフェイスのプロトタイプ技術が紹介されました。</p>
+              <p>ヘッドマウントディスプレイをつけて台紙の上を見ると人が動き回っているように見える「3D Live Video」や、ぬいぐるみを抱きしめると子どものパジャマにその感覚が伝わる「Touch Interface」など、視覚や触覚に訴える技術をはじめ、「Biological Networked Media」はキャベツなどの生物を使って感覚を共有したり、ペットをインターネットを通じてゲームをするといったユニークな研究をされています。</p>
+              <p>「バーチャルな世界と言われるネットでも、インタフェイスを通じて感覚や触覚の共有ができることを研究しており、そうしたリアルな感覚が情報の在り方にも影響を与えるのではないかと思っています」</p>
+              <h4>ブラウザーが秘書になる時代はそう遠くない</h4>
+              <p>現状では、情報は検索するなどして自分で取りに行くというプロセスが必要ですが、できれば必要な情報が自動的にプッシュで配信されるようになることが、将来のブラウザーに求められている機能のひとつであるということが、パネリストらの意見から見えてきます。</p>
+              <p>それらを可能にする方法としては、情報を発信する際に使われるタグや HTML のルールを明確に設けることなどがありますが、すでに Microformats や Semantic Web といったウェブ技術も登場しており、「コンピューターが解読できる形での情報提供が浸透すれば、ウェブを秘書代わりに使うこともそう難しくはないだろう」という意見も出されました。</p>
+              <p>ウェブの情報すべてをブラウザーを通じて行なう必要はないが、ブラウザーを使ったほうがコントロールも共有もしやすい。そこでブラウザーがどのような役割を果たすのかを、さらに研究する必要があるだろうというコメントもあり、会場では今回のパネルディスカッションのような、大学や企業のラボで様々な研究をしている人達が意見を交わす場所を持つことが、新しい変化につながるために大切になるということが、あらためて認識されました。</p>
+              <h3>このセッションの動画を見る</h3>
+              <p><a href="http://www.soi.wide.ad.jp/class/20080048/slides/05/" rel="nofollow" class="movie-play">動画を見る</a></p>
+              <ul>
+                <li>動画の公開期間は 3 ヶ月間となります。(2009 年 4 月 28 日まで)</li>
+                <li>動画配信は WIDE University, School of Internet (SOI) 様のご協力をいただいております。</li>
+                <li>動画を見るには RealPlayer Basic (G2 以上) または RealOne Player が必要です。(<a href="http://www.soi.wide.ad.jp/class/video99.html" rel="nofollow">詳細</a>)</li>
+              </ul>
+              <h3>関連リンク</h3>
+              <ul>
+                <li><a href="/events/devcon/2008/">Firefox Developers Conference 2008</a></li>
+                <li><a href="http://www.kmd.keio.ac.jp/jp/" rel="nofollow">慶應義塾大学大学院 メディアデザイン研究科</a></li>
+                <li><a href="http://isw3.naist.jp/" rel="nofollow">奈良先端科学技術大学院大学 情報科学研究科</a></li>
+                <li><a href="https://mozillalabs.com/en-US/projects/ubiquity/">Mozilla Labs - Ubiquity</a></li>
+              </ul>
+            </div><!-- end #main-content -->
+            <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+              <h3>写真</h3>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a2-1.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <img src="/static/images/events/devcon/2008/a2-2.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">会場風景</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a2-3.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">慶應義塾大学大学院の Adrian D. Cheok 氏からはユニークなインタフェイス技術がいくつか紹介されました。「3D Live Video」はヘッドマウントディスプレイ越しに人やモノが動く様子をリアルタイムで見えるようにする技術。</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a2-4.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <img src="/static/images/events/devcon/2008/a2-5.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">ぬいぐるみやパジャマなどで触覚を共有する「Touch Interface」は、モノやインテリアなどにも応用できるとのこと。</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a2-6.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Cheok 氏の研究はキャベツなどの野菜やペットなど、生物とのインタフェイスにまで拡がっています。</figcaption>
+              </figure>
+            </aside>
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

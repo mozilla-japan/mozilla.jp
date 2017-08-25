@@ -1,0 +1,134 @@
+<?php
+
+$page_title         = 'DemoPit | Mozilla Vision 2012 Conference Day';
+$page_description   = 'Confernce Day 会場内に設けるデモコーナー。「オープンな考えを用いた新しい取り組み」をテーマに、Mozilla 関連技術やウェブテクノロジーに限らず、ハードウェアやアート、アカデミックな取り組みなどについて紹介を行うブースが複数出展。';
+$page_image         = '/static/images/events/vision/2012/logo-128.jpg';
+$body_id            = 'events-vision-2012-conference-demopit';
+$body_class         = 'sand news events vision conference demopit';
+$css                = array('events/vision-2012-20160411'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/vision/2012/' => 'Mozilla Vision 2012',
+  '/events/vision/2012/conference/' => 'Conference Day',
+  '/events/vision/2012/conference/demopit/' => 'DemoPit'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav id="localnav" class="top" role="menubar" aria-label="Mozilla Vision 2012" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <h1 role="presentation"><a href="/events/vision/2012/" tabindex="0" role="menuitem">Mozilla Vision 2012</a></h1>
+            <ul role="presentation">
+              <li role="presentation"><a href="/events/vision/2012/conference/" tabindex="0" role="menuitem">カンファレンス</a></li>
+              <li role="presentation"><a href="/events/vision/2012/workshop/" tabindex="0" role="menuitem">ワークショップ</a></li>
+              <li class="external" role="presentation"><a href="https://wiki.mozilla.org/Japan/Events/MozillaVision2012/Conference" tabindex="0" role="menuitem">English</a></li>
+            </ul>
+          </nav>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <section itemscope itemtype="http://schema.org/Event">
+              <header id="main-feature">
+                <div class="hgroup" itemprop="name">
+                  <h1>Conference Day</h1>
+                  <h2 role="presentation">ウェブテクノロジーからアート、教育まで、オープンを考える</h2>
+                </div>
+                <p><time datetime="2012-01-21" itemprop="startDate endDate">2012 年 1 月 21 日 (土)</time> <span itemprop="location" itemscope itemtype="http://schema.org/EventVenue"><span itemprop="name">ベルサール汐留</span></span> (Ustream 中継あり)</p>
+                <nav role="directory">
+                  <ul>
+                    <li><a href="/events/vision/2012/conference/">プログラム</a></li>
+                    <li><a href="/events/vision/2012/conference/speakers/">講演者</a></li>
+                    <li class="current"><a href="/events/vision/2012/conference/demopit/">DemoPit</a></li>
+                    <li><a href="/events/vision/2012/conference/registration/">参加申し込み</a></li>
+                    <li><a href="/events/vision/2012/conference/access/">会場アクセス</a></li>
+                  </ul>
+                </nav>
+              </header><!-- end #main-feature -->
+              <div id="main-content">
+                <section id="sec-demopit" itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                  <h2 itemprop="name">DemoPit</h2>
+                  <p itemprop="description">Confernce Day 会場のラウンジ内に設けるデモコーナー。「オープンな考えを用いた新しい取り組み」をテーマに、Mozilla 関連技術やウェブテクノロジーのデモに限らず、ハードウェアやアート、アカデミックな取り組みなどについて紹介を行うブースが複数出展します。DemoPit は、午後のセッション時間と懇親会中の見学が可能です。</p>
+                  <section>
+                    <h3>出展者一覧</h3>
+                    <div class="row">
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Phroni</strong> (フローニ)</h4>
+                        <p itemprop="description">スマートフォンやタブレットでブラウジング中に検索したいキーワードがあった場合、該当するキーワードをホールド・スワイプで選択し、検索ボックスにコピー＆ペーストし、検索し、リンクを選択するという面倒な動作が必要です。Phroni は、人工知能を使ってウェブページを自動に解析し、キーワードを自動的にリンク化、リンクをタップするだけで様々なサイトに対して検索できるテクノロジーです。現在は Firefox のアドオンで利用可能です。</p>
+                        <p><a href="http://signup.phroni.com/" itemprop="url">signup.phroni.com</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Paintⁿ</strong> (エヌペイント)</h4>
+                        <p itemprop="description">Mozilla のキャラクター、Dino やフォクすけとあなたの名前でオリジナルのステンシルテンプレート (型版) を作りましょう！ 翌日のワークショップデーでそれぞれのステンシルを製作し、会場の大きな壁にみんなでペイントして一枚の絵を描きます。</p>
+                        <p><a href="http://para-site.jp/" itemprop="url">para-site.jp</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>プロジェクションマッピング協会</strong></h4>
+                        <p itemprop="description">ヨーロッパでは盛んに行われるプロジェクションマッピングですが、私たちは、この映像テクニックを若手アーティストに伝授して行きたいと思い、活動を行っています。本来なら，屋外の大型建造物に、夜、オリジナル映像を投影しますが、当協会では、プロジェクションマッピングの可能性を広げるために室内での常設用展示を可能にしました。</p>
+                        <p><a href="http://www.projection-mapping.jp/" itemprop="url">www.projection-mapping.jp</a></p>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>CHORDxxCODE</strong> (コードコード)</h4>
+                        <p itemprop="description">CHORDxxCODE は、東京大学の女性研究者 7 人から構成されるものづくり集団です。開発スタイルとして「おしゃべり」を重視し，そこで得たアイディアを理論化「おさほう」し、実装「おつくり」するオープンな場として“ヒューマンエンジニアリングサロン”という活動を提唱しています。これまで様々な企業や場にお邪魔して「おしゃべり」や「おつくり」を繰り広げてきた CHORDxxCODE のヒューマンエンジニアリングサロンを Mozilla Vision 2012 で特別公開いたします。</p>
+                        <p><a href="http://chordxxcode.com/about-us/" itemprop="url">chordxxcode.com</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Parapara Animation</strong> (パラパラアニメーション)</h4>
+                        <p itemprop="description">Parapara Amimation は、スマートフォンやタブレット端末���手書きした画像を Canvas や SVG などのウェブ標準技術を使ってブラウザー上にアニメーションとして描画し、みんなでひとつの作品を作るプロジェクトです。</p>
+                        <p><a href="http://minism.jp/parapara/" itemprop="url">minism.jp/parapara</a><br><a href="http://parapara.mozlabs.jp/" itemprop="url">parapara.mozlabs.jp</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Domova</strong> (ドムーバ)</h4>
+                        <p itemprop="description">ウェブブラウザーの「ホームボタン」、「ブックマーク」、「戻るボタン」などのアイコンや背景の画像を自分で手書きした絵やスタンプでデコっちゃおう！ ぬり絵感覚で、自分だけのオリジナルブラウザーづくりが楽しめるワークショップです。</p>
+                        <p><a href="http://domova.mozlabs.jp/" itemprop="url">domova.mozlabs.jp</a></p>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Mobile Learning Course Designer Street</strong></h4>
+                        <p itemprop="description">このプロジェクトは、Moblile Learning 教材の開発者・利用者を結びつけるコミュニティを構築することにより、教材開発のための情報共有や教材活用の促進を支援するためのプロジェクトです。教材に対してユーザーによりタグ付けされた教材のメタデータを用いて、ユーザーの学習進度や興味関心・日常生活におけるコンテクスト等に応じた教材の検索・推薦を実現します。</p>
+                        <p><a href="http://mldst.phpfogapp.com/" itemprop="url">mldst.phpfogapp.com</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Hackasaurus</strong> (ハッカザウルス)</h4>
+                        <p itemprop="description">「X-Ray ゴーグル」というツールを使って、さまざまなウェブページをまるで魔法のように書き替えたり、イメージを変えたりしながら「ウェブサイトのしくみ」を学ぶことができます。</p>
+                        <p><a href="http://hackasaurus.org/" itemprop="url">hackasaurus.org</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Popcorn</strong> (ポップコーン)</h4>
+                        <p itemprop="description">Popcorn では、クリックなどの簡単な操作で、動画とウェブを連携させることが可能になります。たとえば、動画でニュースを見ているときに、その出来事がどこで起きたのかを知りたければ動画のクリックで地図を表示するといったことができるツールです。</p>
+                        <p><a href="http://mozillapopcorn.org/" itemprop="url">mozillapopcorn.org</a></p>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Scratch</strong> (スクラッチ)</h4>
+                        <p itemprop="description">これからは「読み・書き・プログラミング」。MIT メディアラボが開発した「スクラッチ」でゲームを作りましょう！ はじめての人でも大丈夫。ワールドビジネスサテライトでも紹介されました！</p>
+                        <p><a href="http://scratch-ja.org/" itemprop="url">scratch-ja.org</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>RunJumpBuild</strong> (ランジャンプビルド)</h4>
+                        <p itemprop="description">ウェブブラウザーで、誰でも簡単に横スクロールアクションのゲームを作ることができます。好みの画像や音を使い、自由な発想で楽しいオリジナルゲーム作りにチャレンジしてみましょう！</p>
+                        <p><a href="http://runjumpbuild.com/" itemprop="url">runjumpbuild.com</a></p>
+                      </section>
+                      <section itemprop="subEvents" itemscope itemtype="http://schema.org/Event">
+                        <h4 itemprop="name"><strong>Lxe²</strong> (エルバイイーツー)</h4>
+                        <p itemprop="description">Lxe² は、クラウドエンジニアとしてのスキルを診断する IT 検定です。当日はお客様が実際に PC を操作して、IT 検定を体験していただきます。</p>
+                        <p><a href="http://www.lxe2tm.com/" itemprop="url">www.lxe2tm.com</a></p>
+                      </section>
+                    </div>
+                  </section>
+                  <section>
+                    <h3><strong>O'Reilly Japan 書籍販売</strong></h3>
+                    <p>真の Firefox ハッカーのみが知る、超強力アドオン解説および拡張機能の実践的開発テクニック、そして HTML5、CSS3、SVG、次世代 JavaScript やデバイスセンサー系 API などウェブテクノロジーをも広くカバーした最新の Hack 集『Firefox Hacks Rebooted ― Mozilla テクノロジ徹底活用テクニック』をはじめとするウェブ技術に関する書籍を取り揃え、Mozilla Vision 2012 会場特別価格にてご提供いたします。みなさまのお越しをお待ちしております。</p>
+                    <p><a href="http://www.oreilly.co.jp/">www.oreilly.co.jp</a></p>
+                  </section> 
+                </section><!-- end #sec-demopit -->
+<?php @include_once $_SERVER['DOCUMENT_ROOT'] . '/events/vision/2012/includes/supporters.inc.php'; ?>
+              </div><!-- end #main-content -->
+            </section>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

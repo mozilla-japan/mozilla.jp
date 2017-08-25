@@ -1,0 +1,134 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Thunderbird 3.1.7 リリースノート';
+$body_id            = 'thunderbird-relnotes';
+$body_class         = 'sky thunderbird relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.thunderbird.net/ja/' => 'メールソフト Thunderbird',
+  '/thunderbird/releases/' => 'リリースノート',
+  '/thunderbird/3.1.7/releasenotes/' => 'Thunderbird 3.1.7'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name">Thunderbird リリースノート</h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 3.1.7</span></span> &mdash; <time datetime="2010-12-09" itemprop="datePublished">2010/12/09</time> リリース</h2>
+                </div>
+                <p>Thunderbird の最新版に追加された新機能と改良点、既知の問題、よくある質問をご確認ください。いつものように、こちらの <a href="https://support.mozilla.org/ja/questions/new/thunderbirdtopics/new">フィードバックフォーム</a> を通じて、もしくは <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Bugzilla</a> にバグを登録することで、ご意見をお寄せください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="whatsnew">
+                  <h2>Thunderbird&nbsp;3.1.7 の新機能・変更点</h2>
+                  <p>Thunderbird&nbsp;3.1.7 では、旧バージョンの Thunderbird&nbsp;3.1 に見つかった以下の問題が修正されています。</p>
+                  <ul class="spaced">
+                    <li>パフォーマンスと安定性、安全性を改善するいくつかの修正が行われました。概要は <a href="http://www.mozilla-japan.org/security/known-vulnerabilities/thunderbird31.html#thunderbird3.1.7">セキュリティアドバイザリ</a> をご覧ください。</li>
+                    <li>ローカルに保存されている巨大なフォルダーやファイルの処理を改善するいくつかの修正が行われました。</li>
+                    <li>IMAP メールボックスのローカルコピーが破損する状況を防ぐいくつかの修正が行われました。</li>
+                  </ul>
+                  <p>このバージョンで修正された <a href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced;field0-0-0=cf_status_thunderbird31;type0-0-0=equals;value0-0-0=.7-fixed;field0-0-1=cf_status_192;type0-0-1=equals;value0-0-1=.13-fixed">すべての変更一覧</a> もご参照ください。</p>
+                  <p>前バージョンでの変更点については <a href="/thunderbird/3.1.7/releasenotes/">Thunderbird&nbsp;3.1.7 リリースノート</a> をご覧ください。Thunderbird&nbsp;3.1 の新機能と改良については <a href="/thunderbird/3.1/releasenotes/">Thunderbird&nbsp;3.1 リリースノート</a> をご覧ください。</p>
+                </section>
+                <section id="requirements">
+                  <h2>必要システム構成</h2>
+                  <p>インストールの前に、お使いのコンピューターが <a href="/thunderbird/3.1/system-requirements/">システム要件</a> を満たしているかどうかご確認ください。</p>
+                  <p>なお、Thunderbird&nbsp;3.1 は、2000 以前のバージョンの Windows (Windows 95、98、ME、NT) および 10.4 Tiger 以前のバージョンの Mac&nbsp;OS&nbsp;X には対応していません。Linux 版の必要システム構成も変更となっています。非対応 Windows プラットフォームでは、Thunderbird 実行ファイルの互換モードが無効になっていることをご確認ください。</p>
+                </section>
+                <section id="download">
+                  <h2>ダウンロード</h2>
+                  <p>Mozilla では、Thunderbird&nbsp;3.1 を Windows、Linux、Mac&nbsp;OS&nbsp;X 向けに様々な言語で提供しています。<a href="https://www.thunderbird.net/ja/all/">最新の Thunderbird&nbsp;3.1 はこちらからダウンロードできます</a>。</p>
+                  <p>Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                </section>
+                <section id="install">
+                  <h2>インストール</h2>
+                  <p>Thunderbird&nbsp;3.1 をインストールすると、Linux では、すでにインストールされている Thunderbird が <strong>上書きされます</strong> ので、ご注意ください。Windows および Mac&nbsp;OS&nbsp;X では異なる場所にインストールされますが、インストール中に表示されるメッセージを確認するよう推奨します。すべてのシステムで、メッセージやアドレス帳が失われることはありませんが、拡張機能やその他のアドオンの一部は更新版が提供されるまで動かない可能性があります。</p>
+                  <p>すでに Thunderbird を使用しており Thunderbird&nbsp;3.1 をテストする場合は、Thunderbird&nbsp;3.1 を別のフォルダーにインストールし (Windows ではカスタムインストールを使用して行います)、プロファイルをバックアップすることを強く推奨します。</p>
+                </section>
+                <section id="uninstall">
+                  <h2>アンインストール</h2>
+                  <p>Windows では <tt>スタートメニュー</tt> の <tt>コントロール パネル</tt> から、Mac では <tt>Thunderbird</tt> アプリケーションを削除することで、Linux では <tt>thunderbird</tt> フォルダーを削除することで、それぞれ削除できます。</p>
+                  <p>Thunderbird&nbsp;3.1 を削除しても、メッセージ、拡張機能やその他のアドオンは削除されません。これらデータは「プロファイルフォルダー」に保存されています。このフォルダーの場所は、お使いの OS によって異なります。</p>
+                  <table style="font-size: small;" border="1" cellspacing="0">
+                    <tr><td>Windows Vista, 7</td><td>Users&yen;&lt;ユーザー名&gt;&yen;AppData&yen;Roaming&yen;Thunderbird</td></tr>
+                    <tr><td>Windows 2000, XP, Server 2003</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Thunderbird</td></tr>
+                    <tr><td>Mac&nbsp;OS&nbsp;X</td><td>~/Library/Thunderbird</td></tr>
+                    <tr><td>Linux および Unix システム</td><td>~/.thunderbird</td></tr>
+                  </table>
+                  <p>Thunderbird&nbsp;3.1 を削除した後に再度 Thunderbird をインストールした場合、そのバージョンにかかわらず、引き続きこのプロファイルフォルダーにあるデータが使用されます。</p>
+                </section>
+                <section id="extensions">
+                  <h2>拡張機能とテーマ</h2>
+                  <p>Thunderbird の過去のバージョンにインストールされた拡張機能には互換性がなく、Thunderbird&nbsp;3.1 で利用するために更新が必要となるものもあります。何か問題が見つかった場合はその拡張機能の管理者にご連絡ください。</p>
+                  <p>Thunderbird&nbsp;3.1 をインストールすると、すべての拡張機能とテーマは、Thunderbird&nbsp;3.1 が Thunderbird&nbsp;3.1 と互換性があること、あるいは、互換性のある新しいバージョンが利用できることを確認できるまで利用できなくなります。</p>
+                </section>
+                <section id="issues">
+                  <h2>既知の問題</h2>
+                  <p>Thunderbird&nbsp;3.1 で確認されている問題の一部を掲載します。新しいバグを報告する前に必ずお読みください。</p>
+                  <dl>
+                    <dt id="allsystems">すべてのシステム</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>Thunderbird&nbsp;3 以降、パスワードは新しい場所に保存されます。以前のバージョンに戻ったり、Thunderbird&nbsp;3.1 と以前のバージョンを交互に使用した場合、パスワードデータは別々のため更新されません。</li>
+                        <li>フォルダーペインの拡張カラム (メッセージ数などの表示) は Thunderbird&nbsp;3 Beta&nbsp;1 で削除されました。この機能を復活させるアドオン <a href="https://addons.mozilla.org/ja/thunderbird/addon/extra-folder-columns//">Extra Folder Columns</a> が公開されており、「設定変更ガイド」でインストールできます。</li>
+                        <li>コンパクトヘッダービューは Thunderbird&nbsp;3 Beta&nbsp;3 で削除されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480623">Bug 480623</a>)。詳しくは <a href="http://weblogs.mozillazine.org/dmose/archives/2009/07/thunderbird_30b3_shipped.html">このブログ記事</a> をご覧ください。同様の機能を提供するアドオン <a href="https://addons.mozilla.org/ja/thunderbird/addon/compactheader//">Compact Header</a> が公開されており、「設定変更ガイド」でインストールできます。</li>
+                        <li>Thunderbird&nbsp;3.1 は、HTTPS プロトコルを使用した安全なサーバーから提供されているか、デジタル署名されたアドオンのみを受け入れます。どちらの条件も満たしていない場合、インストールに失敗します。</li>
+                        <li>SSL もしくは TLS を使用し、サーバーから提供された証明書が、自己署名、期限切れ、あるいはサーバーのドメインと一致しない場合、Thunderbird がその証明書を例外として受け入れるかどうかを尋ねるダイアログが表示されます。その証明書の間違いを理解している場合のみ受け入れるようにしてください。</li>
+                        <li>「横長表示」レイアウトで RSS フィードのコンテンツを表示できない場合、Lightning カレンダーアドオンをインストールしている場合は無効化するか、「クラシック表示」に切り換えてから Thunderbird を再起動する必要があるかもしれません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=531397">Bug 531397</a>)</li>
+                        <li>特定の状況で、「ファイル」メニューから利用できる「テンプレートとして保存」が機能しない場合があります。メールの編集画面から「テンプレートとして保存」を選択したり、メッセージを「テンプレート」フォルダーにドラッグ＆ドロップすることで、この機能を利用することは可能です。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=532050">Bug 532050</a>)</li>
+                        <li>「スマートフォルダー」は「統合フォルダー」に改名されました。</li>
+                        <li>プラグインが、パフォーマンスの問題によって無効化され、アドオンマネージャーに表示されなくなりました。セキュリティ問題を引き起こす可能性があることから、Mozilla ではプラグインの有効化を推奨しません。</li>
+                      </ul>
+                    </dd>
+                    <dt id="windows">Microsoft Windows</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>Thunderbird&nbsp;3 で、「すべてを既読にする」のキーボードショートカットが Ctrl+Shift+C から Shift+C へ変更されています。</li>
+                        <li>Kaspersky Internet Suite 2010 に付属している Anti-Spam 拡張機能を使用している場合、Thunderbird&nbsp;3.1 で無効化されます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=533692">Bug 533692</a>)</li>
+                        <li>Kaspersky Internet Suite 2011 に付属している Anti-Spam 拡張機能を使用している場合、Kaspersky ソフトウェア内部の問題により、今回のバージョンで正常に利用できなくなる可能性があります。現在 Kaspersky 社と協力して問題の解決に当たっています。</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </section>
+                <section id="troubleshooting">
+                  <h2>トラブルシューティング</h2>
+                  <ul class="spaced">
+                    <li>
+                      <p>拡張機能によっては、安定性やパフォーマンスが低下するなどの問題を Thunderbird に引き起こすことがあります。Thunderbird の一部機能が使えない、Thunderbird が起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、Thunderbird をセーフモードで再起動してください。</p>
+                      <p>Windows では、スタートメニュー内に作成された「Mozilla Thunderbird (セーフモード)」というショートカットを使うか、<code>thunderbird.exe -safe-mode</code> で起動してください。Linux では <code>./thunderbird -safe-mode</code> で起動してください。Mac&nbsp;OS&nbsp;X では、ターミナルを開いて以下のコマンドを実行してください。</p>
+                      <p><code>cd /applications/Thunderbird.app/Contents/MacOS/<br>./thunderbird-bin -safe-mode</code></p>
+                      <p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p>
+                    </li>
+                    <li>
+                      <p>メール、フィード、ニュースグループメッセージなどに関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、コマンドライン引数 -P をつけて Thunderbird を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (メッセージ、フィードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。その際、必要であれば必ず個人情報を削除しておいてください。</p>
+                    </li>
+                  </ul>
+                </section>
+                <section id="faq">
+                  <h2>よくある質問</h2>
+                  <ol class="faq">
+                    <li>プロジェクトに協力したいのですが、どのようなことができますか？<p>Thunderbird をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。こちらの <a href="https://support.mozilla.org/ja/questions/new/thunderbirdtopics/new">フィードバックフォーム</a> からフィードバックをお送りください。また、<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する場合は、事前にこのリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p></li>
+                    <li>Thunderbird&nbsp;3.1 の機能や問題はどこで議論できますか？<p>新機能についての議論に参加したい場合や、トラブルシューティングのアドバイスが必要なときは、<a href="http://getsatisfaction.com/mozilla_messaging">Mozilla Messaging at Get Satisfaction</a> を訪れてください。また、<a href="news://news.mozilla.org/mozilla.support.thunderbird">Mozilla のニュースサーバー</a> でホストされている「mozilla.support.thunderbird」ニュースグループに質問を投稿することもできます。ウェブからアクセスする場合は <a href="http://groups.google.com/group/mozilla.support.thunderbird">Google グループ</a> をご覧ください。また <a href="https://lists.mozilla.org/listinfo/support-thunderbird">メーリングリスト</a> としても利用可能です。投稿する前に <a href="https://www.mozilla.org/ja/about/forums/etiquette/">Mozilla フォーラムエチケットのページ</a> をお読みください。</p></li>
+                    <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/thunderbird/extensions/">拡張機能</a> や <a href="https://addons.mozilla.org/ja/thunderbird/themes/">テーマ</a> は <a href="https://addons.mozilla.org/ja/thunderbird/">Thunderbird Add-ons</a> から入手可能です。</p></li>
+                    <li>誰が Thunderbird を開発しているのですか？<p>多くの人が関わっています。主体となって開発しているのは Mozilla Messaging ですが、Thunderbird は世界中の多数の人々の協力の成果です。</p></li>
+                    <li>Thunderbird&nbsp;3.1.7 のソースコードはどこにありますか？<p>Thunderbird&nbsp;3.1.7 のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/3.1.7/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial">Mercurial</a> を通じて入手可能です。ソースコードの構成については <a href="https://developer.mozilla.org/ja/comm-central">comm-central の情報ページ</a> をご覧ください。詳しくは <a href="https://developer.mozilla.org/ja/Simple_Thunderbird_build">ビルド方法</a> に従ってください。</p></li>
+                    <li>Thunderbird は企業でも導入できますか？<p>はい。<a href="/business/">法人向け情報</a> に導入事例やよくある質問を掲載しています。Thunderbird の企業導入に関する技術的な情報は <a href="https://developer.mozilla.org/ja/Thunderbird/Deploying_Thunderbird_in_the_Enterprise">MDN</a> をご覧ください。</p></li>
+                  </ol>
+                </section>
+                <section id="contributedbuilds">
+                  <h2>提供されたビルド</h2>
+                  <p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。利用可能な提供ビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/3.1.7/contrib/">FTP サイト</a> から入手可能です。</p>
+                </section>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

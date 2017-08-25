@@ -1,0 +1,174 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 3.5.6 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/3.5.6/releasenotes/' => 'Firefox 3.5.6'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 3.5.6</span></span> &mdash; <time datetime="2009-12-15" itemprop="datePublished">2009/12/15</time> リリース</h2>
+                </div>
+                <p itemprop="description">ここでは、Firefox の最新版に関する新機能、既知の問題、よくある質問を掲載しています。いつものように、<a href="https://input.mozilla.org/ja/feedback/firefox">こちらのフィードバックフォーム</a> を利用するか、<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告することで、ご意見をお寄せください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+    <section id="whatsnew2" class="expander expander-odd">
+      <h3 class="expander-header">Firefox&nbsp;3.5 での新機能・変更点</h3>
+      <div class="expander-content">
+        <p>Firefox&nbsp;3.5.6 では、以下の問題が修正されています。</p>
+        <ul class="spaced">
+          <li><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox35.html#firefox3.5.6">いくつかのセキュリティ問題</a> が修正されました。</li>
+          <li>いくつかの安定性に関する問題が修正されました。</li>
+        </ul>
+        <p>このバージョンで修正されたすべてのバグは <a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20status1.9.1%3A.6-fixed">Bugzilla</a> で確認できます。前バージョンでの変更点については <a href="/firefox/3.5.5/releasenotes/">Firefox 3.5.5 リリースノート</a> をご覧ください。</p>
+      </div>
+    </section>
+
+    <section id="requirements" class="expander">
+      <h3 class="expander-header">システム要件</h3>
+      <div class="expander-content">
+        <p>インストールの前に、お使いのコンピューターが <a href="/firefox/3.5/system-requirements/">システム要件</a> を満たしているかどうかご確認ください。</p>
+      </div>
+    </section>
+
+    <section id="download" class="expander expander-odd">
+      <h3 class="expander-header">ダウンロード</h3>
+      <div class="expander-content">
+        <p>Mozilla では、Firefox&nbsp;3.5 を Windows、Linux、そして Mac&nbsp;OS&nbsp;X 用に、様々な言語で提供しています。<a href="https://www.mozilla.org/ja/firefox/all/">Firefox&nbsp;3.5 はこちらからダウンロードできます</a>。Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+      </div>
+    </section>
+
+    <section id="install" class="expander">
+      <h3 class="expander-header">インストール</h3>
+      <div class="expander-content">
+        <p>Firefox&nbsp;3.5 をインストールすると、Mac&nbsp;OS&nbsp;X、Linux、Windows では、すでにインストールされている Firefox が <strong>上書きされます</strong> ので、ご注意ください。すべてのシステムで、ブックマークや閲覧履歴には一切影響ありませんが、拡張機能やその他のアドオンの一部は更新版が提供されるまで動かない可能性があります。</p>
+      </div>
+    </section>
+
+    <section id="uninstall" class="expander expander-odd">
+      <h3 class="expander-header">アンインストール</h3>
+      <div class="expander-content">
+        <p>Firefox&nbsp;3.5 は、Windows では <tt>スタートメニュー</tt> の <tt>コントロール パネル</tt> から、Mac では <tt>Firefox</tt> アプリケーションを削除することで、Linux では <tt>firefox</tt> フォルダーを削除することで、それぞれ削除できます。</p>
+        <p>Firefox&nbsp;3.5 を削除しても、ブックマーク、閲覧履歴、拡張機能やその他のアドオンは削除されません。これらデータは、お使いの「プロファイルフォルダー」に保存されています。「プロファイルフォルダー」の場所は、お使いの OS によって異なります。</p>
+        <table style="font-size: small;" border="1" cellspacing="0">
+          <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows Vista</td><td>Users&yen;&lt;ユーザー名&gt;&yen;AppData&yen;Roaming&yen;Mozilla&yen;Firefox</td></tr>
+          <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows 2000、XP、Server 2003</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+          <tr><td><img src="/static/images/general/platforms/icon-mac.png" alt=""> Mac&nbsp;OS&nbsp;X</td><td>~/Library/application Support/Firefox</td></tr>
+          <tr><td><img src="/static/images/general/platforms/icon-linux.png" alt=""> Linux および Unix システム</td><td>~/.mozilla/firefox</td></tr>
+        </table>
+        <p>Firefox&nbsp;3.5 を削除した後に Firefox をインストールした場合、そのバージョンにかかわらず、引き続きこのプロファイルフォルダーにあるデータが使用されます。</p>
+      </div>
+    </section>
+
+    <section id="extensions" class="expander">
+      <h3 class="expander-header">拡張機能とテーマ</h3>
+      <div class="expander-content">
+        <p>Firefox の過去のバージョンにインストールされた拡張機能には互換性がなく、Firefox&nbsp;3.5 で利用するために更新が必要となるものもあります。何か問題が見つかった場合はその拡張機能の管理者にご連絡ください。</p>
+        <p>Firefox&nbsp;3.5 をインストールすると、すべての拡張機能とテーマは、Firefox&nbsp;3.5 が Firefox&nbsp;3.5 と互換性があること、あるいは、互換性のある新しいバージョンが利用できることを確認できるまで利用できなくなります。</p>
+      </div>
+    </section>
+
+    <section id="issues" class="expander expander-odd">
+      <h3 class="expander-header">既知の問題</h3>
+      <div class="expander-content">
+        <p>Firefox&nbsp;3.5 で確認されている既知の問題を掲載します。これらは今後のバージョンで修正される予定です。</p>
+        <dl>
+          <dt>すべてのシステム</dt>
+          <dd>
+            <ul class="spaced">
+              <li>バックアップからブックマークを復元する際に時間がかかり、その間ブラウザーが応答なし状態になってしまう場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=493731">Bug 493731</a>)</li>
+              <li>Firefox&nbsp;3.5 は ICC&nbsp;v2 で定義されているカラープロファイルのみ対応しており、ICC&nbsp;v4 への対応は今後のバージョンで行われます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=463221">Bug 463221</a>)</li>
+              <li>新しいダウンロードフォントを利用したウェブサイトで <code>:hover</code> 疑似クラスを利用して文字色を変更したい場合、20 ピクセル以下のフォントについては <code>text-rendering: optimizeLegibility</code> も設定する必要があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=495455">Bug 495455</a>)</li>
+              <li>Flash を利用した一部のサイトで、Cookie ダイアログに問題が生じる場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=495035">Bug 495035</a>)</li>
+              <li>ウェブページから PKCS11 暗号トークンを自動的にインストールすることができなくなりました。必要な場合は、手作業でインストールを行うか、代わりにインストールを行うアドオンを Firefox に追加してください。(<a href="https://developer.mozilla.org/ja/PKCS11_Module_Installation">インストール方法の解説</a>)</li>
+            </ul>
+          </dd>
+          <dt id="windows">Microsoft Windows</dt>
+          <dd>
+            <ul class="spaced">
+              <li>印刷ダイアログで Fax を選択すると、Windows Fax ダイアログが一瞬表示されて消えてしまいます。他のアプリケーションからの Fax 送信には問題ありません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=440486">Bug 440486</a>)</li>
+            </ul>
+          </dd>
+          <dt id="osx">Mac&nbsp;OS&nbsp;X</dt>
+          <dd>
+            <ul class="spaced">
+              <li>用紙サイズを繰り返し変更してからプリントプレビューを表示すると、Firefox がクラッシュする場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=495567">Bug 495567</a>)</li>
+            </ul>
+          </dd>
+          <dt>Linux/Unix</dt>
+          <dd>
+            <ul class="spaced">
+              <li>一部のサイトでズームアウトすると、灰色や黒の線が表示される場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=477552">Bug 477552</a>)</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="expander">
+      <h3 class="expander-header">トラブルシューティング</h3>
+      <div class="expander-content">
+        <ul class="spaced">
+          <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された「Safe Mode」というショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac&nbsp;OS&nbsp;X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+          <li><p>ユーザープロファイルにインストールした拡張機能 (ウェブページからインストールしたものなど) をアンインストールし、コマンドラインオプション -install-global-extension を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+          <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、-P コマンドライン引数をつけて Firefox を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (ブックマーク、保存されているパスワードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータのファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="expander expander-odd">
+      <h3 class="expander-header">よくある質問</h3>
+      <div class="expander-content">
+        <ol class="faq">
+          <li>プロジェクトに協力したいのですが、どのようなことができますか？<p>Firefox をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。または、こちらの <a href="https://input.mozilla.org/ja/feedback/firefox">フィードバックフォーム</a> から皆さんの声をお寄せください。<span class="comment">【注: 申し訳ありませんが英語でお願いします】</span></p></li>
+          <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/firefox/">Firefox アドオン</a> のページをご覧ください。</p></li>
+          <li>誰が Firefox&nbsp;3.5 を開発しているのですか？<p>非常に多くの人が関わっています。Firefox&nbsp;3.5 に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] を開いて [クレジット] をご覧ください。</p></li>
+          <li>Firefox&nbsp;3.5 のソースコードはどこにありますか？<p>Firefox&nbsp;3.5 のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.5.6/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(Mercurial)">Mercurial</a> を通じて入手可能です。Firefox 固有のソースは、mozilla-central の browser、toolkit、chrome ディレクトリー以下にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</p></li>
+          <li>メールクライアントはどこにあるのですか？<p>Firefox&nbsp;3.5 は、お使いのシステムでどのアプリケーシ���ンがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアントとして <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> をおすすめします。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contributedbuilds" class="expander">
+      <h3 class="expander-header">提供されたビルド</h3>
+      <div class="expander-content">
+        <p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。利用可能な提供ビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.5.6/contrib/">FTP サイト</a> から入手可能です。</p>
+      </div>
+    </section>
+
+    <section id="links" class="expander expander-odd">
+      <h3 class="expander-header">関連資料とリンク</h3>
+      <div class="expander-content">
+        <p>以下のリソースには、Firefox&nbsp;3.5 に関して参考になる情報が載っています。</p>
+        <ul class="spaced">
+          <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox サポートページ</a></li>
+          <li><a href="http://kb.mozillazine.org/">MozillaZine ナレッジベース (英語)</a></li>
+          <li><a href="https://developer.mozilla.org/ja/Firefox_3.5_for_developers">開発者情報</a></li>
+          <li><a href="http://code.google.com/apis/safebrowsing/firefox3_privacy.html" rel="nofollow">セーフブラウジングサービスのプライバシーポリシー</a> (フィッシング詐欺・マルウェア警告機能)</li>
+        </ul>
+      </div>
+    </section>
+  <div id="release-notes-footer"></div>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

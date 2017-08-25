@@ -1,0 +1,223 @@
+<?php
+
+$page_title         = 'Firefox と Thunderbird の法人向けサポート | 法人向け情報 | Mozilla Japan';
+$page_description   = '企業および行政、教育機関などの皆様向けに、Mozilla Japan のサポートパートナーより、導入支援をはじめとする各種サービスを有償にて提供しています。対象製品は、ブラウザーの Firefox およびメールソフトの Thunderbird です。';
+$body_id            = 'support';
+$body_class         = 'users business support';
+$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/support/' => 'サポート',
+);
+
+// ヘッダーメニューの構成
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav role="directory" class="outer">
+            <ul class="inner">
+              <li><a href="#services">サービスメニュー</a></li>
+              <li><a href="#partners">サポートパートナー</a></li>
+            </ul>
+          </nav>
+          <main>
+            <div id="masthead" class="outer">
+              <div class="inner">
+                <header>
+                  <h1><span>法人向けサポート</span><span>サービスのご案内</span></h1>
+                  <p>法人利用の現場でも Firefox を安心してお使いいただけるよう、Mozilla Japan およびサポートパートナー各社が提供する「法人向けサポートサービス」をご利用ください。</p>
+                </header>
+              </div>
+            </div>
+            <div id="services" class="outer">
+              <div class="inner">
+                <section>
+                  <header>
+                    <h2>法人向けサポートサービス</h2>
+                  </header>
+                  <div class="row">
+                    <div class="col">
+                      <p>Mozilla Japan では、企業および行政、教育機関などの皆様向けに、Firefox の利用をお勧めしています。一括導入や集中管理、カスタマイズに際して有償でのサポートサービスが必要な場合、Mozilla Japan による法人向けサポートサービスもしくは Mozilla Japan の <a href="#partners">サポートパートナー</a> による各種サービスをご利用いただけます。</p>
+                    </div>
+                    <div class="col">
+                      <p>Mozilla Japan による法人向けサポートサービスについてのお申し込み、お問い合わせについては <a href="mailto:fx-support@mozilla-japan.org">Mozilla Firefox 法人向けサポートサービス担当</a> にお問い合わせください。</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <section id="services-support">
+                        <h3>サポート内容</h3>
+                        <p>Mozilla Japan による Firefox 法人向けサポートサービスでは、Firefox に関する次のお問い合わせに電子メールにて対応いたします。</p>
+                        <ul>
+                          <li>使用方法に関するお問い合わせ対応</li>
+                          <li>機能に関するお問い合わせ対応</li>
+                          <li>不具合に関するお問い合わせ対応</li>
+                          <li>動作に係るソースコードレベルの調査</li>
+                          <li>不具合解決および機能追加のためのアドオン開発</li>
+                        </ul>
+                        <p>サポート内容、サービスメニューについては <a href="/business/static/pdf/Firefox-Enterprise-Support.pdf">サポートサービス紹介 (PDF)</a> をご覧ください。ご不明な点などあれば <a href="mailto:fx-support@mozilla-japan.org">Mozilla Firefox 法人向けサポートサービス担当</a> までお問い合わせください。</p>
+                      </section>
+                    </div>
+                    <div class="col">
+                      <section id="services-customize">
+                        <h3>カスタマイズ</h3>
+                        <p>Firefox の法人利用の現場でよく見られる <a href="/business/faq/tech/">一般的なカスタマイズ</a> は、集中管理の設定やすでに公開されているアドオンの利用で実現可能です。個別のニーズにマッチした専用のカスタマイズや集中管理をご希望の場合は、有償の法人向けサポートサービスにて、ご要望に応じた様々なカスタマイズに対応いたします。</p>
+                        <ul>
+                          <li>バージョンアップの集中管理</li>
+                          <li>指定のアドオン以外をインストール禁止</li>
+                          <li>パスワードやフォーム入力を記憶させない</li>
+                          <li>位置情報やカメラへのアクセスを禁止</li>
+                          <li>バックグラウンド通信の禁止</li>
+                          <li>複数バージョンの Firefox をサイト別に切り替えて利用</li>
+                        </ul>
+                        <p>その他、柔軟にカスタマイズが可能です。</p>
+                      </section>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div id="partners">
+              <section class="tabbox">
+                <header class="outer outer-2">
+                  <div class="inner">
+                    <h2>サポートパートナー</h2>
+                    <p>以下のパートナー各社が法人向け有償サポートを提供しています。サポート内容、価格面などの詳細につきましては、各パートナーへ直接お問い合わせください。どのパートナーを選んだらいいか迷われるときは、<a href="mailto:enterprise@mozilla-japan.org">Mozilla Japan</a> にご相談ください。</p>
+                    <ul role="tablist">
+                      <li><a role="tab" id="tab-partner-clear-code" href="#partner-clear-code"><img src="/business/static/images/business/clearcode.logo.png" alt="株式会社クリアコード"></a></li>
+                      <li><a role="tab" id="tab-partner-cyaan" href="#partner-cyaan"><img src="/business/static/images/business/cyaan.logo.png" alt="シアン合同会社"></a></li>
+                      <li><a role="tab" id="tab-partner-miraclelinux" href="#partner-miraclelinux"><img src="/business/static/images/business/miraclelinux.logo.png" alt="ミラクル・リナックス株式会社"></a></li>
+                      <li><a role="tab" id="tab-partner-digitalstacks" href="#partner-digitalstacks"><img src="/business/static/images/business/digitalstacks.logo.png" alt="株式会社 Digital Stacks"></a></li>
+                    </ul>
+                  </div>
+                </header>
+                <section role="tabpanel" id="partner-clear-code" class="outer outer-1">
+                  <div class="inner">
+                    <header>
+                      <h3>株式会社クリアコード</h3>
+                      <p><a href="http://www.clear-code.com/services/mozilla/menu.html">www.clear-code.com</a></p>
+                    </header>
+                    <div class="row">
+                      <div class="col">
+                        <section>
+                          <h4>業務内容</h4>
+                          <p>株式会社クリアコードはフリーソフトウェア開発者が中心となって設立した会社で、フリーソフトウェアの普及と発展に貢献することを目標としています。フリーソフトウェアの開発を柱に、フリーソフトウェアのカスタマイズや品質改善、障害解析、フリーソフトウェアを活用したシステム構築を事業として展開中です。</p>
+                        </section>
+                        <section>
+                          <h4>サポートパートナーになったきっかけ</h4>
+                          <p>クリアコードには Firefox のアドオン開発者や Mozilla のテクノロジーを活用したブラウザーの開発者がいたことから、Mozilla Japan とは会社設立当初から技術的な面で協力関係にあり、それがきっかけでサポートパートナーになりました。オープンソース業界の情報交換や開発者の啓蒙、教育などでも協力していて、Mozilla 製品の開発者向けセミナーで弊社スタッフが講師を行ったこともあります。</p>
+                        </section>
+                      </div>
+                      <div class="col">
+                        <section>
+                          <h4>具体的なサポート体制</h4>
+                          <p>サポートパートナーとして以下のサービスを展開しています。</p>
+                          <ol>
+                            <li>導入支援およびサポート: 企業・官公庁・学校向けに Thunderbird、Firefox の導入支援およびサポートを行います。Thunderbird の導入においては、組織にあわせた Thunderbird のカスタマイズから Thunderbird と連携した迷惑メール対策システムの導入、Active Directory との連携など組織のメールシステム全般について支援します。</li>
+                            <li>アドオン、プラグイン開発: Firefox 用の動画再生プラグインや、ツールバー、アドオンを開発します。</li>
+                            <li>組み込み機器向けソフトウェア開発: Mozilla テクノロジーを活用した各種組込み機器向けブラウザーの開発などを行います。</li>
+                          </ol>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section role="tabpanel" id="partner-cyaan" class="outer outer-1">
+                  <div class="inner">
+                    <header>
+                      <h3>シアン合同会社</h3>
+                      <p><a href="http://cyaan.co.jp/?page_id=35">www.cyaan.co.jp</a></p>
+                    </header>
+                    <div class="row">
+                      <div class="col">
+                        <section>
+                          <h4>業務内容</h4>
+                          <p>IBM Lotus Domino/Notes、Microsoft Office SharePoint Server や他 OSS のソフトウェアを使用したシステム開発や当該システムの運用サポートを中心にサービスを展開しています。新しい技術をお客様に価値ある形でご提供することを重視しており、最近では Firefox、Chrome などのモダンブラウザーを前提した、より高速に、より美しく動作するウェブシステム開発や、Lotus Domino、SharePoint の資産を iPhone、iPad から参照する為のウェブシステム開発など、技術の進化をお客様への価値へ繋げる様々なシステムを開発、ご提案させていただいております。</p>
+                        </section>
+                        <section>
+                          <h4>サポートパートナーになったきっかけ</h4>
+                          <p>Firefox をはじめとするモダンブラウザーは、高速に、美しく小気味よく動作するシステムを実現する上で、今や必要不可欠な存在です。弊社では、スピーディなシステム開発と、より使いやすいシステムの実現のために、従来より積極的にお客様に Firefox の導入を推進しております。一緒にお仕事をさせていただくことで、より多くのお客様にモダンブラウザーがもたらす価値を我々の価値観で提供することができ、またそれが Firefox のエンタープライズ市場における普及促進の一助になればと思い参加させていただきました。</p>
+                        </section>
+                      </div>
+                      <div class="col">
+                        <section>
+                          <h4>具体的なサポート体制</h4>
+                          <p>Internet Explorer に依存したシステムを考慮した Firefox への移行、導入支援、運用サポートをはじめ、Firefox をターゲットとしたウェブシステム開発を行っております。すでに大手建設不動産業のお客様に Firefox とアドオンをパッケージ化し、弊社が導入した営業支援システムのフロントエンドとして活用いただいております。各サービスについての詳細は、<a href="http://cyaan.co.jp/?page_id=35">弊社ウェブページよりお問い合わせください。</a></p>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section role="tabpanel" id="partner-miraclelinux" class="outer outer-1">
+                  <div class="inner">
+                    <header>
+                      <h3>ミラクル・リナックス株式会社</h3>
+                      <p><a href="https://www.miraclelinux.com/lp/mozilla-support">www.miraclelinux.com</a></p>
+                    </header>
+                    <div class="row">
+                      <div class="col">
+                        <section>
+                          <h4>業務内容</h4>
+                          <p>ミラクル・リナックス株式会社は、オンプレミス、クラウド、組込みのあらゆる領域で活用できるエンタープライズ Linux OS とサポートサービスを提供しています。Linux のカーネル技術をさまざまな分野に応用し、デジタルサイネージや IoT 分野にも組込み Linux の実績を伸ばしています。</p>
+                          <p>さらに、オープンソースベースの企業向け統合監視ツールやバックアップソフトウェアを開発しているほか、統合運用ソフトウェアを開発し、オープンソースとしてコミュニティに公開するなど、オープンソースの活性化に向けた取組みも積極的に行っています。</p>
+                        </section>
+                        <section>
+                          <h4>サポートパートナーになったきっかけ</h4>
+                          <p>ミラクル・リナックスは、企業や行政、教育機関など、法人で利用するブラウザーとして、Mozilla Firefox ブラウザーをおすすめしています。</p>
+                          <p>Linux OS をはじめとするミラクル・リナックスの製品・サービスは、通信事業や公共、金融事業などのエンタープライズ領域で幅広い採用実績があり、Mozilla Firefox のメリットを享受できる法人のお客様との親和性が高いことから、サポートパートナーになりました。</p>
+                        </section>
+                      </div>
+                      <div class="col">
+                        <section>
+                          <h4>具体的なサポート体制</h4>
+                          <p>Mozilla Japan が提供する「Mozilla Firefox 法人向けサポートサービス」の販売代理店として、法人のお客様の Mozilla Firefox 導入・活用を推進します。またセキュリティ強化の観点から Mozilla Firefox を活用した社内システム構築をご提案します。</p>
+                          <p>さらに今後、組込み Linux 分野において Firefox (Gecko) を採用されるお客様に対する支援サービスの提供を予定しています。ミラクル・リナックスの持つ Linux カーネルの技術によって、組込み領域における Mozilla Technology の普及に貢献していきます。</p>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section role="tabpanel" id="partner-digitalstacks" class="outer outer-1">
+                  <div class="inner">
+                    <header>
+                      <h3>株式会社 Digital Stacks</h3>
+                      <p><a href="https://www.digitalstacks.net/">www.digitalstacks.net</a></p>
+                    </header>
+                    <div class="row">
+                      <div class="col">
+                        <section>
+                          <h4>業務内容</h4>
+                          <p>株式会社 Digital Stacks は各種ウェブサービス (ウェブ制作・開発、広告、調査・分析) をトータルに提供しているウェブコンサルティングファームです。国内のみならず中国を中心としたアジア市場でのサポート実績も豊富で、地域を超えたウェブビジネスの包括的ソリューションを提供しており、グローバルに企業のウェブ戦略支援を行っています。</p>
+                        </section>
+                        <section>
+                          <h4>サポートパートナーになったきっかけ</h4>
+                          <p>1990 年代中頃から、インターネット・ウェブに関するコンサルティング事業を行う中で Mozilla の前身となっている Netscape のブラウザーをターゲットに、多くの著名ウェブサイトを開発しておりました。Netscape から Mozilla に移行後も、ウェブ産業拡大の原動力としてのブラウザーを支援することが業界の拡大につながると考え、サポートパートナーになりました。Firefox を使用したオリジナルブラウザーのデザイン・開発等も行いました。</p>
+                        </section>
+                      </div>
+                      <div class="col">
+                        <section>
+                          <h4>具体的なサポート体制</h4>
+                          <p><a href="https://www.digitalstacks.net/products-firefox-esr">Firefox ESR 法人向け サポートソリューション</a></p>
+                          <p>ご要件に応じたカスタマイズや運用方法の策定、Firefox の導入から運用までをサポートしております。金融機関様に向けた大規模な導入・運用の実績もございます。<a href="https://www.digitalstacks.net/products-firefox-esr">詳細は弊社ウェブページをご覧ください。</a></p>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,82 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '53.0';
+$_android_version = '53.0';
+$_date = '2017-04-19';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="new">
+              <h4>新機能</h4>
+              <ul class="section-items">
+                <li id="note-786961">
+                  <p>Firefox Developer Edition のテーマを元にした、明るめと暗め 2 種類の新しい「コンパクト」テーマが利用可能となりました。</p>
+                </li>
+                <li id="note-786968">
+                  <p>新たなコンポジタープロセス (Quantum Compositor) の追加によって、Windows 上で <a href="https://ashughes.com/?p=374">グラフィックス関連の安定性が向上しました</a>。</p>
+                </li>
+                <li id="note-786956">
+                  <p>プライベートブラウジングウィンドウにも軽量テーマが適用されるようになりました。</p>
+                </li>
+                <li id="note-786957">
+                  <p>リーダーモードにページの予想読了時間を追加しました。</p>
+                </li>
+                <li id="note-786999">
+                  <p>Windows 7 以降の 64 ビット版 OS ユーザーは、スタブインストーラー上で 32 ビット版と 64 ビット版を選べるようになりました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787054">
+                  <p>様々な <a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox.html#firefox53">セキュリティ問題</a> を修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-786992">
+                  <p>許可設定通知に <a href="https://medium.com/@pastith/feeling-safer-online-with-firefox-b9fe13af6600">よりすっきりとしたデザイン</a> を採用し、簡単に見過ごされないようにしました。</p>
+                </li>
+                <li id="note-786966">
+                  <p>Windows XP および Vista への対応は打ち切られました。Firefox 52 延長サポート版 (ESR) を使用している <a href="https://support.mozilla.org/ja/kb/end-support-windows-xp-and-vista">XP、Vista ユーザー</a> には、あと 1 年セキュリティ更新の提供が継続されます。</p>
+                </li>
+                <li id="note-786967">
+                  <p>32 ビット版 OS X への対応は打ち切られました。32 ビット版 OS X ユーザーは <a href="/business/#esr">Firefox 52 ESR へ乗り換える</a> ことで引き続きセキュリティ更新を受け取れます。</p>
+                </li>
+                <li id="note-787000">
+                  <p>macOS 向け更新のダウンロードサイズが Firefox 52 と比較して小さくなりました。</p>
+                </li>
+                <li id="note-786954">
+                  <p>タブ上に表示されるページタイトルが長くて収まりきらない場合、省略記号を使う代わりにフェードアウトするようにして可読性を向上させました。</p>
+                </li>
+                <li id="note-786959">
+                  <p>Linux 版では Pentium 4 や AMD Opteron 以前の古いプロセッサーを搭載したパソコンへの対応が打ち切られました。</p>
+                </li>
+                <li id="note-786958">
+                  <p>音声・動画コントロールのデザインを刷新しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="developer">
+              <h4>開発者</h4>
+              <ul class="section-items">
+                <li id="note-786983">
+                  <p>背景が透明な動画の再生を可能にする、アルファチャンネル付き WebM 動画に対応しました。</p>
+                </li>
+                <li id="note-786962">
+                  <p><a href="https://developer.mozilla.org/ja/Firefox/Releases/53#Changes_for_Web_developers">ウェブ開発者向けの変更点</a></p>
+                </li>
+              </ul>
+              <a class="mdn-icon more" rel="external" href="https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/53">開発者情報</a>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

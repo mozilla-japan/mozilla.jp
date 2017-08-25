@@ -1,0 +1,935 @@
+#open-web-day {
+  font-size: 17px;
+}
+#open-web-day h2 {
+  font-size: 168%;
+}
+#open-web-day #main a:hover,
+#open-web-day #main span {
+  text-decoration: none;
+}
+#open-web-day h3 {
+  font-size: 141%;
+}
+#open-web-day li {
+  background-image: none;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+#open-web-day #event-info {
+  float: left;
+}
+#open-web-day #doc {
+  width: 100%;
+}
+#open-web-day #inpage-menu {
+  overflow: auto;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+#open-web-day #inpage-menu.active {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  border-bottom: #DDDDDD 1px solid;
+}
+#open-web-day #menu-inner {
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+}
+#open-web-day #menu-inner > ul {
+  float: left;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#open-web-day #menu-inner > ul li {
+  float: left;
+  padding: 1em 18px;
+  border-bottom: 4px solid transparent;
+}
+#open-web-day #menu-inner > ul a:hover li {
+  background-color: #D7D3C8;
+}
+#open-web-day #lang-switcher {
+  float: right;
+  overflow: hidden;
+}
+#open-web-day #lang-switcher ul {
+  float: right;
+  overflow: hidden;
+  min-width: 10.2em;
+}
+#open-web-day #lang-switcher ul a:hover > li div {
+  background-color: #D7D3C8 !important;
+}
+#open-web-day #lang-switcher li {
+  float: left;
+  margin-top: 0.25em;
+  padding: 0.5em 0;
+}
+#open-web-day #lang-switcher div {
+  float: left;
+  padding: 0.25em 0.75em;
+  background: #EFEFEF;
+  border-radius: 0 4px 4px 0;
+}
+#open-web-day #lang-switcher a:first-child div {
+  background: #dddddd;
+  border-radius: 4px 0 0 4px;
+}
+#open-web-day .en #lang-switcher div {
+  background: #dddddd;
+}
+#open-web-day .en #lang-switcher a:first-child div {
+  background: #EFEFEF;
+}
+#open-web-day #main-feature {
+  background: 50% 50% url(/static/images/events/2014/open-web-day/banner.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin-bottom: 0;
+  height: 560px;
+}
+#open-web-day #main-feature section {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 145px;
+  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding-bottom: 30px;
+}
+#open-web-day #main-feature section > div {
+  width: 980px;
+  margin: 0 auto;
+}
+#open-web-day #main-feature section > div > div {
+  float: left;
+  position: relative;
+  margin-top: 70px;
+}
+#open-web-day #main-feature p {
+  margin-left: 0;
+}
+#open-web-day #main-feature h1 {
+  float: left;
+  text-indent: -999em;
+  width: 600px;
+  height: 200px;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 24px;
+  background: url(/static/images/events/2014/open-web-day/open-web-day.png) no-repeat;
+  background-size: contain;
+}
+#open-web-day #open-date,
+#open-web-day #hashtag {
+  margin-bottom: 0;
+}
+#open-web-day #open-date {
+  float: left;
+  font-size: 230%;
+  color: #4D4E53;
+}
+#open-web-day #hashtag {
+  margin-bottom: 0;
+  font-size: 180%;
+  line-height: 0.5;
+  color: #777777;
+}
+#open-web-day #main-content {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  float: none;
+}
+#open-web-day #thanks {
+  background-color: transparent;
+  margin: 0 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+#open-web-day #thanks p {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 160%;
+}
+#open-web-day .desc {
+  overflow: auto;
+  margin: 2.5em 0;
+  padding: 2em;
+  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#open-web-day .desc h1 {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  margin: auto;
+  padding-bottom: 0.5em;
+  text-shadow: 0 1px 0 #FFFFFF;
+}
+#open-web-day .desc > h2 {
+  margin-bottom: 0.5em;
+}
+#open-web-day .desc > h3 {
+  margin-top: 1.35em;
+  margin-bottom: 0.4em;
+}
+#open-web-day .desc ul {
+  float: left;
+  width: 100%;
+  overflow: auto;
+}
+#open-web-day .desc li {
+  float: left;
+}
+#open-web-day .desc li:last-child {
+  border-bottom: none;
+}
+#open-web-day #outline li {
+  width: 100%;
+  border-bottom: 1px solid #E2E2E2;
+}
+#open-web-day #outline li:last-child {
+  border-bottom: none;
+}
+#open-web-day #outline li small {
+  display: block;
+  font-size: 100%;
+}
+#open-web-day #outline li div {
+  float: left;
+  max-width: 75%;
+}
+#open-web-day #outline aside {
+  margin-top: .5em;
+}
+#open-web-day #outline aside li {
+  border: none;
+}
+#open-web-day #outline aside li div:first-child {
+  width: 6.5em;
+  max-width: 100%;
+}
+#open-web-day #schedule h3 {
+  font-size: 140%;
+}
+#open-web-day #schedule li {
+  float: left;
+  width: 100%;
+  overflow: auto;
+  margin-top: 24px;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #E2E2E2;
+}
+#open-web-day #schedule li:last-child {
+  border-bottom: none;
+}
+#open-web-day #schedule li:first-child {
+  margin-top: 0;
+}
+#open-web-day #schedule time {
+  float: left;
+  width: 18%;
+  min-width: 7.8em;
+  height: 2em;
+  line-height: 1.25;
+}
+#open-web-day #schedule li div {
+  float: left;
+  width: 82%;
+}
+#open-web-day li .item-title {
+  width: 6.5em;
+  max-width: 100%;
+  margin-right: 0.5em;
+  padding-bottom: 4px;
+}
+#open-web-day address {
+  display: inline;
+  margin-left: .5em;
+}
+#open-web-day #stage time,
+#open-web-day #schedule time {
+  display: block;
+  font-size: 110%;
+  color: #4D4E53;
+}
+#open-web-day #stage > div {
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  font-size: 95%;
+}
+#open-web-day #stage time {
+  padding-left: 12px;
+}
+#open-web-day #stage h3 {
+  font-size: 150%;
+  padding: 0.4em 12px;
+  background-color: #4D4E53;
+  color: #FFFFFF;
+}
+#open-web-day .stage {
+  width: 100%;
+  float: left;
+  margin-top: 48px;
+}
+#open-web-day .stage:first-child {
+  margin-top: 0;
+}
+#open-web-day .stage .speaker {
+  width: 50%;
+}
+#open-web-day .profile,
+#open-web-day .portrait {
+  float: left;
+  position: relative;
+}
+#open-web-day .portrait {
+  width: 140px;
+  height: 140px;
+  background: no-repeat;
+  background-size: 100%;
+}
+#open-web-day .profile {
+  height: 120px;
+  width: 290px;
+  margin-left: 18px;
+}
+#open-web-day .profile .full-name {
+  font-size: 140%;
+  margin-bottom: 4px;
+  max-width: 20em;
+}
+#open-web-day .profile .positions {
+  position: relative;
+  font-size: 85%;
+}
+#open-web-day #kddi-team .full-name {
+  font-size: 136%;
+}
+#open-web-day #kddi-team .full-name .company-name {
+  display: block;
+  font-size: 140%;
+  margin-bottom: -0.2em;
+}
+#open-web-day #kddi-team .full-name .device-name {
+  display: block;
+  margin-bottom: -0.45em;
+}
+#open-web-day #project-thumbnails {
+  overlow: hidden;
+}
+#open-web-day #project-thumbnails a:hover {
+  text-decoration: none;
+}
+#open-web-day #project-thumbnails > ul {
+  margin-top: 0.25em;
+}
+#open-web-day #project-thumbnails > ul li {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 0;
+}
+#open-web-day #project-thumbnails > ul li:nth-child(even) .open-project > div {
+  background-color: #EEEEEE;
+}
+#open-web-day #project-header {
+  width: 100%;
+  overflow: hidden;
+  margin-left: .5em;
+}
+#open-web-day #project-header .project-name,
+#open-web-day #project-header .project-author {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #777777;
+}
+#open-web-day .open-project {
+  text-decoration: none;
+}
+#open-web-day .open-project > div {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  padding: .75em .5em;
+}
+#open-web-day .faint .open-project > div {
+  opacity: 0.5;
+}
+#open-web-day .project-name {
+  float: left;
+  width: 26.5em;
+  margin-right: 1em;
+  font-size: 16px;
+  line-height: 1.65;
+}
+#open-web-day .project-author {
+  float: left;
+  max-width: 50%;
+  font-size: 14px;
+}
+#open-web-day .project-members {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  font-size: 90%;
+}
+#open-web-day #projects #project-thumbnails li a.open-project:hover > div {
+  background-color: #D7D3C8;
+}
+#open-web-day .js .project-name {
+  border-bottom: none;
+}
+#open-web-day .thumbnail {
+  display: none;
+}
+#open-web-day .js .thumbnail {
+  display: block;
+  height: 200px;
+  background: 50% black no-repeat;
+  background-size: contain;
+}
+#open-web-day .js #project-contents {
+  display: none;
+}
+#open-web-day .box {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-image: linear-gradient(#424f5a, #6a7b86);
+}
+#open-web-day .box-content {
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #4D4E53;
+  background-image: linear-gradient(#424f5a, #6a7b86);
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+#open-web-day .box-content .project-content {
+  overflow: auto;
+  position: relative;
+}
+#open-web-day .box-info,
+#open-web-day .box-image,
+#open-web-day .box-details {
+  padding: 0em 3em;
+}
+#open-web-day .box-info {
+  padding-top: 1em;
+  padding-bottom: 1.25em;
+  color: #FFFFFF;
+}
+#open-web-day .box-project-name {
+  float: none;
+  width: 90%;
+  margin: 0.25em 0 0.5em 0;
+  font-size: 145%;
+  line-height: 1.52;
+}
+#open-web-day .box-project-team {
+  float: none;
+  max-width: 100%;
+  font-size: 110%;
+}
+#open-web-day .box-image {
+  padding: 2em 1em;
+  overflow: auto;
+  background-color: #FFFFFF;
+}
+#open-web-day .box-image div {
+  width: 100%;
+  height: 420px;
+  background: center center no-repeat;
+  background-size: contain;
+}
+#open-web-day .box-details {
+  float: left;
+  overflow: hidden;
+  padding: 24px 8em 3em 8em;
+  background-color: #FFFFFF;
+}
+#open-web-day .project-url-button {
+  display: none;
+}
+#open-web-day .box-project-description {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.75em;
+  line-height: 1.75;
+}
+#open-web-day #close-button {
+  display: block;
+  position: absolute;
+  right: 2em;
+  top: 0;
+  text-decoration: none !important;
+}
+#open-web-day #close-button div {
+  width: 1em;
+  height: 1em;
+  padding: 0.1em 0.35em;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;
+  color: #BBBBBB;
+  background-color: #FFFFFF;
+  border-radius: 0 0 0.72em 0.72em;
+}
+#open-web-day #close-button:hover div,
+#open-web-day #close-button:hover .curve {
+  background-color: #FFFFFF !important;
+  color: #444444;
+  text-decoration: none;
+}
+#open-web-day #close-button span {
+  display: block;
+}
+#open-web-day #close-button .curve {
+  position: absolute;
+  width: 1.5em;
+  height: 1.2em;
+  top: 0px;
+  background: #FFFFFF;
+  left: -1.5em;
+}
+#open-web-day #close-button .curve span {
+  background-color: #424F5A !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 1.5em 0 0;
+}
+#open-web-day #close-button .curve:first-child {
+  left: auto;
+  right: -1.5em;
+}
+#open-web-day #close-button .curve:first-child span {
+  border-radius: 1.5em 0 0 0;
+}
+#open-web-day #report h3 {
+  margin-top: 2em;
+  margin-bottom: 0.25em;
+  font-size: 135%;
+}
+#open-web-day #report h4 {
+  font-size: 120%;
+  margin-bottom: 0.25em;
+}
+#open-web-day #stage-archives {
+  margin-top: 2em;
+}
+#open-web-day .stage-archive {
+  width: 100%;
+  margin-top: 1em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #E2E2E2;
+}
+#open-web-day .stage-archive:first-child {
+  margin-top: 0;
+}
+#open-web-day .stage-archive:last-child {
+  border: none;
+}
+#open-web-day .stage-archive .archive {
+  width: 100%;
+  font-size: 97%;
+}
+#open-web-day .stage-archive .archive span {
+  margin-left: 0.25em;
+  color: #666666;
+}
+#open-web-day .stage-archive ul {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+#open-web-day .stage-archive .speaker {
+  float: left;
+  width: 100%;
+}
+#open-web-day .stage-archive .speaker .name {
+  float: left;
+  margin-right: 0.5em;
+  font-size: 96%;
+}
+#open-web-day .stage-archive .positions {
+  float: left;
+  font-size: 92%;
+}
+#open-web-day .stage-archive .positions > div {
+  float: left;
+}
+#open-web-day .stage-archive .brace {
+  float: left;
+}
+@media only screen and (max-width: 1000px) {
+  #open-web-day .desc {
+    margin: 2em 0px;
+    padding-bottom: 1.5em;
+    padding-bottom: 2em;
+    border-radius: 0;
+    border-bottom: 1px dotted #ccc;
+  }
+  #open-web-day .desc:last-child {
+    border-bottom: none;
+  }
+  #open-web-day .stage .speaker {
+    width: 100%;
+  }
+  #open-web-day .stage .speaker:first-child {
+    margin-bottom: 12px;
+  }
+  #open-web-day .profile {
+    width: auto;
+    max-width: 500px;
+  }
+  #open-web-day #schedule li div {
+    width: 100%;
+  }
+  #open-web-day #project-header {
+    display: none;
+  }
+  #open-web-day .open-project > div {
+    float: none;
+    min-width: 80%;
+  }
+  #open-web-day .open-project > div {
+    float: none;
+    min-width: 80%;
+  }
+  #open-web-day .js .project-name,
+  #open-web-day .js .project-author {
+    float: none;
+    width: auto;
+    max-width: 100%;
+  }
+  #open-web-day .js .project-name {
+    margin-left: 0;
+    margin-bottom: 0.5em;
+  }
+  #open-web-day .project-author {
+    margin-right: 1em;
+  }
+  #open-web-day .box-info,
+  #open-web-day .box-details {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  #open-web-day .box-project-name {
+    margin-top: 45px;
+    width: 100%;
+    line-height: 1.5;
+  }
+  #open-web-day .box-details a {
+    display: none;
+  }
+  #open-web-day .box-details div {
+    width: 100%;
+    overflow: hidden;
+  }
+  #open-web-day .box-details a.project-url-button {
+    display: block;
+    width: 8em;
+    max-width: 100%;
+    margin: 0 auto 0.5em auto;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: #AF3232;
+    color: #FFFFFF;
+    border-radius: 0.35em;
+  }
+  #open-web-day .box-details a.project-url-button:hover {
+    background-color: #872727;
+  }
+  #open-web-day address {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 761px) and (max-width: 1000px) {
+  #open-web-day #main-feature section > div {
+    width: 761px;
+  }
+  #open-web-day #main-feature h1 {
+    width: 400px;
+    background-image: url(/static/images/events/2014/open-web-day/open-web-day-small.png);
+  }
+  #open-web-day #menu-inner > ul li {
+    padding: 1em 8px;
+  }
+  #open-web-day #menu-inner a .detail {
+    display: none;
+  }
+  #open-web-day #main-content,
+  #open-web-day #menu-inner {
+    width: 80%;
+    min-width: 736px;
+  }
+  #open-web-day #guest-info {
+    margin-top: 60px;
+  }
+  #open-web-day #outline li div {
+    max-width: 70%;
+  }
+  #open-web-day .profile {
+    margin-left: 28px;
+  }
+  #open-web-day .box-image > div {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  #open-web-day #main-feature h1 {
+    float: none;
+  }
+  #open-web-day .box-details a.project-url-button {
+    width: auto;
+  }
+  #open-web-day #menu-inner > ul {
+    float: none;
+    width: 100%;
+  }
+  #open-web-day #menu-inner > ul li {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #E2E2E2;
+  }
+  #open-web-day #menu-inner > ul a:last-child li {
+    border-bottom: none;
+  }
+  #open-web-day #lang-switcher {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #open-web-day #lang-switcher ul {
+    float: none;
+    width: 100%;
+  }
+  #open-web-day #lang-switcher li,
+  #open-web-day #lang-switcher div {
+    float: none;
+    text-align: center;
+  }
+  #open-web-day #lang-switcher div {
+    border-radius: 4px;
+  }
+  #open-web-day #lang-switcher a:first-child li {
+    margin-top: 1em;
+  }
+  #open-web-day #lang-switcher li {
+    margin-top: -0.5em;
+  }
+  #open-web-day .stage-archive .speaker .name {
+    font-size: 110%;
+  }
+  #open-web-day .stage-archive .positions {
+    margin-bottom: 0.75em;
+  }
+  #open-web-day .stage-archive .speaker .name,
+  #open-web-day .stage-archive .positions {
+    float: none;
+  }
+  #open-web-day .stage-archive .speaker .name > div,
+  #open-web-day .stage-archive .positions > div {
+    float: none;
+  }
+  #open-web-day .stage-archive .brace,
+  #open-web-day .stage-archive .slash {
+    display: none;
+  }
+  #open-web-day .stage-archive .archive span {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 760px) {
+  #open-web-day {
+    font-size: 16px;
+  }
+  #open-web-day #main-feature {
+    height: 720px;
+    margin: 1em 0;
+    background-size: cover;
+  }
+  #open-web-day #main-feature section > div {
+    width: 481px;
+  }
+  #open-web-day #main-feature section > div > div {
+    width: 100%;
+    margin-top: 24px;
+  }
+  #open-web-day #main-feature h1 {
+    width: 460px;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/static/images/events/2014/open-web-day/open-web-day-small.png);
+  }
+  #open-web-day #open-date,
+  #open-web-day #hashtag {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  #open-web-day #hashtag {
+    padding-left: 1.5em;
+  }
+  #open-web-day #main-content,
+  #open-web-day #menu-inner {
+    width: 80%;
+    min-width: 460px;
+  }
+  #open-web-day #main-content > p {
+    width: 18em;
+  }
+  #open-web-day #main-content h2 {
+    font-size: 141%;
+    margin-bottom: 0.5em;
+  }
+  #open-web-day #outline li {
+    border-bottom: none;
+  }
+  #open-web-day #outline > li > div {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  #open-web-day #outline aside li div {
+    float: left;
+  }
+  #open-web-day li .item-title {
+    font-size: 20px;
+    padding: 12px 0 6px 0;
+  }
+  #open-web-day #stage .profile {
+    max-width: 60%;
+  }
+  #open-web-day #stage a {
+    font-size: 90%;
+  }
+  #open-web-day .box-project-name {
+    font-size: 130%;
+  }
+  #open-web-day .box-image > div {
+    height: 260px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #open-web-day {
+    font-size: 14px;
+  }
+  #open-web-day #main-feature {
+    height: 720px;
+    background-size: cover;
+    margin: 1em 0;
+  }
+  #open-web-day #main-feature section > div {
+    width: 320px;
+  }
+  #open-web-day #main-feature section > div > div {
+    width: 100%;
+    margin-top: 24px;
+  }
+  #open-web-day #main-feature h1 {
+    width: 300px;
+    height: 182px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/static/images/events/2014/open-web-day/open-web-day-small.png);
+  }
+  #open-web-day #open-date,
+  #open-web-day #hashtag {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  #open-web-day #hashtag {
+    padding-left: 1.5em;
+  }
+  #open-web-day .desc {
+    padding: 0.85em;
+  }
+  #open-web-day #main-content,
+  #open-web-day #menu-inner {
+    width: 100%;
+  }
+  #open-web-day #main-content h2 {
+    font-size: 141%;
+    margin-bottom: 0.5em;
+  }
+  #open-web-day #main-content h3 {
+    font-size: 120%;
+    margin-bottom: 0;
+  }
+  #open-web-day #outline li div {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  #open-web-day #outline ul li {
+    border-bottom: none;
+  }
+  #open-web-day #outline aside li:first-child {
+    margin-bottom: 0.5em;
+  }
+  #open-web-day #outline aside li div:first-child {
+    font-size: 110%;
+    margin-bottom: 0.2em;
+  }
+  #open-web-day li .item-title {
+    font-size: 17px;
+    padding: 12px 0 2px 0;
+  }
+  #open-web-day #stage .speaker:first-child {
+    margin-bottom: 24px;
+  }
+  #open-web-day #stage .portrait,
+  #open-web-day #stage .profile {
+    float: none;
+  }
+  #open-web-day #stage .portrait {
+    margin: 0 auto;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 8px;
+  }
+  #open-web-day #stage .profile {
+    height: auto;
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  #open-web-day #stage .profile .full-name {
+    width: 100%;
+    max-width: 100%;
+  }
+  #open-web-day #stage .profile .full-name .company-name,
+  #open-web-day #stage .profile .full-name .device-name {
+    display: inline;
+    margin: 0;
+  }
+  #open-web-day #stage #kddi-team .profile .full-name {
+    font-size: 140%;
+  }
+  #open-web-day #stage #kddi-team .profile .company-name {
+    font-size: 100%;
+  }
+  #open-web-day .box-project-name {
+    font-size: 120%;
+  }
+  #open-web-day .box-project-team {
+    font-size: 110%;
+  }
+  #open-web-day .box-image > div {
+    height: 200px;
+  }
+}

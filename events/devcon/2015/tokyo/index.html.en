@@ -1,0 +1,649 @@
+<?php
+$language           = "en";
+$page_title         = 'Firefox Developers Conference 2015 in Tokyo  Hack, Inspect &amp; Ignite | Mozilla Japan';
+
+$page_description   = 'An event for web developers and front-end engineers, organized by Mozilla Japan. Event date is 11/15,2015.';
+$body_class         = 'sand';
+$body_id            = 'devcon-2015-tokyo';
+$css                = array('events/devcon-2015-tokyo-2016042701');
+$page_image         = "https://www.mozilla.jp/static/images/events/devcon/2015/tokyo/main.png";
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+<section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+  <header>
+    <h1>Firefox Developers Conference 2015 in Tokyo</h1>
+    <h2>Hack - Inspect - Ignite</h2>
+    <div>
+      <span class="date">2015/11/15 10:30 - 18:00</span>
+      <span class="venue">TEPIA Hall</span>
+    </div>  
+    <nav>
+      <ul>
+        <li><a href="index.html">Japanese</a></li>
+        <li><a href="index.html.en">English</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <p>
+        Firefox is turning 11 this November, and as the pioneer of the Web, Mozilla is going to throw a 1-day party to celebrate the State of the Web and to take a look into its future. 
+      </p>
+      <p>
+        The event’s theme is "Inspect, Hack, Ignite!" as we’re going to ignite the torch that would clear the way of the Web with the latest information from the View Source Conference held right before this event. Check out the newest hacks and inquiry from Engineers who are at the frontier of the Web.
+      </p>
+      <p>
+        We will have multiple Mozilla Corporation engineers from around the world visit Japan to give us a wide range of insights on the newest development tools, hacks you can start using today, the latest information on TVs and  IoT/WoT devices, and the frontier of Web standardization and implementation.
+      </p>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#registration">Registration</a></li>
+      <li><a href="#keynotes">Keynote</a></li>
+      <li><a href="#sessions">Session</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#venue">Venue</a></li>
+    </ul>
+  </nav>
+  <section id="keynotes">
+    <header>
+      <h2>Keynote</h2>
+    </header>
+    <div class="container">
+      <div class="abstract">
+        <p>
+          Japan is awaiting the arrival of the new Firefox developed for the smartphone we all love. What kinds of new “Only with Firefox” experiences can you expect with the new Firefox? What’s the next step for the Firefox OS with its installment onto the Panasonic VIERA? Where is Firefox and the Web headed? Find out about Mozilla’s technology and vision at this session.
+        </p>
+      </div>
+      <aside>
+        <p>
+          Parts of this session will be given in Japanese.
+        </p>
+      </aside>            
+      <ul class="speaker">
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/chibi-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Satoko Takita</span>
+            <span class="title">Chair of the Board of Directors</span>
+            <span class="organization">Mozilla Japan</span>
+            <div class="profile">
+              <p>
+                After working with UNIX and the Internet at an IT firm in Japan, Satoko works at Netscape in the US on the browser’s internationalization and localization to Japanese. In 2004 she founds Mozilla Japan, and later becomes chair of the Board of Directors in 2006. Today she works on promoting Mozilla products including the Firefox browser and the Firefox OS, and the idea of open source development itself. She also is a lecturer at the Graduate School of Keio University and at the Faculty of Science and Engineering of Chuo University . 
+              </p>
+              <p>
+                Satoko’s achievements include Nikkei Woman of the Year in 2009 for the Leader Category, 2009 Japan OSS Contribution Award, and the Contribution Award (Special Award) at the 9th Northeast Asia OSS promotion Forum.            
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/joe-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Joe Cheng</span>
+            <span class="title">Product Manager, Firefox OS, Smart TV</span>
+            <span class="organization">Mozilla Corporation</span>
+            <div class="profile">
+              <p>
+                Joe Cheng has been product manager of Firefox OS devices at Mozilla, Taiwan, since June 2014. Working as engineering project manager and product manager with Mozilla since 2012, he worked closely with partners to launch commercial Firefox OS phones into markets and to develop connected devices beyond smartphones. He was involved in the first ever commercial Android phone development working as a technical account and software project manager at HTC from 2007 until 2012. He started working in the mobile sector with MAVs Lab Inc. (2006­2007) and studied Electrical Engineering at the University of Southern California and the University of British Columbia.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/marvin-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Marvin Khoo</span>
+            <span class="title">Product Marketing Manager, Firefox OS</span>
+            <span class="organization">Mozilla Corporation</span>
+            <div class="profile">
+              <p>
+                Product Marketing Manager of Firefox OS, formerly worked as Product Manager of Firefox OS. He joined Mozilla, Taiwan since 2013 and his current role focused on positioning, and creating messaging for Firefox OS, generating awareness and mindshare communications. Marvin has 10 years experience working in mobile industry and well understanding of consumer electronics.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/dynamis-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Tomoya Asai</span>
+            <span class="title">Mobile &amp; Ecosystem manager</span>
+            <span class="organization">Mozilla Japan</span>
+            <div class="profile">
+              <p>
+                After translating technical documentations on the web and managing the release of the Japanese versions of Mozilla product since Firefox 1.0 as a student, Tomoya Asai joins Mozilla Japan sympathizing with Mozilla’s goal of making the Internet a common resource that benefits all. With the mission of spreading the idea of open source creation through Japan, he works on the deployment of the Firefox OS and vitalizing the Web platform and the app ecosystem. As an Evangelist he works to tell the allure of newest Web technologies and Mozilla products.
+              </p>
+            </div>
+          </div>
+        </li>        
+      </ul>
+    </div>
+  </section>
+
+  <section id="sessions">
+    <header>
+      <h2>Breakout session</h2>
+      <p>
+        We will have technical breakout sessions in the afternoon. We will have 10 slots across two rooms and 5 sessions, so please join the session of your preference.
+      </p>
+      <p class="note">
+        Note: session contents and speakers are subject to change
+      </p>
+    </header>
+    <ol class="container">
+      <li>
+        <div>
+          <div class="container">
+            Session #1
+            <span class="time">13:15 - 14:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>Astro Animation!</h3>
+              <div class="abstract">
+                <p>
+                  Web apps often feel like the slightly uncoordinated younger brother of native applications. They are often slow to respond, and when they do, they lack fluidity, stuttering along the way leaving users unimpressed and frustrated. However, using a bunch of techniques from Astro Boy, the freshly-baked Firefox animation devtools, and emerging Web technologies like the Web Animations API, we'll learn how to turn awkward apps into hot stuff that you'll want to hang out with.
+                </p>
+                <aside>
+                  <p>
+                    Note: This session will be given in Japanese. No translation will be available.
+                  </p>   
+                </aside>             
+              </div>
+              <nav>
+                <ul>
+                  <li><a href="http://people.mozilla.org/~bbirtles/pres/201511-astro-animation">Talk slides</a></li>
+                </ul>
+              </nav>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/brian-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Brian Birtles</span>
+                  <span class="title">Engineering manager</span>
+                  <span class="organization">Mozilla Japan</span>
+                  <div class="profile">
+                    <p>
+                      After graduating from University of Technology, Sydney in 2005 in Software Engineering, Brian was initially engaged in developing desktop graphics software for a Japanese corporation in Sydney. Having worked in Web development in Sydney and Osaka, Brian took an interest in improving the Web platform and began contributing to Firefox as a volunteer developer in 2004. In 2011 Brian began working full-time on Firefox's
+animation features as a staff member of Mozilla Japan. He is currently a member of the W3C CSS and SVG working groups where he is involved in designing the Web's animation features.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>
+                WebExtensions Understood with Chrome Extensions
+              </h3>
+              <div class="abstract">
+                <p>
+                  The Web Extensions platform planned to be integrated onto the Firefox Browser has almost an identical environment as the Chrome Extensions offered on the Chrome since its first release. In this session, Google Developers Expert Yoichiro will talk about the basics of WebExtensions, differences from the Chrome Extensions, and points of considerations for developing extensions with WebExtensions.
+                </p>
+                <p class="note">
+                  Note: This session will be given in Japanese. No translation will be available.
+                </p>                                
+              </div>
+              <nav>
+                <ul>
+                  <li><a href="https://docs.google.com/presentation/d/1i7Lc1c3a9_v6qEKCNTNmzwsOYa0UDfzvDz87-xHM2YA/pub?start=false&loop=false&delayms=3000">Talk slides</a></li>
+                </ul>
+              </nav>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/yoichiro-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Yoichiro Tanaka</span>
+                  <span class="title">Google Developers Expert (for Googlel Chrome)</span>
+                  <div class="profile">
+                    <p>
+                      The Web Extensions platform planned to be integrated onto the Firefox Browser has almost an identical environment as the Chrome Extensions offered on the Chrome since its first release. In this session, Google Developers Expert Yoichiro will talk about the basics of WebExtensions, differences from the Chrome Extensions, and points of considerations for developing extensions with WebExtensions.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            Session #2
+            <span class="time">14:15 - 15:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>
+                Inspection & Tweak: Front End Development with Firefox
+              </h3>
+              <div class="abstract">
+                <p>
+                  The Developer Tools - the must-need for all front end and website developers. These tools integrated into most browsers are of course available on the Firefox. With Firefox not only can you inspect  how the browser reads and executes codes from sites and apps, but also you can tweak parts of it to see how it affects the display. In this talk, we will demonstrate features of the Firefox Developer Tools to show its strengths and possibilities.
+                </p>
+                <aside>
+                  <p>
+                    Note: This session will be given in Japanese. No translation will be available.
+                  </p>   
+                </aside>                           
+              </div>
+              <nav>
+                <ul>
+                  <li><a href="http://www.slideshare.net/chikoski/20151114-devtools">講演資料</a></li>
+                </ul>
+              </nav>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/chiko-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Noritada Shimizu</span>                  
+                  <span class="title">Technical marketing</span>
+                  <span class="organization">Mozilla Japan</span>
+                  <div class="profile">
+                    <p>
+                      Noritada starts his Web developing life since he was an undergrad. After receiving his master’s degree in Media and Governance at Keio University, he works at the Information Technology Center of Keio University and at the Information Media Center of Kaetsu University, and joins Mozilla Japan in 2013.
+                    </p>
+                    <p>
+                      Today he develops apps for the Firefox OS and the Firefox browser, and is committed to spreading Web standards and Mozilla products (mainly developer tools).
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>TV Optimized Web App</h3>
+              <div class="abstract">
+                <p>
+                  User experience design for TVs is very different from smartphones. The screen is much larger while users can only navigate apps by TV remote controller — other common mechanisms such as mouse or touch screen are usually unavailable. This session introduces how to develop a TV optimized web app on Firefox OS TV as well as how build­in apps handle the navigation issues in Gaia.
+                </p>                       
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/luke-20151024.jpg">
+                </div>
+                <div>
+                  <span class="name">Luke Chang</span>
+                  <span class="title">Senior Software Engineer</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <div class="profile">
+                    <p>
+                      Luke Chang has been a front­end engineer of Firefox OS at Mozilla, Taiwan, since July 2013. He’s familiar with Gaia system architecture and works closely with partners to resolve technical issues before launching their commercial devices. He was also involved in the Firefox OS TV project and in charge of designing the first prototype. After the first commercial TV was launched, he keeps working on TV optimized web libraries and features until now. Before joining Mozilla, Luke has more than 5 years' experience in developing input method softwares on various platforms.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            Session #3
+            <span class="time">15:15 - 16:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>Innovation of Web App architecture</h3>
+              <div class="abstract">
+                <p>
+                  Over time web technologies have been greatly improved and front-end developers can implement much more fascinating features by pure web technologies. Mozilla already utilized it to build up a mobile operating system Firefox OS, but the evolution will never end. In this session we will introduce the latest technologies that bring up new direction for current Firefox OS Gaia architecture, and how we aggregate them into NGA, the whole New Gaia Architecture.
+                </p>
+              </div>
+              <aside>
+                <p>Parts of this session will be given in English (simultaneous interpretation will be available) </p>
+              </aside>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/steve-20151023.jpg">
+                  </div>
+                <div>
+                  <span class="name">Steve Chung</span>
+                  <span class="title">Engineer</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <div class="profile">
+                    <p>
+                      Steve is front­end developer at Mozilla Taiwan. As a peer of Firefox OS Gaia app, he is focusing on bringing the new web technology to the web app. He was involved in building the web front­end hybrid app on Android and iOS system previously. Now he decides to be fully engaged in Firefox OS core app development and trying to figure out possible shape of the future web app.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>Porting C/C++ code to Web</h3>
+              <div class="abstract">
+                <p>
+                  Mozilla has developed Emscripten and asm.js to allow for Web browsers to quickly execute existent C/C++ codes. There are many products including many games and even the Firefox OS which make actual use of the Emscripten. </p>
+                <p>
+                  The talk will cover a wide range of topics including from how to use the Emscripten to the Web Assembly specifications formulated by the different companies.
+                </p>
+              </div>
+              <aside>
+                <p>
+                  Note: This session will be given in Japanese. No translation will be available.
+                </p>   
+              </aside>
+              <nav>
+                <ul>
+                  <li><a href="https://docs.google.com/presentation/d/1liKVavDBbcg0w8izutvVopCWKGu5M7EJPvst1JlpN_s/edit#slide=id.p">Talk slides</a></li>
+                </ul>
+              </nav>              
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/mkato-20151023.jpg">
+                </div> 
+                <div>
+                  <span class="name">Makoto Kato</span>
+                  <span class="title">Technical Advisor</span>
+                  <span class="organization">Mozilla Japan</span>
+                  <div class="profile">
+                    <p>
+                      Makoto Kato has been involved with the Mozilla Project as one of the first engineer committer from Japan since Netscape became open source in 1998. He experienced product development at multiple software vendors including Japan TimeShare (now known as SORUN) and Microsoft before he joined Mozilla Japan in 2009 as a Technical Advisor. Alongside developing Mozilla products working with engineers overseas, he holds numerous seminars and workshops to promote Mozilla’s technologies in Japan.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            Session #4
+            <span class="time">16:15 - 17:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>
+                The Web for Everyone - Let's fix it!
+              </h3>
+              <div class="abstract">
+                <p>
+                  A person should be able to use the Web with whichever device and browser they are using. After introducing the most common mistakes of (mobile) Japanese Web sites, we will show how to identify and fix them through code and tools to make your site more flexible and portable to any devices. We will also give you hints on the consequences of Web compatibility issues.
+                </p>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/kerl-20151023.jpg">
+                </div>                
+                <div>
+                  <span class="name">Karl Dubost</span>
+                  <span class="title">Web Opener</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <div class="profile">
+                    <p>
+                      Karl is a French living in Japan. He has been working for the Web for 20 years. After Web agencies, W3C, Opera Software, he has been working at Mozilla for the last 2+ years to promote the open Web and fix Web Compatibility issues.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>ES6 in Practice</h3>
+              <div class="abstract">
+                <p>
+                  The ECMAScript 6 released this June will bring big innovations to JavaScript development. Over half of its functions are already available in modern browsers, and by combining it with transpilers such as the Babel, lots of possibilities open up. In addition many new specifications are planned to be standardized in the coming years. In this session, Teppei Sato will lecture about how we should incorporate these new technologies into existing projects, and how these new functions will change the way we code.
+                </p>
+              </div>
+              <aside>
+                <p>
+                  Note: This session will be given in Japanese. No translation will be available.
+                </p>   
+              </aside>
+              <nav>
+                <ul>
+                  <li><a href="http://www.slideshare.net/teppeis/es6-in-practice">Talk slides</a></li>
+                </ul>
+              </nav>              
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/teppeis-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Teppei Sato(@teppeis)</span>
+                  <span class="title">General Manager of Global Development Headquarters</span>
+                  <span class="organization">Cybozu, Inc.</span>
+                  <div class="profile">
+                    <p>
+                      Teppei Sato works as the General Manager of the Global Development Headquarters Cybozu, Inc.. He is committed to the development of the kintone and the management of development teams. He wrote an special article concerning the ECMAScript 6 for the WEB+DB PRESS Vol.87 (published by Gijutsu-Hyohron Co., Ltd.).
+                    </p> 
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>        
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            Session #5
+            <span class="time">17:15 - 18:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>The State of the Web and where it's heading - reports from the View Source Conference</h3>
+              <div class="abstract">
+                <p>
+                  On November 2015, Mozilla will host View Source Conference in Portland. This conference is for front end engineers and Web developers and covers frontier topics of Web technology by Mozilla including the WebVR and the Web Assembly. This talk will share topics covered at the conference, along with discussions that occurred between developers, and the general atmosphere at the conference to take a look at the future of the Web.
+                </p>
+              </div>
+              <aside>
+                <p>
+                  Note: This session will be given in Japanese. No translation will be available.
+                </p>   
+              </aside>                                                                       
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/myakura-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Masataka Yakura</span>
+                  <div class="profile">
+                    <p>
+                      Masataka Yakura in his early days started to learn HTML and CSS with the wish to create a Web site, but he finds himself interested in the code itself rather than the actual Web site. Ever since he is always at the frontier of HTML, CSS, APIs, Web standards, and Web browsers. Today he writes blog posts and magazine articles on HTML5 and CSS3, gives talks at seminars and workshops, supervises Japanese translations of books related to the Web, and translates Web standard specification documents and blog posts from outside Japan. Screen Name: myakura.
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>Web of Things Powered by the Embedded Web</h3>
+              <div class="abstract">
+                <p>
+                  The Web of Things and the Internet of Things are becoming today’s trends, but how will the Web interact with these keywords? Recently, many of the Web technologies including the HTML5 are jumping out of the screens of computers and smartphones and into integrated devices. Web technologies are also starting to be applied to different industries including TVs, game consoles, car navigation systems, and digital signages. Also on a hobby basis, Web technologies are also being applied to hobby electronics  using Raspberry Pi, CHIRIMEN, Single Board Computer, etc. In this session Futomi will Inquire what the Web of Things is by explaining movements on the standardization of the Web, alongside covering different forms of Web technology applications.
+                </p>
+              </div>
+              <aside>
+                <p>
+                  Note: This session will be given in Japanese. No translation will be available.
+                </p>   
+              </aside>                                                                       
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/futomi-20151023.jpg">                  
+                </div>
+                <div>
+                  <span class="name">Futomi Hatano</span>
+                  <span class="title">CTO</span>
+                  <span class="organization">Newphoria Corporation</span>
+                  <div class="profile">
+                    <p>
+                      Futomi Hatano starts his career off at NTT in 1993. He worked as a transmission engineer for maintenance and operation of a telecommunication infrastructure, and later as a system integrator for planning commercial telecommunication systems.In 1999 he was sent on loan to NTT Plala to work on internet connection services, system operation of servers, service planning, and eventually on the startup of the IPTV sercice. he becomes independent in 2004 to start his own company futomi which contracts web system developments alongside web consulting. 
+                    </p>
+                    <p>
+                      He becomes devoted to the inquiry of HTML5 before its boom later started, and he sets up an website dedicated to HTML5 “HTML5.jp” to promote the technology. He also wrote many books and articles considering the topic. in 2011 he takes the post of CTO at Newphoria Cooperation to take charge of Web-based application development and research on digital signage displays. He is also a member of the W3C to create Web standards.
+                    </p>
+                    <p>
+                      His books includes 『HTML5 Web標準API バイブル』 (ソシム、) 『HTMLとJavaScriptではじめるWindowsストアアプリ開発入門』、『徹底解説 HTML5 APIガイドブック ビジュアル系API編』、『徹底解説HTML5マークアップガイドブック 最終草案対応版』 (秀和システム) 、and as coauthor 『HTML5ガイドブック 増補改訂版 (Google Expert Series) 』 (インプレスジャパン)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>          
+          </li>
+        </ul>
+      </li>        
+      
+    </ol>    
+  </section>
+
+
+  <section id="schedule">
+    <header>
+      <h2>Schedule</h2>
+    </header>
+    <ol class="container">
+      <li>
+        <span class="time">10:00</span>
+        <span class="content">Door open</span>
+        <span class="room">Tepia Hall (4F)</span>
+      </li>
+      <li>
+        <span class="time">10:30 - 12:10</span>
+        <span class="content">Keynote</span>
+        <span class="room">Tepia Hall (4F)</span>
+      </li>
+      <li>
+        <span class="time">12:10 - 13:15</span>
+        <span class="content">
+          Lunch break
+          <span class="note">
+            (Please pack a lunch to eat at the venue or use one of the restaurants near the venue)
+          </span>
+        </span>
+        <span class="room"></span>
+      </li>               
+      <li>
+        <span class="time">13:15 - 14:00</span>
+        <span class="content">Session #1</span>
+        <span class="room">Tepia Hall (4F) & Room1 (B1)</span>
+      </li>
+      <li>
+        <span class="time">14:15 - 15:00</span>
+        <span class="content">Session #2</span>
+        <span class="room">Tepia Hall (4F) & Room1 (B1)</span>
+      </li>
+      <li>
+        <span class="time">15:15 - 16:00</span>
+        <span class="content">Session #3</span>
+        <span class="room">Tepia Hall (4F) & Room1 (B1)</span>
+      </li>
+      <li>
+        <span class="time">16:15 - 17:00</span>
+        <span class="content">Session #4</span>
+        <span class="room">Tepia Hall (4F) & Room1 (B1)</span>
+      </li>
+      <li>
+        <span class="time">17:15 - 18:00</span>
+        <span class="content">Session #5</span>
+        <span class="room">Tepia Hall (4F) & Room1 (B1)</span>
+      </li>                        
+      <li>
+        <span class="time">18:30 - 20:00</span>
+        <span class="content">Reception</span>
+        <span class="room">Restaurant (2F)</span>
+      </li>
+    </ol>
+  </section>
+  
+  <section id="venue">
+    <header>
+      <h2>Venue</h2>
+    </header>
+    <div class="container">
+      <div id="map-overlay">
+        <span class="name">TEPIA Hall</span>
+        <span class="access">4 min. walk from Exit 3 of Gaien-Mae Station, Tokyo Metro Ginza Line</span>
+      </div>
+      <div id="map">
+      </div>
+    </div>
+  </section>
+
+  <section id="registration">
+    <header>
+      <h2>Registration</h2>
+    </header>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Date</th>
+          <td>
+            November 15, 2015 (Sun) 10:30AM - 6:00PM (registration begins at 10AM)
+            <spanc class="note">There will be a reception afterwards (RSVP)</span>
+          </td>
+        </tr>
+        <tr><th>Venue</th><td>TEPIA Hall</td></tr>
+        <tr><th>Registration fee</th><td>Free <span class="note">reception will cost 1000 yen - please RSVP in advance</span></td></tr>
+        <tr>
+          <th>Max capacity</th>
+          <td>
+            300 people
+          </td>
+        </tr>
+        <tr><th>Organizaer</th><td>Mozilla Japan</td></tr>
+        <tr><th>Hashtag</th><td>#fxdevcon</td></tr>
+        <tr>
+          <th>Reception</th>
+          <td>
+            Reception will be held after the conference at 2F.
+            <span class="note">
+              Only conference guests are invited - please RSVP in advance. (Max 100 guests)
+            </span>
+          </td>
+        </tr>
+      </table>
+      <a class="registration" href="https://mozilla.doorkeeper.jp/events/33579">REGISTER NOW</a>
+      <a class="registration" href="https://mozilla.doorkeeper.jp/events/33580">Reception registration</a>
+    </div>
+  </section>
+</section>
+<?php
+  
+$extra_footers = <<<EXTRA_FOOTERS
+    <script src="/static/scripts/events/devcon/2015-tokyo.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBL2X57AerrAo8pAZnANImuouuU2qFPk0&amp;callback=initMap" async defer></script>
+EXTRA_FOOTERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

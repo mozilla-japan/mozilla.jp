@@ -1,0 +1,709 @@
+body {
+  background: #FFF;
+}
+
+#nav-main-menu > li > a:link,
+#nav-main-menu > li > a,
+#nav-main-menu > li > a:visited,
+#nav-main-menu > li > a:hover {
+  color: #111;
+  margin: 22px 0 14px 14px;
+  font-size: 14px;
+}
+
+#doc > nav {
+  background-color: #7EB9E5;
+  padding: 16px 0;
+  width: auto;
+}
+
+#doc > nav .inner {
+  margin: 0 auto;
+}
+
+#doc > nav > ul > li > a:link,
+#doc > nav > ul > li > a,
+#doc > nav > ul > li > a:visited {
+  color: #FFF;
+  cursor: pointer;
+}
+
+#doc > nav > ul > li {
+  position: relative;
+  float: left;
+  padding: 0 20px 0 0;
+  background: none;
+}
+
+#masthead {
+  background: linear-gradient(#0078CD, #0096DB);
+  color: #FFF;
+}
+
+#masthead .inner {
+  overflow: visible !important;
+  padding-right: 240px;
+  min-height: 200px;
+}
+
+#masthead .inner::after {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  background: url(/business/static/images/business/firefox.logo.png) no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+#masthead h1 span {
+  display: block;
+}
+
+#pageheader {
+  background: #006FC8;
+}
+
+#globalheader {
+  padding-bottom: 20px;
+}
+
+#doc {
+  width: 100%;
+}
+
+#pagefooter {
+  background: #F5F5F5;
+}
+
+#doc .outer {
+  position: relative;
+  overflow: hidden;
+}
+
+#doc .inner {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 40px auto;
+  width: 960px;
+}
+
+#doc h2 {
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+#doc h2.highlight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#doc h2.highlight::before {
+  display: inline-block;
+  margin-right: 8px;
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  content: "";
+}
+
+#doc header h2 ~ p {
+  text-align: center;
+}
+
+#doc .inner .row {
+  overflow: hidden;
+}
+
+#doc .inner .col {
+  float: left;
+  box-sizing: border-box;
+  padding: 16px;
+  width: 480px;
+}
+
+#doc .inner .col.narrow {
+  width: 320px;
+}
+
+.outer-1 {
+  background: linear-gradient(#C9E1F5, #EEEEEE);
+}
+
+.outer-2 {
+  color: #FFF;
+  background-color: #0097DB;
+}
+
+.outer-2 h2,
+.outer-2 h3,
+.outer-2 h4 {
+  text-shadow: none;
+}
+
+.outer-2 a:link,
+.outer-2 a:hover,
+.outer-2 a:focus,
+.outer-2 a:active,
+.outer-2 a:visited {
+  color: #002147;
+}
+
+.outer-3 {
+  background-color: #F5F5F5;
+}
+
+@media only screen and (min-width: 1280px) {
+  #doc > nav > ul {
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #doc .inner {
+    width: 720px;
+  }
+
+  #doc .inner .col {
+    width: 360px;
+  }
+
+  #doc .inner .col.narrow {
+    width: 240px;
+  }
+
+  #masthead .inner {
+    padding-right: 200px;
+  }
+
+  #masthead .inner::after {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #nav-main-menu > li > a:link,
+  #nav-main-menu > li > a,
+  #nav-main-menu > li > a:visited,
+  #nav-main-menu > li > a:hover {
+    color: #FFF;
+  }
+
+  #doc > nav {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #doc .inner .col {
+    float: none;
+    margin: 16px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #doc .inner .col.narrow {
+    width: 100%;
+  }
+
+  #masthead .inner {
+    padding-right: 0;
+    min-height: 0;
+  }
+
+  #masthead .inner::after {
+    display: none;
+  }
+
+  #masthead h1 span {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  #doc .inner  {
+    width: 608px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #doc .inner {
+    width: 288px;
+  }
+}
+
+/* Landing */
+
+body#landing #overview h2::before {
+  background-image: url(/business/static/images/business/esr-user.png);
+}
+
+body#landing #overview .col section {
+  padding: 0 0 0 136px;
+  min-height: 136px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 120px 120px;
+}
+
+body#landing #overview .col section:not(:first-child) {
+  margin-top: 16px;
+}
+
+body#landing #overview #link-profiles {
+  background-image:  url(/business/static/images/business/top.more3.png);
+}
+
+body#landing #overview #link-support {
+  background-image:  url(/business/static/images/business/top.more2.png);
+}
+
+body#landing #overview .col section h3 {
+  font-size: 20px;
+}
+
+body#landing #overview .col section p {
+  margin: 4px 0 0;
+}
+
+body#landing #overview .col section a::after {
+  content: " »";
+}
+
+body#landing #esr h2::before {
+  background-image: url(/business/static/images/business/esr-life-cycle.png);
+}
+
+body#landing #esr img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+body#landing #download section h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+body#landing #download section section {
+  text-align: center;
+}
+
+body#landing #download li {
+  padding: 0;
+  background: none;
+}
+
+body#landing #faq .col {
+  padding-top: 168px;
+  background-repeat: no-repeat;
+  background-position: center 16px;
+}
+
+body#landing #faq .col h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+body#landing #faq .col h3 span {
+  display: block;
+}
+
+body#landing #faq-support {
+  background-image: url(../images/business/top.more2.png);
+}
+
+body#landing #faq-details {
+  background-image: url(../images/business/top.more3.png);
+}
+
+body#landing #faq-events {
+  background-image: url(../images/business/top.more6.png);
+}
+
+body#landing #faq-android {
+  background-image: url(../images/business/top.more5.png);
+}
+
+body#landing #faq-thunderbird {
+  background-image: url(../images/business/top.more1.png);
+}
+
+body#landing #faq-customize {
+  background-image: url(../images/business/top.more7.png);
+}
+
+@media only screen and (max-width: 639px) {
+  body#landing #overview .col section {
+    padding: 136px 0 0 0;
+    background-position: center top;
+  }
+}
+
+/* Profile index */
+
+body#profiles #list section.col a,
+body#profiles #list section.col a:link {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+}
+
+body#profiles #list section.col h3 {
+  margin: 16px 0 8px;
+  font-size: 24px;
+}
+
+body#profiles #list section.col p {
+  margin: 0;
+  font-size: 12px;
+}
+
+body#profiles #list section.col a p span {
+  color: #2983C8;
+  white-space: nowrap;
+}
+
+/* Each profile */
+
+body#profile #hero {
+  background: #111;
+}
+
+body#profile #hero .inner {
+  margin: 0 auto;
+}
+
+body#profile #hero img {
+  max-width: 100%;
+}
+
+body#profile #header img.logo {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+body#profile #header h1 {
+  font-size: 24px;
+}
+
+body#profile #header h1,
+body#profile #header .caption {
+  text-align: center;
+}
+
+body#profile #intro h2 {
+  position: absolute;
+  left: -99999px;
+}
+
+body#profile #intro img {
+  display: block;
+  float: left;
+}
+
+body#profile #intro img ~ * {
+  margin-left: 200px;
+}
+
+body#profile #interview h2::before {
+  background-image: url(/business/static/images/business/interview.png);
+}
+
+body#profile #interview [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 16px;
+}
+
+body#profile #interview [role="tablist"] li {
+  display: block;
+  margin: 8px;
+}
+
+body#profile #interview [role="tab"] {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border: 1px solid #50C5DE;
+  border-radius: 4px;
+  padding: 12px 16px;
+  background-color: #337AB7;
+  white-space: nowrap;
+}
+
+body#profile #interview [aria-selected="true"] {
+  border-color: #FFF;
+  background-color: #FFF;
+}
+
+body#profile #interview [aria-selected="true"]::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  margin: 0 0 0 -8px;
+  border: 8px solid transparent;
+  border-top-color: #FFF;
+  width: 0;
+  height: 0;
+  content: "";
+}
+
+body#profile #interview h3 span {
+  display: block;
+}
+
+body#profile #interview img {
+  display: block;
+  float: right;
+  margin: 16px 0 16px 16px;
+}
+
+body#profile #column h2::before {
+  background-image: url(/business/static/images/business/column.png);
+}
+
+body#profile #products h2::before {
+  background-image: url(/business/static/images/business/product.png);
+}
+
+body#profile #products ul {
+  overflow: hidden;
+  text-align: center;
+}
+
+body#profile #products li {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 8px 0 0;
+  border-radius: 4px;
+  padding: 0;
+  width: 280px;
+  background: #FFF;
+}
+
+body#profile #products li a {
+  display: block;
+  border: 1px solid #FFF;
+  padding: 8px;
+  text-decoration: none !important;
+}
+
+body#profile #products li img {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+}
+
+body#profile #products li span {
+  display: block;
+  color: #484848;
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  body#profile #interview h3 span {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  body#profile #intro img,
+  body#profile #interview img {
+    float: none;
+    margin: 0 auto 16px;
+  }
+
+  body#profile #intro img ~ * {
+    margin-left: 0;
+  }
+}
+
+/* Support */
+
+body#support #services section section {
+  padding: 0 0 0 80px;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+body#support #services section section:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+body#support #services-support {
+  background-image: url(/business/static/images/business/support.1.png);
+}
+
+body#support #services-customize {
+  background-image: url(/business/static/images/business/support.3.png);
+}
+
+body#support #partners [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+body#support #partners [role="tablist"] li {
+  display: block;
+  margin: 4px;
+}
+
+body#support #partners [role="tab"] {
+  display: inline-block;
+  overflow: hidden;
+  border: 4px solid #EEE;
+  padding: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #FFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 88%;
+  text-align: center;
+  vertical-align: top;
+  line-height: 160px;
+}
+
+body#support #partners [role="tab"][aria-selected="true"] {
+  border-color: #FFA700;
+}
+
+body#support #partners [role="tab"] img {
+  width: 120px;
+  vertical-align: middle;
+}
+
+body#support #partners [role="tabpanel"] header {
+  text-align: center;
+}
+
+body#support #partners [role="tabpanel"] section:not(:first-child) {
+  margin-top: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  body#support #partners [role="tab"] {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  body#support #partners [role="tab"] img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  body#support #services section section {
+    padding: 80px 0 0 0;
+    background-position: center top;
+  }
+}
+
+/* FAQ */
+
+body#faq .questions {
+     -moz-column-count: 2;
+  -webkit-column-count: 2;
+          column-count: 2;
+       -moz-column-gap: 32px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+}
+
+body#faq .questions > section {
+  margin: 0 0 32px;
+     page-break-inside: avoid;
+  -webkit-break-inside: avoid;
+          break-inside: avoid;
+}
+
+body#faq .questions h3 {
+  font-size: 24px;
+}
+
+body#faq .questions h4 {
+  font-size: 20px;
+}
+
+body#faq #footnotes aside {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  body#faq .questions {
+       -moz-column-count: 1;
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+/* Tech FAQ */
+
+body#tech-faq #main-content h2 {
+  text-align: left;
+}
+
+body#tech-faq #main-content h3,
+body#tech-faq #main-content h4 {
+  margin-top: 1em;
+}
+
+body#tech-faq #main-content > section:not(:first-child),
+body#tech-faq #main-content > article:not(:first-child) {
+  margin-top: 32px;
+  border-top: 1px solid #E5E5E5;
+  padding-top: 32px;
+}
+
+body#tech-faq #sidebar ul {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+body#tech-faq #sidebar li {
+  border-top: 1px solid #E5E5E5;
+  padding: 8px 0;
+  background: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body#tech-faq #masthead ~ .outer .inner {
+    width: 752px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #main-content {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main-content > section {
+    margin: 0;
+  }
+}
+
+/* Extra */
+
+#upcoming-events {
+  text-align: center;
+}

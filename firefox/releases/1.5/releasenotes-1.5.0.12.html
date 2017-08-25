@@ -1,0 +1,189 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 1.5.0.12 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/1.5.0.12/releasenotes/' => 'Firefox 1.5.0.12'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 1.5.0.12</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+<p>このリリースノートには、Firefox 1.5.0.12 に関する <a href="#new">新機能</a>、<a href="#download">ダウンロード</a>、<a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#FAQ">よくある質問</a> などが載っています。<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p>
+<p>Firefox に関するあなたのフィードバックをお待ちしています。<a href="http://www.mozillazine.org/">MozillaZine</a> によって運営されている <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> にぜひ参加してください。</p>
+
+<p class="comment">【訳注: このページは、英語版のページを参考のために和訳したものです。】</p>
+<h2><a name="new">新機能と改良点</a></h2>
+<p>Firefox 1.5.0.12 は、ユーザーの皆さんにより安全なインターネット体験をお届けする私たちの取り組みの一環として提供される、安定性を向上させたアップデートです。すべてのユーザーにこの最新版へのアップグレードを推奨します。</p>
+<p>リリース日: 2007/05/30</p>
+<ul>
+  <li><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox15.html#firefox1.5.0.12">いくつかのセキュリティ問題の修正</a></li>
+</ul>
+<p>Windows Vista サポートに関しては、<a href="https://www.mozilla.org/ja/firefox/">Firefox 2.0.0.2</a> 以降のバージョンのご利用をお勧めします。</p>
+<p><strong>注: Firefox 1.5.0.x のセキュリティおよび安定性の向上は、2007 年 6 月まで提供されます。すべてのユーザーに <a href="https://www.mozilla.org/ja/firefox/">Firefox 2</a> へのアップグレードを推奨します。</strong></p>
+<h2><a name="downloadandinstall">ダウンロードとインストール</a></h2>
+<h3><a name="requirements">必要システム構成</a></h3>
+<p>インストールの前に、お使いのコンピューターが <a href="/firefox/1.5/system-requirements/">必要システム構成</a> を満たしているか確認してください。Firefox 1.5 以降、PowerPC 版 Mac OS X では v10.2 以降が必要です。</p>
+<h3><a name="download">ダウンロード</a></h3>
+<p>Mozilla は、Windows、Linux、Mac OS X 版の Firefox を様々な言語で提供しています。Firefox 1.5.0.12 は <a href="https://www.mozilla.org/ja/firefox/all/">ダウンロードページ</a> から入手できます。提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+<h3><a name="install">インストール</a></h3>
+<p>Firefox をダウンロードしたら、以下の手順に従ってインストールしてください。</p>
+<h4>Windows</h4>
+<p>インストーラ (<tt class="filename">Firefox Setup 1.5.0.12.exe</tt>) をダブルクリックするとインストールが開始されます。</p>
+<h4>Mac OS X</h4>
+<p>ダウンロードしたディスクイメージ (<tt class="filename">Firefox 1.5.0.12.dmg</tt>) をダブルクリックして Finder で開き、Firefox アプリケーションをハードディスクにドラッグしてください。Dock に追加したい場合は、アイコンを Dock にドラッグしてください。</p>
+<h4>Linux/GTK2</h4>
+<p>インストールしたいディレクトリーに tarball を展開してください。</p>
+<p><code>tar -xzvf firefox-1.5.0.12.tar.gz</code></p>
+<p>これにより、そのディレクトリーに <code>firefox</code> というサブディレクトリーができます。</p>
+<h4>その他のプラットフォーム</h4>
+<p>圧縮アーカイブを展開して <tt>firefox</tt> を実行してください。</p>
+<h3><a name="uninstall">アンインストール</a></h3>
+<p>Firefox をアンインストールするには、以下の手順に従ってください。</p>
+<h4>Windows</h4>
+<p>[スタート] メニューから [コントロール パネル] を選択してください。パネルが開いたら [プログラムの追加と削除] をダブルクリックしてください。リストの中から &quot;Mozilla Firefox (1.5)&quot; を見つけて [削除] ボタンをクリックするとアンインストールが開始されます。</p>
+<h4>Mac OS X</h4>
+<p><tt class="filename">Firefox</tt> アプリケーションをゴミ箱にドラッグしてください。</p>
+<h4>その他のプラットフォーム</h4>
+<p><tt class="filename">firefox</tt> フォルダーを削除してください。</p>
+<p>これらの手順でアンインストールを完了しても、また次に Firefox をインストールする場合を考えて、あなたのプロファイルは削除されず、そのまま保存されます。Firefox のプロファイルを削除したい場合は、以下の「プロファイルフォルダー」の項目に書かれているフォルダーを削除してください。なお、一度プロファイルを削除してしまうと、ブックマークや保存されたパスワード、個人設定、その他のデータがすべで消去されてしまいますので、次に Firefox を使う場合は新しいプロファイルで起動することになります。</p>
+<h2>その他の情報</h2>
+<h3><a name="profilefolder">プロファイルフォルダー</a></h3>
+<p>Firefox は、以下の場所にユーザーデータを保存します。</p>
+<table border="1" cellspacing="0" style="font-size: smaller;">
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows 2000/XP</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows NT</td><td>WINNT&yen;Profiles&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt="" style="vertical-align:middle;"> Windows 98/ME</td><td>Windows&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-mac.png" alt="" style="vertical-align:middle;"> Mac OS X</td><td>~/Library/Application Support/Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-linux.png" alt="" style="vertical-align:middle;"> Linux/Unix</td><td>~/.mozilla/firefox/</td></tr>
+</table>
+<h3><a name="otherchanges">その他の変更</a></h3>
+<ul>
+  <li>Linux では、Firefox はテキストボックスのキーバインドについて GTK の設定に従うようになりました。そのため、Ctrl+文字 を押すと、Readline のようなテキスト編集ショートカットの代わりに、アプリケーションのショートカットが起動します。詳しくは <a href="http://kb.mozillazine.org/Emacs_Keybindings_%28Firefox%29">こちらのドキュメント</a> をご覧ください。</li>
+</ul>
+<h2><a name="issues">既知の問題</a></h2>
+<p>ここには、Firefox 1.5.0.12 に関する既知の問題の一部が載っています。新たにバグを報告する前にこのリストをご覧ください。</p>
+<h3><a name="extensions">拡張機能とテーマ</a></h3>
+<p>今回のバージョンには、新しい Extension Compatibility and Update 機構が備わっていますが、これに関する問題に遭遇する可能性があります。私たちが認識している問題については、それぞれ簡単な回避策があります。</p>
+<ul>
+  <li>Firefox 1.5.0.12 インストーラの実行後、Extension Compatibility and Update ウィザードが表示されない場合は、Extension Manager を開いて手動で更新を確認してください。</li>
+  <li>Extension Compatibility and Update ウィザードが拡張機能の更新をダウンロード・インストールしても、それらの更新が適用されない場合は、Extension Manager を開いて手動で更新を確認してください。</li>
+  <li>Intel Mac では、PowerPC 専用のバイナリを含む拡張機能は、Intel ネイティブまたは Universal 版に更新するか、Rosetta を有効にしない限り、利用できません。Rosetta を有効にするには、Firefox のアイコンをクリックして [情報を見る] を選択し、[Rosetta を使って開く] にチェックを入れてください。</li>
+</ul>
+<p>Firefox 1.0 にインストールされている拡張機能は Firefox 1.5.0.12 と互換性がなく、アップデートが必要な場合があります。何か問題があった場合は、その拡張機能の作者に報告してください。Firefox 1.5.0.12 をインストールする際、お使いの拡張機能やテーマは、Firefox 1.5.0.12 と互換性があること、または、互換性のある新しい拡張機能やテーマが提供されていることが確認されるまで、すべて無効化されます。これは、Firefox がバージョンごとに変更点を含んでおり、その変更された部分の機能を統合した一部の拡張機能やテーマは、Firefox の新バージョンで使うと問題を引き起こす可能性があるためです。お気に入りの拡張機能やテーマがアップデートされておらず、Firefox の新バージョンと互換性がない場合は、作者に連絡を取ってアップデートを促してください。</p>
+<h3 id="issues-all">すべての OS</h3>
+<ul>
+  <li><p>一部のファイアウォールソフトが、Firefox の実行を静的にブロックしてしまう場合があります。たいていのファイアウォールは、プログラムによるインターネットへの接続を許可するかどうかを尋ねてきます。Firefox には常にアクセスを許可することが大切です。アクセスを拒否してしまった場合は、ファイアウォールの設定画面を開いて、アクセスを許可してください。ファイアウォールの中には、無効になっていてもアクセスが拒否されてしまうものもあります。<a href="http://kb.mozillazine.org/Error_loading_any_website#Firewalls">特定のファイアウォールに関する情報はこちらをご覧ください</a>。</p></li>
+  <li><p>マルチユーザーシステムで、ユーザーが書き込み権限を持たない場所に Firefox 1.5.0.12 をインストールした場合、Firefox を一度特権ユーザーで実行する必要があります。これが望ましくない場合、次のディレクトリーに空のファイルを作成する必要があります： &lt;インストールディレクトリー&gt;/extensions/talkback@mozilla.org/chrome.manifest</p></li>
+  <li><p>ソフトウェアアップデートは、Firefox 1.5.0.12 がインストールされている場所に書き込み権限のないユーザーが実行すると失敗します。これは、ソフトウェアアップデートがその場所にあるファイルを置き換え・作成する必要があるためです。</p></li>
+  <li><p>Firefox 1.0.x で [ウェブサイトによるソフトウェアのインストールを許可する] 設定のチェックを外して XPInstall を無効にしていた場合 (Firefox 1.5.0.12 で変更が行われました)、インストールを有効化するには about:config を使って xpinstall.enabled を true に設定してください。</p></li>
+  <li><p>古いバージョンの Adblock 拡張機能をインストールしていると、Firefox 1.5.0.12 の起動時に「プライバシー情報の消去」確認ウィンドウが表示される場合があります。この問題に遭遇したら、最新の <a href="https://addons.mozilla.org/ja/firefox/addon/adblock/">Adblock</a> または Adblock Plus を使っているかどうか確認してください。</p></li>
+</ul>
+<h3 id="issues-windows">Windows</h3>
+<ul>
+  <li><p>共有マシンで、アクセス権の限られたユーザーが、自分の書き込み権限のある場所に Firefox 1.5.0.12 をインストールした場合でも、マイナスの副作用が発生する場合があります (デフォルトブラウザーその他のキーが正しく設定されないなど)。それでもブラウザーは使えます。アクセス権の限られたユーザーがインストールする場合、アクセス制限のある場所や共有の場所にインストールしてはいけません。インストールに失敗する可能性があります。</p></li>
+  <li><p>一部の古い Adobe Acrobat Reader プラグインで PDF ファイルを開いたあと、Firefox 1.5.0.12 がハングする場合があります。このような問題に遭遇したときは、<a href="http://www.adobe.com/jp/products/acrobat/readstep2.html" rel="nofollow">最新のプラグイン</a> が必要です。</p></li>
+</ul>
+<h3 id="issues-mac">Mac OS X</h3>
+<ul>
+  <li>Java は Rosetta 上では利用できません。</li>
+  <li>Intel Mac では、ネイティブの場合も、Rosetta 上で実行している場合も、Talkback 機能は利用できません。アプリケーションがクラッシュした際には、Apple のクラッシュ報告プログラムが起動します。</li>
+</ul>
+<h3 id="issues-linux">Linux/Unix システム</h3>
+<ul>
+  <li><p>パスに空白を含む場所に Firefox 1.5.0.12 をインストールすると、デフォルトブラウザーに設定できず、起動時に毎回確認ダイアログが表示されてしまいます。解決策は、パスに空白を含まない場所にインストールしてください。</p></li>
+  <li><p>GNOME との統合は Fedora Core 3 では正しく機能しません。Fedora Core 3 ユーザーは、<a href="http://download.fedora.redhat.com/pub/fedora/linux/core/2/i386/os/Fedora/RPMS/linc-1.0.3-3.1.i386.rpm" rel="nofollow">linc-1.0.3-3.1.i386.rpm</a> をダウンロード・インストールする必要があります。この RPM をインストールしたら、Firefox 1.5.0.12 をインストールしたディレクトリーで次のコマンドを実行してください (書き込み権限が必要です)。</p><p><code>touch .autoreg</code></p><p>次に Firefox 1.5.0.12 を起動したときから GNOME 統合が有効になります。</p></li>
+  <li><p>firefox -remote (mozilla-xremote-client) はカンマを含む URL では機能しなくなり、廃止される予定です。firefox -new-window /url/ で新しいウィンドウに URL を開き、firefox -new-tab /url/ で新しいタブに URL を開きます。</p></li>
+</ul>
+<h3>ウェブページの表示</h3>
+<!-- <p>設定コンソール (ロケーションバーに "about:config" と入力して Enter キーを押すと開きます) では、ベテランユーザーが Firefox の設定を直接管理できます。このシステムは、自分が何をしているか分かっている人だけが使うべきもので、値の変更を誤ると、問題が起きたり、最悪の場合 Firefox が起動しなくなる場合もあります。手作業で Firefox をカスタマイズするには、ヘルプサイトなどをよく参考にしてください。</p></li> -->
+<h2><a name="troubleshooting">トラブルシューティング</a></h2>
+<ul>
+  <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された "Safe Mode" ショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac OS X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /Applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使われます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+  <li><p>ユーザープロファイルにインストールした拡張機能をアンインストールし (ウェブページからインストールしたものなど)、コマンドラインオプション -install-global-extension を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+  <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、Firefox の Safe Mode を使ってすべての拡張機能とテーマを無効にし、必要に応じて破損したデータを削除してみてください。</p></li>
+</ul>
+<h2><a name="FAQ">よくある質問</a></h2>
+<dl class="faq">
+  <dt>どのような協力ができますか?</dt>
+  <dd>私たちは少しでも多くの配布経路を必要としています。できる限り多くの友人や家族、同僚を Firefox に乗り換えさせることがあなたの使命です。もしあなたが学生なら、学校で Firefox を配布してください。リリースについて <a href="http://slashdot.org/" rel="nofollow">Slashdot</a> [<a href="http://slashdot.jp/" rel="nofollow">日本語版</a>]、<a href="http://www.digg.com/" rel="nofollow">Digg</a>、その他のニュースサイトに記事を投稿してください。あなたのブログから情報を流してください。例えばあの Skype のように、インターネットを通じた大規模な配布が可能です。<a href="http://www.spreadfirefox.com/">Firefox の話題をどんどん広めてください!</a></dd>
+  <dt>私は別のブラウザーを使っています。なぜなら...</dt>
+  <dd>もしあなたが Firefox を使っていないのなら、開発チームにその理由を教えてください。私たちは <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> に寄せられたフィードバックに目を通しています。</dd>
+  <dt>なぜ私が送ったメールに返事をくれないのですか?</dt>
+  <dd><a href="http://forums.mozillazine.org/?c=4">フォーラム</a> をご利用ください。Firefox チームは常時このフォーラムをチェックしています。私たちは毎日多くのメールを受け取っているので、あなたが送ったメールは見過ごされる可能性もあります。</dd>
+  <dt>テーマとアドオン (拡張機能) はどこで手に入りますか?</dt>
+  <dd>テーマと拡張機能は <a href="https://addons.mozilla.org/ja/firefox/">Mozilla Update</a> からダウンロードできます。</dd>
+  <dt>誰が Firefox の作業をしているのですか?</dt>
+  <dd>非常に多くの人が関わっています。Firefox に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] に書かれているクレジットをご覧ください。</dd>
+  <dt>Firefox のソースコードはどこにありますか?</dt>
+  <dd>Firefox 1.5.0.12 のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(CVS)">cvs</a> を通じて入手可能です。Firefox 固有のソースは &quot;mozilla/browser&quot; と &quot;mozilla/toolkit&quot; と &quot;mozilla/chrome&quot; にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</dd>
+  <dt>メールクライアントはどこにあるのですか?</dt>
+  <dd>Firefox は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアント <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> を使ってみることをお勧めします。</dd>
+  <dt>Firefox のスペルは? 短縮形は?</dt>
+  <dd>Firefox のスペルは最初の F だけが大文字になります (FireFox は間違いです)。好ましい短縮形は「Fx」か「fx」です。</dd>
+</dl>
+<h2><a name="links">その他の関連資料とリンク</a></h2>
+<p>以下のリソースには、Firefox に関する役に立つ情報が載っています。</p>
+<ul>
+  <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox Help</a></li>
+  <li><a href="http://kb.mozillazine.org/Mozilla_Firefox">MozillaZine ナレッジベース</a> (英語)</li>
+  <li><a href="https://www.mozilla.org/projects/firefox/">開発者情報</a></li>
+</ul>
+<h2 id="contributedbuilds">提供されたビルド</h2>
+<p>これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。それぞれの説明をご覧ください。</p>
+<h3 id="solarisbuilds">Solaris (SUN デスクトップ北京チーム提供)</h3>
+<p><strong><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/README.txt">README</a></strong></p>
+<p><strong>Tarball 形式</strong></p>
+<ul>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris10-i386.tar.bz2">firefox-1.5.0.12.en-US.solaris10-i386.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris10-i386.tar.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris10-sparc.tar.bz2">firefox-1.5.0.12.en-US.solaris10-sparc.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris10-sparc.tar.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris8-i386-gtk1.tar.bz2">firefox-1.5.0.12.en-US.solaris8-i386-gtk1.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris8-i386-gtk1.tar.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris8-sparc-gtk1.tar.bz2">firefox-1.5.0.12.en-US.solaris8-sparc-gtk1.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_tarball/firefox-1.5.0.12.en-US.solaris8-sparc-gtk1.tar.bz2.cksum">cksum</a>)<br></li>
+</ul>
+<p><strong>Pkgadd 形式</strong></p>
+<ul>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris10-i386-pkg.bz2">firefox-1.5.0.12.en-US.solaris10-i386-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris10-i386-pkg.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris10-sparc-pkg.bz2">firefox-1.5.0.12.en-US.solaris10-sparc-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris10-sparc-pkg.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris8-i386-gtk1-pkg.bz2">firefox-1.5.0.12.en-US.solaris8-i386-gtk1-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris8-i386-gtk1-pkg.bz2.cksum">cksum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris8-sparc-gtk1-pkg.bz2">firefox-1.5.0.12.en-US.solaris8-sparc-gtk1-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/solaris_pkgadd/firefox-1.5.0.12.en-US.solaris8-sparc-gtk1-pkg.bz2.cksum">cksum</a>)<br></li>
+</ul>
+<h3><a name="othersystems">その他のシステム</a></h3>
+<p>mozilla.org によって公式に提供されている 3 種類以外のプラットフォーム向けビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib/">FTP サイト</a> にあります。</p>
+<h3><a name="otherlanguages">ローカライズビルド</a></h3>
+<p>多くのローカライズビルドが、<a href="https://wiki.mozilla.org/L10n:Localization_Teams" title="Mozilla Localization Project">協力者</a> を代表して、mozilla.org によって作成、配布されています。私たちが提供している公式ビルドの一覧は、<a href="https://www.mozilla.org/ja/firefox/all/">すべてのシステムと言語</a> を参照してください。</p>
+<p>Firefox 1.5.0.12 の公式ローカライズとして認定されていないビルドは、<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/1.5.0.12/contrib-localized/">FTP サイト</a> を参照してください。</p>
+<br><br>
+<p>過去のバージョンのリリースノート: <a href="0.1">0.1</a> | <a href="0.2">0.2</a> | <a href="0.3">0.3</a> | <a href="0.4">0.4</a> | <a href="0.5">0.5</a> | <a href="0.6">0.6</a> | <a href="0.6.1">0.6.1</a> | <a href="0.7">0.7</a> | <a href="0.7.1">0.7.1</a> | <a href="0.8">0.8</a> | <a href="0.9">0.9</a> | <a href="0.9.1">0.9.1/0.9.2</a> | <a href="0.9.3">0.9.3</a> | <a href="0.10">1.0 Preview Release</a> | <a href="1.0">1.0</a> | <a href="1.0.1">1.0.1</a> | <a href="1.0.2">1.0.2</a> | <a href="1.0.3">1.0.3</a> | <a href="1.0.4">1.0.4</a> | <a href="1.0.5">1.0.5</a> | <a href="1.0.6">1.0.6</a> | <a href="1.0.7">1.0.7</a> | <a href="1.5">1.5</a> | <a href="1.5.0.1">1.5.0.1</a> | <a href="1.5.0.2">1.5.0.2</a> | <a href="1.5.0.3">1.5.0.3</a> | <a href="1.5.0.4">1.5.0.4</a> | <a href="1.5.0.5">1.5.0.5</a> | <a href="1.5.0.6">1.5.0.6</a> | <a href="1.5.0.7">1.5.0.7</a> | <a href="1.5.0.8">1.5.0.8</a> | <a href="1.5.0.9">1.5.0.9</a> | <a href="1.5.0.10">1.5.0.10</a> | <a href="1.5.0.11">1.5.0.11</a></p>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

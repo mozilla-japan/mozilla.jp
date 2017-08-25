@@ -1,0 +1,1169 @@
+<?php
+$page_title         = 'Mozilla Open Web Day in Tokyo | Mozilla Japan';
+$page_description   = 'Mozilla Open Web Day in Tokyo is a festival that various communities and research project related to Mozilla get together to show and to make a presentation about their works.';
+$body_id            = 'open-web-day';
+$body_class         = 'sand events';
+$css                = array('events/2014-open-web-day-2016042701');
+$js                 = array('events/open-web-day/vendor.js', 'events/open-web-day/openweb.js', 'lib/jquery/jquery.scrollTo.min.js');
+$page_image         = 'https://www.mozilla.jp/static/images/events/2014/open-web-day/open-web-day-small.png';
+
+$breadcrumbs        = array(
+  '/events/' => 'イベント',
+  '/events/2014/open-web-day/' => 'Mozilla Open Web Day in Tokyo'
+);
+
+$extra_headers      = <<<EXTRA_HEADERS
+    <link rel="alternate" hreflang="ja" href="index.html" title="日本語">
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+<section id="main" role="main" class="en" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+  <header id="main-feature">
+    <section>
+      <div>
+        <h1>Mozilla Open Web Day in Tokyo</h1>
+        <div>
+          <p id="open-date">2014.10.05</p>
+          <p id="hashtag">
+            <span>#mozillajp</span>
+          </p>
+        </div>
+      <div>
+    </section>
+  </header><!-- end #main-feature -->
+  <nav id="inpage-menu">
+    <div id="menu-inner">
+      <ul>
+        <a href="#overview"><li>Overview</li></a>
+        <a href="#schedule"><li>Schedule</li></a>
+        <a href="#stage"><li>Stage<span class="detail"> program</span></li></a>
+        <a href="#projects"><li>Exhibitors</li></a>
+        <a href="#report"><li>Report</li></a>
+        
+      </ul>
+      <div id="lang-switcher">
+        <ul>
+          <a href="./">
+            <li>
+              <div>日本語</div>
+            </li>
+          </a>
+          <a href="index.html.en">
+            <li>
+              <div>English</div>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="main-content">
+    <section id="thanks" class="desc">
+      <p>Thank you for your participation and attendance at Mozilla Open Web Day in Tokyo on Oct. 5th</p>
+    </section>
+    <section class="desc" id="new">
+      <h2>Latest Information</h2>
+      <ul id="outline">
+        <li>
+          <div class="item-title">10 / 03</div>
+          <div>We will broadcast the stage programs live on Ustream from 1:00 p.m. on Oct. 5th.</div>
+        </li>
+        <li>
+          <div class="item-title">09 / 26</div>
+          <div>Website has been opened.</div>
+        </li>
+        
+      </ul>
+    </section>
+    <section class="desc" id="overview">
+      <p>Mozilla Open Web Day in Tokyo, “A Bazaar of the Latest Technologies and Ideas” surrounding Mozilla, features anticipated platforms for the mobile devices: the Firefox project, the Web of Things, Personal Fabrication, Linked Open Data, the latest technologies of Firefox, Localization and Add-Ons. Mozilla Open Web Day in Tokyo provides unique opportunity to think about the potential of Web and Open through presentations/exhibitions of projects as well as interaction between each group. </p><p>日本語のページは<a href="./">こちら</a>。</p>
+      <ul id="outline">
+        <li>
+          <div class="item-title">Date</div>
+          
+          <div>Sunday, October 5th, 2014 from 1:00 p.m. to 7:00 p.m.</div>
+        </li><li>
+          <div class="item-title">Venue</div>
+          <div>
+            <a href="http://www.3331.jp/access/">3331 Arts Chiyoda</a>
+            <address>(6-11-14 Sotokanda,Chiyoda-ku, Tokyo)</address>
+            <aside>
+              <ul>
+                <li>
+                  <div>Reception</div>
+                  <div>Community Space (1st floor)</div>
+                </li><li>
+                  <div>Main Venue</div>
+                  <div>Gymnasium (2nd floor)</div>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </li><li>
+          <div class="item-title">Admission</div>
+          
+          <div>Free</div>
+        </li><li>
+          <div class="item-title">Organizer</div>
+          
+          <div><a href="/about/japan/">Mozilla Japan</a></div>
+        </li>
+      </ul>
+    </section>
+    <section class="desc" id="schedule">
+      <h2>Schedule</h2>
+      <ul>
+        <li>
+          <time>13:00 〜 14:00</time>
+          <div>
+            <h3>Kick-off Session</h3>
+            <p>Satoko Takita, the chair of the Board of Directors of Mozilla Japan will give the opening address, followed with lightning talks by a representative from each exhibitor.</p>
+          </div>
+        </li><li>
+          <time>14:00 〜 </time>
+          <div>
+            <h3>Starts the exhibitions as well as talk sessions at the open stage</h3>
+            <p>Visitors are free to walk around the booths, view the works at the main venue as well as the community space in the 1st floor. There are 3 talk sessions at the open stage in the main venue.</p>
+          </div>
+        </li><li>
+          <time>17:30 〜 </time>
+          <div>
+            <h3>Networking starts</h3>
+            <p>Exhibitors and visitors are free to mingle.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="desc" id="stage">
+      <h2>Open Stage Program</h2>
+      <p>We had 3 talk sessions at the open stage of the venue. <a href="#report">Videos and slides are available here.</a></p>
+      <ul>
+        <li id="stage-web-web" class="stage">
+          <time>14:30 〜 15:00</time>
+          <h3>Web & Fab</h3>
+          <ul>
+            
+            <li id="hiroya-tanaka" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/hiroya-tanaka.jpg);"></div>
+              <div class="profile">
+                <div class="full-name">Hiroya Tanaka</div>
+                
+                <div class="positions">
+                  
+                  <div>Associate Professor at Keio University</div>
+                  
+                  <div>Founder of FabLab Japan</div>
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+            
+            <li id="satoko-takita" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/satoko-takita.jpg);"></div>
+              <div class="profile">
+                <div class="full-name">Satoko Takita</div>
+                
+                <div class="positions">
+                  
+                  <div>The chair of the Board of Directors of Mozilla Japan</div>
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+            
+          </ul>
+        </li><li id="stage-thing-life" class="stage">
+          <time>15:30 〜 16:00</time>
+          <h3>Web & Things & Living</h3>
+          <ul>
+            
+            <li id="futomi-hatano" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/futomi-hatano.jpg);"></div>
+              <div class="profile">
+                <div class="full-name">Futomi Hatano</div>
+                
+                <div class="positions">
+                  
+                  <div>Director and CTO at Newphoria Corporation</div>
+                  
+                  <div>CEO of Futomi Co.,Ltd.</div>
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+            
+            <li id="satoshi-endo" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/satoshi-endo.jpg);"></div>
+              <div class="profile">
+                <div class="full-name">Satoshi Endo</div>
+                
+                <div class="positions">
+                  
+                  <div>Director and chief researcher at KADOKAWA ASCII Research Laboratories, Inc.</div>
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+            
+          </ul>
+        </li><li id="stage-kddi" class="stage">
+          <time>16:30 〜 17:00</time>
+          <h3>KDDI Firefox OS project team</h3>
+          <ul>
+            
+            <li id="kddi-team" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/kddi-team.jpg);"></div>
+              <div class="profile">
+                <div class="full-name"><span class="company-name">KDDI&#32;</span><span class="device-name">Firefox OS&#32;</span>project team</div>
+                
+                
+              </div>
+            </li>
+            
+            <li id="hiromu-tsuda" class="speaker">
+              <div class="portrait" style="background-image: url(/static/images/events/2014/open-web-day/speakers/hiromu-tsuda.jpg);"></div>
+              <div class="profile">
+                <div class="full-name">Hiromu Tsuda</div>
+                
+                <div class="positions">
+                  
+                  <div>Engadget Japan</div>
+                  
+                </div>
+                
+                <div>
+                  <a href="http://japanese.engadget.com/">http://japanese.engadget.com/</a>
+                <div>
+              </div>
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="desc" id="projects">
+      <h2>List of Exhibitors</h2>
+      <p>Mozilla Open Web Day in Tokyo is held in cooperation with the following organizations and communities.</p>
+      <div id="project-thumbnails">
+        <div id="project-header">
+          <div class="project-name">Project name</div>
+          <div class="project-author">Exhibitor</div>
+        </div>
+        <ul>
+          <li>
+              <a href="#project0" class="open-project">
+                <div>
+                  <div class="project-name">FabNavi: Support System to Assemble Physical Objects Using Visual Instructions</div>
+                  <div class="project-author">FabNavi Project</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project1" class="open-project">
+                <div>
+                  <div class="project-name">Firefox OS Ideathon Report - Web application Development from the Designers' Point of View-</div>
+                  <div class="project-author">Mozilla Japan</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project2" class="open-project">
+                <div>
+                  <div class="project-name">Introduction of Firefox OS Tablet Device</div>
+                  <div class="project-author">Systena Corporation</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project3" class="open-project">
+                <div>
+                  <div class="project-name">Introduction of Web Application Development Guide for Firefox OS</div>
+                  <div class="project-author">TechBooster</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project4" class="open-project">
+                <div>
+                  <div class="project-name">Demonstration and Sales of the Flame - Developer Reference Phone</div>
+                  <div class="project-author">Beginet OSS Store</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project5" class="open-project">
+                <div>
+                  <div class="project-name">Firefox Student Community Activities</div>
+                  <div class="project-author">Firefox Student Community</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project6" class="open-project">
+                <div>
+                  <div class="project-name">Introduction of Foxroid Tips、Foxroid、Claps for WOT</div>
+                  <div class="project-author">TAS Design Group Co., Ltd.</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project7" class="open-project">
+                <div>
+                  <div class="project-name">Tools for Web developers by KDDI</div>
+                  <div class="project-author">KDDI CORPORATION</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project8" class="open-project">
+                <div>
+                  <div class="project-name">Modern web development with MEAN Full-Stack</div>
+                  <div class="project-author">html5j</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project9" class="open-project">
+                <div>
+                  <div class="project-name">Maker Party for "Teachers-to-be" in Asia</div>
+                  <div class="project-author">Global Education Project</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project10" class="open-project">
+                <div>
+                  <div class="project-name">Mozilla DocFest & Live Localization</div>
+                  <div class="project-author">Mozilla Translation/products L10N community</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project11" class="open-project">
+                <div>
+                  <div class="project-name">OpenStreetMap / OpenRelief / Race for Resilience</div>
+                  <div class="project-author">OpenStreetMap / OpenRelief / Race for Resilience</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project12" class="open-project">
+                <div>
+                  <div class="project-name">Parapara Animation</div>
+                  <div class="project-author">Mozilla Factory</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project13" class="open-project">
+                <div>
+                  <div class="project-name">Rust/Servo Hackathon</div>
+                  <div class="project-author">Rust Samurai</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project14" class="open-project">
+                <div>
+                  <div class="project-name">Demonstration of Award Winning Application at WEB Innovation Hackathon</div>
+                  <div class="project-author">Firefox OS / HTML5 / LOD WEB innovation hackathon operation team</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project15" class="open-project">
+                <div>
+                  <div class="project-name">Fabsat project</div>
+                  <div class="project-author">Tokai University satellite project (TSP)</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project16" class="open-project">
+                <div>
+                  <div class="project-name">gitFAB: A Web service for developing “physical things” in the manner of open source software development</div>
+                  <div class="project-author">SFC*SFC + Mozilla Japan</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project17" class="open-project">
+                <div>
+                  <div class="project-name">【TECH×ART】 Firefox OS support camera application - cameran</div>
+                  <div class="project-author">Recruit Holdings Co.,ltd.</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project18" class="open-project">
+                <div>
+                  <div class="project-name">Demonstration of the Web Audio API: Play with sounds on the Web</div>
+                  <div class="project-author">W3C (World Wide Web Consortium)</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project19" class="open-project">
+                <div>
+                  <div class="project-name">Firefox OS based small hardware with Web nature development project</div>
+                  <div class="project-author">Mozilla Factory - Open Hardware Project</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project20" class="open-project">
+                <div>
+                  <div class="project-name">Jorte for Firefox OS beta version</div>
+                  <div class="project-author">Jorte Inc.</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project21" class="open-project">
+                <div>
+                  <div class="project-name">Independent research on Firefox OS application at Chuo University</div>
+                  <div class="project-author">Independent research society of Firefox OS at Chuo University</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project22" class="open-project">
+                <div>
+                  <div class="project-name">Work Products of Open Project Seminar at Chuo University</div>
+                  <div class="project-author">Volunteers of Open Project Seminar at Chuo University</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project23" class="open-project">
+                <div>
+                  <div class="project-name">Firefox OS Research Project in Hakodate</div>
+                  <div class="project-author">Tsukada research lab, Future University Hakodate</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project24" class="open-project">
+                <div>
+                  <div class="project-name">Summer Break Project: Workshops for Firefox OS Application Development</div>
+                  <div class="project-author">Summer break project: research society of Firefox OS application</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project25" class="open-project">
+                <div>
+                  <div class="project-name">Firefox OS Application for Learning</div>
+                  <div class="project-author">Matsushita Laboratory at Kansai University Faculty of Informatics</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project26" class="open-project">
+                <div>
+                  <div class="project-name">Device Trial Event, Perler Beads & NFC Workshop, AppMaker Demonstration</div>
+                  <div class="project-author">Firefox OS community</div>
+                </div>
+              </a>
+            </li>
+          </a><li>
+              <a href="#project27" class="open-project">
+                <div>
+                  <div class="project-name">Introduction of Taovisor - 3DVR goggles</div>
+                  <div class="project-author">Tao software Co., Ltd.</div>
+                </div>
+              </a>
+            </li>
+          </a>
+        </ul>
+        <ul id="project-contents">
+          <li>
+            <div id="project0" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">FabNavi: Support System to Assemble Physical Objects Using Visual Instructions</div>
+                <div class="box-project-team">FabNavi Project</div>
+                
+                <div class="project-members">Keita Watanabe (School of Interdisciplinary Mathematical Sciences, Meiji University), Kouji Tsukada (Future University - Hakodate), Maho Oki (Future University - Hakodate), Daisuke Akatsuka (Mozilla Japan)</div>
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/14.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://fabnavi.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://fabnavi.org/">http://fabnavi.org/</a>
+                </div>
+                <div class="box-project-description"><p>FabNavi helps people to assemble physical objects in remote places using visual instructions. FabNavi mainly consists of a pair of a camera and a projector set above the tabletop that unable other people easily reassemble them just by following the visual instructions projected on the remote tabletop. The goal of FabNavi is to create a framework for recording and sharing new universal instructions through the FabLab network.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project1" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Firefox OS Ideathon Report - Web application Development from the Designers' Point of View-</div>
+                <div class="box-project-team">Mozilla Japan</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/28.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="/events/2014/ideathon-0920/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="/events/2014/ideathon-0920/">https://www.mozilla.jp/events/2014/ideathon-0920/</a>
+                </div>
+                <div class="box-project-description"><p>We will exhibit about the Firefox OS ideathon held on September 20th. We had Mamoru Kano, an Art Director at WOW visual design studio as a guest speaker. Look at the ideas brought up from each group at the event, and we welcome your open ideas on what may be interesting to link together in the Web generation.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project2" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Introduction of Firefox OS Tablet Device</div>
+                <div class="box-project-team">Systena Corporation</div>
+                
+              </div>
+              
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://www.systena.co.jp/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://www.systena.co.jp/">http://www.systena.co.jp/</a>
+                </div>
+                <div class="box-project-description"><p>We will demonstrate the 10.1 inches Firefox OS tablet device developed by Systena Corporation. Also we will introduce our approach to the Web application development.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project3" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Introduction of Web Application Development Guide for Firefox OS</div>
+                <div class="box-project-team">TechBooster</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/5.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://techbooster.github.io/announce/c86/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://techbooster.github.io/announce/c86/">http://techbooster.github.io/announce/c86/</a>
+                </div>
+                <div class="box-project-description"><p>We will exhibit and sell technical information magazine "Fox Story" along with "Reader for the web application development of Firefox OS" both written by volunteers at Firefox OS community.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project4" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Demonstration and Sales of the Flame - Developer Reference Phone</div>
+                <div class="box-project-team">Beginet OSS Store</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/21.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://begi.net" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://begi.net">http://begi.net</a>
+                </div>
+                <div class="box-project-description"><p>Now "Flame", the developer reference phone is available at OSS online store.</p><p>For the developers who want to try "Flame" before buying, or the ones who missed to purchase, we have a demonstration device as well as limited supply of “Flame” for sale. <p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project5" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Firefox Student Community Activities</div>
+                <div class="box-project-team">Firefox Student Community</div>
+                
+              </div>
+              
+              <div class="box-details">
+                
+                <div class="box-project-description"><p>Firefox Student Marketing Team is a project aims to promote Firefox to the world through students.</p><p>We are capable of a wide range of works related Firefox including holding programing workshops, making movies about Firefox features as well as other marketing activities.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project6" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Introduction of Foxroid Tips、Foxroid、Claps for WOT</div>
+                <div class="box-project-team">TAS Design Group Co., Ltd.</div>
+                
+              </div>
+              
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://tasdg.co.jp/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://tasdg.co.jp/">http://tasdg.co.jp/</a>
+                </div>
+                <div class="box-project-description"><p>We will introduce "Foxroid Tips" and "Foxroid."</p><p>"Foxroid Tips" is a special web contents to support Android developers to make FirefoxOS applications.</p><p>"Foxroid" is a Firefox OS add-on designed to support beginners in Firefox OS applications development.</p><p>Android developers who are not familiar with Markup language are also able to begin developing Firefox OS application using "Foxroid."</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project7" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Tools for Web developers by KDDI</div>
+                <div class="box-project-team">KDDI CORPORATION</div>
+                
+              </div>
+              
+              <div class="box-details">
+                
+                <div class="box-project-description"><p>As a part of KDDI's Activity to support Firefox OS communities and the Web developers, we will demonstrate the tools that we are developing for them.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project8" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Modern web development with MEAN Full-Stack</div>
+                <div class="box-project-team">html5j</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/3.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://html5j.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://html5j.org/">http://html5j.org/</a>
+                </div>
+                <div class="box-project-description"><p>Demonstrate modern web application development with MEAN full-stack solution (MongoDB / Express / AngularJS / Node.js) using YEOMAN scaffolding tool.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project9" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Maker Party for "Teachers-to-be" in Asia</div>
+                <div class="box-project-team">Global Education Project</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/15.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://ttb2014.strikingly.com/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://ttb2014.strikingly.com/">http://ttb2014.strikingly.com/</a>
+                </div>
+                <div class="box-project-description"><p>"Inter-connected" Maker Party for "Teachers-To-Be" in Asia is designed for ”Teachers-To-Be (the future teachers)”who not only to use Web and ICT but also wants to utilize their unique ideas in teaching to make the education more fruitful. Our exhibition will be about the workshop being held on October 11th and 18th.</p><p>This event is carried out in cooperation with Mozilla Factory and Global Education. Global Education is a research project of Keio University Graduate School of Media Design.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project10" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Mozilla DocFest & Live Localization</div>
+                <div class="box-project-team">Mozilla Translation/products L10N community</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/1.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="/community/translation.html" class="project-url-button">Website</a>
+                  </div>
+                  <a href="/community/translation.html">https://www.mozilla.jp/community/translation.html</a>
+                </div>
+                <div class="box-project-description"><p>Mozilla Documentation/L10N Group will demonstrate their localization work.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project11" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">OpenStreetMap / OpenRelief / Race for Resilience</div>
+                <div class="box-project-team">OpenStreetMap / OpenRelief / Race for Resilience</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/22.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://osm.jp" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://osm.jp">http://osm.jp</a>
+                </div>
+                <div class="box-project-description"><p>We will introduce 3 projects.</p><p>1. "OpenStreetMap": an openly licensed map of the world being created by volunteers using local knowledge, GPS tracks and donated sources.</p><p>2. "OpenRelief": a project to develop better communication tools to support disaster recovery.</p><p>3. "Race for Resilience": a global disaster response and prevention ideathon and hackathon.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project12" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Parapara Animation</div>
+                <div class="box-project-team">Mozilla Factory</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/18.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://parapara.mozlabs.jp/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://parapara.mozlabs.jp/">http://parapara.mozlabs.jp/</a>
+                </div>
+                <div class="box-project-description"><p>Parapara Animation is a workshop where participants draw simple frame-based animations on tablets and smartphones. These individual animations are then shared over the Web where they become part of a much larger collaborative animation that may be projected for all to see. All components of the workshop are built with standard Web technologies and encourage participants to be makers of the Web, not just spectators, and to experience the culture of open information sharing.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project13" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Rust/Servo Hackathon</div>
+                <div class="box-project-team">Rust Samurai</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/4.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://www.rust-lang.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://www.rust-lang.org/">http://www.rust-lang.org/</a>
+                </div>
+                <div class="box-project-description"><p>We are the community to study about Rust and Servo. We run several workshops through a year. We will hold a hackathon in this event and have a Servo code reading workshop.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project14" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Demonstration of Award Winning Application at WEB Innovation Hackathon</div>
+                <div class="box-project-team">Firefox OS / HTML5 / LOD WEB innovation hackathon operation team</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/17.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="/blog/entry/10411/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="/blog/entry/10411/">https://www.mozilla.jp/blog/entry/10411/</a>
+                </div>
+                <div class="box-project-description"><p>We will have a demonstration of Firefox OS applications that won award at a hackathon event hosted by Osaka innovation hub during June through September this year. In the hackathon, groups promoting the web standard technology such as Mozilla Japan, HTML5-WEST.jp, LOD Challenge executive committee and Linked Open Data Initiative (LODI) got together in Osaka.</p><p>We will have a variety of unique applications that effectively use HTML5, LOD technology and the open data released by Osaka City.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project15" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Fabsat project</div>
+                <div class="box-project-team">Tokai University satellite project (TSP)</div>
+                
+              </div>
+              
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://fabsat.tumblr.com/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://fabsat.tumblr.com/">http://fabsat.tumblr.com/</a>
+                </div>
+                <div class="box-project-description"><p>Fabsat is one of the satellite projects in Tokai University under the concept of making the world where people can casually enjoy building satellites.</p><p>In order to realize the future where people can enjoy building satellites, we are working on the use of digital fabrication, open satellite development and linkage between the satellite and web.</p><p>Mozilla Factory has similar philosophy with ours, so we had their support on the workshop and the ideathon for high school students held in this August.</p><p>Participants of the event studied about setting of the simulated satellite’s name as well as its character, and also deepened understanding about the satellite behavior and data acquired from the censor at the time of launch, then brainstormed about tweet messages.</p><p>We succeeded the test-launch as well as sending the tweet messages brought up together with high school students in Akita prefecture in this August. Currently we are working on to analyze the experimental data and for the next step.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project16" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">gitFAB: A Web service for developing “physical things” in the manner of open source software development</div>
+                <div class="box-project-team">SFC*SFC + Mozilla Japan</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/13.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://gitfab.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://gitfab.org/">http://gitfab.org/</a>
+                </div>
+                <div class="box-project-description"><p>gitFAB is a Web service to develop a variety of high quality “physical things” in DIY. It is based on the open source software philosophy such as 1. Anyone can use for free.  2. Anyone can make copies or fork.  3. Anyone can contribute to the project in various levels.</p><p>The point we aimed at is “Recipe for creating physical things.” Based on this, we developed an infrastructure which anyone can make copies or fork it.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project17" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">【TECH×ART】 Firefox OS support camera application - cameran</div>
+                <div class="box-project-team">Recruit Holdings Co.,ltd.</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/7.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="https://marketplace.firefox.com/app/cameran?src=search" class="project-url-button">Website</a>
+                  </div>
+                  <a href="https://marketplace.firefox.com/app/cameran?src=search">https://marketplace.firefox.com/app/cameran?src=search</a>
+                </div>
+                <div class="box-project-description"><p>We announced a partnership with Mozilla in February this year.</p><p>We will exhibit the 1st collaboration product, "cameran" an English-capable Firefox OS camera application.</p><p>Cameran allows you to retouch photos through the perspective of Mika Ninagawa simply by tapping on a filter.</p><p>Please come see how we implemented the filter feature using HTML5 to add effects on photos.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project18" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Demonstration of the Web Audio API: Play with sounds on the Web</div>
+                <div class="box-project-team">W3C (World Wide Web Consortium)</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/20.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://www.w3.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://www.w3.org/">http://www.w3.org/</a>
+                </div>
+                <div class="box-project-description"><p>Web Audio API is a high-level JavaScript API for processing and synthesizing audio in web applications. The web developers are able to create, modify and analyze the audio using the audio processing feature which works flawlessly on the web. In addition, Web Audio API equips specifications to work on any platform or browser without a plug-in or software.  Web Audio API is expected to be used in education, research, digital publishing and entertainment field in the future.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project19" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Firefox OS based small hardware with Web nature development project</div>
+                <div class="box-project-team">Mozilla Factory - Open Hardware Project</div>
+                
+              </div>
+              
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://ja.mozillafactory.org/post/98952414398/open-hardware-project" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://ja.mozillafactory.org/post/98952414398/open-hardware-project">http://ja.mozillafactory.org/post/98952414398/open-hardware-project</a>
+                </div>
+                <div class="box-project-description"><p>Our project is to develop a Firefox OS based small hardware platform like Arduino and to propose usages of it in the WoT era. Also, we are working on to develop a prototype.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project20" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Jorte for Firefox OS beta version</div>
+                <div class="box-project-team">Jorte Inc.</div>
+                
+              </div>
+              
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://www.jorte.com/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://www.jorte.com/">http://www.jorte.com/</a>
+                </div>
+                <div class="box-project-description"><p>We will introduce a calendar application "Jorte" for Firefox OS beta version which is downloaded over than 20 million in the world.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project21" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Independent research on Firefox OS application at Chuo University</div>
+                <div class="box-project-team">Independent research society of Firefox OS at Chuo University</div>
+                
+                <div class="project-members">Shun Kusakabe, Tomoyasu Shirani, Shohei Toyota, Shun Hayami, Atsushi Yamauchi, Masafumi Yamamoto, Chihiro Watanabe</div>
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/11.jpg);"></div>
+              </div>
+              <div class="box-details">
+                
+                <div class="box-project-description"><p>We will display applications which use the sensor of Firefox OS device. These applications are the work products of 7 volunteers at undergraduate and graduate School of Chuo University. Visitors are able to see the source code of each work product.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project22" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Work Products of Open Project Seminar at Chuo University</div>
+                <div class="box-project-team">Volunteers of Open Project Seminar at Chuo University</div>
+                
+                <div class="project-members">Shohei Toyota, Takuya Morishita, Chihiro Watanabe</div>
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/27.jpg);"></div>
+              </div>
+              <div class="box-details">
+                
+                <div class="box-project-description"><p>We will exhibit a work product titled "Open Project Exercise" in Information and System Engineering course, Faculty of Science and Engineering at Chuo University.</p><p>We developed a device that connects to the Web using open hardware such as Arduino and open software.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project23" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Firefox OS Research Project in Hakodate</div>
+                <div class="box-project-team">Tsukada research lab, Future University Hakodate</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/10.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://tsuka-lab.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://tsuka-lab.org/">http://tsuka-lab.org/</a>
+                </div>
+                <div class="box-project-description"><p>We will exhibit 2 projects "Sun sometimes rain-bringer" and "PuTalk!" These are the projects from the Firefox OS workshop held at Future University Hakodate in this June and we have made some progress to them.</p><p>First, "Sun sometimes rain-bringer" an application to determine how a person's presence causes the weather; sunny or rainy.</p><p>The application automatically accumulates the weather data at users' device when s/he is outside. Then based on the statistics, the application determines whether the person is a sun/rain bringer. Users are able to post the result on SNS.</p><p>Second project is "PuTalk!" an application to switch the telephone call mode. When put the smartphone to ear, you can talk normally. When you place the smartphone on the desk, then it automatically switch to the speaker mode enabling the group conversation.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project24" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Summer Break Project: Workshops for Firefox OS Application Development</div>
+                <div class="box-project-team">Summer break project: research society of Firefox OS application</div>
+                
+                <div class="project-members">Shun, Maiko Wakatsuki, Rui, Harumi Kawakami</div>
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/16.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://webmaker.mozillafactory.org/post/96436564487" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://webmaker.mozillafactory.org/post/96436564487">http://webmaker.mozillafactory.org/post/96436564487</a>
+                </div>
+                <div class="box-project-description"><p>We will introduce applications created by students raging from elementary school to university students at "Maker Party" a workshop held during the summer break.</p><p>With the cooperation of Chuo University students, participants freely developed applications under the theme of "application which uses Firefox OS device censor."</p><p>There are a lot of potential in developing applications for Firefox OS, we truly enjoyed the opportunity and had a fruitful time. We look forward to your visit.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project25" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Firefox OS Application for Learning</div>
+                <div class="box-project-team">Matsushita Laboratory at Kansai University Faculty of Informatics</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/24.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href=" http://amateras.wsd.kutc.kansai-u.ac.jp/?p=2047" class="project-url-button">Website</a>
+                  </div>
+                  <a href=" http://amateras.wsd.kutc.kansai-u.ac.jp/?p=2047"> http://amateras.wsd.kutc.kansai-u.ac.jp/?p=2047</a>
+                </div>
+                <div class="box-project-description"><p>We will exhibit 3 works on Firefox OS from our current research at Matsushita Laboratory.</p><p>1. Word Scrap - A vocabrary learning application. We made some improvements from the one we developed at Firefox OS hackathon last year.</p><p>2. Bouken will! mk2 (Adventure! mk2) - A city area guide application. We added a history learning feature in the application which we developed this year's WEB hackathon.</p><p>3. Onomatopoeia illustrated book - A web application designed for foreign people to learn the nuance of Japanese onomatopoeia through the illustrations.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project26" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Device Trial Event, Perler Beads & NFC Workshop, AppMaker Demonstration</div>
+                <div class="box-project-team">Firefox OS community</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/2.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://fxos.org/" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://fxos.org/">http://fxos.org/</a>
+                </div>
+                <div class="box-project-description"><p>We will have a touch and try area for the Firefox OS device, workshop for Perler Beads and demonstration of AppMaker which enables to create an application easily on the web browser. We hope to show the attractiveness of Firefox OS and visitors enjoy the friendly atmosphere.</p></div>
+              </div>
+            </div>
+          </li><li>
+            <div id="project27" class="project-content">
+              <div class="box-info">
+                <div class="box-project-name">Introduction of Taovisor - 3DVR goggles</div>
+                <div class="box-project-team">Tao software Co., Ltd.</div>
+                
+              </div>
+              <div class="box-image">
+                <div style="background-image: url(/static/images/events/2014/open-web-day/projects/23.jpg);"></div>
+              </div>
+              <div class="box-details">
+                <div>
+                  <div>
+                    <a href="http://www.taovisor.com" class="project-url-button">Website</a>
+                  </div>
+                  <a href="http://www.taovisor.com">http://www.taovisor.com</a>
+                </div>
+                <div class="box-project-description"><p>We made Taovisor, a pair of goggles compatible with Google’s cardboard viewer which is used to experience 3DVR.</p><p>Using WebGL on Firefox OS allows rendering 3D graphics. Combination of Taovisor and Firefox, we will have a demonstration to experience 3DVR.</p></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="desc" id="report">
+      <h2>Report</h2>
+      <p>We had approximately 400 participants including exhibitors and visitors in spite of the haevy rain due to the typhoon.</p>
+      <p>There were many participants joined over the internet for the open stage program along with actual site attendees. In the talk session of KDDI, commented about firefox OS and device to be a nice “Christmas Present” which made everyone very excited.</p>
+      <p>Please click the URL below for the video of talk sessions.</p>
+      <div>
+        <h3>Open Stage Session Archive Video</h3>
+        <ul id="stage-archives">
+          
+          <li class="stage-archive">
+            <h4>
+              <span>Session&thinsp;1:&nbsp;</span>Web & Fab
+            </h4>
+            <ul><li class="archive">
+                <a href="https://www.youtube.com/watch?v=G0Epv5yVbEc">Movie on YouTube</a>
+              </li>
+              
+              <li class="archive">
+                <a href="/static/docs/events/2014-open-web-day/slides/1.pdf">Presentation slide(PDF)</a>
+              </li>
+              
+            </ul>
+            <ul>
+              
+              <li class="speaker">
+                <div class="name">Hiroya Tanaka</div>
+                
+                <div class="positions">
+                  <div class="brace">(</div>
+                  
+                  <div>Associate Professor at Keio University</div><div class="slash">&nbsp;/&nbsp;</div>
+                  <div>Founder of FabLab Japan</div>
+                  <div></div>
+                  <div class="brace">)</div>
+                </div>
+                
+              </li>
+              
+              <li class="speaker">
+                <div class="name">Satoko Takita</div>
+                
+                <div class="positions">
+                  <div class="brace">(</div>
+                  
+                  <div>The chair of the Board of Directors of Mozilla Japan</div>
+                  <div></div>
+                  <div class="brace">)</div>
+                </div>
+                
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li class="stage-archive">
+            <h4>
+              <span>Session&thinsp;2:&nbsp;</span>Web & Things & Living
+            </h4>
+            <ul><li class="archive">
+                <a href="https://www.youtube.com/watch?v=z0okGoLCnGQ">Movie on YouTube</a>
+              </li>
+              
+              <li class="archive">
+                <a href="/static/docs/events/2014-open-web-day/slides/2.pdf">Presentation slide(PDF)</a>
+              </li>
+              
+            </ul>
+            <ul>
+              
+              <li class="speaker">
+                <div class="name">Futomi Hatano</div>
+                
+                <div class="positions">
+                  <div class="brace">(</div>
+                  
+                  <div>Director and CTO at Newphoria Corporation</div><div class="slash">&nbsp;/&nbsp;</div>
+                  <div>CEO of Futomi Co.,Ltd.</div>
+                  <div></div>
+                  <div class="brace">)</div>
+                </div>
+                
+              </li>
+              
+              <li class="speaker">
+                <div class="name">Satoshi Endo</div>
+                
+                <div class="positions">
+                  <div class="brace">(</div>
+                  
+                  <div>Director and chief researcher at KADOKAWA ASCII Research Laboratories, Inc.</div>
+                  <div></div>
+                  <div class="brace">)</div>
+                </div>
+                
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li class="stage-archive">
+            <h4>
+              <span>Session&thinsp;3:&nbsp;</span>KDDI Firefox OS project team
+            </h4>
+            <ul><span>(KDDI's CEO Mr.Tanaka's comments about the Firefox OS device starts at 7:18.)</span><li class="archive">
+                <a href="https://www.youtube.com/watch?v=yHKO0iuVo3s">Movie on YouTube</a>
+              </li>
+              
+              <li class="archive">
+                <a href="/static/docs/events/2014-open-web-day/slides/3.pdf">Presentation slide(PDF)</a>
+              </li>
+              
+            </ul>
+            <ul>
+              
+              <li class="speaker">
+                <div class="name"><span class="company-name">KDDI&#32;</span><span class="device-name">Firefox OS&#32;</span>project team</div>
+                
+              </li>
+              
+              <li class="speaker">
+                <div class="name">Hiromu Tsuda</div>
+                
+                <div class="positions">
+                  <div class="brace">(</div>
+                  
+                  <div>Engadget Japan</div>
+                  <div></div>
+                  <div class="brace">)</div>
+                </div>
+                
+              </li>
+              
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+  </div><!-- end #main-content -->
+</section><!-- end #main -->
+
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

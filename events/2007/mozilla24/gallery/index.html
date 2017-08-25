@@ -1,0 +1,23 @@
+<?php 
+$page_title         = 'Mozilla 24 | イベント情報 | Mozilla Japan';
+$body_class         = 'sand news events';
+$meta_robots        = 'noindex';
+$css                = array('sandstone/global'); // 最終更新日は /includes/functions.inc.php で管理
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/shared-header.inc.php';
+
+?>
+  <body role="document" itemscope itemtype="http://schema.org/WebPage" itemref="copyright">
+<?php 
+$screenshots = array('home', 'about', 'rockfestival', 'ccstudio');
+
+if (!empty($_GET['screen']) && in_array($_GET['screen'], $screenshots)) {
+  echo '    <p><img src="/static/images/events/2007/mozilla24/scr-' . $_GET['screen'] . '.jpg" alt=""></p>' . PHP_EOL;
+}
+
+?>
+    <p><a href="../">Mozilla 24 のアーカイブページへ戻る</a></p>
+<?php 
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/shared-footer.inc.php';
+
+?>

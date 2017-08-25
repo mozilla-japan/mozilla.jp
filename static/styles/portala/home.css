@@ -1,0 +1,176 @@
+@media screen {
+  h2 {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  h2 span {
+    display: inline-block;
+  }
+
+  ul.column li {
+    margin: 16px 0;
+  }
+
+  ul.column li > a {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  ul.column span {
+    display: block;
+  }
+
+  .row.tiles {
+    margin: 64px 0;
+    align-items: center;
+  }
+
+  .row.tiles a {
+    display: block;
+    text-align: center;
+  }
+
+  .row.tiles img + span {
+    display: block;
+    margin-top: 16px;
+    font-size: 20px;
+  }
+
+  #main-feature {
+    padding-top: 0;
+    background-image: url(/static/images/about/hero.jpg);
+  }
+
+  #main-feature h1 span {
+    display: block;
+    margin: 2px 0;
+  }
+
+  #main-feature h1 strong {
+    display: inline-block;
+    padding: 0 10px;
+    color: #FFF;
+    background-color: #000;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  #main-feature h1 span:first-child {
+    font-size: 56px;
+  }
+
+  #main-feature h1 span:last-child {
+    font-size: 32px;
+    letter-spacing: -.1em;
+  }
+
+  #announcement h2 {
+    position: absolute;
+    left: -9999px;
+  }
+
+  #announcement p {
+    padding: 16px;
+    color: #FFF;
+    background-color: #646363;
+  }
+
+  #social {
+    color: #EEE;
+    background-color: #2E3A42;
+  }
+
+  #social ul {
+    margin: 48px 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #social li {
+    display: inline-block;
+    margin: 0 16px;
+    line-height: 1;
+  }
+
+  #social .icon::before {
+    color: #EEE;
+  }
+
+  #events {
+    color: #EEE;
+    background-color: #2E3A42;
+    background-image: url(/static/images/home/background-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+
+  #products,
+  #community {
+    background-color: #EEE;
+    background-image: url(/static/images/home/stripe-lightgray.png);
+  }
+
+  #globalfooter {
+    color: #FFF;
+    background-color: #000;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .row.tiles {
+    display: flex;
+    margin: 64px -16px;
+  }
+
+  .row.tiles .col {
+    margin: 0 16px;
+  }
+
+  .row.tiles .col.s3 {
+    width: 50% !important;
+  }
+
+  .row.tiles img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  .row.tiles {
+    margin: 32px 0;
+  }
+
+  .row.tiles img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .row.tiles img + span {
+    font-size: 20px;
+  }
+
+  #main-feature h1 span:first-child {
+    font-size: 40px;
+  }
+
+  #main-feature h1 span:last-child {
+    font-size: 24px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  #products,
+  #community {
+    background-image: url(/static/images/home/stripe-lightgray@2x.png);
+    background-size: 4px 4px;
+  }
+}

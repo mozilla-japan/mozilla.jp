@@ -1,0 +1,33 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'android';
+$_version = '55.0.2';
+$_desktop_version = '55.0.2';
+$_date = '2017-08-16';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787229">
+                  <p>タブの復元に関する問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1379374">Bug 1379374</a>)</p>
+                </li>
+                <li id="note-787230">
+                  <p>Telemetry によるクラッシュを修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1386027">Bug 1386027</a>)</p>
+                </li>
+                <li id="note-787231">
+                  <p>Galaxy S4 SPH-L720 モデルで適応再生機能を無効化しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1390022">Bug 1390022</a>)</p>
+                </li>
+                <li id="note-787225">
+                  <p>予測先読み機能を無効化しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1388160">Bug 1388160</a>)</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

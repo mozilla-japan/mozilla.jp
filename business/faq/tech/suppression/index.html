@@ -1,0 +1,116 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = 'ユーザを惑わすメッセージを表示させたくない | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/suppression/' => 'ユーザを惑わすメッセージを表示させたくない'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>ユーザを惑わすメッセージを表示させたくない</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>初回起動時の設定移行ウィザードを表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>FirefoxやThundebirdの初回起動時に表示される <code>設定移行ウィザード</code> （他のアプリケーションの設定を引き継ぐためのウィザード）は無効化することができます。</p><h3 id="-">設定方法</h3><p><code>override.ini</code> という名前で以下の内容のテキストファイルを作成し、Firefoxであればインストール先ディレクトリ内の <code>browser</code> ディレクトリ内（Windowsであれば、<code>C:\Program Files (x86)\Mozilla Firefox\browser\override.ini</code> など）、Thunderbirdであればインストール先ディレクトリ直下（Windowsであれば、<code>C:\Program Files (x86)\Mozilla Thunderbird\override.ini</code> など）に置きます。</p><pre><code>[XRE]
+EnableProfileMigrator=false
+</code></pre>
+                    </article>
+                    <article id="faq2">
+                      <h2>アップデート後の「お使いのFirefoxは最新版に更新されました」タブを表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxを更新した後の初回起動時に表示される「お使いのFirefoxは最新版に更新されました」タブは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;browser.startup.homepage_override.mstone&quot;, &quot;ignore&quot;);
+</code></pre>
+                    </article>
+                    <article id="faq3">
+                      <h2>アップデート後の「Thunderbirdへようこそ」（新着情報）タブを表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Thunderbirdを更新した後の初回起動時に表示される「Thunderbirdへようこそ」タブは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>clearPref(&quot;app.update.postupdate&quot;);
+</code></pre><p>上記の設定は、設定値の内容に関わらず、ユーザ設定値が保存されていると「Thunderbirdへようこそ」タブが開かれるという仕様になっています。そのため、明示的に <code>false</code> を指定する代わりにユーザ設定値を消去する必要があります。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>「あなたの権利について」を表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>FirefoxやThunderbirdの初回起動時などに表示される「あなたの権利について」のメッセージは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。FirefoxとThunderbirdで設定名が異なることに注意して下さい。</p><pre><code>// Firefoxの場合
+lockPref(&quot;browser.rights.override&quot;, true);
+
+// Thunderbirdの場合
+lockPref(&quot;mail.rights.override&quot;, true);
+</code></pre>
+                    </article>
+                    <article id="faq5">
+                      <h2>パフォーマンス情報の自動送信に関するメッセージを表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>FirefoxやThunderbirdの初回起動時などに表示される「Mozilla Firefox（Thunderbird）の改善のため、メモリ消費量、パフォーマンス、応答速度を自動的にMozillaに送信しますか？」のメッセージは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。設定名はFirefoxとThunderbirdで共通です。</p><pre><code>if (typeof getPref(&quot;toolkit.telemetry.prompted&quot;) == &quot;boolean&quot;)
+  clearPref(&quot;toolkit.telemetry.prompted&quot;);
+lockPref(&quot;toolkit.telemetry.prompted&quot;, 2);
+</code></pre><p>上記のメッセージが表示された際に「いいえ」を選択した状態にしたい場合（パフォーマンス情報の自動送信を禁止したい場合）は、以下も併せて指定します。</p><pre><code>lockPref(&quot;toolkit.telemetry.enabled&quot;, false);
+lockPref(&quot;toolkit.telemetry.rejected&quot;, true);
+</code></pre>
+                    </article>
+                    <article id="faq6">
+                      <h2>プラグインのインストールを促すメッセージを表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>FirefoxでFlashやJavaなどのプラグインを使用したページを閲覧する際に表示される、プラグインのインストールを促すメッセージは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;plugins.hide_infobar_for_missing_plugin&quot;, true);
+</code></pre>
+                    </article>
+                    <article id="faq7">
+                      <h2>タブを閉じようとしたときの警告を表示させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxでウィンドウや複数のタブを一度に閉じようとした時に表示される、本当に閉じてもよいかどうかの確認ダイアログは、設定で無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>// 複数のタブを開いた状態でウィンドウを閉じようとした時の確認を表示しない
+lockPref(&quot;browser.tabs.warnOnClose&quot;, false);
+// 「他のタブを閉じる」で複数のタブを一度に閉じようとした時の確認を表示しない
+lockPref(&quot;browser.tabs.warnOnCloseOtherTabs&quot;, false);
+</code></pre>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">初回起動時の設定移行ウィザードを表示させたくない</a></li>
+                        <li><a href="#faq2">アップデート後の「お使いのFirefoxは最新版に更新されました」タブを表示させたくない</a></li>
+                        <li><a href="#faq3">アップデート後の「Thunderbirdへようこそ」（新着情報）タブを表示させたくない</a></li>
+                        <li><a href="#faq4">「あなたの権利について」を表示させたくない</a></li>
+                        <li><a href="#faq5">パフォーマンス情報の自動送信に関するメッセージを表示させたくない</a></li>
+                        <li><a href="#faq6">プラグインのインストールを促すメッセージを表示させたくない</a></li>
+                        <li><a href="#faq7">タブを閉じようとしたときの警告を表示させたくない</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

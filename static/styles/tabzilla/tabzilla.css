@@ -1,0 +1,20 @@
+/* Tab */
+#tabzilla {
+  float: right;
+  display: block;
+  background-image: url(/static/images/tabzilla/tab-2017011808.png);
+  height: 36px;
+  width: 147px;
+  position: relative;
+  text-indent: -2000px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  #tabzilla {
+    -webkit-background-size: 147px 36px;
+    background-size: 147px 36px;
+    background-image: url(/static/images/tabzilla/tab@2x-2017011808.png);
+  }
+} /* end media query */

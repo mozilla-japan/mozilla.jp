@@ -1,0 +1,57 @@
+<?php
+
+$page_title         = '会場アクセス | Mozilla Vision 2012 Workshop Day';
+$page_description   = 'Workshop Day は 原宿 cafe STUDIO にて開催します。アクセス方法は 原宿 cafe STUDIO 公式サイトでご確認ください。';
+$page_image         = '/static/images/events/vision/2012/logo-128.jpg';
+$body_id            = 'events-vision-2012-workshop-access';
+$body_class         = 'sand news events vision workshop access';
+$css                = array('events/vision-2012-20160411'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/vision/2012/' => 'Mozilla Vision 2012',
+  '/events/vision/2012/workshop/' => 'Workshop Day',
+  '/events/vision/2012/workshop/access/' => '会場アクセス'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav id="localnav" class="top" role="menubar" aria-label="Mozilla Vision 2012" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <h1 role="presentation"><a href="/events/vision/2012/" tabindex="0" role="menuitem">Mozilla Vision 2012</a></h1>
+            <ul role="presentation">
+              <li role="presentation"><a href="/events/vision/2012/conference/" tabindex="0" role="menuitem">カンファレンス</a></li>
+              <li role="presentation"><a href="/events/vision/2012/workshop/" tabindex="0" role="menuitem">ワークショップ</a></li>
+              <li class="external" role="presentation"><a href="https://wiki.mozilla.org/Japan/Events/MozillaVision2012/Workshop" tabindex="0" role="menuitem">English</a></li>
+            </ul>
+          </nav>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <section itemscope itemtype="http://schema.org/Event">
+              <header id="main-feature">
+                <div class="hgroup" itemprop="name">
+                  <h1>Workshop Day</h1>
+                  <h2 role="presentation">子どもから大人までオープンなものづくりを体感</h2>
+                </div>
+                <p><time datetime="2012-01-22T11:00+0900" itemprop="startDate endDate">2012 年 1 月 22 日 (日) 11:00</time> ～ <time datetime="2012-01-22T20:00+0900" itemprop="startDate endDate">20:00</time> <span itemprop="location" itemscope itemtype="http://schema.org/EventVenue"><span itemprop="name">原宿 cafe STUDIO</span></span></p>
+                <nav role="directory">
+                  <ul>
+                    <li><a href="/events/vision/2012/workshop/">プログラム</a></li>
+                    <li class="current"><a href="/events/vision/2012/workshop/access/">会場アクセス</a></li>
+                  </ul>
+                </nav>
+              </header><!-- end #main-feature -->
+              <div id="main-content">
+                <p class="note">お知らせ：デザイン フェスタ ギャラリーから <strong>原宿 cafe STUDIO に会場が変更となりました</strong></p>
+                <section id="sec-access">
+                  <h2>会場アクセス</h2>
+                  <p>Workshop Day は 原宿 cafe STUDIO にて 11:00 から 20:00 まで開催します。<br>アクセス方法は <a href="http://www.cafe-studio.jp/guide/map.html">原宿 cafe STUDIO 公式サイト</a> でご確認ください。</p>
+                  <p><a class="button" href="http://www.cafe-studio.jp/guide/map.html">アクセスマップを見る</a></p>
+                </section><!-- end #sec-access -->
+<?php @include_once $_SERVER['DOCUMENT_ROOT'] . '/events/vision/2012/includes/supporters.inc.php'; ?>
+              </div><!-- end #main-content -->
+            </section>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

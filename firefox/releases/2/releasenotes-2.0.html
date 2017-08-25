@@ -1,0 +1,185 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 2 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/2.0/releasenotes/' => 'Firefox 2'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 2.0</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+<p>Firefox&nbsp;2 は、数々の賞を受賞している Mozilla のウェブブラウザー「Firefox」の次世代版です。</p>
+<p>このリリースノートには、Firefox&nbsp;2  に関する <a href="#whatsnew">新機能</a>、<a href="#download">ダウンロード</a>、<a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#FAQ">よくある質問</a> が載っています。<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p>
+<p>こちらの <a href="https://input.mozilla.org/ja/feedback/firefox">フィードバックフォーム</a> から皆さんの声をお寄せください。<span class="comment">【注: 申し訳ありませんが英語でお願いします】</span></p>
+
+<h2><a name="whatsnew">Firefox&nbsp;2 の新機能と改良点</a></h2>
+<ul class="news spaced">
+  <li><p><b>外見の刷新:</b> Firefox&nbsp;2 のテーマおよびユーザーインターフェースが改良され、慣れ親しんだブラウジング体験に影響を与えることなく使い勝手を向上させました。</p></li>
+  <li><p><b>組み込みのフィッシング対策機能:</b> <a href="https://support.mozilla.org/ja/kb/how-does-phishing-and-malware-protection-work" rel="nofollow">フィッシング詐欺サイト警告機能</a> は、偽装サイトの疑いがある場合は警告を表示して、ユーザーのホームページへ戻れるようにします。この機能は標準で有効になっており、ローカルあるいはオンラインに蓄積された既知のフィッシング詐欺サイト一覧を参照することで動作します。フィッシング詐欺サイト警告機能が有効になっている場合、この一覧は自動的にダウンロードされ定期的に更新されます。</p></li>
+  <li><p><b>拡張された検索能力:</b> 統合された検索バーから Yahoo! JAPAN および Google の検索エンジンを利用する際、ユーザーの入力にしたがって検索キーワードの候補一覧が表示されます。新しい検索エンジンマネージャーにより、検索エンジンを簡単に追加、削除、並び替えでき、新しい検索エンジンを提供するウェブページを表示すると、検索バーのアイコンの色が変わってインストール可能なことをお知らせします。</p></li>
+  <li><p><b>改良されたタブブラウジング:</b> Firefox では標準で、新しいウィンドウで開かれるリンクを新しいタブで開くようになりました。そして、それぞれのタブには [タブを閉じる] ボタンが付いています。パワーユーザーの皆さんは、ひとつのウィンドウに収まりきらないぐらい多くのタブを開くかも知れません。その場合はタブバーの左右に矢印が表示され、タブを左右にスクロールできるようになります。履歴メニューには最近閉じたタブの一覧が保存され、誤って閉じてしまったタブもすばやく開きなおせます。</p></li>
+  <li><p><b>ブラウジングセッションの再開:</b> セッション復元機能では、直前のセッションのウィンドウ、タブ、フォームに入力したテキスト、そして進行中だったダウンロードを復元できます。この機能は、Firefox の更新または拡張機能のインストール時に自動的に有効になるとともに、システムクラッシュ後にも直前のセッションを復元したいかどうかを尋ねるダイアログを表示します。</p></li>
+  <li><p><b>ウェブフィードのプレビューと購読:</b> ウェブフィード (RSS フィード) を表示したときに、その処理方法を選択できるようになりました。例えば <a href="/blog/feed/">こちら</a> のフィードをご覧ください。ウェブサービス経由もしくは独立して動作するフィードリーダー (RSS リーダー) で購読するか、あるいは <a href="https://support.mozilla.org/ja/kb/Live+Bookmarks">ライブブックマーク</a> として追加するかを選択できます。日本語版では、My Yahoo!、Google、Bloglines、はてな RSS、livedoor Reader、goo RSS リーダーがウェブサービスのオプションとしてあらかじめ用意されていますが、RSS フィードを扱うあらゆるウェブサービスを追加できるようになっています。</p></li>
+  <li><p><b>インラインスペルチェック:</b>スペルチェック機能が新たに組み込まれ、ウェブフォーム (例えば <a href="http://hendrix.mozilla.org/">こちら</a>) に入力したテキストのスペルを、外部アプリケーションを利用することなく、すばやくチェックできるようになりました。<span class="comment">【注: スペルチェック機能を使うには専用の辞書をインストールする必要があります。テキストボックス上で右クリックして [辞書を追加] を選択し、必要な言語の辞書をインストールしてください】</span></p></li>
+  <li><p><b>ライブタイトル:</b> ウェブページで最も重要な情報の要約で定期的に更新される <a href="https://wiki.mozilla.org/Microsummaries">マイクロサマリー</a> がウェブサイトによって提供されている場合、「ライブタイトル」 としてブックマークを作成できます。ブックマークラベルに収まるほどコンパクトで、固定されたページタイトルよりも分かりやすい情報を提供してくれるだけでなく、定期的に最新の情報に更新されます。ライブタイトルを使ってブックマークできるウェブサイトは <a href="http://people.mozilla.com/~myk/microsummaries/sites/">複数あり</a>、人気のある他のウェブサイトに対応してライブタイトルを生成できる <a href="http://people.mozilla.com/~myk/microsummaries/generators/">アドオン</a> も登場し始めています。</p></li>
+  <li><p><b>改良されたアドオンマネージャー:</b> 新しくなったアドオンマネージャーでは、拡張機能およびテーマを一つのツールからまとめて管理できるようにインターフェースが改良されました。</p></li>
+  <li><p><b>JavaScript 1.7:</b> JavaScript 1.7 では、ジェネレーター、イテレーター、配列の内包表記 (array comprehension)、let 式 (let expression)、分割代入 (destructuring assignment) といった <a href="https://developer.mozilla.org/ja/New_in_JavaScript_1.7">複数の新機能</a> が導入されています。本バージョンには JavaScript 1.6 が備える機能もすべて含まれています。</p></li>
+  <li><p><b>拡張された検索プラグイン形式:</b> Firefox の <a href="https://developer.mozilla.org/ja/Creating_OpenSearch_plugins_for_Firefox">検索エンジン形式</a> は、Sherlock や OpenSearch 形式で書かれた検索エンジンプラグインにも対応し、検索キーワードの候補一覧も表示できるようになりました。</p></li>
+  <li><p><b>拡張機能システムの改良:</b> 拡張機能システムが刷新され、より充実したセキュリティ機能を提供し、拡張機能をより簡単にローカライズできるようになりました。</p></li>
+  <li><p><b>クライアントサイドセッションおよび永続ストレージ：</b> クライアント側で構造化されたデータを新たに保存できるようになり、ドキュメントやメールボックスといった大量のデータを処理する際のオンライントランザクションをより適切に処理させることが可能になるとともに、パフォーマンスを向上させることができます。これは、クライアントサイドセッションおよび永続ストレージのための <a href="http://www.whatwg.org/specs/web-apps/current-work/#scs-client-side" rel="nofollow">WHATWG 仕様</a> に基づいています。</p></li>
+  <li><p><b>SVG テキスト:</b> svg:textpath 仕様をサポートし、SVG テキストが曲線や図形に沿って表示できるようになりました。</p></li>
+  <li><p><b>新しい Windows 版インストーラ:</b> <a href="http://sourceforge.net/projects/nsis/" rel="nofollow">Nullsoft Scriptable Install System</a> を採用しました。これまで長い間解決できなかった問題が、新しい Windows インストーラによって解消されました。</p></li>
+</ul>
+
+<h2 id="downloadandinstall">ダウンロードとインストール</h2>
+<h3 id="requirements">必要システム構成</h3>
+<p>インストールの前に、お使いのコンピューターが <a href="/firefox/2.0/system-requirements/">必要システム構成</a> を満たしているか確認してください。</p>
+<h3 id="download"><a>Firefox&nbsp;2 のダウンロード</a></h3>
+<p>Mozilla では、Firefox&nbsp;2 を Windows、Linux、そして Mac&nbsp;OS&nbsp;X 用に、さまざまな言語で提供しています。<a href="https://www.mozilla.org/ja/firefox/all/">Firefox&nbsp;2 の最新版はこちらからダウンロードできます</a>。Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+<h3><a name="install">Firefox&nbsp;2 のインストール</a></h3>
+<p>Firefox&nbsp;2 をインストールすると、すでにインストールされている Firefox が <strong>上書きされます</strong> ので、ご注意ください。ブックマークや閲覧履歴には一切影響ありませんが、拡張機能やその他のアドオンの一部は更新が提供されるまで動かない可能性があります。</p>
+<h3 id="uninstall">Firefox&nbsp;2 の削除</h3>
+<p>Firefox&nbsp;2 は、Windows では <tt>スタートメニュー</tt> の <tt>コントロール パネル</tt> から、Mac では <tt>Firefox</tt> アプリケーションを削除することで、Linux では <tt>firefox</tt> フォルダーを削除することで、それぞれ削除できます。</p>
+<p>Firefox&nbsp;2 を削除しても、ブックマーク、閲覧履歴、拡張機能やその他のアドオンは削除されません。これらデータは、お使いの「プロファイルフォルダー」に保存されています。「プロファイルフォルダー」の場所は、お使いの OS によって異なります。</p>
+<table style="font-size: small;" border="1" cellspacing="0">
+  <tr><td>Windows 2000、XP、Server 2003</td><td>Documents and Settings\&lt;ユーザー名&gt;\Application Data\Mozilla\Firefox</td></tr>
+  <tr><td>Windows NT</td><td>WINNT\Profiles\&lt;ユーザー名&gt;\Application Data\Mozilla\Firefox</td></tr>
+  <tr><td>Windows 98、ME</td><td>Windows\Application Data\Mozilla\Firefox</td></tr>
+  <tr><td>Mac&nbsp;OS&nbsp;X</td><td>~/Library/Application Support/Firefox</td></tr>
+  <tr><td>Linux および Unix システム</td><td>~/.mozilla/firefox</td></tr>
+</table>
+<p>Firefox&nbsp;2 を削除した後に Firefox をインストールした場合、そのバージョンにかかわらず、引き続きこのプロファイルフォルダーにあるデータが使用されます。</p>
+<h3 id="extensions">拡張機能とテーマ</h3>
+<p>Firefox 1.5 環境下でインストールされた拡張機能には互換性がなく、Firefox&nbsp;2 で利用するために更新が必要となるものもあります。何か問題が見つかった場合はその拡張機能の管理者にご連絡ください。Firefox&nbsp;2 をインストールすると、すべての拡張機能とテーマは、Firefox&nbsp;2 が a) Firefox&nbsp;2 と互換性がある、b) 互換性のある新しいバージョンが利用できる、のいずれかの判断をするまで利用できなくなります。</p>
+
+<h2><a name="issues">既知の問題</a></h2>
+<p>Firefox&nbsp;2 で確認されている問題の一部を掲載します。新しいバグを報告する前に必ずお読みください。</p>
+<dl>
+  <dt>すべてのシステム</dt>
+  <dd>
+    <ul class="spaced">
+      <li>一部のファイアウォールソフトが、Firefox の実行を自動的にブロックしてしまう場合があります。この問題は、Firefox のインストール直後や、前のバージョンからの更新直後にしばしば発生します。一般的なファイアウォールプログラムに関しては、Firefox のインターネット接続を許可するための <a href="http://kb.mozillazine.org/Firewalls">設定方法</a> が公開されています。</li>
+      <li>Firefox のビルドには複数のロケールに対応した辞書を同梱することができないため、テキストエリア内で右クリックし、コンテキストメニューから [辞書を追加] を選んで、手動でダウンロードしてください。新しい辞書は Mozilla Add-ons のサイトに随時追加されますので、必要な辞書が見つからなかった場合でも、また後日チェックしてください。</li>
+      <li>テキストエリアのあるウェブページを印刷する際、テキストエリアにスペルの間違った単語が含まれていて、スペルチェック機能が有効になっていると、その後に続くテキストエリア内のテキストが印刷されません。テキストエリア内で右クリックして [このフィールドのスペルチェックを行う] からチェックを外し、印刷中のみ一時的にスペルチェックを無効にしてください。</li>
+      <li>ウェブページによって提供されるアクセスキー定義は、Windows では Alt+Shift+該当キー、Mac OS X では Ctrl+該当キー、Unix では Ctrl+Shift+該当キーで機能するようになりました。</li>
+      <li>Firefox&nbsp;2 で提供されるセッション復元機能は、Gmail など、ログイン状況を保持するセッション Cookie を使用しているサービスへの接続を復元します。この挙動によるプライバシー問題を懸念するユーザーは、<tt>browser.sessionstore.resume_from_crash</tt> の値を false に変更しておくことを推奨します。</li>
+      <li>Firefox&nbsp;2 では「ページサイズに合わせて縮小」機能の設定項目が削除されました。前のバージョンの Firefox で設定した値を変更したい場合は、<tt>browser.enable_automatic_image_resizing</tt> の値を変更してください。</li>
+      <li>マルチユーザーシステムで、ユーザーが書き込み権限を持たない場所に Firefox をインストールした場合、少なくとも初回のみ特権ユーザーとして Firefox を起動する必要があります。または、次のディレクトリーに空のファイルを作成する必要があります。&lt;インストールディレクトリー&gt;/extensions/talkback@mozilla.org/chrome.manifest</li>
+      <li>ソフトウェアアップデートは、Firefox がインストールされている場所に書き込み権限のないユーザーが実行すると失敗します。これは、ソフトウェアアップデートがその場所にあるファイルを置き換え・作成する必要があるためです。</li>
+      <li>安全なログインのためにポート 563 を使用している一部の金融機関でエラーメッセージが表示されます。このエラーが表示された場合は、<tt>network.security.ports.banned.override</tt> というネットワーク禁止ポートの例外リストに 563 を追加してください。ポートを複数指定する場合はカンマで区切ります。</li>
+    </ul>
+  </dd>
+  <dt>Windows</dt>
+  <dd>
+    <ul class="spaced">
+      <li>共有マシンで、アクセス権の限られたユーザーが、自分の書き込み権限のある場所に Firefox をインストールした場合、マイナスの副作用が発生する場合があります (デフォルトブラウザーその他のキーが正しく設定されないなど)。それでもブラウザーは使えます。アクセス権の限られたユーザーがインストールする場合、アクセス制限のある場所や共有の場所に上書きインストールしようとしてはいけません。インストールに失敗する可能性があります。</li>
+      <li>一部の古い Adobe Acrobat Reader プラグインで PDF ファイルを表示して閉じたあと、Firefox がハングする場合があります。このような問題に遭遇したときは、<a href="http://www.adobe.com/jp/products/acrobat/readstep2.html" rel="nofollow">最新のプラグイン</a> が必要です。</li>
+    </ul>
+  </dd>
+  <dt>Mac OS X</dt>
+  <dd>
+    <ul class="spaced">
+      <li>タブのショットカットメニューにある [他のタブをすべて閉じる] は、タブが 20 以上開かれていると機能しません。</li>
+      <li>一部のユーザーから、Intel Mac コンピューター上での Flash コンテンツの表示に関する問題が報告されています。この問題を回避するには、<tt>/Library/Internet Plug-Ins</tt> から Flash Player Enabler.plugin の PowerPC 版を削除、または別の場所に移動してください。</li>
+      <li>新しいプラグインをインストールしても、Firefox は about:plugins に古いプラグインのバージョン情報を表示し続けます。このような問題に遭遇した場合は、一度 Firefox を終了し、<a href="http://kb.mozillazine.org/Profile_folder">プロファイルフォルダー</a> から pluginreg.dat を削除して Firefox を再起動してください。</li>
+      <li>Java は Intel Core プロセッサー上の Rosetta 環境では実行できません。</li>
+      <li>Intel Mac では、ネイティブの場合も Rosetta 上で実行している場合も、Talkback 機能は利用できません。アプリケーションがクラッシュした際には Apple のクラッシュ報告プログラムが起動します。</li>
+    </ul>
+  </dd>
+  <dt>Linux/Unix</dt>
+  <dd>
+    <ul class="spaced">
+      <li>パスに空白を含む場所に Firefox をインストールすると、デフォルトブラウザーに設定できず、起動時に毎回確認ダイアログが表示されてしまいます。この問題を回避するには、パスに空白を含まない場所にインストールしてください。</li>
+      <li>GNOME との統合は Fedora Core 3 では正しく機能しません。Fedora Core 3 ユーザーは、<a href="http://download.fedora.redhat.com/pub/fedora/linux/core/2/i386/os/Fedora/RPMS/linc-1.0.3-3.1.i386.rpm" rel="nofollow">linc-1.0.3-3.1.i386.rpm</a> をダウンロード・インストールする必要があります。この RPM をインストールしたら、Firefox をインストールしたディレクトリーで次のコマンドを実行してください (書き込み権限が必要です)。<p><code>touch .autoreg</code></p>次に Firefox を起動したときから GNOME 統合が有効になります。</li>
+      <li><tt>firefox -remote</tt> (mozilla-xremote-client) は、カンマを含む URL では機能しなくなり、廃止される予定です。<tt>firefox -new-window /url/</tt> で新しいウィンドウに URL を開き、<tt>firefox -new-tab /url/</tt> で新しいタブに URL を開きます。</li>
+    </ul>
+  </dd>
+</dl>
+
+<h2><a name="troubleshooting">トラブルシューティング</a></h2>
+<ul>
+  <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された「Safe Mode」というショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac OS X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+  <li><p>ユーザープロファイルにインストールした拡張機能 (ウェブページからインストールしたものなど) をアンインストールし、コマンドラインオプション -install-global-extension を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+  <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、-p コマンドライン引数をつけて Firefox を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (ブックマーク、保存されているパスワードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータのファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。</p></li>
+</ul>
+
+<h2><a name="FAQ">よくある質問</a></h2>
+<ol class="faq">
+  <li>どのような協力ができますか？<p>Firefox をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。または、こちらの <a href="https://input.mozilla.org/ja/feedback/firefox">フィードバックフォーム</a> から皆さんの声をお寄せください。<span class="comment">【注: 申し訳ありませんが英語でお願いします】</span></p></li>
+  <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/firefox/">Firefox アドオン</a> のページをご覧ください。<!-- <a href="https://ja.add-ons.mozilla.com/ja/firefox/extensions/">拡張機能</a> と <a href="https://ja.add-ons.mozilla.com/ja/firefox/themes/">テーマ</a> は <a href="https://ja.add-ons.mozilla.com/ja/firefox/">Firefox Add-ons</a> からダウンロードできます。 --></p></li>
+  <li>誰が Firefox&nbsp;2 を開発しているのですか？<p>非常に多くの人が関わっています。Firefox&nbsp;2 に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] を開いて [クレジット] をご覧ください。</p></li>
+  <li>Firefox&nbsp;2 のソースコードはどこにありますか？<p>Firefox&nbsp;2 のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(CVS)">CVS</a> を通じて入手可能です。Firefox 固有のソースは mozilla/browser と mozilla/toolkit、mozilla/chrome にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</p></li>
+  <li>メールクライアントはどこにあるのですか？<p>Firefox&nbsp;2 は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアントとして <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> をおすすめします。</p></li>
+</ol>
+
+<h2 id="contributedbuilds">提供されたビルド</h2>
+<p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。</p>
+<h3 id="solarisbuilds">Solaris (SUN デスクトップ北京チーム提供)</h3>
+<p><strong>Tarball 形式</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/README.txt">README</a>)</p>
+<ul>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-i386.tar.bz2">firefox-2.0.en-US.solaris10-i386.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-i386.tar.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-i386.tar.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-sparc.tar.bz2">firefox-2.0.en-US.solaris10-sparc.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-sparc.tar.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris10-sparc.tar.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-i386-gtk1.tar.bz2">firefox-2.0.en-US.solaris8-i386-gtk1.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-i386-gtk1.tar.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-i386-gtk1.tar.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-sparc-gtk1.tar.bz2">firefox-2.0.en-US.solaris8-sparc-gtk1.tar.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-sparc-gtk1.tar.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_tar_ball/firefox-2.0.en-US.solaris8-sparc-gtk1.tar.bz2.MD5SUM">md5sum</a>)<br></li>
+</ul>
+<p><strong>Pkgadd 形式</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/README.txt">README</a>)</p>
+<ul>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-i386-pkg.bz2">firefox-2.0.en-US.solaris10-i386-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-i386-pkg.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-i386-pkg.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-sparc-pkg.bz2">firefox-2.0.en-US.solaris10-sparc-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-sparc-pkg.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris10-sparc-pkg.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-i386-gtk1-pkg.bz2">firefox-2.0.en-US.solaris8-i386-gtk1-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-i386-gtk1-pkg.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-i386-gtk1-pkg.bz2.MD5SUM">md5sum</a>)<br></li>
+<li><a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-sparc-gtk1-pkg.bz2">firefox-2.0.en-US.solaris8-sparc-gtk1-pkg.bz2</a>
+  (<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-sparc-gtk1-pkg.bz2.cksum">cksum</a>,
+  <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib/solaris_pkgadd/firefox-2.0.en-US.solaris8-sparc-gtk1-pkg.bz2.MD5SUM">md5sum</a>)<br></li>
+</ul>
+<h3 id="otherlanguages">ローカライズビルド</h3>
+<p>Mozilla は、数多くのローカライズビルドを <a href="https://wiki.mozilla.org/L10n:Localization_Teams" title="Mozilla ローカライズチーム">その製作者</a> に代わって配布しています。これらビルドは <a href="https://www.mozilla.org/ja/firefox/all/">Firefox&nbsp;2 ダウンロードページ</a> で公開されています。</p>
+<p>Firefox&nbsp;2 公式ローカライズとして認定されていないビルドは、<a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/contrib-localized/">FTP サイト</a> を参照してください。</p>
+
+<h2 id="links">その他の関連資料とリンク</h2>
+<p>以下のリソースには、Firefox&nbsp;2 に関して参考になる情報が載っています：</p>
+<ul>
+  <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox サポートページ</a></li>
+  <li><a href="http://kb.mozillazine.org/">MozillaZine ナレッジベース (英語)</a></li>
+  <li><a href="https://www.mozilla.org/projects/firefox/">開発者情報</a></li>
+  <li><a href="https://wiki.mozilla.org/Firefox2">Firefox&nbsp;2 プロジェクトページ (英語)</a></li>
+</ul>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

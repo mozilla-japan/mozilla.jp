@@ -1,0 +1,323 @@
+#seminar-20150213 h1 {
+  font-size: 200%;
+}
+
+#seminar-20150213 h2  {
+  font-size: 140%;
+}
+
+#seminar-20150213 h2:before{
+  content: "〜 ";
+}
+
+#seminar-20150213 h2:after{
+  content: " 〜";
+}
+
+#seminar-20150213 h1 span,
+#seminar-20150213 h2 span{
+  display: inline-block;
+}
+
+#seminar-20150213 h3 {
+  font-size: 120%;
+}
+
+#seminar-20150213 h4 {
+  font-size: 100%;
+}
+
+#seminar-20150213 p{
+  margin-left: 0;
+}
+
+#seminar-20150213 #globalheader h1 strong{
+  background-image: url(/static/images/events/2015/seminar-0213/MozillaJapanWordMark_R.png);
+  background-repeat: no-repeat;
+}
+
+#seminar-20150213 #globalheader nav > ul > li > a,
+#seminar-20150213 #globalheader nav > ul > li:hover,
+#seminar-20150213 #globalheader nav > ul > li:hover > a,
+#seminar-20150213 #globalheader nav > ul > li > a:hover,
+#seminar-20150213 #globalheader nav > ul > li > a:focus,
+#seminar-20150213 #globalheader nav > ul > li > a:active{
+  color: white;
+}
+
+#seminar-20150213 #pageheader{
+  background-color: #00539F;
+}
+
+#seminar-20150213 #doc{
+  width: 100%;
+}
+
+#seminar-20150213 #doc header{
+  color: #FFFFFF;
+  background-color: #00539F;
+  padding-top: 6em;
+}
+
+#seminar-20150213 #doc header > div, #main{
+  width: 960px;
+  margin: auto;
+}
+
+#seminar-20150213 #doc header > div .note{
+  border: dashed 1px white;
+  margin-top: 2em;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+#seminar-20150213 #doc header > div .note > a{
+  color: white;
+  text-decoration: underline;
+}
+
+#seminar-20150213 #main{
+  margin-top: 4em;
+}
+#seminar-20150213.fixed #main{
+  margin-top: 10em;
+}
+
+#description > section{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: #FFFFFF;
+  background-color: rgba(255,255,255,0.8);
+  padding: 2em;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+#lead{
+  color: white;
+  background-image: url(/static/images/events/2015/seminar-0213/firefox-os_logo-wordmark.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+
+#specifications{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+#specifications dl{
+  width: 90%;
+  margin: auto;
+}
+
+#specifications dt {
+  float: left;
+  width: 8em;
+}
+
+#specifications dd {
+  margin-left: 10em;
+}
+
+#specifications #registration {
+  font-size: 14px;
+}
+
+#lead > p{
+  width: 700px;
+}
+
+#program > table {
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+}
+
+#program  th {
+  border-style: solid;
+  border-color: #000;
+  background: none repeat scroll 0% 0% #52C2C9;
+  text-align: center;
+  color: #FFFFFF;
+  border-width: 1px 1px 1px 1px;
+}
+
+#program td {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px 1px 1px 1px;
+}
+
+#program h4 {
+  margin-top: .2em;
+  margin-left: .2em;
+  background-color: #D4F8F5;
+}
+
+#program h5 {
+  font-size: 90%;
+}
+
+#program h5 > a,
+#program h5 > a:hover,
+#program h5 > a:focus,
+#program h5 > a:active {
+  color: #20679E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#program img {
+  float: left;
+  width: 60px;
+}
+
+#program p, #program span {
+  font-size: 14px;
+  margin-left: .3em;
+}
+
+.fixed #fixedMenu{
+  position : fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  color: #FFFFFF;
+  background-color: #00539F;  
+}
+
+#fixedMenu {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#fixedMenu li{
+  background: none;
+  display: inline-block;
+  padding: .5em 0;
+}
+
+#fixedMenu li:after{
+  margin: 0 .5em 0 1em;
+  content: '|';
+}
+#fixedMenu li:last-child:after{
+  content: '';
+}
+
+#fixedMenu a:link,
+#fixedMenu a:hover,
+#fixedMenu a{
+  color:white;
+}
+
+@media only screen and (min-width: 761px) and (max-width: 1000px) {
+  #seminar-20150213 #doc header > div, #main{
+    width: 740px;
+    margin: auto;
+  }
+  #lead > p{
+    width: 520px;
+  }  
+}
+
+@media only screen and (min-width: 481px) and (max-width: 760px) {
+  #seminar-20150213 h2{
+    font-size: 120%;
+    margin-top: .5em;
+  }
+  #seminar-20150213 h2:before{
+    content: "";
+  }
+  #seminar-20150213 h2:after{
+    content: "";
+  }
+  
+  #seminar-20150213 #doc header > div, #main{
+    width: 480px;
+    margin: auto;
+  }
+
+  #lead{
+    background-image: none;
+  }
+
+  #lead > p{
+    width: auto;
+  }
+
+  #fixedMenu {
+    font-size: 80%;
+  }
+
+  #specifications dt {
+    float: none;
+    width: auto;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  #specifications dd {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #seminar-20150213 #doc header > div, #main{
+    width: 300px;
+    margin: auto;
+  }
+
+  #lead{
+    background-image: none;
+  }
+
+  #lead > p{
+    width: auto;
+  }
+
+  .fixed #fixedMenu{
+    text-align: center;
+  }
+
+  .fixed #fixedMenu li:nth-child(odd){
+    width: auto;
+  }
+  
+  .fixed #fixedMenu li:nth-child(even){
+    width: auto;
+  }
+
+  #fixedMenu {
+    text-align: left;
+    font-size: 80%;
+  }
+
+  #fixedMenu li:after{
+    content: "";
+  }  
+  #fixedMenu li:nth-child(odd){
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+  }
+  #fixedMenu li:nth-child(even){
+    width: 170px;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  #specifications dt {
+    float: none;
+    width: auto;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  #specifications dd {
+    margin-left: auto;
+  }
+}

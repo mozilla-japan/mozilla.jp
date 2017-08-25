@@ -1,0 +1,144 @@
+<?php
+
+$page_title         = 'アズビル株式会社の Firefox/Thunderbird 導入事例 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'アズビル株式会社はグループ会社 3 社の統合によって誕生したこともあり、Lotus Notes/Domino や Outlook など複数のメールソフトが混在していました。なぜ Thunderbird への統一を決断したのか、業務システム部の 4 人に話を伺いました。';
+$body_id            = 'profile';
+$body_class         = 'users business profile';
+$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/profiles/' => '導入事例',
+  '/business/profiles/azbil/' => 'アズビル株式会社'
+);
+
+// ヘッダーメニューの構成
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav role="directory" class="outer">
+            <ul class="inner">
+              <li><a href="#interview">インタビュー</a></li>
+              <li><a href="#column">コラム</a></li>
+              <li><a href="#support">サポート担当者のコメント</a></li>
+              <li><a href="#products">使われている製品</a></li>
+            </ul>
+          </nav>
+          <main>
+            <article>
+              <div id="hero" class="outer">
+                <div class="inner">
+                  <img src="/business/static/images/business/profiles/azbil/main-feature.jpg" alt="">
+                </div>
+              </div>
+              <div id="header" class="outer">
+                <div class="inner row">
+                  <header class="col">
+                    <img class="logo" src="/business/static/images/business/azbil.logo.png" alt="">
+                    <h1>アズビル 株式会社</h1>
+                    <p class="caption"><a href="http://www.azbil.com/">www.azbil.com</a></p>
+                  </header>
+                  <div class="col">
+                    <p>1906 年に「山武商会」として創業、計測や制御をはじめとするオートメーション技術を追求し、100 年以上にわたり社会に貢献してきた企業です。建物市場、工場やプラント、さらにライフラインや健康などの生活に密着した領域でオートメーション事業を展開しています。また、一層の成長に向けて、海外市場においても積極的に事業を展開しています。「人を中心としたオートメーション」の追求を通じて、人々の「安心、快適、達成感」を実現すると共に、地球環境への貢献を目指しています。</p>
+                  </div>
+                </div>
+              </div>
+              <div id="intro" class="outer outer-3">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">イントロダクション</h2>
+                    <img src="/business/static/images/business/column-image.png" alt="">
+                    <p>従業員数 5,000 名以上、関連会社を含めたグループ全体では 8,000 名以上の規模となるアズビル株式会社。ここではメールソフトの統一が進められています。同社は 2003 年にグループ会社 3 社の統合によって誕生したこともあり、メールソフトも Lotus Notes/Domino や Microsoft Outlook、Eudora、Becky! など、複数のものが混在していました。これらを PC 更新のタイミングで、順次 Thunderbird へと移行しているのです。この取り組みは 2010 年 4 月から始まっており、2012 年 4 月までに半数以上の移行を達成。今後 2〜3年以内に全社移行を完了する予定です。それではなぜ Thunderbird への統一を決断したのでしょうか。業務システム部のキーパーソン 4 人にお話を伺いました。</p>
+                    <p><small>※ この記事は、2012 年 5 月の取材に基づいたものです</small></p>
+                  </section>
+                </div>
+              </div>
+              <div id="interview" class="outer outer-2">
+                <div class="inner">
+                  <section class="tabbox">
+                    <header>
+                      <h2 class="highlight">インタビュー</h2>
+                    </header>
+                    <ul role="tablist">
+                      <li><a role="tab" id="tab-interview-1" href="#interview-1">ポイント 1</a></li>
+                      <li><a role="tab" id="tab-interview-2" href="#interview-2">ポイント 2</a></li>
+                      <li><a role="tab" id="tab-interview-3" href="#interview-3">ポイント 3</a></li>
+                      <li><a role="tab" id="tab-interview-4" href="#interview-4">ポイント 4</a></li>
+                    </ul>
+                    <section role="tabpanel" id="interview-1">
+                      <img src="/business/static/images/business/profiles/azbil/photo-1.jpg" alt="">
+                      <h3><span>ユーザーを適切にサポートするには</span> <span>メールソフトの統一が不可欠です</span></h3>
+                      <p>電子メールは多くの企業にとって、情報伝達の主役というべき重要アプリケーションです。アズビル株式会社 (以下、アズビル) でも、社内外に対するほとんどのコミュニケーションが電子メールで行われており、なくてはならない存在になっています。しかし同社における以前の電子メールシステムは、大きな課題を抱えていました。複数のメールソフトが混在し、十分なユーザーサポートが行いにくい状況だったのです。</p>
+                      <p>「アズビルは、2003 年に山武が山武ビルシステムと山武産業システムを合併することで社内カンパニー制へと移行し、2012 年 4 月に現在の社名に変更されました」と説明するのは業務システム部 運用管理グループ グループマネージャーの横山 雅彦氏です。合併前の各社がそれぞれ個別にメールシステムを運用していたことが、複数のメールソフトが混在する結果を招いたと言います。「山武は標準メールソフトを定めていませんでしたが、Outlook や Eudora が多くのユーザーに使われていました。その一方で、山武ビルシステムは Lotus Notes/Domino、山武産業システムは Netscape が標準メールソフトとして使用されていました」</p>
+                      <p>このような状況は、運用担当者にとって大きな負担になっていました。複数のメールソフトに関する幅広い技術情報を把握することは、決して簡単ではないからです。そのためユーザーから問い合わせが来ても、迅速に対応することが難しくなっていたのです。「電子メールは業務遂行に不可欠な基盤です。これを適切に運用するには、メールソフトの統一が不可欠だと考えました」(横山氏)</p>
+                    </section>
+                    <section role="tabpanel" id="interview-2">
+                      <img src="/business/static/images/business/profiles/azbil/photo-2.jpg" alt="">
+                      <h3><span>最終的なユーザー数は 8,000</span> <span>最大の壁はコストでした</span></h3>
+                      <p>それではなぜ統一先のメールソフトとして Thunderbird が選ばれたのでしょうか。「最大の理由はコストです」と説明するのは、業務システム部 インフラグループマネージャーの松原 健氏です。</p>
+                      <p>「当初は Notes に統一することも考えたのですが、グループ全体で約 8,000 ユーザー分のライセンスを購入すると、億単位のコストになることがわかりました。電子メールは確かに重要ですが、それだけのコストをかけるのは難しい。可能であれば無料で使えるものを選択すべきだと判断しました」</p>
+                      <p>無料のメールソフトとしては Outlook Express という選択肢もありましたが、Windows 7 のサポートがないことがネックになりました。アズビルでは現在も主要なクライアント OS として Windows XP が使用されていますが、長期的な視野に立てば Windows 7 への対応は必須条件でした。</p>
+                      <p>「Thunderbird なら Windows 7 に対応していますし、導入実績も十分にあります。無料メールソフトの中で Thunderbird ほどの定評のあるものは、他にありませんでした」(松原氏)</p>
+                    </section>
+                    <section role="tabpanel" id="interview-3">
+                      <img src="/business/static/images/business/profiles/azbil/photo-3.jpg" alt="">
+                      <h3><span>きちんとしたサポートさえあれば</span> <span>無料ソフトでも問題ありません</span></h3>
+                      <p>Thunderbird が選ばれた理由はもうひとつあります。それはきちんとしたサポートが受けられるということです。「Mozilla Japan のサイトにはサポートパートナーの一覧があったので、各社に連絡を取って話を聞き、最終的に シアン合同会社 を選択しました」と松原氏。このようなパートナーの存在は心強いと指摘します。</p>
+                      <p>「一般に無料ソフトウェアを企業で採用するのは敷居が高く、アズビルでも基本的には使わない方針です」と言うのは、業務システム部 運用管理グループ管理 2 チーム チームリーダーの長岡秀行氏です。何か問題が発生した場合、システム部門がすべての責任を負う必要が出てくるため、リスクが大きいからです。「しかしサポートパートナーさえ確保できれば、無料ソフトウェアでも構いません。もちろんしっかりとしたサポートに対しては、コストをかける価値があると考えています」</p>
+                      <p>ユーザーからの質問や問題への対応は、まずアズビル社内の業務システム部で行います。これまで頻繁に質問された内容や、旧メールソフトからの移行手順に関しては、FAQ や手順書といったドキュメントも作成されています。アズビル社内だけでは対応しきれない内容は、シアンの担当者が対応します。「Thunderbird に統一したおかげで質問内容を集約でき、対応も容易になりました。また社内だけでは解決できない問題もシアンがスピーディに調べてくれるので、安心して運用できます」(長岡氏)</p>
+                    </section>
+                    <section role="tabpanel" id="interview-4">
+                      <img src="/business/static/images/business/profiles/azbil/photo-4.jpg" alt="">
+                      <h3><span>技術者にとってオープンソースで</span> <span>あることも安心材料になります</span></h3>
+                      <p>事前に手順書を作成していたこともあり、Thunderbird への移行は順調に進みました。これまでで最も規模が大きかったのは、2010 年 11 月に実施された約 3,000 ユーザー分の Lotus Notes/Domino からの移行でしたが、ほとんど問い合わせもなく驚くほどスムーズに進んだと言います。</p>
+                      <p>「実は Thunderbird がオープンソースソフトウェアであることも、スムーズな移行に貢献しています」と指摘するのは、業務システム部 運用管理グループ 管理 2 チーム サブリーダーの富田 芳孝氏です。「私は以前研究開発部門にいたのですが、ここでは以前から Thunderbird を使っている部員がいました。業務システム部がソフトウェアの選定を行う際には必ずいろんな意見が上がってきます。しかし今回の Thunderbird の採用では、特に意見は上がってきませんでした。オープンソースである Thunderbird を使うことへのハードルは低かったと思います。」</p>
+                      <p>Thunderbird の使い勝手もユーザーから評価されていると言います。その一例として挙げられるのが、送信済みメールをボタンひとつでコピーして編集可能にする機能です。転送や返信とは異なり、宛先や CC、BCC もすべてそのままの状態で編集できるため、メールの再利用が可能です。この機能を利用することで、定型メールのテンプレート化が可能になると富田氏は説明します。</p>
+                      <p>また検索フォルダーの存在も利便性を高めています。特定の検索条件を保存した仮想的なフォルダーを作成しておけば、複数のフォルダーにまたがって保管されている既存のメールから新たに受信したメールまで、条件に合致するものが自動的に最新の検索結果として表示されます。</p>
+                      <p>「Thunderbird は十分な機能が装備されているため、基本的にアドオンを使う必要がありません。既製のアドオンを使うと、そのアドオンのために Thunderbird のバージョンを上げられなくなる可能性もゼロではないため、アドオンは使わないようにしました」(富田氏)</p>
+                    </section>
+                  </section>
+                </div>
+              </div>
+              <div id="column" class="outer">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">コラム</h2>
+                    <p>ソフトウェアの全社展開を長期にわたって実施する場合、いかにしてバージョンを統一するかも重要な課題になります。異なるバージョンが混在してしまうと、他システムとの連携に支障が生じたり、ユーザーサポートが困難になったりする可能性があるからです。アズビルではこの問題を、現在は自動更新の無効化で解消していますが、今後は法人向け延長サポート版 (ESR) の導入で対応することが検討されています。これによってバージョンを意識的にコントロールできるようになり、動作検証など運用面でのメリットも大きいため、ぜひ積極的に活用いただきたいと思います。</p>
+                  </section>
+                </div>
+              </div>
+              <div id="support" class="outer outer-3">
+                <div class="inner">
+                  <section>
+                    <h2>サポート担当者のコメント</h2>
+                    <p>サポートを担当されている シアン合同会社 の木下薫氏は次のようにコメントしています。「アズビル様は科学・工学・計測機器の歴史ある会社で電子メールの稼働も古くからあり、エンドユーザーのリテラシーも高く、多種多様なメールソフトを利用されていました。グループ会社の統合などによるメールの運用環境問題が表面化し、メールソフトの統一を望まれました。細かな設定に関するご質問や運用上の問題に対する回避策のご相談など問い合わせいただく範囲は幅広く���勉強させていただいていることも多くあります。弊社といたしましてはできる限り早い対応を心がけてサポートさせていただいております」</p>
+                  </section>
+                </div>
+              </div>
+              <div id="products" class="outer outer-1">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">使われている製品</h2>
+                    <ul>
+                      <li><a href="https://www.thunderbird.net/ja/"><img src="/business/static/images/business/thunderbird.black.png" alt="Thunderbird"> <span>4,000 台以上</span></a></li>
+                    </ul>
+                    <p>Thunderbird は社内の標準メールソフトに指定されています。</p>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/profile-extra.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

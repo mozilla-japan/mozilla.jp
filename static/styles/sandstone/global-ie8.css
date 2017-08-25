@@ -1,0 +1,79 @@
+body {
+  color: #484848;
+  background: #F9F9F9 url(/static/images/sandstone/template/page-bg-stone.png) repeat-x;
+  font-family: "MS PGothic", sans-serif;
+  line-height: 1.6;
+}
+
+body.sand {
+  background-color: #F5F1E8;
+  background-image: url(/static/images/sandstone/template/bg-sand.png);
+}
+
+body.sky {
+  background-color: #EEE;
+  background-image: url(/static/images/sandstone/template/page-bg-sky.png);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+a:link,
+a:visited {
+  color: #2983C8;
+  cursor: pointer;
+}
+
+body.sand a:link,
+body.sand a:visited {
+  color: #AF3232;
+}
+
+body.sky a:link,
+body.sky a:visited {
+  color: #67A7D0;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #20679E;
+  text-decoration: underline;
+}
+
+a:hover span,
+a:focus span,
+a:active span {
+  text-decoration: underline;
+}
+
+body.sand a:hover,
+body.sand a:focus,
+body.sand a:active {
+  color: #872727;
+}
+
+body.sky a:hover,
+body.sky a:focus,
+body.sky a:active {
+  color: #4090C4;
+}

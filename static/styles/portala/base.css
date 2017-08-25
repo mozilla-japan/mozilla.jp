@@ -1,0 +1,502 @@
+@font-face {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/global/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+       url('/static/fonts/global/fontawesome-webfont.woff?v=4.7.0') format('woff');
+}
+
+@media screen, print {
+  body {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  body, table *, form * {
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Verdana, "ＭＳ Ｐゴシック", "MS PGothic", "VL Pゴシック", "Takao Pゴシック", "IPA Pゴシック", sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    font-family: 'source-han-sans-japanese', Calibri, Ubuntu, Roboto, sans-serif;
+    line-height: 1.25;
+    font-weight: normal;
+    letter-spacing: -.03em;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  ul {
+    margin: 16px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  ul.bulleted li {
+    margin: 8px 0;
+    padding: 0 0 0 20px;
+  }
+
+  ul.bulleted li::before {
+    display: inline-block;
+    float: left;
+    margin-left: -14px;
+    font-family: FontAwesome;
+    content: '\F0DA';
+  }
+
+  figure {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  figcaption {
+    font-size: 14px;
+  }
+
+  figure > :not(:first-child) {
+    margin-top: 16px;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: top;
+  }
+
+  .icon::before {
+    margin-right: .4em;
+    font-family: FontAwesome;
+  }
+
+  .icon.twitter::before {
+    content: '\f099';
+  }
+
+  .icon.facebook::before {
+    content: '\f09A';
+  }
+
+  .icon.medium::before {
+    content: '\f23a';
+  }
+
+  .icon span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /*
+  * イベント情報 (Sandstone と共通)
+  */
+
+  .upcoming-events [itemtype$="Event"] {
+    position: relative;
+    margin: 16px 0;
+  }
+
+  .upcoming-events [itemtype$="Event"] ul {
+    margin: 8px 0 0;
+  }
+
+  .upcoming-events [itemtype$="Event"] ul.flat li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    background: none;
+    line-height: inherit;
+  }
+
+  .upcoming-events [itemtype$="Event"] [itemprop="startDate"]::before,
+  .upcoming-events [itemtype$="Event"] [itemprop="location"] [itemprop="name"]::before {
+    display: inline-block;
+    margin-right: .5em;
+    width: 1em;
+    color: #c13832;
+    font-family: FontAwesome;
+    text-align: center;
+  }
+
+  .upcoming-events [itemtype$="Event"] [itemprop="startDate"]::before {
+    content: '\f073';
+  }
+
+  .upcoming-events [itemtype$="Event"] [itemprop="location"] [itemprop="name"]::before {
+    content: '\f041';
+  }
+
+  .upcoming-events footer {
+    margin-top: 20px;
+  }
+
+  .upcoming-events footer p {
+    margin: 0;
+  }
+}
+
+@media screen {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    transition: color .5s;
+  }
+
+  a:link, a:visited {
+    color: #0096d5;
+  }
+
+  a:hover, a:focus, a:active {
+    color: #4bbde6;
+  }
+
+  .outer {
+    overflow: hidden;
+  }
+
+  .inner {
+    margin: 0 auto;
+  }
+
+  #header {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: transparent;
+    padding-top: 32px;
+    width: 100%;
+    color: #FFF;
+    background: transparent;
+    transition-property: color, background-color, border-color;
+  }
+
+  #header.fixed {
+    position: fixed;
+    top: -32px;
+    border-color: #CCC;
+    color: #333;
+    background-color: rgba(255, 255, 255, .95);
+    transition-duration: .5s;
+  }
+
+  #header nav {
+    display: flex;
+    margin: 16px;
+  }
+
+  #header a {
+    color: inherit !important;
+  }
+
+  #header h1 {
+    margin: 0;
+  }
+
+  #header h1 a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 128px;
+    height: 50px;
+  }
+
+  #header h1 a::before,
+  #header h1 a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    content: '';
+    transition-property: opacity;
+  }
+
+  #header h1 a::before {
+    opacity: 0;
+    background-image: url(/static/images/template/header-logo.png);
+  }
+
+  #header.fixed h1 a::before {
+    opacity: 1;
+    transition-duration: .5s;
+  }
+
+  #header h1 a::after {
+    background-image: url(/static/images/template/header-logo-white.png);
+    opacity: 1;
+  }
+
+  #header.fixed h1 a::after {
+    opacity: 0;
+    transition-duration: .5s;
+  }
+
+  #header ul {
+    flex: auto;
+    display: flex;
+    margin: 0;
+    height: 50px;
+    align-items: flex-end;
+  }
+
+  #header li {
+    margin: 0 0 0 80px;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  #footer {
+    color: #EEE;
+    background-color: #353C48;
+  }
+
+  #footer h1 {
+    font-size: 24px;
+  }
+
+  #footer h1 span {
+    display: block;
+    font-size: 16px;
+  }
+
+  #footer h2 {
+    font-size: 24px;
+    color: #FFF;
+  }
+
+  #footer p,
+  #footer ul {
+    margin-bottom: 0;
+  }
+
+  #footer p,
+  #footer li {
+    line-height: 1.5;
+  }
+
+  #footer a {
+    white-space: nowrap;
+  }
+
+  #footer #social h2 {
+    position: absolute;
+    left: -9999px;
+  }
+
+  #footer #social ul {
+    margin: 0;
+  }
+
+  #footer #social .icon::before {
+    font-size: 32px;
+  }
+
+  #footer #contact li {
+    margin-top: 8px;
+  }
+
+  #main-feature {
+    position: relative;
+    padding-top: 120px;
+    color: #FFF;
+    background-color: #666;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #main-feature p span {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2 span {
+    display: block;
+  }
+
+  .inner {
+    width: 960px;
+  }
+
+  .row {
+    display: flex;
+    margin: 0 -16px;
+  }
+
+  .row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .col {
+    margin: 0 16px;
+  }
+
+  .col.s2 {
+    width: 288px;
+  }
+
+  .col.s3 {
+    width: 448px;
+  }
+
+  .col.s4 {
+    width: 608px;
+  }
+
+  .column {
+    column-count: 2;
+    column-gap: 32px;
+  }
+
+  .column > * {
+    overflow: hidden;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .column > :first-child {
+    margin-top: 0;
+  }
+
+  .column > :last-child {
+    margin-bottom: 0;
+  }
+
+  #main-feature p {
+    max-width: 608px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  h2 span {
+    display: inline-block;
+  }
+
+  .col {
+    margin: 32px 0;
+    width: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  .inner > * {
+    margin: 64px 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .inner > * {
+    margin: 32px 16px;
+  }
+
+  #header {
+    padding-top: 16px;
+  }
+
+  #header h1 a {
+    margin: 0 auto;
+  }
+
+  #header nav {
+    flex-direction: column;
+  }
+
+  #header ul {
+    margin-top: 16px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #FFF;
+    padding: 12px 0;
+    height: auto;
+    justify-content: center;
+  }
+
+  #header li {
+    margin: 0 16px;
+    font-size: 16px;
+  }
+
+  #main-feature {
+    padding-top: 160px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  #header h1 a::before {
+    background-image: url(/static/images/template/header-logo@2x.png);
+  }
+
+  #header h1 a::after {
+    background-image: url(/static/images/template/header-logo-white@2x.png);
+  }
+}
+
+@media print {
+  #header,
+  #footer {
+    display: none;
+  }
+}

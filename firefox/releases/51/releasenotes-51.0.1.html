@@ -1,0 +1,30 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '51.0.1';
+$_android_version = '51.0';
+$_date = '2017-01-26';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-786952">
+                  <p>マルチプロセス非互換性が一部のアドオンについて適切に登録されていない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1333423">Bug 1333423</a>)</p>
+                </li>
+                <li id="note-786951">
+                  <p>Windows で位置情報通知機能が動作しない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1333516">Bug 1333516</a>)</p>
+                </li>
+                <li id="note-786950">
+                  <p>参考: <a href="/firefox/51.0/releasenotes/">51.0 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

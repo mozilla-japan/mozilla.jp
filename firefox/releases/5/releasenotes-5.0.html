@@ -1,0 +1,130 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 5 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/5.0/releasenotes/' => 'Firefox 5'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 5.0</span></span> &mdash; <time datetime="2011-06-21" itemprop="datePublished">2011/06/21</time> リリース</h2>
+                </div>
+                <p itemprop="description">このリリースノートでは、Firefox の最新版に関する変更点、既知の問題、よくある質問を掲載しています。いつものように、<a href="https://input.mozilla.org/ja/feedback/firefox">フィードバックを提供</a> するか <a href="https://bugzilla.mozilla.org/">バグを報告</a> して、製品の改良にご協力ください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="sec-whatsnew2">
+                  <h2>このバージョンでの変更点</h2>
+                  <p>この最新版では、以下の変更が行われています。</p>
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/ja/CSS/CSS_animations">CSS アニメーション</a> に対応しました。</li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/dnt/">Do Not Track</a> ヘッダー送信の設定を見つけやすいところへ移動しました。</li>
+                    <li>パフォーマンス向上のため、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=624739">HTTP アイドル接続方式の調整を行いました</a>。</li>
+                    <li>Canvas、JavaScript、メモリー、ネットワーキングのパフォーマンスを強化しました。</li>
+                    <li>HTML5、XHR、MathML、SMIL、Canvas といったウェブ標準への対応を強化しました。</li>
+                    <li>一部の言語でスペルチェックの精度を強化しました。</li>
+                    <li>Linux デスクトップ環境との統合を強化しました。</li>
+                    <li>WebGL コンテンツが <a href="https://hacks.mozilla.org/2011/06/cross-domain-webgl-textures-disabled-in-firefox-5/">クロスドメインテクスチャを読み込めなくなりました</a>。</li>
+                    <li>バックグラウンドのタブで設定されている setTimeout と setInterval のタイマー間隔が、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=633421">パフォーマンス向上のため 1000ms に固定されました</a>。</li>
+                    <li>いくつかの安定性に関わる問題を修正しました。</li>
+                    <li><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox.html#firefox5">いくつかのセキュリティ問題</a> を修正しました。</li>
+                  </ul>
+                  <p>このバージョンで行われた <a href="https://www.mozilla.org/ja/firefox/5.0/releasenotes/buglist.html">すべての変更一覧</a> や <a href="https://developer.mozilla.org/ja/Firefox_5_for_developers">開発者向け資料</a> も用意しています。前バージョンでの変更点については <a href="/firefox/4.0/releasenotes/">Firefox&nbsp;4 リリースノート</a> をご覧ください。</p>
+                </section>
+                <section id="sec-requirements">
+                  <h2>システム要件</h2>
+                  <p>インストールの前に、お使いのコンピューターが <a href="/firefox/5.0/system-requirements/">システム要件</a> を満たしているかどうかご確認ください。</p>
+                </section>
+                <section id="sec-download">
+                  <h2>ダウンロード</h2>
+                  <p>Mozilla では、Firefox を Windows、Linux、そして Mac&nbsp;OS&nbsp;X 用に、様々な言語で提供しています。<a href="https://www.mozilla.org/ja/firefox/">最新の正式版はこちらからダウンロードできます</a>。</p>
+                  <p>Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                </section>
+                <section id="sec-install">
+                  <h2>インストール</h2>
+                  <p>Firefox の新バージョンをインストールすると、<strong>すでにインストールされている Firefox は上書きされます</strong>。すべてのシステムで、ブックマークや閲覧履歴には一切影響ありませんが、拡張機能やその他のアドオンの一部は更新版が提供されるまで動かない可能性があります。</p>
+                </section>
+                <section id="sec-uninstall">
+                  <h2>アンインストール</h2>
+                  <p>Firefox は、Windows では「コントロール パネル」の「プログラムの追加と削除」ツールを使って、Mac では「Firefox」アプリケーションを削除することで、Linux では「firefox」フォルダーを削除することで、それぞれ削除できます。</p>
+                  <p>デフォルトでは、Firefox を削除しても、ブックマーク、閲覧履歴、拡張機能やその他のアドオンは削除されません。これらのデータは、お使いの「プロファイルフォルダー」に保存されており、その場所は [ヘルプ] メニューから [トラブルシューティング情報] を選択することで確認できます。「アプリケーション基本情報」という欄の「プロファイルディレクトリー」の横にあるボタンをクリックすると、お使いのシステムのファイルエクスプローラでプロファイルディレクトリーを開くことができます。</p>
+                  <p>プロファイルを残すと、Firefox を削除した後にインストールした Firefox は、そのバージョンにかかわらず、このプロファイルフォルダーに保存されているブックマーク、履歴、アドオン、その他のデータが引き続き使用されます。</p>
+                </section>
+                <section id="sec-extensions">
+                  <h2>アドオン</h2>
+                  <p>拡張機能やテーマなどのアドオンは <a href="https://addons.mozilla.org/ja/firefox/">Firefox アドオン</a> のサイトから入手できます。アドオンによっては、まだ作者による Firefox 最新版への対応が完了していない場合があります。アドオンの互換性テストに協力したいときは、<a href="https://addons.mozilla.org/ja/firefox/addon/add-on-compatibility-reporter/">Add-on Compatibility Reporter</a> を使ってください。あなたがお気に入りのアドオンの作者に喜ばれることでしょう。</p>
+                </section>
+                <section id="sec-issues">
+                  <h2>既知の問題</h2>
+                  <p>現在確認されている主な問題を掲載します。これらは今後のバージョンで修正される予定です。</p>
+                  <h3>すべてのシステム</h3>
+                  <ul>
+                    <li>一部のユーザーから、Gmail メイン画面上のでのスクロールが通常より遅くなるとの報告があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=579260">Bug 579260</a>)</li>
+                    <li>ロックされたプロファイルで Firefox を起動しようとするとクラッシュします。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=573369">Bug 573369</a>)</li>
+                  </ul>
+                  <h3>Windows</h3>
+                  <ul>
+                    <li>一部の Adobe Reader X ユーザーから、ブラウザー内で PDF 文書を表示したときに、動作が不安定になる現象が報告されています。この問題は一度 Adobe Reader X を削除して再インストールすれば解決することが分かっています。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=640901">Bug 640901</a>)</li>
+                  </ul>
+                  <h3>Mac</h3>
+                  <ul>
+                    <li>今回のバージョンは PowerPC CPU を搭載した Macintosh ハードウェアに対応していません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=587799">Bug 587799</a>)</li>
+                  </ul>
+                  <h3>Linux/Unix</h3>
+                  <ul>
+                    <li>libtotem で QuickTime 動画を再生しているとき、動画コントロールボタンが機能しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=625036">Bug 625036</a>)</li>
+                    <li>ビルド要件が変更されたため、ソースコードからコンパイルする場合、gcc とlibstdc++ の新バージョンが必要となります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=578880">Bug 578880</a>)</li>
+                  </ul>
+                </section>
+                <section id="sec-troubleshooting">
+                  <h2>トラブルシューティング</h2>
+                  <ul>
+                    <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された「Safe Mode」というショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac&nbsp;OS&nbsp;X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+                    <li><p>ユーザープロファイルにインストールした拡張機能 (ウェブページからインストールしたものなど) をアンインストールし、コマンドラインオプション <code>-install-global-extension</code> を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+                    <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、コマンドライン引数 <code>-P</code> をつけて Firefox を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (ブックマーク、保存されているパスワードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータのファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。</p></li>
+                  </ul>
+                </section>
+                <section id="sec-faq">
+                  <h2>よくある質問</h2>
+                  <ol class="faq">
+                    <li>プロジェクトに協力したいのですが、どのようなことができますか？<p>Firefox をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。ぜひ <a href="https://input.mozilla.org/ja/feedback/firefox">フィードバック</a> をお送りください。</p></li>
+                    <li>Firefox の次期バージョンをテストしたい場合は？<p><a href="https://www.mozilla.org/ja/firefox/channel/">プレビューリリース</a> のページでベータ版を公開しています。</p></li>
+                    <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/firefox/">Firefox アドオン</a> のサイトをご覧ください。</p></li>
+                    <li>誰が Firefox を開発しているのですか？<p>非常に多くの人が関わっています。Firefox に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] を開いて「global community」というリンクをクリックしてください。</p></li>
+                    <li>Firefox のソースコードはどこにありますか？<p>Firefox のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/5.0/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(Mercurial)">Mercurial</a> を通じて入手可能です。Firefox 固有のソースは、mozilla-central の browser、toolkit、chrome ディレクトリー以下にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</p></li>
+                    <li>メールクライアントはどこにあるのですか？<p>Firefox は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアントとして <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> をおすすめします。</p></li>
+                  </ol>
+                </section>
+                <section id="sec-contributedbuilds">
+                  <h2>提供されたビルド</h2>
+                  <p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。利用可能な提供ビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/5.0/contrib/">FTP サイト</a> から入手可能です。</p>
+                </section>
+                <section id="sec-links">
+                  <h2>関連資料とリンク</h2>
+                  <p>以下のリソースには、Firefox に関して参考になる情報が載っています。</p>
+                  <ul>
+                    <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox サポートページ</a></li>
+                    <li><a href="https://developer.mozilla.org/ja/Firefox_5_for_developers">開発者情報</a></li>
+                    <li><a href="http://code.google.com/apis/safebrowsing/firefox3_privacy.html" rel="nofollow">Google セーフブラウジングサービスのプライバシーポリシー</a> (フィッシング詐欺・マルウェア警告機能)</li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

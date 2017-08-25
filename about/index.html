@@ -1,0 +1,83 @@
+<?php
+
+$page_type          = 'AboutPage';
+$page_title         = 'Mozilla — ウェブのために。世界のために。';
+$page_description   = 'Mozilla は、グローバルなコミュニティであり、非営利の公益法人であり、オープンソースソフトウェアプロジェクトでもあります。誰もがより豊かなインターネット体験を享受できるよう、1998 年から活動を展開しています。';
+$body_id            = 'about';
+$body_class         = 'about sand';
+$css                = array('sandstone/about'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  '/about/' => 'Mozilla について'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <div id="main-feature" class="outer">
+              <div class="inner">
+                <header>
+                  <h1>Mozilla について</h1>
+                </header>
+              </div>
+            </div><!-- end #main-feature -->
+            <div id="main-content" class="outer">
+              <div class="inner">
+                <div class="row">
+                  <div class="col">
+                    <section id="intro">
+                      <h2><span>ウェブのために。</span><span>世界のために。</span></h2>
+                      <p>Mozilla は、ウェブブラウザー「Firefox」、メールソフト「Thunderbird」をはじめとする、無償のソフトウェア製品および関連技術の提供を通じて、誰もがより豊かなインターネット体験を享受できるよう努力を続けています。株主の利害にとらわれず、消費者の利益を第一に考えて開発された Mozilla 製品は、全世界で広く愛用され、高い評価を受けています。</p>
+                      <section>
+                        <h3>Mozilla はグローバルなコミュニティです</h3>
+                        <p>インターネットをより良いものにするため、<time datetime="1998">1998 年</time>以来、世界規模で共に活動しています。</p>
+                      </section>
+                      <section>
+                        <h3>Mozilla は非営利の公益法人です</h3>
+                        <p>利益を追い求めることなく、インターネットの公共性と技術革新を促進し、選択肢の多様性を重視しています。</p>
+                      </section>
+                      <section>
+                        <h3>Mozilla はオープンソースソフトウェアプロジェクトです</h3>
+                        <p>Mozilla が開発し無償で公開している技術は、他の様々なソフトウェアでも活用されています。</p>
+                      </section>
+                    </section>
+                  </div><!-- end .col -->
+                  <div class="col">
+                    <figure>
+                      <video poster="/static/images/about/poster-crop.jpg" preload="none" controls>
+                        <source src="https://videos.cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" type="video/webm; codecs=vp8,vorbis" title="WebM 形式">
+                        <source src="https://videos.cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.theora.ogv" type="video/ogg; codecs=theora,vorbis" title="Ogg Theora 形式">
+                        <source src="https://videos.cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.mp4" type="video/mp4" title="MPEG-4 形式">
+                        <track src="/static/videos/tracks/brand-subtitles-ja.vtt" kind="subtitles" default label="日本語" srclang="ja">
+                      </video>
+                    </figure>
+                    <nav id="links">
+                      <ul>
+                        <li><a href="https://www.mozilla.org/ja/mission/">ミッション</a></li>
+                        <li><a href="https://www.mozilla.org/ja/about/history/">沿革</a></li>
+                        <li><a href="https://www.mozilla.org/ja/about/manifesto/">マニフェスト</a></li>
+                        <li><a href="https://mozilla.doorkeeper.jp/">イベント</a></li>
+                        <li><a href="https://blog.mozilla.org/press/">プレスルーム</a></li>
+                        <li><a href="https://www.mozilla.org/ja/foundation/licensing/">ライセンスと商標</a></li>
+                        <li><a href="https://www.mozilla.org/ja/contact/">お問い合わせ</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="https://medium.com/mozilla-japan">Mozilla Japanese Community Medium</a></li>
+                        <li><a href="/blog/">旧 Mozilla Japan ブログ</a></li>
+                        <li><a href="https://www.mozilla.org/ja/firefox/">ウェブブラウザー「Firefox」</a></li>
+                        <li><a href="https://www.thunderbird.net/ja/">メールソフト「Thunderbird」</a></li>
+                        <li><a href="https://www.mozilla.org/ja/foundation/">Mozilla Foundation</a> (英語)</li>
+                        <li><a href="https://www.mozilla.org/ja/foundation/annualreport/">年次報告書</a> (英語)</li>
+                        <li><a href="https://www.mozilla.org/ja/about/governance/policies/participation/">コミュニティ参加ガイドライン</a></li>
+                      </ul>
+                    </nav>
+                  </div><!-- end .col -->
+                </div><!-- end .row -->
+              </div><!-- end .inner -->
+            </div><!-- end #main-content -->
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

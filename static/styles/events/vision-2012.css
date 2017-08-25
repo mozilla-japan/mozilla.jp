@@ -1,0 +1,1082 @@
+/* --------------------------------------------------------------------------
+ * screen
+ * -------------------------------------------------------------------------- */
+
+@media screen {
+
+/* --------------------------------------------------------------------------
+ * 全ページ共通
+ * -------------------------------------------------------------------------- */
+
+#wrapper {
+  color: #FFF;
+  background: #010006 url(/static/images/events/vision/2012/background-20111215.jpg) no-repeat center 0 !important;
+}
+
+#nav-main h1,
+#nav-main-menu {
+  display: none;
+}
+
+#localnav.top {
+  margin-bottom: 0;
+  height: 56px;
+}
+
+#localnav.top h1 {
+  width: 436px;
+  height: 56px;
+}
+
+#localnav.top ul {
+  padding: 0;
+  height: 56px;
+  text-align: left;
+  text-indent: -99999px;
+}
+
+#localnav.top li {
+  display: block;
+  float: left;
+  padding: 0;
+  width: 208px;
+  height: 56px;
+}
+
+#localnav.top li.external {
+  width: 76px;
+}
+
+#localnav.top li a {
+  display: block;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#main-feature {
+  position: relative;
+  margin: 0 0 24px 0;
+  width: 100%;
+  text-indent: -99999px;
+}
+
+#main-feature nav ul {
+  position: absolute;
+  bottom: 16px;
+  overflow: hidden;
+  margin: 0;
+  height: 48px;
+}
+
+#main-feature nav li {
+  float: left;
+  margin: 0 4px;
+  padding: 0;
+  width: 176px;
+  height: 100%;
+  background: none;
+  list-style-type: none;
+}
+
+#main-feature nav a {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#main-feature .share {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  margin: 0;
+  height: 20px;
+  text-align: right;
+  text-indent: 0;
+}
+
+#main-feature .share li {
+  display: inline;
+  padding: 0;
+  background: none;
+}
+
+#main-feature .share iframe {
+  max-width: 104px;
+  height: 20px;
+  vertical-align: baseline;
+}
+
+#main-content {
+  float: none;
+  margin: 0 24px;
+  width: auto;
+  min-height: 400px;
+     -moz-text-shadow: 1px 1px 2px #000, 0 0 4px #000;
+  -webkit-text-shadow: 1px 1px 2px #000, 0 0 4px #000;
+          text-shadow: 1px 1px 2px #000, 0 0 4px #000;
+}
+
+#main-content > section {
+  margin: 24px 0;
+}
+
+#main-content section section {
+     -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+          text-shadow: none;
+}
+
+body.landing #main-feature hgroup,
+#main-content h2 {
+  background: url(/static/images/events/vision/2012/titles-20120116.png) no-repeat;
+  text-indent: -99999px;
+}
+
+/* hgroupの廃止に伴い追記 */
+body.landing #main-feature div.hgroup,
+#main-content h2 {
+  margin: 0;
+  background: url(/static/images/events/vision/2012/titles-20120116.png) no-repeat;
+  text-indent: -99999px;
+}
+/* /hgroupの廃止に伴い追記 */
+
+#main-content h2 {
+  margin-bottom: 16px;
+  width: 160px;
+}
+
+#main-content li {
+  margin-left: 24px;
+  padding-left: 0;
+  background: none;
+  list-style-type: disc;
+}
+
+#main-content table {
+  border-collapse: separate;
+  border-spacing: 4px;
+  width: 100%;
+}
+
+#main-content table th,
+#main-content table td {
+  padding: 16px;
+  background: #282828;
+  background: rgba(50,50,50,0.8);
+  box-shadow: 0 0 8px #010006;
+  vertical-align: top;
+}
+
+#main-content table .tags ul {
+  overflow: hidden;
+}
+
+#main-content table .tags li {
+  display: block;
+  float: left;
+  margin: 2px !important;
+  border-radius: 4px;
+  padding: 0 8px;
+  background: #666;
+  box-shadow: inset 1px 1px 2px #333;
+  font-weight: bold;
+     -moz-text-shadow: 1px 1px 2px #333;
+  -webkit-text-shadow: 1px 1px 2px #333;
+          text-shadow: 1px 1px 2px #333;
+}
+
+#main-content a,
+#speaker-overlay a {
+  color: #A1C8FF;
+}
+
+#main-content a.button {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 368px;
+  height: 112px;
+  text-indent: -99999px;
+}
+
+#main-content a.button:hover {
+  background-position: 368px 0;
+}
+
+#main-content p.note {
+  margin: 16px 0;
+  border-radius: 4px;
+  padding: 8px 24px;
+  color: #FFF;
+  background: #F8B600;
+  background:    -moz-repeating-linear-gradient(-45deg, #F8B600, #F8B600 8px, #F4A104 8px, #F4A104 16px);
+  background:     -ms-repeating-linear-gradient(-45deg, #F8B600, #F8B600 8px, #F4A104 8px, #F4A104 16px);
+  background:      -o-repeating-linear-gradient(-45deg, #F8B600, #F8B600 8px, #F4A104 8px, #F4A104 16px);
+  background: -webkit-repeating-linear-gradient(-45deg, #F8B600, #F8B600 8px, #F4A104 8px, #F4A104 16px);
+  background:         repeating-linear-gradient(-45deg, #F8B600, #F8B600 8px, #F4A104 8px, #F4A104 16px);
+  box-shadow: inset -4px -4px 8px #BF5200, 0 0 8px #010006;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+     -moz-text-shadow: 0 0 4px #000;
+  -webkit-text-shadow: 0 0 4px #000;
+          text-shadow: 0 0 4px #000;
+}
+
+#main-content p.note strong {
+  border-bottom: 1px solid #FFF;
+}
+
+#main-content .row {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  width: 100%;
+}
+
+body.program #sec-digest {
+  float: right;
+  margin-left: 16px;
+  width: 320px;
+  box-shadow: 0 0 8px #010006;
+}
+
+body.program #sec-digest h2 {
+  position: absolute;
+  left: -99999px;
+}
+
+body.program #sec-digest a {
+  display: block;
+  outline: 0;
+  width: 320px;
+  height: 180px;
+  background: url(/static/images/events/vision/2012/video-digest-poster-320.jpg);
+  text-indent: -99999px;
+}
+
+#sec-program h2 {
+  background-position: -320px -128px;
+}
+
+#sec-program > [itemprop="description"] {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sec-speakers h2 {
+  background-position: -480px -128px;
+}
+
+#sec-demopit h2 {
+  background-position: 0 -156px;
+}
+
+#sec-demopit section {
+  margin: 24px 0;
+}
+
+#sec-demopit .row section {
+  margin: 12px 8px 0 4px;
+  border-radius: 4px;
+  padding: 24px;
+  width: 296px;
+  background: #282828;
+  background: rgba(50,50,50,0.8);
+  box-shadow: 0 0 8px #010006;
+}
+
+#sec-demopit .row section:last-of-type {
+  margin-right: 0;
+}
+
+#sec-demopit .row section h4 {
+  font-size: 14px;
+}
+
+#sec-demopit .row section h4 strong {
+  font-size: 18px;
+}
+
+#sec-registration h2 {
+  background-position: -160px -156px;
+}
+
+#sec-registration strong {
+  font-size: 14px;
+}
+
+#sec-access h2 {
+  background-position: -320px -156px;
+}
+
+#sec-access a.button {
+  background-image: url(/static/images/events/vision/2012/button-access.png);
+}
+
+#sec-supporters section {
+  margin: 16px 0;
+  text-align: center;
+}
+
+#sec-supporters h2 {
+  position: absolute;
+  left: -99999px;
+}
+
+#sec-supporters ul {
+  overflow: hidden;
+}
+
+#sec-supporters li {
+  display: inline-block;
+  margin: 8px;
+  border-radius: 4px;
+  padding: 16px;
+  background: #FFF;
+  box-shadow: inset 0 0 8px #010006;
+  list-style-type: none;
+     -moz-transition: 0.4s;
+       -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+}
+
+#sec-supporters li:hover {
+  box-shadow: inset 0 0 8px #999, 0 0 8px #FFF;
+}
+
+#pagefooter {
+  background: transparent none;
+}
+
+/* --------------------------------------------------------------------------
+ * ランディング
+ * -------------------------------------------------------------------------- */
+
+body.landing #main-feature {
+  overflow: hidden;
+  margin: 0 auto !important;
+  padding: 48px 0 80px 0;
+  width: 762px;
+  min-height: 128px;
+}
+
+body.landing #main-feature hgroup {
+  height: 128px;
+}
+
+/* hgroupの廃止に伴い追記 */
+body.landing #main-feature div.hgroup {
+  height: 128px;
+}
+/* /hgroupの廃止に伴い追記 */
+
+body.landing #main-feature .share {
+  top: auto;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+body.landing #main-feature .english {
+  position: absolute;
+  bottom: 28px;
+  right: 0;
+  overflow: hidden;
+  margin: 0;
+  width: 68px;
+  height: 24px;
+}
+
+body.landing #main-feature .english * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body.landing #main-feature .english li {
+  padding: 0;
+  background: url(/static/images/events/vision/2012/titles-20120116.png) no-repeat -480px -156px;
+}
+
+body.landing #main-content {
+  background: url(/static/images/events/vision/2012/landing/illustration.png) no-repeat right 360px;
+}
+
+body.landing #main-content section {
+  margin: 40px 0;
+}
+
+body.landing #sec-digest {
+  margin-top: 0 !important;
+}
+
+body.landing #sec-digest h2 {
+  position: absolute;
+  left: -99999px;
+}
+
+body.landing #sec-digest p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body.landing #sec-digest #video-panel {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  box-shadow: 0 0 8px #010006;
+}
+
+body.landing #sec-entrance {
+  margin: 0 auto 40px auto !important;
+  width: 880px;
+  height: 396px;
+  background: url(/static/images/events/vision/2012/landing/buttons-20120118.png) no-repeat;
+  text-indent: -99999px;
+}
+
+body.landing #sec-entrance h2 {
+  position: absolute;
+  left: -99999px;
+}
+
+body.landing #sec-entrance section {
+  position: relative;
+  margin: 0;
+  width: 432px;
+  height: 100%;
+}
+
+body.landing #sec-entrance section:first-of-type {
+  float: left;
+}
+
+body.landing #sec-entrance section:last-of-type {
+  float: right;
+}
+
+body.landing #sec-entrance a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.landing #sec-message {
+  margin-right: 360px !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body.landing #sec-message h2 {
+  background-position: 0 -128px;
+}
+
+body.landing #sec-overview h2 {
+  background-position: -160px -128px;
+}
+
+body.landing #sec-overview th {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+body.landing #sec-overview tbody th {
+  text-align: center;
+}
+
+body.landing #sec-overview td {
+  width: 42%;
+}
+
+/* --------------------------------------------------------------------------
+ * カンファレンス
+ * -------------------------------------------------------------------------- */
+
+body.conference #doc-outer {
+  background: url(/static/images/events/vision/2012/conference/header-background-20120118.jpg) no-repeat center top;
+}
+
+body.conference #main-feature nav ul {
+  left: 24px;
+  width: 920px;
+}
+
+body.conference #main-feature nav li.current a {
+  background-image: url(/static/images/events/vision/2012/conference/header-menu-selected.png);
+}
+
+body.conference #main-feature nav li.current a[href$="/speakers/"] {
+  background-position: -176px 0;
+}
+
+body.conference #main-feature nav li.current a[href$="/demopit/"] {
+  background-position: -352px 0;
+}
+
+body.conference #main-feature nav li.current a[href$="/registration/"] {
+  background-position: -528px 0;
+}
+
+body.conference #main-feature nav li.current a[href$="/access/"] {
+  background-position: -704px 0;
+}
+
+#sec-program table tbody th {
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+#sec-program table td {
+  width: 32%;
+}
+
+#sec-program table h3 {
+  display: inline;
+}
+
+#sec-program table header {
+  margin-bottom: 16px;
+}
+
+#sec-program table header ul {
+  overflow: hidden;
+  margin: 8px 0 0 0;
+}
+
+#sec-program table header li {
+  display: block;
+  float: left;
+  margin: 4px !important;
+  width: 88px;
+  height: 28px;
+}
+
+#sec-program table header li > * {
+  display: block;
+  border-radius: 4px;
+  padding: 8px;
+  width: auto;
+  height: 12px;
+  color: #555;
+  background: #D5D5D5; /* fallback */
+  box-shadow: 0 0 4px #000;
+  line-height: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#sec-program table header li a {
+  outline: 0;
+     -moz-transition: 0.4s;
+       -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+}
+
+#sec-program table header li a:hover,
+#sec-program table header li a:focus,
+#sec-program table header li a:active {
+  background: #F5F5F5;
+}
+
+#sec-program table header .live {
+  width: 128px;
+}
+
+#sec-program table header .live strong {
+  display: block;
+  background: url(/static/images/events/vision/2012/conference/content-sprite.png) no-repeat center;
+  text-indent: -99999px;
+}
+
+#sec-program table h4 {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+#sec-program table [itemprop="subEvents"] > section {
+  border-top: 1px solid #010006;
+  padding: 12px 0;
+}
+
+#sec-program table p,
+#sec-program table ul {
+  margin: 0;
+}
+
+#sec-program table li {
+  margin: 0 !important;
+  padding: 0;
+  background: transparent none;
+  list-style-type: none !important;
+}
+
+#sec-program table .speakers h4,
+#sec-program table .description h4,
+#sec-program table .tags h4,
+#sec-program table .video h4 {
+  position: absolute;
+  left: -99999px;
+}
+
+#sec-program table .speakers a {
+  display: block;
+  overflow: hidden;
+  outline: 0;
+  padding: 4px;
+}
+
+#sec-program table .speakers img {
+  margin-right: 8px;
+  width: 32px;
+  height; 32px;
+  box-shadow: 0 0 4px #000;
+  vertical-align: middle;
+}
+
+#sec-program table .speakers a > [itemprop="name"] {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#sec-program table .speakers [role="note"] {
+  margin-top: 4px;
+  color: #999;
+  font-size: 10px;
+}
+
+#sec-program table .links li {
+  margin-left: 16px !important;
+  list-style-type: disc !important;
+}
+
+#sec-program table .video li {
+  width: 184px;
+  color: #999;
+  text-align: center;
+}
+
+#sec-program table .video li a {
+  display: block;
+  outline: 0;
+  width: 184px;
+  height: 54px;
+  background: url(/static/images/events/vision/2012/video-play-button.png);
+  text-indent: -99999px;
+}
+
+#sec-program table .featured h3 strong {
+  display: block;
+  font-size: 24px;
+}
+
+#sec-program table .featured .speakers {
+  overflow: hidden;
+}
+
+#sec-program table .featured .speakers h5 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#sec-program table .featured .speakers section {
+  float: left;
+}
+
+#sec-program table .featured .speakers .hosts {
+  margin-right: 12px;
+  border-right: 1px solid #010006;
+  padding-right: 12px;
+}
+
+#sec-program table .featured .speakers li {
+  float: left;
+  width: 136px;
+  text-align: center;
+}
+
+#sec-program table .featured .speakers img {
+  margin: 0 0 8px 0;
+  width: 80px;
+  height: 80px;
+}
+
+#sec-program table .featured .speakers a > span {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+}
+
+#sec-program table .lightning .speakers h4 {
+  position: static;
+}
+
+#sec-program table .featured [class="description"] p {
+  font-size: 14px;
+}
+
+#sec-speakers [itemprop="performers"] {
+  position: relative;
+  margin: 56px 0 0 0 !important;
+  background: #282828;
+  background: rgba(50,50,50,0.8);
+  box-shadow: 0 0 8px #010006;
+}
+
+#sec-speakers hgroup {
+  padding: 16px;
+  background: #333;
+}
+
+/* hgroupの廃止に伴い追記 */
+#sec-speakers div.hgroup {
+  padding: 16px;
+  background: #333;
+}
+/* /hgroupの廃止に伴い追記 */
+
+#sec-speakers figure {
+  position: absolute;
+  top: -56px;
+  right: 0;
+  width: 224px;
+  height: 224px;
+}
+
+#sec-speakers img {
+  display: block;
+  margin: 24px;
+  border: 8px solid #FFF;
+  width: 160px;
+  height: 160px;
+  background: #FFF;
+  box-shadow: 4px 4px 8px #111;
+     -moz-transform: rotate(6deg);
+      -ms-transform: rotate(6deg);
+       -o-transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+     -moz-transition: 0.2s;
+       -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+
+#sec-speakers figure:hover img {
+     -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#sec-speakers figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  width: 120px;
+  color: #999;
+  font-size: 10px;
+     -moz-transition: 0.2s;
+       -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+
+#sec-speakers figure:hover figcaption {
+  left: 36px;
+}
+
+#sec-speakers div {
+  overflow: hidden;
+}
+
+#sec-speakers div p {
+  margin: 24px;
+  width: 640px;
+     -moz-column-count: 2;
+  -webkit-column-count: 2;
+          column-count: 2;
+     -moz-column-gap: 24px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+}
+
+#speaker-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  background: rgba(0,0,0,0.7);
+}
+
+#speaker-overlay[aria-hidden="true"] {
+  display: none;
+}
+
+#speaker-overlay .frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -160px 0 0 -320px;
+  width: 640px;
+  height: 320px;
+  background: #333;
+}
+
+#speaker-overlay .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  width: 624px;
+  height: 16px;
+  background: #222;
+  line-height: 16px;
+  text-align: right;
+}
+
+#speaker-overlay .content {
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 32px;
+  padding: 24px;
+  height: 240px;
+}
+
+#speaker-overlay .content > * {
+  text-align: left;
+}
+
+#speaker-overlay .content hgroup,
+#speaker-overlay .content div {
+  float: left;
+  width: 400px;
+} 
+
+#speaker-overlay .content hgroup {
+  margin-bottom: 12px;
+}
+
+/* hgroupの廃止に伴い追記 */
+#speaker-overlay .content div.hgroup,
+#speaker-overlay .content div {
+  float: left;
+  width: 400px;
+} 
+
+#speaker-overlay .content div.hgroup {
+  margin-bottom: 12px;
+}
+/* /hgroupの廃止に伴い追記 */
+
+#speaker-overlay .content figure {
+  float: right;
+}
+
+#speaker-overlay .content img {
+  box-shadow: 0 0 4px #000;
+}
+
+#speaker-overlay .content figcaption {
+  margin-top: 4px;
+  color: #999;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+ * ワークショップ
+ * -------------------------------------------------------------------------- */
+
+body.workshop #doc-outer {
+  background: url(/static/images/events/vision/2012/workshop/header-background-20120120.jpg) no-repeat center top;
+}
+
+body.workshop #main-feature nav ul {
+  left: 300px;
+  width: 368px;
+}
+
+body.workshop #main-feature nav li.current a {
+  background-image: url(/static/images/events/vision/2012/workshop/header-menu-selected.png);
+}
+
+body.workshop #main-feature nav li.current a[href$="/access/"] {
+  background-position: -176px 0;
+}
+
+body.workshop [itemprop="subEvents"] {
+  overflow: hidden;
+  margin: 32px 0;
+  border-radius: 4px;
+  padding: 24px;
+  background: #282828;
+  background: rgba(50,50,50,0.8);
+  box-shadow: 0 0 8px #010006;
+}
+
+body.workshop [itemprop="subEvents"] figure {
+  float: right;
+  margin-left: 16px;
+  border-radius: 4px;
+  padding: 16px;
+  background: #FFF;
+  box-shadow: inset 0 0 8px #010006;
+}
+
+body.workshop [itemprop="subEvents"] h3 {
+  font-size: 14px;
+}
+
+body.workshop [itemprop="subEvents"] h3 strong {
+  font-size: 18px;
+}
+
+body.workshop [itemprop="subEvents"] dl {
+  overflow: hidden;
+  margin-bottom: 0;
+  border-bottom: 1px solid #010006;
+}
+
+body.workshop [itemprop="subEvents"] dt {
+  float: left;
+  padding: 4px 8px;
+  width: 6em;
+}
+
+body.workshop [itemprop="subEvents"] dd {
+  margin: 0;
+  border-top: 1px solid #010006;
+  padding: 4px 8px 4px 8em;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"] {
+  overflow: visible;
+  margin: 24px 24px 0 0;
+  width: 226px;
+  background: #333;
+  box-shadow: none;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"]:last-of-type {
+  margin-right: 0;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"] h4 {
+  font-size: 12px;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"] h4 strong {
+  font-size: 14px;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"] figure {
+  float: none;
+  margin: 16px 0;
+}
+
+body.workshop [itemprop="subEvents"] [itemprop="subEvents"] img {
+  width: 194px;
+  height: 194px;
+}
+
+} /* end @media screen */
+
+/* --------------------------------------------------------------------------
+ * print
+ * -------------------------------------------------------------------------- */
+
+@media print {
+
+#main-feature ul,
+#main-content a.button,
+#speaker-overlay {
+  display: none;
+}
+
+#main-content section {
+  margin: 16px 0;
+}
+
+#main-content table {
+  margin: 12px 1px;
+}
+
+#main-content th,
+#main-content td {
+  border: 1px solid #CCC;
+  padding: 12px;
+  vertical-align: top;
+}
+
+#main-content tbody th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#sec-supporters ul {
+  text-align: center;
+}
+
+#sec-supporters li {
+  display: inline-block;
+  margin: 8px;
+  list-style-type: none;
+}
+
+body.landing #sec-overview td {
+  width: 42%;
+}
+
+#sec-program table td {
+  padding: 1px 12px;
+  width: 32%;
+}
+
+#sec-program table .speakers ul {
+  margin: 12px 0;
+  padding: 0;
+}
+
+#sec-program table .speakers li {
+  margin: 4px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#sec-program table .speakers img {
+  width: 32px;
+  height; 32px;
+  vertical-align: middle;
+}
+
+#sec-speakers section,
+body.workshop [itemprop="subEvents"] {
+  overflow: hidden;
+  border: 1px solid #CCC;
+  padding: 12px;
+}
+
+#sec-speakers figure,
+body.workshop [itemprop="subEvents"] figure {
+  float: right;
+  margin: 0 0 12px 12px;
+}
+
+} /* end @media print */

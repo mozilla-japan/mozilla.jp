@@ -1,0 +1,132 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Android 版 Firefox 5 ベータ版リリースノート';
+$body_id            = 'firefox-android-relnotes';
+$body_class         = 'sky firefox mobile android relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/android/' => 'Android 版',
+  '/firefox/android/5.0beta/releasenotes/' => 'Firefox 5 ベータ版リリースノート'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Android 版</em> <em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 5.0 ベータ版</span></span></h2>
+                </div>
+                <p>Firefox を好きなところへ持ち出そう。Android 版 Firefox はデスクトップ版 Firefox と同じ技術プラットフォームを基盤としながら、モバイル端末でのブラウジングに最適化されています。</p>
+                <p itemprop="description">このリリースノートでは、Firefox の最新ベータ版に関する変更点、既知の問題、よくある質問を掲載しています。いつものように、<a href="https://input.mozilla.org/ja/feedback/android">フィードバックを提供</a> するか <a href="https://bugzilla.mozilla.org/">バグを報告</a> して、製品の改良にご協力ください。サポートが必要なら、<a href="https://support.mozilla.org/ja/questions/mobile">Firefox for Mobile Support Forum</a> をご利用ください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="sec-whatsnew2">
+                  <h2>このベータ版での変更点</h2>
+                  <p>Firefox の最新ベータ版では、以下の変更が行われています。</p>
+                  <ul>
+                    <li>重要なバグの修正: パスワード欄に入力された文字が即座にマスクされない (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655864">Bug 655864</a>)、テキスト欄に入力し続けると、最初の文字がだんだん消えてしまう (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655852">Bug 655852</a>)、リッチテキストエディターへの入力問題 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=624163">Bug 624163</a>)、クラッシュ問題 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=641010">Bug 641010</a>)</li>
+                    <li>各国語版での省略された文言に関する問題の修正: フランス語 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=658121">Bug 658121</a>)、ロシア語 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=658099">Bug 658099</a>)、イタリア語 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=658109">Bug 658109</a>、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=646093">Bug 646093</a>)</li>
+                    <li>特に 3G ネットワーク環境において、ページ読み込み速度が向上しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=561694">Bug 561694</a>)</li>
+                    <li>パンニングの応答性を改善しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=639179">Bug 639179</a>)</li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/dnt/">Do Not Track</a> ヘッダーに対応しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=648654">Bug 648654</a>)</li>
+                    <li>SwiftKey キーボードとの互換性を改善しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617298">Bug 617289</a>)</li>
+                    <li>Android ギャラリーへダウンロードした画像がすぐに表示されるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=646550">Bug 646550</a>)</li>
+                    <li>色変換の改良によって、画像や動画が意図した通りに表示されるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=641014">Bug 641014</a>)</li>
+                    <li>警告や入力のダイアログが Android 標準により近いスタイルで表示されるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=618989">Bug 618989</a>)</li>
+                    <li>Android メニューに 6 個を超える項目を追加できるようになりました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=610784">Bug 610784</a>)</li>
+                    <li>有効なインターネット接続がない状態でページを読み込もうとする際に見られたエラーを修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=648268">Bug 648268</a>)</li>
+                  </ul>
+                  <h3>アドオン</h3>
+                  <p>Android 版 Firefox 向けの <a href="https://addons.mozilla.org/ja/android/extensions/">拡張機能</a> は 160 種類以上あり、その数は増え続けています。そのうち 100 個近くはすでに最新版へ対応しています。素晴らしいコミュニティのおかげで、Firefox の最新版へ対応したエキサイティングな拡張機能は絶えず増え続けています。<a href="https://blog.mozilla.org/mobile/2011/01/20/congrats-mobile-add-ons-cup-winners/">Mobile Add-on Cup</a> の優秀作品をはじめとする素敵なモバイル向け拡張機能をぜひお試しください。</p>
+                  <h3>開発者向けの新機能と改良点</h3>
+                  <p>新しい素敵なアドオンを作ったり、既成のモバイル用アドオンをリリース候補版へ対応させるなら、今がその時期です。インタフェースはすべて安定しており、必要なツールと資料はすべて <a href="https://addons.mozilla.org/ja/developers/">開発者センター</a> に揃っています。</p>
+                  <p>前バージョンでの変更点については <a href="/firefox/android/4.0.1/releasenotes/">Firefox&nbsp;4.0.1 リリースノート</a> をご覧ください。</p>
+                </section>
+                <section id="sec-developers">
+                  <h2>開発者向け情報</h2>
+                  <p>Firefox は、高速、パワフル、かつ美しいモバイル向けウェブアプリケーションやアドオンの作成に適した、使いやすくオープンな開発プラットフォームです。HTML5、CSS、JavaScript など最新のウェブ技術を使って、より素早く簡単に革新的な機能を実装し、リーチを広げることが可能です。スマートフォンが持つデバイス固有の機能を活用して素晴らしいサイトやアプリを開発したり、ウェブの使い方を変えるアドオンを作成したりしましょう。<a href="https://developer.mozilla.org/ja/mobile">Mozilla Developer Network</a> を訪れて、膨大な数の端末へリーチできる革新的なサイトを構築する方法を学んでください。</p>
+                  <h3>モバイル向けアドオンの開発</h3>
+                  <p>デスクトップ版 Firefox と Android 版 Firefox はいずれも同じプラットフォームを基盤としていますが、両者には若干の違いがあるため、アドオン作者は Android へ対応させるため少し手を加える必要があります。Android 版 Firefox は <a href="https://developer.mozilla.org/ja/Extensions/Bootstrapped_extensions">再起動不要なアドオン</a> に対応しています。詳しくは、MozillaWiki にある <a href="https://wiki.mozilla.org/Mobile/Fennec/Extensions/Electrolysis">Electrolysis</a> と <a href="https://wiki.mozilla.org/Mobile/AddonsTrainingWeek">Add-ons Training Week</a> のドキュメントを参照してください。</p>
+                  <h3>バックエンドの特長</h3>
+                  <ul>
+                    <li>デスクトップ版 Firefox と同じブラウザーエンジン</li>
+                    <li>Mozilla 独自の Jägermonkey (イェガーモンキー) JIT コンパイラを統合した高速 JavaScript エンジン</li>
+                    <li>優れたウェブ標準互換性</li>
+                    <li>ARM プロセッサーに最適化</li>
+                    <li>位置情報通知機能</li>
+                  </ul>
+                  <h3>HTML5 をはじめとするウェブ標準技術</h3>
+                  <ul>
+                    <li>ウェブワーカー</li>
+                    <li>オフラインストレージ</li>
+                    <li>&lt;canvas&gt;</li>
+                    <li>&lt;svg&gt;</li>
+                    <li><a href="https://developer.mozilla.org/ja/online_and_offline_events">オンライン・オフラインイベント</a></li>
+                    <li>ネイティブ JSON</li>
+                    <li>&lt;audio&gt;</li>
+                    <li>&lt;video&gt;</li>
+                  </ul>
+                </section>
+                <section id="sec-known-issues">
+                  <h2>既知の問題</h2>
+                  <p>Firefox ベータ版で確認されている既知の問題を掲載します。これらは今後のバージョンで修正される予定です。</p>
+                  <ul>
+                    <li>ウェブページのヘッダー・フッター上でダブルタップしたときに、ページが拡大・縮小されません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=639504">Bug 639504</a>)</li>
+                    <li>places.sqlite-wal のファイルサイズが大きすぎる (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=625981">Bug 625981</a>)</li>
+                    <li>同期中も [今すぐ同期] ボタンを押せてしまう (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=656594">Bug 656594</a>)</li>
+                    <li>一部のロケールで、ロケーションバーからの検索が確実に動作しないことがあります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=645970">Bug 645970</a>)</li>
+                    <li>HTML5 動画の読み込みが遅くなり、再生中画面上にノイズが見られる場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=622839">Bug 622839</a>)</li>
+                    <li>再読み込みの際にページが拡大表示されてしまいます。(see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=628269">Bug 628269</a>)</li>
+                    <li>デスクトップ版 Firefox のプロファイルのサイズが大きい状態で Firefox Sync を使うと、初回同期の際にパフォーマンスの問題が生じる場合があります。</li>
+                    <li>Adobe Flash などのプラグインには対応していません。現時点で Flash プラグインを有効にすると、アプリケーション全般のユーザー体験を損ねるためです。</li>
+                  </ul>
+                  <h3>端末や OS に起因する既知の問題</h3>
+                  <ul>
+                    <li>一部の Motorola 製端末、特に Droid と Milestone では、Firefox で一部のページを読み込む際にフリーズする場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=602252">Bug 602252</a>)</li>
+                    <li>Android&nbsp;2.1 が動作している Samsung Galaxy S では Jägermonkey JIT コンパイラが無効になります。このため、他の端末よりも Firefox の JavaScript 実行速度が低下します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=601222">Bug 601222</a>)</li>
+                    <li>Android&nbsp;2.3.1 が動作している Google Nexus S では、Firefox を実行中に端末がフリーズする場合があります。これは Android&nbsp;2.3.3 へシステムを更新することで改善されます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=624652">Bug 624652</a>)</li>
+                  </ul>
+                </section>
+                <section id="sec-system-requirements">
+                  <h2>システム要件</h2>
+                  <p>Firefox&nbsp;5 は Android&nbsp;2.0 以上に対応しています。</p>
+                  <p>Firefox&nbsp;5 は 512&nbsp;MB の RAM と約 17&nbsp;MB のストレージを必要とします。ただし、Android&nbsp;2.2 では、Android 付属の設定アプリを使用して、Firefox 本体とユーザーデータを SD カードへ移すことができます。</p>
+                  <p>Firefox&nbsp;5 は ARMv7 プロセッサー搭載の端末を必要とします。インストール前に <a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">対応機種</a> をご確認ください。</p>
+                </section>
+                <section id="sec-downloading">
+                  <h2>ダウンロード</h2>
+                  <p>ベータ版は <a href="<?= FirefoxAndroid::APP_STORE_BETA_URL ?>">Google Play</a> からダウンロードできます。お使いの端末がシステム要件を満たしているかどうか、インストール前にあらかじめ <a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">対応機種</a> をご確認ください。</p>
+                  <p>開発者の皆さんは、パソコンに Android 版 Firefox のエミュレータをインストールして、テスト、フィードバックの提供、アドオンの開発を行えます。パソコン用のエミュレータは開発目的に限って公開しているもので、完全な機能は備えていません。</p>
+                  <ul>
+                    <li><a href="https://releases.mozilla.org/pub/mozilla.org/mobile/releases/5.0b2/win32-i686/fennec-5.0b2.en-US.win32.zip">Windows</a></li>
+                    <li><a href="https://releases.mozilla.org/pub/mozilla.org/mobile/releases/5.0b2/macosx-i686/fennec-5.0b2.en-US.mac.dmg">Mac&nbsp;OS&nbsp;X</a></li>
+                    <li><a href="https://releases.mozilla.org/pub/mozilla.org/mobile/releases/5.0b2/linux-i686/fennec-5.0b2.en-US.linux-i686.tar.bz2">Linux</a></li>
+                  </ul>
+                </section>
+                <section id="sec-faq">
+                  <h2>よくある質問</h2>
+                  <p>別途用意した「<a href="/firefox/android/faq/">よくある質問</a>」のページをご覧ください。</p>
+                </section>
+                <section id="sec-other-resources-links">
+                  <h2>関連資料とリンク</h2>
+                  <p>以下のサイトには、Android 版 Firefox に関して参考になる情報が載っています。</p>
+                  <ul>
+                    <li></li>
+                    <li><a href="https://support.mozilla.org/ja/products/mobile">Android 版 Firefox のヘルプ記事</a></li>
+                    <li><a href="https://support.mozilla.org/ja/questions/mobile">Firefox for Mobile Support Forum</a></li>
+                    <li><a href="https://input.mozilla.org/ja/feedback/android">Android 版 Firefox についてフィードバックをお寄せください</a></li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

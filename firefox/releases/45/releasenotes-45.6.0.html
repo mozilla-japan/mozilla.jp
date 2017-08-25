@@ -1,0 +1,70 @@
+<?php
+
+$_version = '45.6.0';
+$_date = '2016-12-13';
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox ' . $_version . ' 延長サポート版 (ESR) リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes');
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/' . $_version . '/releasenotes/' => 'Firefox ' . $_version
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン <?= $_version ?> 延長サポート版 (ESR)</span></span> &mdash; <time datetime="<?= $_date ?>" itemprop="datePublished"><?= str_replace('-', '/', $_date) ?></time> リリース</h2>
+                </div>
+                <p itemprop="description">このバージョンの変更点と既知の問題を掲載しています。いつものように <a href="https://input.mozilla.org/ja/feedback/firefox">フィードバックを提供</a> するか <a href="https://bugzilla.mozilla.org/">バグを報告</a> して、Firefox の改良にご協力ください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="sec-whatsnew">
+                  <h2>このバージョンでの変更点</h2>
+                  <ul>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefoxESR.html#firefox<?= preg_replace("/(\.0)*$/", "", $_version) ?>">いくつかのセキュリティ問題</a>が修正されました</p>
+                    </li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+              <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+                <section id="sec-join">
+                  <h2>協力者募集中！</h2>
+                  <p>Firefox を作っている Mozilla プロジェクトには、誰でも様々な形で参加できます。<br><a href="/community/" class="more">Mozilla のコミュニティ</a></p>
+                </section>
+                <section id="sec-support">
+                  <h2>問題を見つけたら</h2>
+                  <ul>
+                    <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox サポートのページでナレッジベースの情報を探してみましょう</a></li>
+                    <li><a href="#sec-issues">開発チームがすでに認識しているかどうか、既知の問題を確認しましょう</a></li>
+                    <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi">情報が見当たらない場合は、ぜひバグとして報告してください</a></li>
+                  </ul>
+                </section>
+                <section id="sec-resources">
+                  <h2>関連情報</h2>
+                  <ul>
+                    <li><a href="/business/">法人向け情報</a></li>
+                    <li><a href="/blog/category/firefox/">Mozilla Japan ブログ</a></li>
+                    <!-- value0-0-0=XX の値を対応する通常リリース版に合わせて書き換えること -->
+                    <!--                     <li><a href="https://bugzilla.mozilla.org/buglist.cgi?type0-1-0=anywordssubstr;field0-1-0=cf_status_firefox_esr24;field0-0-0=cf_tracking_firefox_esr24;query_format=advanced;value0-1-0=fixed%20verified;type0-0-0=equals;value0-0-0=24%2B">すべての変更点一覧</a></li> -->
+                  </ul>
+                </section>
+              </aside><!-- end #sidebar -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

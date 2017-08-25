@@ -1,0 +1,216 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Thunderbird 2 Beta 2 リリースノート';
+$body_id            = 'thunderbird-relnotes';
+$body_class         = 'sky thunderbird relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.thunderbird.net/ja/' => 'メールソフト Thunderbird',
+  '/thunderbird/releases/' => 'リリースノート',
+  '/thunderbird/2.0b2/releasenotes/' => 'Thunderbird 2 Beta 2'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name">Thunderbird リリースノート</h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 2 Beta 2</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <p>Thunderbird 2 Beta 2 は、次世代 Thunderbird 電子メールクライアントの開発者向けプレビューリリースで、<strong>テスト目的にのみ限って</strong> 提供されます。Thunderbird 2 Beta 2 はテストコミュニティを対象にしています。</p>
+                <p>このリリースノートには、Thunderbird 2 Beta 2 に関する <a href="#new">新機能</a>、<a href="#download">ダウンロード</a>、<a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#links">ユーザーサポート / フィードバック方法</a> が載っています。Bugzilla にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p>
+                <p>こちらにある <a href="https://support.mozilla.org/ja/questions/new/thunderbird">フィードバック欄</a> からフィードバックをお寄せくださるか、<a href="http://www.mozillazine.org/">MozillaZine</a> がホストする Mozilla Thunderbird フォーラムにお越しください。</p>
+
+                <h2><a name="new">本開発マイルストーンの新機能</a></h2>
+                <p>Thunderbird 2 Beta 2 には、いろいろ試すことができる要素がたくさん詰まっています：</p>
+                <ul class="news">
+                  <li><b>メッセージタグ：</b> 電子メールの整理のために独自のタグを作成できるようになりました。メッセージには好きなだけタグを割り当てることができるようになりました。タグは検索フォルダーやメールビューと連携させることができ、電子メールの整理が簡単にできるようになっています。</li>
+                  <li><b>テーマ：</b>Thunderbird 2 のテーマおよびユーザーインターフェースがアップデートされ、利便性が向上しています。</li>
+                  <li><b>セッション履歴ナビゲーション：</b> 進む・戻るボタンからメッセージ履歴をナビゲートできるようになりました。</li>
+                  <li><b>フォルダービュー：</b> フォルダーペインをカスタマイズして、お気に入りや未読フォルダー、最近のフォルダーを表示できるようになりました。</li>
+                  <li><b>拡張機能へのより良い対応：</b> 拡張機能を用いて、メールデータベースにカスタムのメッセージデータを追加できるだけでなく、カスタムコラムをメッセージリスト領域に追加できるようになりました。</li>
+                  <li><b>改良されたオフライン管理機能：</b> Thunderbird  (Linux および Windows) では、その時点のネットワーク状態に応じて、自動的にオフライン状態を調節できるようになりました。</li>
+                  <li><b>改良された新着メール通知機能：</b> 新しいメール通知機能には、件名、送信者およびメッセージ本文といった情報が含まれるようになりました。</li>
+                  <li><b>フォルダーの要約ポップアップ：</b> 新着メッセージが含まれるフォルダーにマウスをおくと、そのフォルダー内にある新着メッセージの要約を確認できるようになりました。</li>
+                  <li><b>検索フォルダーのパフォーマンス：</b> 検索フォルダーの検索結果がキャッシュされるようになり、フォルダーの読み込みパフォーマンスが向上しました。</li>
+                  <li><b>Find As You Type</b></li>
+                  <li><b>改良されたファイリングツール：</b> 最近利用したフォルダーへフォルダーを移動・コピーするための、最近利用したメニュー項目 (訳注：自信ありません) 再び移動・コピーする機能</li>
+                  <li><b>拡張機能システムのアップデート：</b> 拡張機能システムはアップデートされ、より充実したセキュリティ機能を提供し、拡張機能をより簡単にローカライズできるようになりました。</li>
+                  <li><b>新しい Windows インストーラ：</b> <a href="http://sourceforge.net/projects/nsis/" rel="nofollow">Nullsoft Scriptable Install System</a> を採用しました。これまで長い間解決できなかった問題が、新しい Windows インストーラによって解消されました。</li>
+                  <li><b>MacOS X でのユニバーサルバイナリ化</b></li>
+                </ul>
+                <p>Rumbling Edge に <a href="http://weblogs.mozillazine.org/rumblingedge/archives/2007/01/2-0beta2.html">重要なバグ修正</a> に関するより詳しい一覧があります。</p>
+
+                <h2 id="downloadandinstall">ダウンロードとインストール</h2>
+                <h3 id="requirements">必要システム構成</h3>
+                <p>インストールの前に、お使いのコンピューターが <a href="/thunderbird/2.0/system-requirements/">必要システム構成</a> を満たしているか確認してください。</p>
+                <h3 id="download"><a name="download">Thunderbird 2 Beta 2 のダウンロード</a></h3>
+                <p>Mozilla.org からは、さまざまな言語で Windows、Linux、および Mac OS X に対応した Thunderbird 2 Beta 2 を提供しています。Thunderbird 2 Beta 2 という最新版は <a href="https://www.thunderbird.net/ja/beta/all/">こちらからダウンロードできます</a>。</p>
+                <p>mozilla.org によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                <h3><a name="install">Thunderbird のインストール</a></h3>
+                <p>Thunderbird 2 Beta 2 をダウンロードしたら、次の指示に従ってください：</p>
+                <h3>Windows</h3>
+                <p><tt class="filename">Thunderbird Setup 2.0 Beta 2.exe</tt> インストーラをダブルクリックして、インストールします。</p>
+                <h3>MacOS X</h3>
+                <p>Thunderbird 2 Beta 2.dmg ファイルをダウンロードしたら、Thunderbird のディスクイメージをダブルクリックして Finder に開き、Thunderbird のアプリケーションアイコンをハードディスクにドラッグしてください。アプリケーションを Dock に表示したい場合は、アイコンを Dock にドラッグしてください。</p>
+                <h3>その他のプラットフォーム</h3>
+                <p>圧縮されたアーカイブを解凍して、<tt>thunderbird</tt> を実行します。</p>
+
+                <h3 id="uninstall">Thunderbird のアンインストール</h3>
+                <p>Thunderbird をアンインストールするには、次の指示に従ってください：</p>
+                <h3>Windows</h3>
+                <p><kbd>スタート</kbd> メニューから <kbd>コントロールパネル</kbd> を選択します。コントロールパネルが表示されたら、<kbd>プグラムの追加と削除</kbd> をダブルクリックします。一覧から 「Mozilla Thunderbird (2.0b2)」 を探して、<kbd>削除</kbd> ボタンをクリックしてアンインストールします。</p>
+                <h3>MacOS X</h3>
+                <p><tt class="filename">Thunderbird</tt> アプリケーションをゴミ箱にドラッグします。</p>
+                <h3>その他</h3>
+                <p><tt class="filename">thunderbird</tt> フォルダーを削除します。</p>
+                <p>以上のガイドではプロファイルデータはそのまま残ります。将来 Thunderbird をインストールした際に再び使えるようにするためです。プロファイルフォルダーを削除したい場合は、<strong>プロファイルフォルダー</strong> のセクションで示されているフォルダーを削除してください。プロファイルフォルダーを削除すると、電子メール、アドレス帳データ、設定その他の情報が削除され、再び Thunderbird を使用する際にはまっさらなプロファイルで初めから設定し直す必要があります。</p>
+
+                <h2>その他の情報</h2>
+                <h3 id="profilefolder">プロファイルフォルダー</h3>
+                <p>Thunderbird は次の場所のいずれかにユーザーデータを保存します：</p>
+                <table style="font-size: smaller;" border="1" cellspacing="0">
+                  <tr>
+                    <td><img src="/static/images/general/platforms/icon-win.png" alt="">Windows 2000、XP</td>
+                    <td>Documents and Settings\&lt;ユーザー名&gt;\Application Data\Thunderbird</td>
+                  </tr>
+                  <tr>
+                    <td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows NT</td>
+                    <td>WINNT\Profiles\&lt;ユーザー名&gt;\Application Data\Thunderbird</td>
+                  </tr>
+                  <tr>
+                    <td><img src="/static/images/general/platforms/icon-win.png" alt="">Windows 98、ME</td>
+                    <td>Windows\Application Data\Thunderbird</td>
+                  </tr>
+                  <tr>
+                    <td><img src="/static/images/general/platforms/icon-mac.png" alt=""> MacOS X</td>
+                    <td>~/Library/Thunderbird</td>
+                  </tr>
+                  <tr>
+                    <td><img src="/static/images/general/platforms/icon-linux.png" alt="">Linux および Unix システム</td>
+                    <td>~/.thunderbird</td>
+                  </tr>
+                </table>
+
+                <h3 id="extensions">拡張機能とテーマ</h3>
+                <p>Thunderbird 1.5 環境下でインストールされた拡張機能には、互換性が無く、Thunderbird 2 Beta 2 で利用するためにアップデートが必要となるものもあります。なにか問題が見つかった場合は、その拡張機能の管理者にご連絡ください。Thunderbird 2 Beta 2 をインストールすると、すべての拡張機能とテーマは、Thunderbird が次のいずれかの判断をするまで利用できなくなります： a)  Thunderbird 2 Beta 2 リリースと互換性がある、b)  互換性のある新しいバージョンが利用できる。</p>
+
+                <h2><a name="issues">既知の問題</a></h2>
+                <p>Thunderbird 2 Beta 2 で確認されている問題の一部を掲載します。新しいバグを報告する前に、かならずお読みになるとともに、定期的に確認してください  (リリースに新しいバグが見つかるたびに更新します) 。　</p>
+
+                <h3>すべてのシステム</h3>
+                <dl>
+                  <dt>スペルチェック：</dt>
+                   <dd>標準の辞書は英語のみです。英語以外の辞書は、<a href="https://addons.mozilla.org/ja/thunderbird/language-tools/">addons.mozilla.org</a> から拡張機能としてインストールできます。</dd>
+
+                  <dt>拡張機能：</dt>
+                  <dd>Thunderbird の過去のバージョンから Thunderbird 2 Beta 2 へと移行する際、一部の拡張機能やテーマが無効化される可能性があります。上記 <a href="#extensions">「拡張機能とテーマ」</a> をご覧ください。</dd>
+
+                  <dt>メールビュー：</dt>
+                  <dd>メールビューツールバーボタンは、標準のツールバーには表示されなくなりました。この機能を使いたい方は、［表示］-&gt; ［ツールバー］-&gt; ［カスタマイズ］ から、メールの 3 ペインウィンドウで標準のツールバーに戻す必要があります。</dd>
+
+                  <dt>メッセージ履歴：</dt>
+                  <dd>メッセージ履歴のために進む・戻るボタンが新しく加わりましたが、標準のツールバーセットには含まれていません。この新機能を利用するには、［表示］ -&gt; ［ツールバー］ -&gt; ［カスタマイズ］から、メールウィンドウのツールバーに進む・戻るボタンを追加する必要があります。</dd>
+
+                  <dt>オフライン管理</dt>
+                  <dd>ネットワークの接続状態におうじてオンライン状態を調節できる Thunderbird の機能を最大限に生かすには、まず <tt>network.autodial-helper.enabled</tt> の値を変更しておく必要があります。</dd>
+
+                  <dt>共通受信トレイ：</dt>
+                  <dd>共通受信トレイと POP3 アカウントの受信箱を行き来して利用する場合は、必ず一方のフォルダーにメッセージをコピーを残しておいてください。</dd>
+
+                  <dt>DOM インスペクター：</dt>
+                  <dd>互換性のある DOM インスペクターが、拡張機能やテーマの開発者用に <a href="https://addons.mozilla.org/ja/thunderbird/addon/dom-inspector/">https://addons.mozilla.org/ja/thunderbird/addon/dom-inspector/</a> から利用できるようになっています。</dd>
+                </dl><!--
+                  <li>
+                    Windows users can sync their address book with a Palm device by installing the
+                    <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/extensions/palmsync/1.5b1/palmsync.xpi">Palm Sync extension</a>
+                    for Thunderbird. Save the file locally and install it from the extensions dialog in Thunderbird. The extension will
+                    not show up in the list of extensions. You will have to restart Thunderbird after installing the extension
+                    before it will take effect.
+                  </li>
+          -->
+
+
+                <p>&nbsp;</p>
+                <h2><a name="FAQ">よくある質問</a></h2>
+                <ol class="faq">
+                  <li>どのような協力ができますか？<p>できるだけ多くの人の目に触れるようにしたいと考えています。できるだけ多くの友人や家族、同僚の皆さんに Thunderbird を奨めてください。学生さんの場合は、学校で配布してください。<a href="http://www.slashdot.jp/" rel="nofollow"> Slashdot</a> やその他のニュースサイトにリリースについて投稿してください。ご自分のブログに投稿してください。インターネットでは大量配布が可能です。Kazaa が良い例です。</p>
+                  </li>
+                  <li>なぜ私が送ったメールに返事をくれないのですか？<p><a href="http://forums.mozillazine.org/index.php?c=8">フォーラム</a> をご利用ください。Thunderbird チームは常時このフォーラムをチェックしています。私たちは毎日多くのメールを受け取っているので、あなたが送ったメールは見過ごされる可能性もあります。</p>
+                  </li>
+                  <li>アドオン (拡張機能) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/thunderbird/extensions/">拡張機能</a> と <a href="https://addons.mozilla.org/ja/thunderbird/themes/">テーマ</a> は <a href="https://addons.mozilla.org/ja/thunderbird/">Mozilla Update</a> からダウンロードできます。</p>
+                  </li>
+                  <li>誰が Thunderbird の開発をしているのですか？<p>非常に多くの人が関わっています。Thunderbird に貢献している人たちの一覧を見るには、［ヘルプ］ メニューの ［Mozilla Thunderbird について］ を開いて「クレジット」をご覧ください。</p>
+                  </li>
+                </ol>
+
+                <p>&nbsp;</p>
+                <h2 id="links">その他の関連資料とリンク</h2>
+                <p>以下のリソースには、Thunderbird に関して参考になる情報が載っています：</p>
+
+                <ul>
+                  <li><a href="http://opensourcearticles.com/introduction_to_thunderbird_japanese" rel="nofollow">はじめての Thunderbird</a>  (手っ取り早い入門編) </li>
+                  <li><a href="https://support.mozilla.org/ja/products/thunderbird">Mozilla Thunderbird Help</a>  (FAQ、ヒントやコツ、その他の設定方法) </li>
+                  <li><a href="http://kb.mozillazine.org/Thunderbird">MozillaZine Knowledge Base</a>  (英語の FAQ、ヒントやコツ、その他の参考になる情報) </li>
+                  <li><a href="http://www.mozillazine.org/"> MozillaZine</a> による <a href="http://forums.mozillazine.org/index.php?c=10">Mozilla Thunderbird フォーラム</a>  (英語での一般の議論、フィードバック、そしてユーザー同士のサポート) </li>
+                </ul>
+
+                <p>&nbsp;</p>
+                <h2>提供されたビルド</h2>
+                <p>これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。</p><!--
+                <h3 id="solarisbuilds">Solaris (contributed by SUN Desktop Beijing Team)</h3>
+                <p><strong>Tarball format</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/README">README</a>)<br>
+                <ul>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.10-i386.tar.bz2">thunderbird-2.0a1.en-US.solaris2.10-i386.tar.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.10-i386.tar.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.10-sparc.tar.bz2">thunderbird-2.0a1.en-US.solaris2.10-sparc.tar.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.10-sparc.tar.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1.tar.bz2">thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1.tar.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1.tar.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1.tar.bz2">thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1.tar.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_tar_ball/thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1.tar.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                </ul>
+                <p><strong>Pkgadd format</strong> (<a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/README">README</a>)<br>
+                <ul>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.10-i386-pkg.bz2">thunderbird-2.0a1.en-US.solaris2.10-i386-pkg.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.10-i386-pkg.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.10-sparc-pkg.bz2">thunderbird-2.0a1.en-US.solaris2.10-sparc-pkg.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.10-sparc-pkg.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1-pkg.bz2">thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1-pkg.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.8-i386-gtk1-pkg.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                <li><a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1-pkg.bz2">thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1-pkg.bz2</a>
+                <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0a1/contrib/solaris_pkgadd/thunderbird-2.0a1.en-US.solaris2.8-sparc-gtk1-pkg.bz2.MD5SUM">(MD5SUM)</a><br></li>
+                </ul>
+           --><!-- Put Solaris Builds Here-->
+
+
+
+                <h3 id="othersystems">その他のシステム</h3>
+                <p>Mozilla.org が提供する 3 種類の公式ビルド以外のプラットフォーム用のビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0b2/contrib/">FTP サイト</a> をご覧ください。</p><!--
+                      Build contributors, please put your builds under:
+                        pub/mozilla.org/thunderbird/releases/<version>/contrib/
+
+                      Your build file name should match the pattern set by official builds
+                      and include a README explaining any build peculiarities and identifying
+                      yourself as the contributor. Thanks.
+                    --><!--
+                <h3 id="otherlanguages">Localized Builds</h3>
+                <p>Many localized builds are now produced and distributed by Mozilla.org
+                   on behalf of <a href="https://www.mozilla.org/projects/l10n/mlp_otherproj.html#thunderbird" title="Mozilla Localization Project">their authors</a>.
+                   Builds that have not yet been certified as official Thunderbird Alpha 1 localizations are available by browsing the
+                   <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0b1/contrib-localized/">FTP site</a>.
+          -->
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

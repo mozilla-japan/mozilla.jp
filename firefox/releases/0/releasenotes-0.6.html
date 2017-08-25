@@ -1,0 +1,122 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firebird 0.6 リリースノート・よくある質問';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/0.6/releasenotes/' => 'Firebird 0.6'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">Firebird 0.6</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+<p>Mozilla Firebird (元 Phoenix) は、Galeon、K-Meleon、Camino&trade; と同じように Mozilla のブラウザーコンポーネントを再設計したものですが、<abbr title="XML-based User Interface Language">XUL</abbr> ユーザーインターフェイス言語を使って記述され、クロスプラットフォームであるように設計されています。Mozilla Firebird に関する <a href="http://texturizer.net/mozilla/jp/firebird/" rel="nofollow">詳しい情報</a> もご覧ください。</p>
+
+    </div>
+    <div id="main-content">
+
+<p>このドキュメントには、Mozilla Firebird 0.6 のリリースに関する <a href="#new">新機能</a>、<a href="#install">ダウンロード・インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#FAQ">よくある質問</a> が載っています。Bugzilla にバグを報告する前に、このリリースノートと <a href="http://texturizer.net/mozilla/jp/firebird/bugs.html" rel="nofollow">バグ登録方法</a> をお読みください。</p>
+<p>Mozilla Firebird に関するあなたのフィードバックをお待ちしています。<a href="http://www.mozillazine.org/">MozillaZine</a> [<a href="http://mozillazine.jp/">日本語版</a>] が親切にも提供してくれている <a href="http://forums.mozillazine.org/?c=4">Mozilla Firebird フォーラム</a> にぜひ参加してください。</p>
+<h2><a name="new">新機能</a></h2>
+<ul>
+  <li><strong>新しいデフォルトテーマ</strong><p>Mozilla Firebird 0.6 は、Arvid Axelsson が作成した素晴らしい Qute テーマをベースとした、さっぱりとした斬新で魅力的なテーマが人目を惹いています。また、新しいテーマには Bookmark Manager ツールバー用のアイコンが付いています。</p></li>
+  <li><strong>再設計された設定ウィンドウ</strong><p>新しい Options ウィンドウでは、もっともよく使われる設定が 7 つの使いやすいパネルにまとめられており、それぞれに説明的なアイコンセレクタが付いています。</p></li>
+  <li><strong>プライバシーオプションの改良</strong><p>フォームデータ、履歴、キャッシュ、Cookie など、すべての個人情報を、ワンクリック (と対話ダイアログ) で消去できるようになりました。</p></li>
+  <li><strong>ブックマークの改良</strong><p>ブックマークに関する機能向上はいくつもありますが、その中でも、Bookmarks メニューにコンテキストメニューが付きました。メニューの中のブックマーク上で右クリックしてみてください。</p></li>
+  <li><strong>Talkback が有効に</strong><p>Mozilla Firebird がクラッシュしたときに Talkback 情報を送れるようになりました。これは、開発者がより簡単に深刻なバグを修正できるようにするものです。より詳しい情報は <a href="http://texturizer.net/mozilla/jp/firebird/faq.html#1.11" rel="nofollow">FAQ</a> の Talkback について をお読みください。</p></li>
+  <li><strong>自動画像リサイズ機能</strong><p>この機能を使うと、Mozilla Firebird は、ウィンドウサイズより大きい画像を全体が見られるように縮小表示します。このとき、画像上のカーソルが変わって、クリックすると画像が元のフルサイズに戻ることを知らせてくれます。<a href="http://texturizer.net/mozilla/jp/firebird/tips.html#beh_imageresizing" rel="nofollow">この機能を無効にする</a> 方法もあります。</p></li>
+  <li><strong>スムーズスクロール</strong><p><a href="http://texturizer.net/mozilla/jp/firebird/tips.html#beh_smoothscroll" rel="nofollow">この機能を無効にする</a> 方法もあります。</p></li>
+  <li><strong>より多くの設定項目にアクセス</strong><p>アドレスバーに about:config と入力し Enter キーを押すことで、Options ウィンドウには現れていない、多くの上級者向け設定が編集可能になりました。</p></li>
+  <li><strong>プロファイルクローム</strong><p>Mozilla Firebird の拡張機能を、現在のプログラムフォルダーの代わりに、ユーザー自身のプロファイルフォルダーにインストールできるようになりました。これによって、拡張機能をすべて手放すことなく、新しいバージョンの Mozilla Firebird にアップグレードすることが可能になります。なお、これについては、拡張機能の作者がこの仕組みを利用できるように自作アプリケーションをアップデートしていることが条件です。一部の拡張機能は、まだオプションとしてこの仕組みを提供していません。</p></li>
+  <li><strong>Mac OS X サポート</strong><p>Mac OS X 版の Mozilla Firebird が利用可能になりました。完成度はまだいまいちですが、これはスタートです。</p></li>
+  <li><strong>その他数多くのバグの修正</strong><p>Phoenix 0.5 以降、すべて把握するのが大変なくらい、数多くのバグの修正がおこなわれました。0.6.1 はより良いものになっています。私たちを信じてください。</p></li>
+</ul>
+<h2><a name="install">ダウンロード・インストール・アンインストール</a></h2>
+<div style="border: medium dotted black; padding: 0.5em; background-color: rgb(255, 255, 180);">
+  <p><strong style="background-color: rgb(255, 204, 51);">お読みください : Mozilla Firebird 0.6 用に新しいプロファイルを作成する必要があります。</strong> 新しいプロファイルを作成するには、MozillaFirebird.exe -p を実行して Mozilla Firebird を起動し、&quot;Create Profile&quot; ボタンをクリックしてください。</p>
+  <p><strong style="background-color: rgb(255, 204, 51);">また、今あるファイルにただ上書きするのではなく、古い Mozilla Firebird のディレクトリーを削除する必要があります。</strong> そうしないと問題が起こる可能性があります。最初から正しいインストールをおこない、新しいプロファイルでテストしない限り、Mozilla Firebird に関するどんなバグも登録すべきではありません。Mozilla Firebird がさらに安定すれば、この作業は必要なくなると思いますが、それまではこれらの措置が絶対に必要です。</p>
+</div>
+<p>mozilla.org は、Windows、Linux、Mac OS X 向けの Mozilla Firebird バイナリを提供しています。</p>
+<ul>
+  <li><strong>Windows</strong> : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/MozillaFirebird-0.6-win32.zip">MozillaFirebird-0.6-win32.zip</a></li>
+  <li><strong>Linux</strong> : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/MozillaFirebird-0.6-i686-pc-linux-gnu.tar.gz">MozillaFirebird-0.6-i686-pc-linux-gnu.tar.gz</a></li>
+  <li><strong>Mac OS X</strong>  <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/MozillaFirebird-0.6-mac.dmg.gz">MozillaFirebird-0.6-mac.dmg.gz</a></li>
+</ul>
+<p>訳注 : これらのリンクは、日本国内にある複数のサーバーによって運営されている <a href="http://www.t.ring.gr.jp/index.html.ja" rel="nofollow">Ring Server</a> から、ネットワーク上でいちばん近いサーバーを自動的に選んでダウンロードできるものですが、中には Mozilla Firebird をミラーしていないサーバーもあります。その場合は、ご自分のプロバイダーが提供している Ring Server か、<a href="http://www.t.ring.gr.jp/ring/softlib/load.html.ja" rel="nofollow">負荷分散グラフ</a> をご覧のうえ、混雑していないサーバーをご利用ください。</p>
+<p>訳注 : これらのビルドは <strong>日本語版ではありません</strong>。</p>
+<div style="border: 1px solid #cccccc; background-color: #f8f8f8; padding: .5em;">
+  <p><strong>貢献者より提供されたビルド</strong> - これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合もあります。</p>
+  <ul>
+    <li>OS/2 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-os2.zip">MozillaFirebird-0.6-os2.zip</a></li>
+    <li>Solaris 2.7 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-sparc-sun-solaris2.7.tar.gz">MozillaFirebird-0.6-sparc-sun-solaris2.7.tar.gz</a> (<a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-sparc-sun-solaris2.7.readme">Readme</a>)</li>
+    <li>Solaris 2.8 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-sparc-sun-solaris2.8.tar.gz">MozillaFirebird-0.6-sparc-sun-solaris2.8.tar.gz</a> (<a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-sparc-sun-solaris2.8.readme">Readme</a>)</li>
+    <li>BeOS : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-i586-beos.zip">MozillaFirebird-0.6-i586-beos.zip</a></li>
+    <li>AIX : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-powerpc-ibm-aix4.3.3.0.tar.gz">MozillaFirebird-0.6-powerpc-ibm-aix4.3.3.0.tar.gz</a> (<a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib/MozillaFirebird-0.6-powerpc-ibm-aix4.3.3.0.readme">Readme</a>)</li>
+  </ul>
+  <p><strong>ローカライズ (地域化) ビルド</strong> - <a href="https://wiki.mozilla.org/L10n:Localization_Teams">MLP</a> のボランティアによって提供されています。</p>
+  <ul>
+    <li>簡体字中国語 (中国) : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-zhCN.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-zhCN.zip">Windows zip</a></li>
+    <li>繁体字中国語 (台湾) : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-zhTW.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-zhTW-installer.exe">Windows フルインストーラ</a></li>
+    <li>チェコ語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-csCZ.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-csCZ-installer.exe">Windows フルインストーラ</a></li>
+    <li>オランダ語 : <a href="https://releases.mozilla.org/pub/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-nlNL.tar.gz">Linux x86 tar.gz</a> / <a href="https://releases.mozilla.org/pub/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-nlNL.zip">Windows zip</a></li>
+    <li>フランス語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-frFR.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-frFR.zip">Windows zip</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-frFR-installer.exe">Windows フルインストーラ</a></li>
+    <li>ドイツ語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-deDE.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-deDE.zip">Windows zip</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-deDE-installer.exe">Windows フルインストーラ</a></li>
+    <li>ギリシア語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-elGR.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-elGR-installer.exe">Windows フルインストーラ</a></li>
+    <li>イタリア語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-itIT.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-itIT.zip">Windows zip</a></li>
+    <li>韓国語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-koKR.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-koKR.zip">Windows zip</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-koKR-installer.exe">Windows フルインストーラ</a></li>
+    <li>ポーランド語 : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-plPL.tar.gz">Linux x86 tar.gz</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-plPL-installer.exe">Windows フルインストーラ</a></li>
+    <li>スペイン語 (アルゼンチン) : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-win32-esAR-installer.exe">Windows フルインストーラ</a> / <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-esAR-installer.bin">Linux x86 フルインストーラ</a></li>
+    <li>スペイン語 (スペイン) : <a href="ftp://ftp.t.ring.gr.jp/pub/net/www/mozilla/firebird/releases/0.6/contrib-localized/MozillaFirebird-0.6-i686-pc-linux-gnu-esES.tar.gz">Linux x86 tar.gz</a></li>
+  </ul>
+</div>
+<p>バイナリをダウンロードしたら、Winzip か gzip を使って、Mozilla Firebird を空のディレクトリーに解凍し、MozillaFirebird.exe を実行してください。</p>
+<p>Mozilla Firebird のアンインストールは、Mozilla Firebird ディレクトリーを削除するだけです。この作業をしても、あなたのプロファイルは、今後も Mozilla Firebird のインストールによって利用できる場所に保存されています。Mozilla Firebird の <a href="http://texturizer.net/firebird/edit.html#profile" rel="nofollow">プロファイル</a> [<a href="http://members.jcom.home.ne.jp/noririty/help/edit-ja.html#profile" rel="nofollow">和訳</a>] を削除したければ、Windows なら Application Data ディレクトリーにある Phoenix ディレクトリーを、Linux ならホームディレクトリーから .phoenix ディレクトリーを削除してください。</p>
+<h2><a name="issues">既知の問題</a></h2>
+<p>ここには、Mozilla Firebird 0.6 に関する既知の問題の一部が載っています。新たにバグを報告する前にこのリストをお読みになり、今後も定期的にチェックするようにしてください (リリースに新しいバグが見つかった場合は更新されます)。</p>
+<ul>
+  <li>Mozilla Firebird は Mozilla Application Suite から多くのコードを利用しています。Mozilla Firebird に含まれる問題の多くは、実際には Mozilla のコアコードにおける問題です。ページのコンテンツや接続性に関する問題を発見した場合、それはおそらく Mozilla の問題ですから、Bugzilla では Mozilla Firebird プロダクトではなく Browser プロダクトに対して報告してください。</li>
+  <li>Windows 版では、メニューやブックマークツールバー上のフォルダーが正しく折り畳まれないことがあります。</li>
+  <li>Profile Manager の &quot;Don't ask startup&quot; チェックボックスは機能しません。</li>
+  <li>テーマインストールの &quot;Use this theme&quot; チェックボックスは正しく機能しませんので、Tools &gt; Options &gt; Themes から切り替える必要があります。また、一部のテーマは再起動しないと完全に切り替わらないことがあります。</li>
+  <li>フォームのオートコンプリート (自動補完) 機能はまだ不安定で、クラッシュにつながる可能性があります。</li>
+  <li>フォームのオートコンプリート (自動補完) の無効化は機能しません。</li>
+  <li>Mac OS X 版の Mozilla Firebird は新しく、まだ完成度が十分ではありません。プラットフォームと一致しないところがあると思います。</li>
+</ul>
+<p>Mozilla Firebird に関するその他の問題、よくある質問、便利な使い方、一般的なヘルプについては、David Tenser の大変便利なヘルプサイト <a href="http://texturizer.net/firebird/" rel="nofollow">Mozilla Firebird</a> [<a href="http://texturizer.net/mozilla/jp/firebird/" rel="nofollow">日本語版</a>] や、<a href="http://www.mozillazine.org/">MozillaZine</a> [<a href="http://mozillazine.jp/">日本語版</a>] によって運営されている <a href="http://forums.mozillazine.org/?c=4">Mozilla Firebird フォーラム</a> をチェックしてください。</p>
+<h2><a name="FAQ">よくある質問</a></h2>
+<ol>
+  <li><strong>どのような協力ができますか?</strong><p>私たちは少しでも多くの配布経路を必要としています。5 人の友人や家族、同僚を Mozilla Firebird に移行させることがあなたの使命です。もしあなたが学生なら、学校で Mozilla Firebird を配布してください。リリースについて <a href="http://slashdot.org/" rel="nofollow">Slashdot</a> [<a href="http://slashdot.jp/" rel="nofollow">日本語版</a>] やその他のニュースサイトに記事を投稿してください。あなたの blog から情報を流してください。例えばあの Kazaa のように、インターネットを通じた大規模な配布が可能です。Firebird の話題をどんどん広めてください!</p></li>
+  <li><strong>私は別のブラウザーを使っています。なぜなら...</strong><p>もしあなたが Mozilla Firebird を使っていないのなら、開発チームにその理由を教えてください。私たちは <a href="http://forums.mozillazine.org/?c=4">Mozilla Firebird フォーラム</a> に寄せられたフィードバックに目を通しています。</p></li>
+  <li><strong>開発チームにメールを送ったのですが、返事がありません。</strong><p><a href="http://forums.mozillazine.org/?c=4">フォーラム</a> をご利用ください。Firebird チームは、フォーラムに寄せられたフィードバックを欠かさず読んでいます。メールを送ってもおそらく無視されます。</p></li>
+  <li><strong>テーマとアドオン (拡張機能) はどこで手に入りますか?</strong><p><a href="http://texturizer.net/mozilla/jp/firebird/themes/" rel="nofollow">テーマ</a> と <a href="http://texturizer.net/mozilla/jp/firebird/extensions/" rel="nofollow">拡張機能</a> をご利用ください。</p></li>
+  <li><strong>Mozilla Firebird の作業をしているのは誰ですか?</strong><p>Dave Hyatt、Blake Ross、Pierre Chanial、noririty、Ben Goodger、Dean Tessman、Mike Kaply、Jan Varga、Brian Ryner が開発に参加しています。Asa Dotzler は、リリース、バグの選別、ウェブサイト、その他雑用を手伝ってくれます。David Tenser はドキュメントやウェブサイトに関して協力してくれます。Arvid Axelsson はデフォルトテーマをメンテナンスしています。Mozilla Firebird に関する評価、協力の申し出、その他一般のメールは <a href="http://forums.mozillazine.org/?c=4">フォーラム</a> に送ってください。</p></li>
+  <li><strong>Mozilla Firebird のソースはどこにありますか?</strong><p>cvs.mozilla.org にあります。Mozilla トランクと mozilla/browser と mozilla/toolkit を組み合わせたものになります。</p></li>
+  <li><strong>Mozilla Firebird は、ユーザーインターフェイスにちょっとだけ手を加えた、ただの Mozilla では?</strong><p>すでに 4 万行以上のコードが Mozilla のコードに追加・変更されていますので、別物として捉えるべきです。</p></li>
+  <li><strong>Phoenix の名前に何が起きたのですか?</strong><p>商標の問題から名称を変更する必要がありました。新名称は Mozilla Firebird です。</p></li>
+  <li><strong>メールクライアントはどこにあるのですか?</strong><p>現在フルセットの Mozilla アプリケーションスイートを使っている人の多くは、それをメールやニュースの購読にも利用していると思います。Mozilla Firebird にはブラウザー機能しかありませんので、そのような利用はできませんが、Mozilla Firebird への乗り換えたからといって Mozilla のメールクライアントの利用をあきらめる必要はありません。Mozilla Firebird ブラウザーにぴったりな、新しいメールアプリケーション <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> をご利用ください。</p></li>
+</ol>
+<p>過去のバージョンのリリースノート: <a href="0.1">0.1</a> | <a href="0.2">0.2</a> | <a href="0.3">0.3</a> | <a href="0.4">0.4</a> | <a href="0.5">0.5</a></p>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

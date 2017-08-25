@@ -1,0 +1,43 @@
+<?php
+
+$page_title         = 'プロフィール | Mozilla Japan 第 1 回 セミナー';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2004/mjseminar1/' => 'Mozilla Japan 第 1 回 セミナー',
+  '/events/2004/mjseminar1/profiles' => 'プロフィール'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen">
+      #main-feature { width: auto; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">Mozilla Japan 第 1 回 セミナー</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <h2>プロフィール</h2>
+              <h3><a name="chris">Chris Hofmann 略歴</a></h3>
+              <p>Chris Hofmann は Mozilla Foundation 技術部門のディレクターです。8 年間勤務した Netscape においては、Netscape 3.01 以降、Netscape と Mozilla ブラウザーのすべてのバージョンのリリースに携わってまいりました。昨年 8 月 Mozilla Foundation の最初の従業員として、その立ち上げに奔走し、少人数のチームで同財団を軌道に乗せ、独立した組織として運営を行っていくことに成功しました。</p>
+              <p>今年に入ってからは、11 月に予定されている Firefox 1.0 の世界的なリリースに向けたプロジェクト運営に広く貢献しており、オープンなウェブ標準をサポートし、インターネットクライアントソフトウェアの革新と選択肢を提供し続けるという Mozilla Foundation の目標実現に取り組んでいます。</p>
+              <div lang="en" style="font-size: smaller;">
+              <p>Chris Hofmann is director of engineering of the Mozilla Foundation. For eight years, he worked at Netscape and was involved in every Netscape and Mozilla Browser release since Netscape 3.01. In August of 2003 he was hired as the first employee at the Mozilla Foundation and spent the last year in startup mode, working with the small team that has been successful in getting the foundation off the ground and running as a independent and self-sustaining organization.</p>
+              <p>In 2004 he has contributed a wide variety of management efforts that will lead to the world  wide release of Firefox 1.0 in November, and will help to fulfill the Mozilla Foundation's goal of continuing to support open web standards provide innovation and choice for Internet client software.</p>
+              </div>
+              <h3><a name="tago">田胡 和哉氏 略歴</a></h3>
+              <p>筑波大学電子情報工学系助手、東京大学工学部助手、日本 IBM 東京基礎研究所を経て現職。</p>
+              <h3><a name="takita">瀧田 佐登子 略歴</a></h3>
+              <p>1996 年 Netscape Communications 入社。I18N、L10N のエンジニアとして製品の開発およびプロモーション担当。2001 年 US AOL/Netscape プロダクトマネージャーとして日本の金融関連サポートおよび Netscape 7.0 のプロモーション業務担当。2003 年 オレンジソフトとコンサルタント契約。携帯電話用 POP/SMTP メーラー (BREW アプリ) の開発プロジェクトマネージャー。2004 年 Mozilla の技術、関連技術の普及啓蒙を目的として Mozilla Japan 設立。理事</p>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

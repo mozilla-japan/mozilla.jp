@@ -1,0 +1,41 @@
+<?php
+
+$page_title         = '404 Not Found | Mozilla Japan';
+$css                = array('sandstone/404');
+$body_class         = 'error sand';
+$tracking_url       = '/error'.htmlspecialchars($_SERVER['REQUEST_URI']);
+$extra_headers      = <<<EXTRA_HEADERS
+    <link rel="tracking" href="{$tracking_url}">
+    <meta name="event-tracking" content="gleanings;404;{$tracking_url}">
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">リクエストされたページは存在しません。</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <section id="sec-reasons">
+                <h2>申し訳ありませんが、お探しのページまたはファイルは見つかりませんでした。</h2>
+                <ul>
+                  <li>URL を直接入力された場合は、もう一度スペルをご確認ください。</li>
+                  <li>当サイト (www.mozilla.jp) 内のリンクを辿ってこのページが表示された場合は <a href="mailto:webmaster&#64;mozilla-japan&#46;org">webmaster&#64;mozilla-japan&#46;org</a> まで、リンク切れのある箇所をお知らせいただければ幸いです。</li>
+                </ul>
+              </section>
+              <section id="sec-suggestions">
+                <h2>当サイトの主要なページは、以下のリンクから辿ることができます。</h2>
+                <ul>
+                  <li>ウェブブラウザーをお探しなら <a href="https://www.mozilla.org/ja/firefox/">Firefox の製品ページ</a> へ</li>
+                  <li>メールソフトをお探しなら <a href="https://www.thunderbird.net/ja/">Thunderbird の製品ページ</a> へ</li>
+                  <li>あるいは <a href="/">トップページ</a> へ</li>
+                </ul>
+              </section>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

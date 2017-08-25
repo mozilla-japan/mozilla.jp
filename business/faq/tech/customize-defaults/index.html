@@ -1,0 +1,237 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = '初期設定の変更 | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/customize-defaults/' => '初期設定の変更'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>初期設定の変更</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>既定のホームページを変更したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxを起動した時に表示される最初のページはユーザが自由に変更できますが、変更するまでの間は初期設定が使われ、また、<code>初期設定に戻す</code> で最初の状態に戻すことができます。この時の初期設定として使われるページは変更することができます。</p><h3 id="-">設定方法</h3><p>設定ファイルを使用して任意のブックマーク項目を初期状態に追加する手順は以下の通りです。</p><ol>
+<li>後述する内容で、テキストファイル <code>distribution.ini</code> を作成します。</li>
+<li>Firefoxの実行ファイルと同じ位置に <code>distribution</code> という名前でフォルダを作成します。
+Firefoxが <code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされている場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution</code> となります。</li>
+<li>1.で作成したフォルダの中に <code>distribution.ini</code> を設置します。
+最終的なファイルのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution\distribution.ini</code> となります。</li>
+</ol><p><code>distribution.ini</code> の内容は以下の要領で記述します。なお、日本語を記述する場合は文字エンコーディングをUTF-8にしてファイルを保存して下さい。</p><pre><code>[Global]
+; カスタマイズ済みFirefoxを識別する一意な名前。
+id=our-customized-firefox
+; カスタマイズのバージョン。
+version=1.0
+; 「Mozilla Firefoxについて」に表示される説明文。
+about=Customized Version
+
+[LocalizablePreferences]
+; 必ず以下の2項目をセットで指定する。
+browser.startup.homepage=&quot;http://mozilla.jp/&quot;
+browser.startup.homepage_reset=&quot;http://mozilla.jp/&quot;
+</code></pre><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p>
+                    </article>
+                    <article id="faq2">
+                      <h2>初期状態のブックマークの内容を変更したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">ブックマーク</span></span></span></p><p>Firefoxの初期状態のブックマークの内容は、変更することができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、初期状態のブックマークを変更する機能を含むアドオンを作成することができます。</p><h3 id="-">設定ファイルで任意のブックマーク項目を初期状態に追加する</h3><p>設定ファイルを使用して任意のブックマーク項目を初期状態に追加する手順は以下の通りです。</p><ol>
+<li>後述する内容で、テキストファイル <code>distribution.ini</code> を作成します。</li>
+<li>Firefoxの実行ファイルと同じ位置に <code>distribution</code> という名前でフォルダを作成します。
+Firefoxが <code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされている場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution</code> となります。</li>
+<li>1.で作成したフォルダの中に <code>distribution.ini</code> を設置します。
+最終的なファイルのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution\distribution.ini</code> となります。</li>
+</ol><p><code>distribution.ini</code> の内容は以下の要領で記述します。なお、日本語を記述する場合は文字エンコーディングをUTF-8にしてファイルを保存して下さい。</p><pre><code>[Global]
+; カスタマイズ済みFirefoxを識別する一意な名前。
+id=our-customized-firefox
+; カスタマイズのバージョン。
+version=1.0
+; 「Mozilla Firefoxについて」に表示される説明文。
+about=Customized Version
+; 初期化が完了したことを保持する設定の名前。
+bookmarks.initialized.pref=distribution.ini.boomkarks.initialized
+
+; ブックマークツールバーへの追加項目
+[BookmarksToolbar]
+item.1.title=ブックマーク1のタイトル
+item.1.link=ブックマーク1のURL
+item.1.description=ブックマーク1の説明文（省略可）
+; 添字を変えて複数の項目を登録できる
+item.2.title=ブックマーク2のタイトル
+item.2.link=ブックマーク2のURL
+item.2.description=ブックマーク2の説明文（省略可）
+; セパレータも挿入できる
+item.3.type=separator
+; フォルダも挿入できる
+item.4.type=folder
+item.4.title=フォルダ名
+; この「id」を、後の「BookmarksFolder-X」の部分に指定する
+item.4.folderId=1
+
+; ブックマークメニューへの追加項目
+[BookmarksMenu]
+item.1.type=folder
+item.1.title=フォルダ名その2
+item.1.folderId=2
+
+[BookmarksFolder-1]
+item.1.title=ブックマークツールバーに追加したフォルダ中の項目1のタイトル
+item.1.link=ブックマークツールバーに追加したフォルダ中の項目1のURL
+
+[BookmarksFolder-2]
+item.1.title=ブックマークメニューに追加したフォルダ中の項目1のタイトル
+item.1.link=ブックマークメニューに追加したフォルダ中の項目1のURL
+</code></pre><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p><h3 id="-">注意事項</h3><p><code>distribution.ini</code> を使った設定手順では項目を追加することはできますが、削除する事はできません。ブックマークの初期状態を完全に空にしたり、ブックマークの任意の初期項目を削除したりするには、そのためのアドオンを開発するか、userChrome.jsスクリプトなどを使う必要があります。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>プロキシの設定を固定・強制したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">機能制限</span></span></span></p><p>Firefoxのネットワーク設定において、プロキシの使用を強制することができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、プロキシ設定を自動的に行うアドオンを作成することができます。</p><h3 id="-">設定ファイルでプロキシの設定を指定する</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><p>特定のHTTPプロキシの使用を強制する場合は以下のように設定します。</p><pre><code>lockPref(&quot;network.proxy.type&quot;, 1);
+lockPref(&quot;network.proxy.http&quot;, &quot;proxy.hostname&quot;);
+lockPref(&quot;network.proxy.http_port&quot;, 8080);
+</code></pre><p>自動設定スクリプトの使用を強制する場合は以下のように設定します。</p><pre><code>lockPref(&quot;network.proxy.type&quot;, 2);
+lockPref(&quot;network.proxy.autoconfig_url&quot;, &quot;http://internal-server/proxy.pac&quot;);
+</code></pre><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>プロキシを使用しない例外サイト（ドメイン）を指定したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxは、プロキシを使用しない例外サイトを管理する設定UIを持っていません。
+その代わり、自動プロキシ設定スクリプト（PACファイル）を使うことで、アクセス先のURLに応じてプロキシを使用するかどうか、どのプロキシを使用するかを細かく制御する事ができます。</p><h3 id="-">設定方法</h3><ol>
+<li>自動プロキシ設定スクリプト（PACファイル）を作成します。
+記述方法は、<a href="http://technet.microsoft.com/ja-jp/library/cc985335.aspx" title="付録 B : 自動プロキシ構成スクリプトの例">Microsoftの技術資料</a>などを参考にして下さい。</li>
+<li>作成した自動プロキシ設定スクリプトをクライアントからアクセス可能な位置に設置し、そのURLを控えます。
+例えば以下の要領です。<ul>
+<li>Webサーバ上に設置する。<code>http://internal-server/proxy.pac</code> など。</li>
+<li>ネットワークドライブ上のファイルやローカルファイルとして設置する。<code>file:///Z:/firefox/proxy.pac</code> など。</li>
+<li>Sambaサーバ、NASなどの上に設置する。<code>file://///file-server/shared/firefox/proxy.pac</code> など。</li>
+</ul>
+</li>
+<li><p>作成した自動プロキシ設定スクリプトをFirefoxで使用するように設定します。</p>
+<ul>
+<li>ユーザ固有の設定とする場合は、Firefoxのオプション画面で <code>詳細</code>→<code>ネットワーク</code>→<code>接続設定</code>と辿り、<code>自動プロキシ設定スクリプトURL</code>を選択して、2で控えたURLを指定します。</li>
+<li><p>設定を管理者が集中管理する場合は、<code>network.proxy.type</code> の値を <code>2</code> にした上で、<code>network.proxy.autoconfig_url</code> の値に2で控えたURLを指定します。
+例えば<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>では以下の要領です。</p>
+<pre><code>lockPref(&quot;network.proxy.type&quot;, 2);
+lockPref(&quot;network.proxy.autoconfig_url&quot;, &quot;http://internal-server/proxy.pac&quot;);
+</code></pre></li>
+</ul>
+</li>
+</ol>
+                    </article>
+                    <article id="faq5">
+                      <h2>履歴を保存させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">機能制限</span></span></span></p><p>FirefoxでのWebページの閲覧履歴について、一切の履歴を保存しないように設定することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;places.history.enabled&quot;, false);
+</code></pre><h3 id="-">注意事項</h3><p>過去のバージョンのFirefoxでは日数単位で閲覧履歴の保持期限を設定することができましたが、現在のバージョンのFirefoxでは、閲覧履歴を保存するかしないかの2択となっています。よって、短い期間だけ履歴を保存するということはできません。</p>
+                    </article>
+                    <article id="faq6">
+                      <h2>一定以上の日数が経過した履歴を自動的に消去したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">機能制限</span></span></span></p><p>現在のバージョンのFirefoxは、一定以上の日数が経過した履歴を自動的に消去する機能を持っていません。
+アドオンを使用する事で、古い履歴を自動的に消去させることができます。</p><h3 id="-">設定方法</h3><p>日数ベースでの履歴の管理機能をFirefoxに導入する方法としては、アドオン <a href="https://addons.mozilla.org/firefox/addon/expire-history-by-days/">Expire history by days</a>の利用が挙げられます。
+例えば、Expire history by daysを使って履歴の有効期限を30日に設定する場合の手順は以下の通りです。</p><ol>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従い、Expire history by daysを導入します。</li>
+<li><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を使い、以下の通り設定します。</p>
+<pre><code>lockPref(&quot;extensions.bonardonet.expire-history-by-days.days&quot;, 30);
+</code></pre></li>
+</ol>
+                    </article>
+                    <article id="faq7">
+                      <h2>サイトごとの機能の許可をあらかじめ設定しておきたい（位置情報の取得の可否、アドオンのインストールの可否など）</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxには、Cookieや位置情報などのWebページから利用できる様々な機能について、機能の許可をWebサイトごとに管理する仕組みが備わっています。既に保存されている設定については、<code>about:permissions</code>（サイト別設定マネージャ）で設定の変更や消去が可能です。</p><p>アドオンを使うことによって、これらのサイト別設定を管理者が任意の状態に設定することができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、サイトごとの機能の利用許可を行うアドオンを作成することができます。</p><h3 id="-">より詳細な設定を伴う実現方法</h3><p>サイト別設定を管理者が詳細に管理する方法として、アドオン <a href="https://addons.mozilla.org/firefox/addon/permissions-auto-registerer/">Permissions Auto Registerer</a>の利用が挙げられます。
+例えば、Permissions Auto Registererを使って <code>www.example.com</code> に対しサイト別設定の全項目を「禁止」と設定する場合の手順は以下の通りです。</p><ol>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってPermissions Auto Registererを導入します。</li>
+<li><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を使い、以下の通り設定します。</p>
+<pre><code>lockPref(&quot;extensions.autopermission.sites.www.example.com&quot;, &quot;password=2, geo=2, cookie=2, popup=2, indexedDB=2, fullscreen=2, image=2, install=2, offline-app=2&quot;);
+</code></pre></li>
+</ol><p>設定名はサイト別設定を指定するサイトのドメイン名を含めて <code>extensions.autopermission.sites.&lt;ドメイン名&gt;</code> とします。設定値は、1つ以上の設定項目についてキーと値を <code>=</code> で繋げたリストをカンマ区切りで列挙した文字列で指定します。指定可能な設定項目は以下の通りです。</p><ul>
+<li><code>password</code>：パスワードを保存する。</li>
+<li><code>geo</code>：位置情報を取得する。</li>
+<li><code>cookie</code>：Cookieを保存する。</li>
+<li><code>popup</code>：ポップアップウィンドウを開く。</li>
+<li><code>indexedDB</code>：オフラインストレージを利用する。</li>
+<li><code>fullscreen</code>：DOMフルスクリーンAPIを利用する。</li>
+<li><code>image</code>：画像を読み込む。</li>
+<li><code>install</code>：アドオンのインストールを許可する。</li>
+<li><code>offline-app</code>：オフラインアプリケーション用のキャッシュの利用を許可する。</li>
+</ul><p>また、個々の項目の値は以下のいずれかを取ります。</p><ul>
+<li><code>0</code>：不明。どうするかはユーザに尋ねる。</li>
+<li><code>1</code>：許可する。</li>
+<li><code>2</code>：禁止する。</li>
+</ul><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも機能の利用を許可するドメインの指定が可能です。</p>
+                    </article>
+                    <article id="faq8">
+                      <h2>ロケーションバーで常に「http://」を表示させたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxのロケーションバーでは通常、URL文字列の先頭の「http://」は省略して表示されますが、これを常に表示するように設定することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;browser.urlbar.trimURLs&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq9">
+                      <h2>独自SSL証明書やルート証明書をあらかじめ登録済みの状態にしたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Firefoxにあらかじめ登録されている物以外の証明局によって署名された証明書（いわゆる自己署名証明書など）を使ったWebサイトにSSLで接続すると、Firefoxは不明な証明書として警告を表示します。それらの証明書を別途安全な手段で提供できるのであれば、証明書をFirefoxにあらかじめ登録しておくことで、警告画面を見ずにWebサイトを利用することができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、任意の証明書を自動登録するアドオンを作成することができます。</p><h3 id="-">より詳細な設定を伴う実現方法</h3><p>証明書を管理者があらかじめ登録しておく別の方法としては、アドオン <a href="https://github.com/clear-code/certimporter/releases">Cert Importer</a>の利用が挙げられます。
+例えば、Cert Importerを使ってルート証明書 <code>myCA.crt</code> を登録する場合の手順は以下の通りです。</p><ol>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってPermissions Auto Registererを導入します。</li>
+<li>Firefoxの実行ファイルと同じ位置にある <code>defaults</code> フォルダに <code>myCA.crt</code> を置きます。
+Firefoxが <code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされている場合、最終的なファイルのパスは <code>C:\Program Files (x86)\Mozilla Firefox\defaults\myCA.crt</code> となります。</li>
+</ol><p>以上で設定は完了です。Firefoxの次回起動時にアドオンがファイルを自動認識し、証明書に設定されたフラグに従って証明書の登録を行います。Firefoxのオプション画面で <code>詳細</code>→<code>証明書</code>→<code>証明書を表示</code>と辿り、証明書が正しく登録されているかどうかを確認して下さい。</p><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも機能の利用を許可するドメインの指定が可能です。</p><h4 id="-">証明書の種類を正しく認識しない場合</h4><p>Cert Importerが証明書自身に設定されたフラグを正しく認識できなかった場合、ルート証明書がSSLのサイト証明書として登録されるといった結果になることがあります。このような場合は、設定を用いて強制的に証明書の種類を上書き指定することができます。以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>defaultPref(&quot;extensions.certimporter.certs.myCA.crt&quot;, 1);
+</code></pre><p>証明書の種類を指定する設定の名前は <code>extensions.certimporter.certs.&lt;ファイル名&gt;</code> とし、値は以下の整数値の1つ以上の和を指定します。</p><ul>
+<li><code>1</code>：ルート証明書。</li>
+<li><code>2</code>：ユーザー証明書。</li>
+<li><code>4</code>：E-mail証明書。</li>
+<li><code>8</code>：SSLサイト証明書。</li>
+</ul><h4 id="ssl-">SSLのセキュリティ例外の自動登録</h4><p>Cert Importerは、SSLのセキュリティ例外について、特定のホストを対象に設定する事もできます。詳細は<a href="https://github.com/clear-code/certimporter/releases">Cert Importer</a>の説明文を参照して下さい。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">既定のホームページを変更したい</a></li>
+                        <li><a href="#faq2">初期状態のブックマークの内容を変更したい</a></li>
+                        <li><a href="#faq3">プロキシの設定を固定・強制したい</a></li>
+                        <li><a href="#faq4">プロキシを使用しない例外サイト（ドメイン）を指定したい</a></li>
+                        <li><a href="#faq5">履歴を保存させたくない</a></li>
+                        <li><a href="#faq6">一定以上の日数が経過した履歴を自動的に消去したい</a></li>
+                        <li><a href="#faq7">サイトごとの機能の許可をあらかじめ設定しておきたい（位置情報の取得の可否、アドオンのインストールの可否など）</a></li>
+                        <li><a href="#faq8">ロケーションバーで常に「http://」を表示させたい</a></li>
+                        <li><a href="#faq9">独自SSL証明書やルート証明書をあらかじめ登録済みの状態にしたい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

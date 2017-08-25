@@ -1,0 +1,135 @@
+<?php
+
+$page_title         = '明星大学の Firefox 導入事例 | 法人向け情報 | Mozilla Japan';
+$page_description   = '明星大学では、1,300 台以上のパソコンに Firefox が標準ブラウザーとして設定されています。Firefox が導入された経緯や情報システムの運用などについて、情報システム課の小峰一純主任と情報学部の矢吹道郎准教授に話を伺いました。';
+$body_id            = 'profile';
+$body_class         = 'users business profile';
+$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/profiles/' => '導入事例',
+  '/business/profiles/meisei-univ/' => '明星大学'
+);
+
+// ヘッダーメニューの構成
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav role="directory" class="outer">
+            <ul class="inner">
+              <li><a href="#interview">インタビュー</a></li>
+              <li><a href="#column">コラム</a></li>
+              <li><a href="#products">使われている製品</a></li>
+            </ul>
+          </nav>
+          <main>
+            <article>
+              <div id="hero" class="outer">
+                <div class="inner">
+                  <img src="/business/static/images/business/profiles/meisei-univ/main-feature.jpg" alt="">
+                </div>
+              </div>
+              <div id="header" class="outer">
+                <div class="inner row">
+                  <header class="col">
+                    <img class="logo" src="/business/static/images/business/profiles/meisei-univ/profile.jpg" alt="">
+                    <h1>明星大学</h1>
+                    <p class="caption"><a href="http://www.meisei-u.ac.jp/">www.meisei-u.ac.jp</a></p>
+                  </header>
+                  <div class="col">
+                    <p>「和の精神のもと、世界に貢献する人を育成する」を建学の精神に掲げる明星学苑の高等教育機関として 1964 年に創設。2010 年には、教育現場と連携して取り組む教育インターンシップや体験型のプロジェクトを正規の授業科目に取り入れるなど、すべての学科・学系で体験教育を充実させた、実践的なカリキュラムを導入されています。東京都公立小学校教員採用試験では、全国 2 位、私立ナンバー 1 の合格実績を持つ「教育の明星」としての地位を確立しておられ、通信教育部にも小学校教員免許が取得できるチャンスを広げるなど、情報時代にも柔軟に対応した教育システムを実現されています。</p>
+                  </div>
+                </div>
+              </div>
+              <div id="intro" class="outer outer-3">
+                <div class="inner">
+                  <section>
+                    <h2>イントロダクション</h2>
+                    <img src="/business/static/images/business/profiles/meisei-univ/photo-intro.jpg" alt="">
+                    <p>明星大学は、「自己実現を目指し社会貢献ができる人の育成」を教育目標として、1964 年に設立されました。特に教育関連のカリキュラムに力を入れておられ、創立から 3 年後の 1967 年には通信教育をスタート。1983 年には情報科学研究センターを設立するなど、情報通信技術を早い時期から積極的に取り入れています。日野校と青梅校の両キャンパスを合わせて 1,300 台以上のコンピューターを導入されており、基本となるブラウザーとして Firefox が設定されています。明星大学に Firefox が導入された経緯や情報システムの運用などについて、構内のシステム管理を担当されている情報システム課の小峰一純主任と情報学部の矢吹道郎准教授にそれぞれお話を伺いました。</p>
+                    <p><small>※ この記事は、2010 年 5 月の取材に基づいたものです</small></p>
+                  </section>
+                </div>
+              </div>
+              <div id="interview" class="outer outer-2">
+                <div class="inner">
+                  <section class="tabbox">
+                    <header>
+                      <h2 class="highlight">インタビュー</h2>
+                    </header>
+                    <ul role="tablist">
+                      <li><a role="tab" id="tab-interview-1" href="#interview-1">ポイント 1</a></li>
+                      <li><a role="tab" id="tab-interview-2" href="#interview-2">ポイント 2</a></li>
+                      <li><a role="tab" id="tab-interview-3" href="#interview-3">ポイント 3</a></li>
+                      <li><a role="tab" id="tab-interview-4" href="#interview-4">ポイント 4</a></li>
+                    </ul>
+                    <section role="tabpanel" id="interview-1">
+                      <img src="/business/static/images/business/profiles/meisei-univ/photo-1.jpg" alt="">
+                      <h3><span>ブラウザーの選択もリテラシー教育の</span> <span>一環だと考えています</span></h3>
+                      <p>明星大学は日野校と青梅校の 2 つのキャンパスがあり、日野校内にある情報科学研究センターでは、両校合わせて 1,300 台以上あるコンピューター端末の管理を行なっています。コンピューターは授業をはじめ、学生生活全般でも使われており、情報学部のある日野校には、Windows、Mac、FreeBSD (UNIX) というそれぞれの OS ごとに教室が設けられています。</p>
+                      <p>「校内にある教育用コンピューターの運営に関しては、情報科学研究センター運営委員会があり、技術的なサポートやメンテナンスをはじめ、サーバールームの運用管理などの情報科学研究センターの実務は情報システム課で担当しています。他にも、学生たちから設備の利用やマシンの操作に関する質問を受け付けるといった業務もありますが、1 年生は情報リテラシーの授業が必修になっていることもあり、基本的な操作についてはマニュアルを作成して渡すぐらいで、十分使いこなせているようです」(小峰主任)</p>
+                      <p>情報科学研究センターおよび情報システム課が責任を持つ、あるいはインストールした教職員が使用するコンピューターは、一部を除いて Firefox がインストールされており、デスクトップ上にある「インターネット」のアイコンも Firefox になっています。</p>
+                      <p>「他のブラウザーを使うことは制限していませんが、メンテナンスは Firefox のみとすることで、業務が煩雑にならないようにしています。Firefox を選んだ理由は、Internet Explorer (IE) 以外のブラウザーがあると知ってもらうためで、それだけでも学生にとっては情報リテラシー教育のひとつになっているのです」</p>
+                    </section>
+                    <section role="tabpanel" id="interview-2">
+                      <img src="/business/static/images/business/profiles/meisei-univ/photo-2.jpg" alt="">
+                      <h3><span>実は、Mozillaのコミュニティに</span> <span>参加していたことがありました</span></h3>
+                      <p>明星大学では、IE と Netscape がブラウザーのシェアを争っていた 90 年代後半から Netscape を使用されていました。Netscape 4.1 がリリースされた時は、ダウンロード元となる公式ミラーサイトサーバーを提供していたこともあるそうです。</p>
+                      <p>「日本の大学や一部の企業でインターネット使われ始めた頃から、インターネット関連のプロジェクトにも関わっていたこともあり、Netscape に関する情報や貢献は早い時期から行なっていました。そうした関係もあって、現在、大学の標準ブラウザーに Firefox が設定されているわけです」と語る小峰主任は同大学の卒業生で、在学中の頃から Netscape を使われていたとのこと。</p>
+                      <p>「学生として情報学部に所属していた時は、今のように校内のどこにでもコンピューターがあるという状況ではなく、授業や研究の素材として、また個人的な興味もあって Netscape を使っていました。実はその頃、Netscape がオープンソース化されたのがきっかけで、オープンソースのプロジェクトやコミュニティ活動に興味を持ち始めまして、一時期、JLP (日本語ランゲージパック) の Windows ビルドのお手伝いをしていたこともありました」</p>
+                    </section>
+                    <section role="tabpanel" id="interview-3">
+                      <img src="/business/static/images/business/profiles/meisei-univ/photo-3.jpg" alt="">
+                      <h3><span>セキュリティ設定は</span> <span>自由度とのバランスが難しい</span></h3>
+                      <p>明星大学では、学生専用サイトを設けたり、授業や学生生活に関する情報をインターネットでも共有できるようにしているため、放課後や休憩時間も端末を使えるよう、実習室や図書館にも端末を置いて、インターネットへ自由にアクセスできる環境を整えています。今どきの大学生らしく、ケータイでインターネットにアクセスする率も高いそうですが、校内でコンピューターを使う学生の姿もかなり多く見られます。</p>
+                      <p>「コンピューターの使い方については、最低限のルールを守ること以外は、あまりうるさくいわず、なるべく自由に使えるような環境を提供しています。かといって、あまり自由にさせすぎるのも問題になるので、もちろんセキュリティ設定はきちんと行なっています」</p>
+                      <p>校内にある端末のセキュリティ設定については、学内の関係者を集めて会議を開き、仕様を決めるようにしています。ただし、どのような設定にするかのバランスが難しく、たとえば、基本的なフィルターリング設定をするだけでも、学生が就活のためにアクセスしようとした下着メーカーや製薬会社のサイトが見られなくなるといったことが起きてしまいます。</p>
+                      <p>「学生の安全を考えると、コンピューターやブラウザーをカスタマイズして、大学が想定した使い方しかできないようにすることは技術的には可能です。けれども、がちがちにセキュリティをかけたからといって、必ずしも安全ではありません。現時点では学生の使い方を考えながら、状況に合わせた設定を考えています」</p>
+                    </section>
+                    <section role="tabpanel" id="interview-4">
+                      <img src="/business/static/images/business/profiles/meisei-univ/photo-4.jpg" alt="">
+                      <h3><span>ブラウザーの設定はあえて素に近い</span> <span>状態にしています</span></h3>
+                      <p>校内にあるブラウザーの設定を、あえてダウンロードしたばかりの素に近い状態にしている理由について、情報学部の矢吹道郎准教授も「大学だからこそ特殊な設定をせずに、普通の使い方から始めるべき」とされています。</p>
+                      <p>「学生を守るため、あるいは使いやすくするという理由で、インターネット環境をカスタマイズするという選択肢ももちろんあっていいと思います。ただし本校の場合は、そうした便利な使い方をするにはどうすればいいのかを考える側の人間を育てることを目指している大学なので、あえて、普通の人がインターネットを使い始めるのと同じような状態にしておくことで、いろいろ考える機会を設けるようにしています」</p>
+                      <p>同じ理由で、コンピューター本体の設定についても個人用のディスク領域を用意し、プロキシの設定をする以外は、かなり自由度の高い使い方ができる環境にされているそうですが、今のところ大きな問題に直面したことはないとのことです。</p>
+                      <p>「入学時は、コンピューターが使えるというのは、Excel や Word を使えるという意味だと考えている学生たちも、実践的な授業と様々な工夫ができる情報環境の中で、本来の使い方を身に付けることができるようになっていきます。情報学部以外でも、自分のコンピューターを持ち込む学生も多く、インターネットは学生生活になくてはならない道具になっているようです」</p>
+                    </section>
+                  </section>
+                </div>
+              </div>
+              <div id="column" class="outer">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">コラム</h2>
+                    <p>明星大学では、端末のメンテナンスは半年に 1 回、さらに大規模なものを 2 年ごとに行われています。そのタイミングで最新バージョンの Firefox をインストールされているそうですが、その際の設定も最低限のものとし、学生が自ら新しい発見ができるようにされています。早くからオープンソースにも関わりがあり、オープンソースカンファレンス 2010 Tokyo の会場に日野校の情報科学研究センターを提供されています。今後も機会があれば、Mozilla プロジェクトにも参加していただきたいと考えています。</p>
+                  </section>
+                </div>
+              </div>
+              <div id="products" class="outer outer-1">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">使われている製品</h2>
+                    <ul>
+                      <li><a href="https://www.mozilla.org/ja/firefox/"><img src="/business/static/images/business/firefox.black.png" alt="Firefox"> <span>約 1,100 台</span></a></li>
+                    </ul>
+                    <p>Firefox は校内で使われる教育用コンピューターの標準ブラウザーとして設定されています。</p>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/profile-extra.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

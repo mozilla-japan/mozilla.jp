@@ -1,0 +1,39 @@
+<?php
+$_version = "4.0";
+
+$page_title         = 'Firefox ' . $_version . ' システム要件 | Mozilla';
+$body_id            = 'firefox-sysreq';
+$body_class         = 'sky firefox ios sysreq';
+$css                = array('sandstone/product-sysreq'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/' . $_version . '.0/system-requirements/' => 'Firefox ' . $_version . ' システム要件'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>システム要件</em></h1>
+                <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">Firefox <?= $_version ?></span></span></h2>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <section id="ios">
+                <h3>オペレーティングシステム (OS)</h3>
+                <ul>
+                  <li>iOS 8.2 以上</li>
+                  <li>iOS 9</li>
+                </ul>
+              </section>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

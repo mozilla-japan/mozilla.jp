@@ -1,0 +1,185 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Thunderbird 3.0.9 リリースノート';
+$body_id            = 'thunderbird-relnotes';
+$body_class         = 'sky thunderbird relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.thunderbird.net/ja/' => 'メールソフト Thunderbird',
+  '/thunderbird/releases/' => 'リリースノート',
+  '/thunderbird/3.0.9/releasenotes/' => 'Thunderbird 3.0.9'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name">Thunderbird リリースノート</h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 3.0.9</span></span> &mdash; <time datetime="2010-10-19" itemprop="datePublished">2010/10/19</time> リリース</h2>
+                </div>
+                <p>Thunderbird の最新版に追加された新機能と改良点、既知の問題、よくある質問をご確認ください。いつものように、こちらの <a href="https://support.mozilla.org/ja/questions/new/thunderbirdtopics/new">フィードバックフォーム</a> を通じて、もしくは <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Bugzilla</a> にバグを登録することで、ご意見をお寄せください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="whatsnew">
+                  <h2>Thunderbird&nbsp;3.0.9 の新機能・変更点</h2>
+                  <p>Thunderbird&nbsp;3.0.9 では、旧バージョンの Thunderbird&nbsp;3 に見つかった以下の問題が修正されています。</p>
+                  <ul class="spaced">
+                    <li>安定性と安全性を改善するいくつかの修正が行われました。概要は <a href="http://www.mozilla-japan.org/security/known-vulnerabilities/thunderbird30.html#thunderbird3.0.9">セキュリティアドバイザリ</a> をご覧ください。</li>
+                  </ul>
+                  <p>このバージョンで修正された <a href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced;field0-0-0=cf_status_thunderbird30;type0-0-0=equals;value0-0-0=.9-fixed;field0-0-1=cf_status_191;type0-0-1=equals;value0-0-1=.14-fixed">すべての変更一覧</a> もご参照ください。前バージョンでの変更点については <a href="/thunderbird/3.0.8/releasenotes/">Thunderbird 3.0.8 リリースノート</a> をご覧ください。</p>
+                  <p>Thunderbird&nbsp;3 の主な新機能は以下の通りです。</p>
+                  <h3 id="performance2">検索機能</h3>
+                  <ul class="spaced">
+                    <li>高度な絞り込みツール付きの新しい検索機能
+                      <p>検索結果に高度な絞り込みツールが搭載されました。差出人、タグ、添付ファイル、関係者、フォルダー、メーリングリストなどによって結果を絞り込めます。</p>
+                    </li>
+                    <li>自動補完付きの新しいグローバル検索バー
+                      <p>グローバル検索バーに文字を入力しはじめると、Thunderbird はアドレス帳を元にした自動補完を行います。全文を対象とするか、件名、差出人などメールの一部を対象とするかを選択することも可能です。</p>
+                    </li>
+                  </ul>
+                  <h3>ユーザー体験の向上</h3>
+                  <ul class="spaced">
+                    <li>新しいメールアカウント設定ウィザード
+                      <p>新しいメールアカウント設定ウィザードが、主要なメールプロバイダーのサーバー設定が登録されたデータベースを参照するため、新しいメールアカウントを設定する際は、名前、メールアドレス、パスワードを入力するだけで済みます。</p>
+                    </li>
+                    <li>再設計されたメールツールバー
+                      <p>メールツールバーが再設計され、新しいグローバル検索バーが搭載されました。返信、転送、削除、迷惑メールなどのボタンはメッセージのヘッダー部分に移動されました。ツールバーをカスタマイズすることで、メインのツールバーにこれらのボタンを戻すことも可能です。</p>
+                    </li>
+                    <li>メッセージのタブ表示
+                      <p>メッセージをダブルクリックするか、選択した状態で Enter キーを押すと、そのメッセージが新しいタブで開かれます。メッセージやフォルダーを中クリックすると、バックグラウンドのタブで開かれます。Thunderbird を終了する際は、開いているタブの状態が記憶され、次回起動時に復元されます。タブバーの右端には、開いているタブのタイトルを一覧できるドロップダウンリストもあり、多くのタブを開いているときも容易に切り換えられます。</p>
+                    </li>
+                    <li>スマートフォルダー
+                      <p>フォルダーペインに、複数アカウントの受信トレイなど特別なフォルダーをまとめて表示するスマートフォルダーモードが追加されました。スマートフォルダーは初期設定で有効になっています。</p>
+                    </li>
+                    <li>メッセージ要約ビュー
+                      <p>複数のメッセージを選択すると、選択された一連のメッセージの要約を見ることができます。</p>
+                    </li>
+                    <li>カラムヘッダー
+                      <p>カラムヘッダーの表示項目と並べ替え順序をフォルダーごとに設定できるようになりました。</p>
+                    </li>
+                    <li>メッセージアーカイブ
+                      <p>受信トレイやその他のフォルダーから、新しいアーカイブフォルダーシステムにメッセージを移動して保管しておけるようになりました。</p>
+                    </li>
+                    <li>アクティビティマネージャー
+                      <p>アクティビティマネージャーは、メールプロバイダーとの送受信ログをすべて一か所にまとめて記録します。</p>
+                    </li>
+                    <li>新しいアドオンマネージャー
+                      <p>新しいアドオンマネージャー ([ツール] &gt; [アドオン]) では、拡張機能、テーマ、プラグインなどの Thunderbird 用アドオンを、直接検索してインストールできるようになりました。</li>
+                    <li>改良されたアドレス帳
+                      <p>差出人などがアドレス帳に登録されていると、新しいスターアイコンで示され、それをクリックすると連絡先の詳細をインラインで編集できます。アドレス帳に登録されていない場合は、アイコンをクリックするだけで連絡先として追加できます。新しい誕生日フィールドでは、友人の誕生日を記録しておけます。また、アドレス帳に連絡先の顔写真を追加することも可能になりました。</p>
+                    </li>
+                    <li>Gmail 統合の改良
+                      <p>Gmail の言語が英語以外に設定されていると「送信済みメール」や「ごみ箱」などの特別なフォルダーが正しく認識されなかった問題が修正されました。Thunderbird&nbsp;3 では、「すべてのメール」フォルダーがアーカイブフォルダーとして使用されます。</p>
+                    </li>
+                    <li>Windows&nbsp;Vista および Windows&nbsp;7 では、Windows の検索結果に Thunderbird&nbsp;3 に保存されているメッセージが表示されるようになりました。Thunderbird は初回起動時に Windows にインデックスシステムをインストールするかどうかを尋ねます。以後 Windows の検索結果からメールやニュースのメッセージを選択できるようになります。</li>
+                    <li>Mac では、Thunderbird&nbsp;3 は Spotlight と統合されるとともに、Apple Mail からの環境移行、アドレスブックの読み込み、Growl による新着メッセージの通知が可能となりました。</li>
+                  </ul>
+                  <h3>パフォーマンスの向上</h3>
+                  <ul class="spaced">
+                    <li>IMAP フォルダーの同期
+                      <p>メッセージの読み込み時間を短縮し、オフライン時の操作性を向上させるため、Thunderbird は IMAP のメッセージをバックグラウンドでダウンロード・同期するようになりました。この機能は (フォルダーのプロパティで) フォルダーごとに有効化できるほか、「アカウント設定」の「同期とディスク領域」からアカウント内の全フォルダーに対して設定することも可能です。</p>
+                    </li>
+                  </ul>
+                </section>
+                <section id="requirements">
+                  <h2>必要システム構成</h2>
+                  <p>インストールの前に、お使いのコンピューターが <a href="/thunderbird/3.0/system-requirements/">システム要件</a> を満たしているかどうかご確認ください。</p>
+                  <p>なお、Thunderbird&nbsp;3 は、2000 以前のバージョンの Windows (Windows 95、98、ME、NT) および 10.4 Tiger 以前のバージョンの Mac&nbsp;OS&nbsp;X には対応しませんのでご了承ください。Linux 版の必要システム構成も変更となっています。非対応 Windows プラットフォームでは、Thunderbird 実行ファイルの互換モードが無効になっていることをご確認ください。</p>
+                </section>
+                <section id="download">
+                  <h2>ダウンロード</h2>
+                  <p>Mozilla では、Thunderbird&nbsp;3 を Windows、Linux、Mac&nbsp;OS&nbsp;X 向けに様々な言語で提供しています。<a href="https://www.thunderbird.net/ja/all/">最新の Thunderbird&nbsp;3 はこちらからダウンロードできます</a>。</p>
+                  <p>Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                </section>
+                <section id="install">
+                  <h2>インストール</h2>
+                  <p>Thunderbird&nbsp;3 をインストールすると、Linux では、すでにインストールされている Thunderbird が <strong>上書きされます</strong> ので、ご注意ください。Windows および Mac&nbsp;OS&nbsp;X では異なる場所にインストールされますが、インストール中に表示されるメッセージを確認するよう推奨します。すべてのシステムで、メッセージやアドレス帳が失われることはありませんが、拡張機能やその他のアドオンの一部は更新版が提供されるまで動かない可能性があります。</p>
+                  <p>すでに Thunderbird を使用しており Thunderbird&nbsp;3 をテストする場合は、Thunderbird&nbsp;3 を別のフォルダーにインストールし (Windows ではカスタムインストールを使用して行います)、プロファイルをバックアップすることを強く推奨します。</p>
+                </section>
+                <section id="uninstall">
+                  <h2>アンインストール</h2>
+                  <p>Windows では <tt>スタートメニュー</tt> の <tt>コントロール パネル</tt> から、Mac では <tt>Thunderbird&nbsp;3</tt> アプリケーションを削除することで、Linux では <tt>thunderbird</tt> フォルダーを削除することで、それぞれ削除できます。</p>
+                  <p>Thunderbird&nbsp;3 を削除しても、メッセージ、拡張機能やその他のアドオンは削除されません。これらデータは「プロファイルフォルダー」に保存されています。このフォルダーの場所は、お使いの OS によって異なります。</p>
+                  <table style="font-size: small;" border="1" cellspacing="0">
+                    <tr><td>Windows Vista, 7</td><td>Users&yen;&lt;ユーザー名&gt;&yen;AppData&yen;Roaming&yen;Thunderbird</td></tr>
+                    <tr><td>Windows 2000, XP, Server 2003</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Thunderbird</td></tr>
+                    <tr><td>Mac&nbsp;OS&nbsp;X</td><td>~/Library/Thunderbird</td></tr>
+                    <tr><td>Linux および Unix システム</td><td>~/.thunderbird</td></tr>
+                  </table>
+                  <p>Thunderbird&nbsp;3 を削除した後に再度 Thunderbird をインストールした場合、そのバージョンにかかわらず、引き続きこのプロファイルフォルダーにあるデータが使用されます。</p>
+                </section>
+                <section id="extensions">
+                  <h2>拡張機能とテーマ</h2>
+                  <p>Thunderbird の過去のバージョンにインストールされた拡張機能には互換性がなく、Thunderbird&nbsp;3 で利用するために更新が必要となるものもあります。何か問題が見つかった場合はその拡張機能の管理者にご連絡ください。</p>
+                  <p>Thunderbird&nbsp;3 をインストールすると、すべての拡張機能とテーマは、Thunderbird&nbsp;3 が Thunderbird&nbsp;3 と互換性があること、あるいは、互換性のある新しいバージョンが利用できることを確認できるまで利用できなくなります。</p>
+                </section>
+                <section id="issues">
+                  <h2>既知の問題</h2>
+                  <p>Thunderbird&nbsp;3 で確認されている問題の一部を掲載します。新しいバグを報告する前に必ずお読みください。</p>
+                  <dl>
+                    <dt id="allsystems">すべてのシステム</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>過去にマスターパスワード機能を使ったことがある場合、Thunderbird の初回起動時にマスターパスワードを入力するよう求められることがあります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338549">Bug 338549</a>)</li>
+                        <li>Thunderbird&nbsp;3 では、パスワードは新しい場所に保存されます。以前のバージョンに戻ったり、Thunderbird&nbsp;3 と以前のバージョンを交互に使用した場合、パスワードデータは別々のため更新されません。</li>
+                        <li>英語以外の言語では、メッセージの検索は大文字と小文字が区別されます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=525537">Bug 525537</a>)</li>
+                        <li>SSL もしくは TLS を使用し、サーバーから提供された証明書が、自己署名、期限切れ、あるいはサーバーのドメインと一致しない場合、Thunderbird がその証明書を例外として受け入れるかどうかを尋ねるダイアログが表示されます。その証明書の間違いを理解している場合のみ受け入れるようにしてください。</li>
+                        <li>フォルダーペインの拡張カラム (メッセージ数などの表示) は Thunderbird&nbsp;3 Beta&nbsp;1 で削除されました。この機能を復活させるアドオン <a href="https://addons.mozilla.org/ja/thunderbird/addon/extra-folder-columns/">Extra Folder Columns</a> が公開されています。</li>
+                        <li>コンパクトヘッダービューは Thunderbird&nbsp;3 Beta&nbsp;3 で削除されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480623">Bug 480623</a>)。詳しくは <a href="http://weblogs.mozillazine.org/dmose/archives/2009/07/thunderbird_30b3_shipped.html">このブログ記事</a> をご覧ください。同様の機能を提供するアドオン <a href="https://addons.mozilla.org/ja/thunderbird/addon/compactheader/">CompactHeader</a> が公開されています。</li>
+                        <li>Thunderbird&nbsp;3 に更新した一部のユーザーから、送信 (SMTP) サーバーにログインできないという報告が入っています。これは、保護された認証の設定が有効になっており、SMTP サーバーがそれに対応していないことが原因と考えられます。[ツール] メニューから [アカウント設定] &gt; [送信 (SMTP) サーバー] を選択してサーバー設定を確認し、問題のあるサーバーの設定を編集してください。「保護された認証を使用する」にチェックが入っている場合は、そのチェックを外してから、再度送信テストを行ってください。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=522633">Bug 522633</a>)</li>
+                        <li>Thunderbird は、HTTPS プロトコルを使用した安全なサーバーから提供されているか、デジタル署名されたアドオンのみを受け入れます。どちらの条件も満たしていない場合、インストールに失敗します。</li>
+                        <li>「横長表示」レイアウトで RSS フィードのコンテンツを表示できない場合、Lightning カレンダーアドオンをインストールしている場合は無効化するか、「クラシック表示」に切り換えてから Thunderbird を再起動する必要があるかもしれません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=531397">Bug 531397</a>)</li>
+                        <li>プレーンテキストで送信された一部のメッセージについて、メッセージやボタンの一部がメッセージ表示部の外にはみ出てしまう場合があります。メッセージを新しいタブで開くか、ウィンドウをリサイズするか、レイアウトを「クラシック表示」もしくは「横長表示」に変えることでメッセージを表示できます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=530047">Bug 530047</a>)</li>
+                        <li>オフライン作業中にメッセージを編集して「後で送信」を選択すると、インターネットへ自動的に再接続してもメッセージが送信されないことがあります。その場合、「送信トレイ」フォルダーから手作業でメッセージを再送信する必要があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=531179">Bug 531179</a>)</li>
+                        <li>特定の状況で、「ファイル」メニューから利用できる「テンプレートとして保存」が機能しない場合があります。メールの編集画面から「テンプレートとして保存」を選択したり、メッセージを「テンプレート」フォルダーにドラッグ＆ドロップすることで、この機能を利用することは可能です。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=532050">Bug 532050</a>)</li>
+                      </ul>
+                    </dd>
+                    <dt id="windows">Microsoft Windows</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>「すべてを既読にする」のキーボードショートカットが、Ctrl+Shift+C から Shift+C へ変更されました。</li>
+                        <li>Kaspersky Internet Suite 2010 に付属している Anti-Spam 拡張機能を使用している場合、Thunderbird&nbsp;3.0.1 以降で無効化されます。この問題は Kaspersky Internet Suite 2011 で修正されています。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=533692">Bug 533692</a>)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </section>
+                <section id="troubleshooting">
+                  <h2>トラブルシューティング</h2>
+                  <ul class="spaced">
+                    <li>
+                      <p>拡張機能によっては、安定性やパフォーマンスが低下するなどの問題を Thunderbird に引き起こすことがあります。Thunderbird の一部機能が使えない、Thunderbird が起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、Thunderbird をセーフモードで再起動してください。</p>
+                      <p>Windows では、スタートメニュー内に作成された「Mozilla Thunderbird (セーフモード)」というショートカットを使うか、<code>thunderbird.exe -safe-mode</code> で起動してください。Linux では <code>./thunderbird -safe-mode</code> で起動してください。Mac&nbsp;OS&nbsp;X では、ターミナルを開いて以下のコマンドを実行してください。</p>
+                      <p><code>cd /applications/Thunderbird.app/Contents/MacOS/<br>./thunderbird-bin -safe-mode</code></p>
+                      <p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p>
+                    </li>
+                    <li>
+                      <p>メール、フィード、ニュースグループメッセージなどに関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、コマンドライン引数 -P をつけて Thunderbird を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (メッセージ、フィードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。その際、必要であれば必ず個人情報を削除しておいてください。</p>
+                    </li>
+                  </ul>
+                </section>
+                <section id="faq">
+                  <h2>よくある質問</h2>
+                  <ol class="faq">
+                    <li>プロジェクトに協力したいのですが、どのようなことができますか？<p>Thunderbird をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。こちらの <a href="https://support.mozilla.org/ja/questions/new/thunderbirdtopics/new">フィードバックフォーム</a> からフィードバックをお送りください。また、<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する場合は、事前にこのリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p></li>
+                    <li>Thunderbird&nbsp;3 の機能や問題はどこで議論できますか？<p>新機能についての議論に参加したい場合や、トラブルシューティングのアドバイスが必要なときは、<a href="http://getsatisfaction.com/mozilla_messaging">Mozilla Messaging at Get Satisfaction</a> を訪れてください。また、<a href="news://news.mozilla.org/mozilla.support.thunderbird">Mozilla のニュースサーバー</a> でホストされている「mozilla.support.thunderbird」ニュースグループに質問を投稿することもできます。ウェブからアクセスする場合は <a href="http://groups.google.com/group/mozilla.support.thunderbird">Google グループ</a> をご覧ください。また <a href="https://lists.mozilla.org/listinfo/support-thunderbird">メーリングリスト</a> としても利用可能です。投稿する前に <a href="https://www.mozilla.org/ja/about/forums/etiquette/">Mozilla フォーラムエチケットのページ</a> をお読みください。</p></li>
+                    <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/thunderbird/extensions/">拡張機能</a> や <a href="https://addons.mozilla.org/ja/thunderbird/themes/">テーマ</a> は <a href="https://addons.mozilla.org/ja/thunderbird/">Thunderbird Add-ons</a> から入手可能です。</p></li>
+                    <li>誰が Thunderbird を開発しているのですか？<p>多くの人が関わっています。主体となって開発しているのは Mozilla Messaging ですが、Thunderbird は世界中の多数の人々の協力の成果です。</p></li>
+                    <li>Thunderbird&nbsp;3 のソースコードはどこにありますか？<p>Thunderbird&nbsp;3 のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/3.0.9/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial">Mercurial</a> を通じて入手可能です。ソースコードの構成については <a href="https://developer.mozilla.org/ja/comm-central">comm-central の情報ページ</a> をご覧ください。詳しくは <a href="https://developer.mozilla.org/ja/Simple_Thunderbird_build">ビルド方法</a> に従ってください。</p></li>
+                  </ol>
+                </section>
+                <section id="contributedbuilds">
+                  <h2>提供されたビルド</h2>
+                  <p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。利用可能な提供ビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/3.0.9/contrib/">FTP サイト</a> から入手可能です。</p>
+                </section>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,201 @@
+<?php
+
+$page_title         = 'コミュニティ－製品・ツールの日本語化 | Mozilla Japan';
+$page_description   = 'Mozilla の活動を支えているのは、世界中から集まるコミュニティメンバーの存在です。プログラムの改良から、セキュリティレビュー、製品の多言語化、ベータ版の動作確認、ドキュメントの翻訳、ユーザーサポート、広報活動に至るまで、多岐にわたって多くの有志が参加しています。';
+$body_id            = 'community';
+$body_class         = 'sand community';
+$css                = array('sandstone/community');
+$breadcrumbs        = array(
+  '/community/' => 'mozilla Community'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+
+            <header id="main-feature">
+              <a href="/community/"><img src="/static/images/community/head.png"></a><br>
+              <h1>MozillaCommunity</h1>
+              <h2>こんな場面でのあなたの参加をお待ちしています！</h2>
+            </header><!-- end #main-feature -->
+
+
+            <nav class="jump">
+              <ul>
+                <li class="buttonblue">
+                  <a href="feedback.html">
+                    <img src="/static/images/community/list/feedback-lowres.png">
+                    <h3>フィードバックする</h3>
+                    <p>製品のクオリティ向上のために…</p>
+                  </a>
+                </li>
+                <li class="buttonblue">
+                  <a href="support.html">
+                    <img src="/static/images/community/list/sumo.png">
+                    <h3>サポートする</h3>
+                    <p>トラブルシューティングや Tips の共有を！</p>
+                  </a>
+                </li>
+                <li class="buttonblue">
+                  <a href="translation.html">
+                    <img src="/static/images/community/list/MDN.png">
+                    <h3>翻訳する</h3>
+                    <p>ドキュメントの日本語化</p>
+                  </a>
+                </li>
+                <li class="buttonblue selected">
+                  <a href="localization.html">
+                    <img src="/static/images/community/list/logo-only.png">
+                    <h3>製品･ツールの日本語化</h3>
+                    <p>製品やアドオンなどをローカライズ！</p>
+                  </a>
+                </li>
+                <li class="buttonblue">
+                  <a href="development.html">
+                    <img src="/static/images/community/list/addon_dev-lowres.png">
+                    <h3>開発する</h3>
+                    <p>Mozilla を Hack する</p>
+                  </a>
+                </li>
+                <li class="buttonblue">
+                  <a href="design.html">
+                    <img src="/static/images/community/list/personas-9.png">
+                    <h3>デザインする</h3>
+                    <p>デザインでカスタマイズ！</p>
+                  </a>
+                </li>
+                <li class="buttonblue">
+                  <a href="spread.html">
+                    <img src="/static/images/community/list/foxkeh_student03_fin.png">
+                    <h3>広める</h3>
+                    <p>Mozilla や Firefox を広めるために…</p>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div id="main-content" class="community-description">
+              <h2>製品・ツールの日本語化</h2>
+              <p class="em">Firefox や Thunderbird といった製品やアドオンなどをローカライズ！</p>
+              <hr>
+              <div class="description">
+                <img src="/static/images/community/logos.png" id="logos">
+                <h3>製品のローカライズ</h3>
+                <p>Firefox や Thunderbird といった製品に組み込まれている表示やメッセージを日本語化するローカリゼーション(L10N)に参加しませんか？</p>
+                <p>
+                  <a href="https://dev.mozilla.jp/project/l10n/">日本語版の Localization について »</a><br>
+                </p>
+                <ul class="requirements">
+                  <li class="small-technical-skill">一部、技術的知識が必要です。</li>
+                  <li class="translation15">一部、英語のスキルが必要となります。</li>
+                </ul>
+              </div>
+              <div class="description">
+                <img src="/static/images/community/addon.png" id="addon">
+                <h3>アドオンのローカライズ</h3>
+                <p>世界各国のアドオン作者が作ったアドオンを日本語化で使えるようにする作業。</p>
+                <p>
+                  <a href="https://dev.mozilla.jp/project/l10n-addons/">アドオンの日本語化作業について »</a><br>
+                </p>
+                <ul class="requirements">
+                  <li class="small-technical-skill">一部、技術的知識が必要です。</li>
+                  <li class="translation15">一部、英語のスキルが必要となります。</li>
+                </ul>
+              </div>
+            </div><!-- end #main-content -->
+
+            <div id="global-programs">
+              <h2><em>グローバルにおける</em><em>コミュニティ向けプログラム</em></h2>
+              <p>Mozilla がグローバルに提供しているコミュニティ向けプログラムのご紹介です。</p>
+              <ul>
+                <li>
+                  <article id="mozillians">
+                    <h3>mozillians</h3>
+                    <p>
+                      Mozillia はコミュニティメンバーのことを Mozillian と呼んでいます。
+                    </p>
+                    <p>
+                      Mozillian 同士が知り合い、新たな活動に参加するためのディレクトリーが <a href="http://mozillians.org/">mozillians</a> です。
+                      こちらを通して、日本で活動している Mozillian について知ることができます。
+                    </p>
+                    <ul>
+                      <li><a href="http://mozillians.org">Mozillians ディレクトリー</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li>
+                  <article id="campus-clubs">
+                    <h3>Mozilla Campus Clubs</h3>
+                    <p>
+                      自分の通う学校内でオープンウェブのための技術を広めるための活動です。
+                    </p>
+                    <ul>
+                      <li><a href="https://campus.mozilla.community/">Mozilla Campus Clubs</a></li>
+                      <li><a href="https://twitter.com/mozstudents">Twitter</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li>
+                  <article id="mozilla-reps">
+                    <h3>mozilla reps</h3>
+                    <p>
+                      各国を代表する Mozillian の活動をサポートするためのプログラムです。
+                    </p>
+                    <ul>
+                      <li><a href="https://reps.mozilla.org/">mozilla reps</a></li>
+                      <li><a href="https://www.facebook.com/MozillaReps">Facebook グループ</a></li>
+                      <!--
+                      <li><a href="https://reps.mozilla.org/people/#/search/japan/">日本で活動する mozilla reps</a></li>
+                       -->
+                    </ul>
+                  </article>
+                </li>
+            </div>
+
+            <div id="community-site">
+              <h2>日本のコミュニティサイト</h2>
+              <p>日本国内で、Mozilla 関連の活動を行っているコミュニティグループの紹介です。</p>
+              <ul>
+                <li>
+                  <a href="https://dev.mozilla.jp/" class="element">
+                    <article id="modest">
+                      <h4>Mozilla Developer Street (modest)</h4>
+                      <p>開発・翻訳・サポートなど、 Mozilla への参加はまずここから！</p>
+                    </article>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://mozillazine.jp" class="element">
+                    <article id="mozillazine">
+                    <img src="/static/images/community/site/mozillazine-jp.png">
+                    <h4>MozillaZine.jp</h4>
+                    <p>リリース情報など Mozilla 関連のニュースサイトと、ユーザーと開発者向けのフォーラムを運営しています。</p>
+                    </article>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://fxstudent.tumblr.com/" class="element">
+                    <article id="fxstudent">
+                    <h4>Firefox 学生マーケティングチーム</h4>
+                    <p>学生メンバーによって Firefox やウェブ技術を広める活動を行うコミュニティ。</p>
+                    </article>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/search?q=%23%E3%82%82%E3%81%9A%E3%81%A7%E3%81%B6" class="element">
+                    <article id="twitter">
+                      <img src="/static/images/community/site/twitter.png">
+                      <h4>#もずでぶ</h4>
+                      <p>Mozilla の開発に関する情報共有を Twitter で行っています。</p>
+                    </article>
+                  </a>
+                </li>
+            </div>
+          </section><!-- end #main -->
+
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,212 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = 'アドオン、プラグイン | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/addons/' => 'アドオン、プラグイン'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>アドオン、プラグイン</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>アドオンの利用を禁止したい（ユーザが任意にアドオンをインストールできないようにしたい）</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">アドオン</span></span></span></span></span></span></span></p><p>無用なトラブルを避けるため、ユーザが任意にアドオンをインストールできないよう設定することができます。</p><h3 id="-">設定方法</h3><p>アドオンの利用を禁止する最も簡単な方法は、アドオン <a href="https://github.com/clear-code/disableaddons/releases">Disable Addons</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってDisable Addonsを導入すると、以下の操作が完全に禁止されます。</p><ul>
+<li>ユーザがWebページからアドオンをダウンロードしてきてインストールする。</li>
+<li>ユーザがアドオンのインストーラパッケージをFirefoxのウィンドウにドラッグ＆ドロップしてインストールする。</li>
+<li>ユーザがアドオンのインストーラパッケージをFirefoxのショートカットにドラッグ＆ドロップしてインストールする。</li>
+<li>ユーザがアドオンマネージャを閲覧・操作する。</li>
+</ul><h3 id="-">注意事項</h3><p>アドオン「Disable Addons」は、既にインストール済みの他のアドオンの状態を変更しません。
+既にインストール済みのアドオンをシステム管理者の判断で強制的に無効化する方法は、<a href="/business/faq/tech/addons/#disable-addons-by-administrator">特定のアドオンやプラグイン（Javaなど）を常に無効化したい</a>を参照して下さい。</p><p>また、このアドオンはアドオンマネージャへのアクセスを禁止する機能を含むため、必然的に、アドオンマネージャを必要とする以下の操作が行えなくなります。</p><ul>
+<li>アドオンの有効・無効の状態を変更する。</li>
+<li>アドオンをアンインストールする。</li>
+<li>アドオンの設定を変更する。（Tab Mix Plusなどのように、<code>ツール</code>メニュー等からアドオンの設定を変更できるようになっている場合を除く）</li>
+</ul><p>このアドオン自体をアンインストールするには、システム管理者がクライアント上からアドオンの実体となるファイルを削除する必要があります。</p>
+                    </article>
+                    <article id="faq2">
+                      <h2>特定のアドオンやプラグイン（Javaなど）を常に無効化したい <a name="disable-addons-by-administrator" class="anchor-substitution"></a></h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">アドオン</span><span class="slash"> / <span><span class="keyword">プラグイン</span></span></span></span></span></span></span></span></span></p><p>システムに導入されているJavaやFlashなどのプラグイン、他のソフトウェアが自動的に追加するアドオンなどを、システム管理者の判断で強制的に無効化することができます。</p><h3 id="-">設定方法</h3><p>アドオンやプラグインの有効・無効の状態をシステム管理者が制御する最も簡単な方法は、アドオン <a href="https://addons.mozilla.org/firefox/addon/force-addon-status/">Force Addon Status</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってForce Addon Statusを導入した上で、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>を使って以下のような設定を施すことで、指定したアドオンやプラグインの状態を強制的に設定することができます。</p><pre><code>// Test Pilotアドオンを強制的に無効化する例
+pref(&quot;extensions.force-addon-status@clear-code.com.addons.tbtestpilot@labs.mozilla.com.status&quot;,
+     &quot;disabled&quot;); // 設定する有効・無効の状態（&quot;enabled&quot;=有効、&quot;disabled&quot;=無効）
+
+// Javaプラグインを強制的に無効化する例
+pref(&quot;extensions.force-addon-status@clear-code.com.plugins.java.pattern&quot;,
+     &quot;^Java\(TM\) Plug-in&quot;); // 判別のためのルール（正規表現）
+pref(&quot;extensions.force-addon-status@clear-code.com.plugins.java.enabledState&quot;,
+     0); // 設定する有効・無効の状態（0=常に無効、1=クリックされたら有効にする、2=常に有効）
+</code></pre><p>アドオンの状態を制御する場合は、 <code>extensions.force-addon-status@clear-code.com.addons.(アドオンの内部的なID).status</code> という名前の文字列型の設定を1つ作成します。
+値が <code>enabled</code> であればアドオンは有効化され、 <code>disabled</code> であれば無効化されます。</p><p>プラグインの状態を制御する場合は、 <code>extensions.force-addon-status@clear-code.com.plugins.(ドットを含まない任意の識別名).pattern</code> と <code>extensions.force-addon-status@clear-code.com.plugins.(ドットを含まない任意の識別名).enabledState</code> という2つの設定を使用します。
+まずプラグインを識別するための正規表現のルールを <code>extensions.force-addon-status@clear-code.com.plugins.(ドットを含まない任意の識別名).pattern</code> という名前の文字列型の設定として作成します。正規表現は、about:pluginsで表示されるプラグインの名前にマッチするようにします。
+次に、プラグインの状態を制御する <code>extensions.force-addon-status@clear-code.com.plugins.(ドットを含まない任意の識別名).enabledState</code> という名前の数値型の設定を作成します。値が <code>2</code> であればプラグインは常に有効化され、値が <code>0</code> であれば常に無効化されます。値が <code>1</code> であれば、初期状態では無効化され、プラグイン有効化のメッセージがクリックされると有効化されます（既定の動作）。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>管理者によるアドオンのインストール手順 <a name="install-addons-by-administrator" class="anchor-substitution"></a></h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">アドオン</span></span></span></p><p>FirefoxやThunderbirdは通常、ユーザが任意のアドオンをインストールして使用します。
+以下の手順に則ると、管理者が、そのクライアント上のすべてのユーザを対象としてアドオンをインストールすることができます。</p><p>管理者の手動操作によるアドオンのインストール方法にはいくつかのパターンがあり、それぞれメリットとデメリットがあります。
+<a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a>をインストールする場合を例にとって、代表的な3つのパターンを解説します。</p><h4 id="-1-">パターン1：組み込みモジュールとしてインストールする</h4><p>※<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1144127" title="1144127 – Remove support for distribution/bundles">Bug 1144127 </a>での変更により、この方法はFirefox 40およびそれ以降のバージョンでは利用できなくなりました。</p><p>この場合のインストール手順は以下の通りです。</p><ol>
+<li>Firefoxの実行ファイルと同じ位置に <code>distribution</code> という名前でフォルダを作成します。
+Firefoxが <code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされている場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution</code> となります。</li>
+<li>1.で作成したフォルダの中に <code>bundles</code> という名前でフォルダを作成します。</li>
+<li>2.で作成したフォルダの中に、インストールしたいアドオンの内部的なIDと同じ名前でフォルダを作成します。
+DOM Inspectorであれば、フォルダ名は <code>inspector@mozilla.org</code> となります。</li>
+<li>アドオンのインストールパッケージ（xpiファイル）をZIP形式の圧縮ファイルとして展開し、取り出されたすべてのファイルやフォルダを3.で作成したフォルダの中に置きます。
+DOM Inspectorであれば、以下のようなファイル配置になります。<ul>
+<li><code>C:\Program Files (x86)\Mozilla Firefox\distribution\bundles\inspector@mozilla.org\install.rdf</code></li>
+<li><code>C:\Program Files (x86)\Mozilla Firefox\distribution\bundles\inspector@mozilla.org\chrome.manifest</code></li>
+<li>...</li>
+</ul>
+</li>
+</ol><p>ただし、そのアドオンが検索プラグイン（検索プロバイダ）を含んでいる場合、検索プラグインのファイルは <code>distribution\bundles</code> 以下ではなく、<code>distribution\searchplugins\common</code> 以下に設置する必要があります。</p><p>この手順でインストールしたアドオンは以下の特徴を持ちます。</p><ul>
+<li><em>当該アドオンはアドオンマネージャの管理下から外れます。</em>
+（Firefox組み込みのモジュールの1つとして認識されるようになります。）<ul>
+<li><em>当該アドオンはアドオンマネージャ上に表示されません。</em>
+ユーザは当該アドオンをアドオンマネージャから認識できません。</li>
+<li>ユーザは当該アドオンを削除できません。</li>
+<li><em>ユーザは当該アドオンを無効化できません。</em></li>
+</ul>
+</li>
+<li><em>当該アドオンは自動アップデートされません。</em>
+ただし、アップデート後のバージョンを通常のアドオンとしてユーザがインストールすることはでき、その場合、その後は通常通り自動アップデートされるようになります。</li>
+<li><em>Add-on SDKベースのアドオン、再起動不要なアドオンは、この方法では動作しません。</em>
+（ただし、例外的にこの方法でインストールしても動作する再起動不要なアドオンはいくつか存在します。）</li>
+<li><em>アドオンは次回起動時から強制的に有効化されます。</em></li>
+</ul><h4 id="-2-">パターン2：全ユーザ向けのアドオンとしてインストールする</h4><p>この場合のインストール手順は以下の通りです。</p><ol>
+<li>アドオンのインストールパッケージを入手します。</li>
+<li>アドオンのインストールパッケージ（xpiファイル）をZIP形式の圧縮ファイルとして展開し、取り出されたファイル群の中の「install.rdf」をテキストエディタなどで開き、<code>&lt;em:unpack&gt;true&lt;/em:unpack&gt;</code>または<code>em:unpack=&quot;true&quot;</code>という記述があるかどうかを調べます。<ul>
+<li><code>unpack</code>の指定がある場合:<ol>
+<li>アプリケーション組み込みアドオンの設置用のフォルダを作成します。<ul>
+<li><code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされているFirefoxの場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\browser\extensions</code> となります。</li>
+<li><code>C:\Program Files (x86)\Mozilla Thunderbird</code> にインストールされているThunderbirdの場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Thunderbird\extensions</code> となります。</li>
+</ul>
+</li>
+<li>1.で作成したフォルダの中に、インストールしたいアドオンの内部的なIDと同じ名前でフォルダを作成します。
+DOM Inspectorであれば、フォルダ名は <code>inspector@mozilla.org</code> となります。</li>
+<li>アドオンのインストールパッケージ（xpiファイル）をZIP形式の圧縮ファイルとして展開し、取り出されたすべてのファイルやフォルダを2.で作成したフォルダの中に置きます。
+DOM Inspectorであれば、以下のようなファイル配置になります。<ul>
+<li><code>C:\Program Files (x86)\Mozilla Firefox\browser\extensions\inspector@mozilla.org\install.rdf</code></li>
+<li><code>C:\Program Files (x86)\Mozilla Firefox\browser\extensions\inspector@mozilla.org\chrome.manifest</code></li>
+<li>...</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><code>unpack</code>の指定が無い場合:<ol>
+<li>アドオンのインストールパッケージ（xpiファイル）のファイル名を、<code>アドオンの内部的なID.xpi</code>に変更します。
+DOM Inspectorであれば、ファイル名は <code>inspector@mozilla.org.xpi</code> となります。</li>
+<li>1.で用意したファイルを、適切な位置に設置します。<ul>
+<li><code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされているFirefoxの場合、ファイルを設置するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\browser\extensions</code> となります。</li>
+<li><code>C:\Program Files (x86)\Mozilla Thunderbird</code> にインストールされているThunderbirdの場合、ファイルを設置するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Thunderbird\extensions</code> となります。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使い、以下の設定を反映します。</p>
+<pre><code>pref(&quot;extensions.autoDisableScopes&quot;, 11);
+// この設定値は、整数値で表現された以下のフラグの組み合わせ。
+// ユーザの意図が関与せずにインストールされたアドオンが
+// 以下のフラグで示されるインストール方法に該当する場合、そのアドオンは
+// 次回起動時に自動的に無効化され、ユーザに有効化の可否が確認される。
+//  1: 現在のユーザープロファイルのみを対象としたインストール
+//     （通常のインストール）
+//  2: 現在ログインしているユーザのすべてのユーザープロファイルを対象としたインストール
+//     （HKEY_CURRENT_USER以下のレジストリを使用したインストールなど）
+//  4: そのインストール先のアプリケーションのすべてのユーザを対象としたインストール
+//     （C:\Program Files (x86)\Mozilla Firefox\browser\extensions 以下へのファイル配置）
+//  8: そのコンピュータのすべてのアプリケーションのすべてのユーザを対象としたインストール
+//     （C:\Program Files (x86)\Mozilla Firefox\browser\extensions 以下へのファイル配置、
+//       HKEY_LOCAL_MACHINE以下のレジストリを使用したインストールなど）
+</code></pre><p>この設定を行わないと、アドオンは次回起動時には無効化された状態となります。</p>
+</li>
+</ol><p>この手順でインストールしたアドオンは以下の特徴を持ちます。</p><ul>
+<li><em>当該アドオンはアドオンマネージャの管理下に置かれます。</em><ul>
+<li><em>当該アドオンはアドオンマネージャ上に表示されます。</em>
+ユーザは当該アドオンをアドオンマネージャから認識できます。</li>
+<li>ユーザは当該アドオンを削除できません。
+後述の通り、ユーザはアップデート後のアドオンを削除することはできますが、その場合は、管理者がインストールした最初のバージョンに戻るという結果になります。</li>
+<li><em>ユーザは当該アドオンを無効化できます。</em></li>
+</ul>
+</li>
+<li><em>当該アドオンは自動アップデートされません。</em>
+ただし、アップデート後のバージョンを通常のアドオンとしてユーザがインストールすることはでき、その場合、その後は通常通り自動アップデートされるようになります。</li>
+<li><em>Add-on SDKベースのアドオン、再起動不要なアドオンも、この方法でインストールできます。</em></li>
+<li>「extensions.autoDisableScopes」の設定を変更していないと、<em>当該アドオンは次回起動時に強制的に無効化されます。</em></li>
+</ul><h4 id="-3-">パターン3：新規プロファイル作成時に同時にインストールされるアドオンとして登録する</h4><p>この場合のインストール手順は以下の通りです。</p><ol>
+<li>Firefoxの実行ファイルと同じ位置に <code>distribution</code> という名前でフォルダを作成します。
+Firefoxが <code>C:\Program Files (x86)\Mozilla Firefox</code> にインストールされている場合、作成するフォルダのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution</code> となります。</li>
+<li>1.で作成したフォルダの中に <code>extensions</code> という名前でフォルダを作成します。</li>
+<li>2.で作成したフォルダの中に、インストールしたいアドオンのインストールパッケージ（xpiファイル）を設置します。ファイル名はアドオンの内部的なIDに合わせて変更します。
+DOM Inspectorであれば、ファイル名は <code>inspector@mozilla.org.xpi</code> で、最終的なファイルのパスは <code>C:\Program Files (x86)\Mozilla Firefox\distribution\extensions\inspector@mozilla.org.xpi</code> となります。</li>
+<li>ユーザ権限でFirefoxを起動します。それが初回起動であれば、アドオンが自動的にインストールされます。</li>
+</ol><p>この手順でインストールしたアドオンは以下の特徴を持ちます。</p><ul>
+<li><em>既に存在しているユーザプロファイルでFirefoxを起動した場合、当該アドオンはインストールされません</em>。
+当該アドオンが自動的にインストールされるのは、あくまで、新規の導入時などで新しいプロファイルが作成された場合のみに限られます。</li>
+<li>当該アドオンは、ユーザが自分でインストールしたのと同じ扱いになります。<ul>
+<li>当該アドオンはアドオンマネージャ上に表示されます。</li>
+<li><em>ユーザは当該アドオンを削除できます。</em></li>
+<li><em>ユーザは当該アドオンを無効化できます。</em></li>
+</ul>
+</li>
+<li><em>当該アドオンは自動アップデートされます。</em></li>
+<li>Add-on SDKベースのアドオン、再起動不要なアドオンも、この方法でインストールできます。</li>
+</ul><h4 id="-">その他のパターン</h4><p>上記の3パターン以外にも、アドオンを管理者がインストールするための方法はいくつかあります。詳細は以下の開発者向け情報を参照して下さい。</p><ul>
+<li><a href="https://developer.mozilla.org/en-US/Add-ons/Installing_extensions?redirectlocale=en-US&amp;redirectslug=Installing_extensions">Installing extensions - Mozilla | MDN</a>（英語）</li>
+</ul>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">アドオンの利用を禁止したい（ユーザが任意にアドオンをインストールできないようにしたい）</a></li>
+                        <li><a href="#faq2">特定のアドオンやプラグイン（Javaなど）を常に無効化したい <a name="disable-addons-by-administrator" class="anchor-substitution"></a></a></li>
+                        <li><a href="#faq3">管理者によるアドオンのインストール手順 <a name="install-addons-by-administrator" class="anchor-substitution"></a></a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

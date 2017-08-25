@@ -1,0 +1,251 @@
+#doc {
+  background: url(/static/images/covehead/blog/background.png) no-repeat 640px 40px;
+}
+
+#main-feature {
+  margin-bottom: 0;
+  padding-bottom: 64px;
+  width: auto;
+  background: url(/static/images/covehead/template/divider-main.jpg) no-repeat center bottom;
+}
+
+#main-feature h1,
+#sidebar h2 {
+  background: url(/static/images/covehead/blog/titles.png) no-repeat;
+  text-indent: -99999px;
+}
+
+#main-feature h1 {
+  width: 472px;
+}
+
+#main-feature h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#main-content {
+  margin-top: -92px;
+  width: 672px;
+}
+
+#sec-entries > header {
+  height: 92px;
+}
+
+#sec-entries > header h2 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+body.home #main-content h2,
+body.individual #main-content h2 {
+  text-indent: -99999px;
+}
+
+#sec-entries article {
+  clear: both;
+  overflow: hidden;
+  padding-bottom: 96px;
+  background: url(/static/images/covehead/template/divider-main.jpg) no-repeat center bottom;
+}
+
+#sec-entries article header {
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+#sec-entries article header h3 {
+  float: left;
+  margin: 0 0 8px 0;
+  width: 472px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sec-entries article header [itemprop="author"] {
+  position: relative;
+  float: right;
+  margin: 0 0 8px 0;
+  padding: 9px 48px 4px 4px;
+  width: 136px;
+  min-height: 33px;
+  background: #F3F5F5;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+#sec-entries article header [itemprop="author"] [itemprop="name"] {
+  display: block;
+  font-size: 11px;
+}
+
+#sec-entries article header [itemprop="author"] [itemprop="image"] {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -18px;
+  width: 36px;
+  height: 36px;
+  background: #CCC;
+}
+
+#sec-entries article header .metadata {
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+  font-size: 11px;
+}
+
+#sec-entries article header .metadata img {
+  vertical-align: middle;
+}
+
+#sec-entries article header .metadata .publishing,
+#sec-entries article header .metadata .comments {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 4px;
+  line-height: 16px;
+}
+
+#sec-entries article header .metadata .comments .inbound,
+#sec-entries article header .metadata .comments .social-widget {
+  display: block;
+  float: left;
+  margin-right: .5em;
+}
+
+#sec-entries article [itemprop="articleBody"] {
+  clear: both;
+}
+
+#sec-entries article [itemprop="articleBody"] h4,
+#sec-entries article [itemprop="articleBody"] h5,
+#sec-entries article [itemprop="articleBody"] h6 {
+  margin: 1em 0;
+}
+
+#sec-entries article [itemprop="articleBody"] .note {
+  margin: 1em;
+  border: silver solid 1px;
+  padding: 0 1em;
+  color: #666;
+  background-color: #FCFCFC;
+}
+
+#sec-entries article [itemprop="articleBody"] blockquote {
+  margin: 1em;
+  border: silver solid 1px;
+  padding: 0 1em;
+  color: #666;
+  background-color: #FFFDF0;
+}
+
+#sec-entries article [itemprop="articleBody"] div.personas-preview {
+  overflow: hidden;
+}
+
+#sec-entries article [itemprop="articleBody"] div.personas-preview p {
+  float: right;
+}
+
+#sec-entries article [itemprop="articleBody"] div.personas-preview p span {
+  display: block;
+  float: right;
+  margin-top: 8px;
+  width: 625px;
+}
+
+#sec-entries article .extra {
+  overflow: hidden;
+  margin-top: 40px;
+  padding-top: 20px;
+  background: url(/static/images/covehead/template/divider-hr.png) repeat-x;
+}
+
+#sec-entries article .extra h4 {
+  margin-bottom: 16px;
+}
+
+#sec-entries article .extra dl dt {
+  margin: 0;
+  padding: 4px 8px;
+  background: #F3F5F5;
+  font-weight: normal;
+}
+
+#sec-entries article .extra dl dd {
+  margin: 16px;
+}
+
+#sec-entries article .extra dl dd p {
+  margin: 0;
+}
+
+#sec-entries-older header {
+  margin: 0 0 16px 0;
+}
+
+#sec-entries-older h2 {
+  font-size: 18px;
+}
+
+#sec-entries-older article {
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+#sec-entries-older h3 {
+  float: right;
+  width: 584px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#sec-entries-older p.date {
+  margin: 2px 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+#sidebar {
+  width: 188px;
+}
+
+#sidebar section {
+  margin-bottom: 32px;
+}
+
+#sidebar #sec-subscribe h2 {
+  background-position: 0 -56px;
+}
+
+#sidebar #sec-subscribe li {
+  margin: 8px 0;
+  padding: 0;
+  background-image: none;
+  font-weight: bold;
+}
+
+#sidebar #sec-subscribe li a {
+  display: block;
+  padding-left: 28px;
+  height: 22px;
+  background: url(/static/images/general/service/subscribe-20120912.png) no-repeat;
+}
+
+#sidebar #sec-subscribe li.twitter a {
+  background-position: 0 -44px;
+}
+
+#sidebar #sec-archive h2 {
+  background-position: -240px -56px;
+}
+
+#sidebar #sec-categories h2 {
+  background-position: 0 -84px;
+}

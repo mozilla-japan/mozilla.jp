@@ -1,0 +1,212 @@
+<?php
+
+$_version = '14.0';
+$_date = '2012-06-26';
+
+$page_type          = 'ItemPage';
+$page_title         = 'Android 版 Firefox ' . $_version . ' リリースノート';
+$body_id            = 'firefox-android-relnotes';
+$body_class         = 'sky firefox mobile android relnotes version';
+$css                = array('sandstone/product-relnotes');
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/android/' => 'Android 版',
+  '/firefox/android/' . $_version . '/releasenotes/' => 'Firefox ' . $_version . ' リリースノート'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Android 版</em> <em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン <?= $_version ?></span></span> &mdash; <time datetime="<?= $_date ?>" itemprop="datePublished"><?= str_replace('-', '/', $_date) ?></time> リリース</h2>
+                </div>
+                <p itemprop="description">このバージョンの変更点と既知の問題を掲載しています。いつものように <a href="https://input.mozilla.org/ja/feedback/android">フィードバックを提供</a> するか <a href="https://bugzilla.mozilla.org/">バグを報告</a> して、Firefox の改良にご協力ください。</p>
+                <nav class="switcher" role="navigation">
+                  <h2>このバージョンのリリースノート</h2>
+                  <ul><!-- 14.0 は Android Only -->
+                    <li><a href="/firefox/14.0.1/releasenotes/">デスクトップ版</a></li>
+                    <li><span>Android 版</span></li>
+                  </ul>
+                </nav>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="sec-whatsnew">
+                  <h2>このバージョンでの変更点</h2>
+                  <ul>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>起動やページの読み込みが高速になりました。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>Adobe Flash プラグインに対応しました。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>ユーザーインタフェースを完全に再設計し、新しいスマートスクリーンを備えました。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>パーソナライズされたスタートページでトップサイト (よく見るページ一覧) と前回開いていたタブを表示するようにしました。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>文字サイズの自動拡大によって、可読性を向上させました。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>初期設定では、プラグインコンテンツはタップしてから読み込まれます。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p><a href="/blog/entry/9307/">Google 検索を SSL 暗号化通信に切り替えました</a>。</p>
+                    </li>
+                    <li>
+                      <span class="tag new">新機能</span>
+                      <p>パンとズームの処理を再設計し、タッチの応答性を向上させました。</p>
+                    </li>
+                    <li>
+                      <span class="tag changed">変更</span>
+                      <p>トップサイト、ブックマーク、履歴をスマートロケーションバーから参照しやすくしました。</p>
+                    </li>
+                    <li>
+                      <span class="tag developer">開発者</span>
+                      <p><a href="https://developer.mozilla.org/ja/API/Pointer_Lock_API">Pointer Lock API</a> を実装しました。</p>
+                    </li>
+                    <li>
+                      <span class="tag developer">開発者</span>
+                      <p>ディスプレイをスリープさせないようにする新しい API を実装しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697132">Bug&nbsp;697132</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag developer">開発者</span>
+                      <p>テュルク諸語とギリシャ語のために、CSS プロパティ <code>text-transform</code>、<code>font-variant</code> を <a href="https://developer.mozilla.org/ja/Firefox_14_for_developers#CSS">改善しました</a>。</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>ページを再読み込みすると文字サイズが拡大されてしまう問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=628269">Bug&nbsp;628269</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>フォーム入力欄で文字が点滅する場合がある問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=665374">Bug&nbsp;665374</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>前回のセッション (開いていたタブ) が特定の状況で起動時に復元されない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697858">Bug&nbsp;697858</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>一部の文字が非常に大きく表示される問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=710808">Bug&nbsp;710808</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>外部アプリケーションからのリンクが正しく開かれない場合がある問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=711515">Bug&nbsp;711515</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>Flash 動画の全画面表示が機能しない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=727421">Bug&nbsp;727421</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag fixed">修正</span>
+                      <p>Galaxy Note のスタイラスを端末に近づけると、スマートスクリーン上でバーチャルキーボードが使えない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=750511">Bug&nbsp;750511</a>)</p>
+                    </li>
+                  </ul>
+                </section>
+                <section id="sec-issues">
+                  <h2>既知の問題</h2>
+                  <ul>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>アニメーション GIF 画像のソースとサイズが変更されたときに、アニメーションが止まってしまいます。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=743598">Bug&nbsp;743598</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>Google で最近行われたデザイン変更によって、Firefox など WebKit 以外のブラウザーで問題が生じているところがあります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=668288">Bug&nbsp;668288</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>ページ内検索機能はまだ実装されていません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=695172">Bug&nbsp;695172</a>)</p>
+                      <ul class="status"><li class="unresolved">Firefox&nbsp;14 では未解決</li><li class="resolved"><a href="/firefox/android/15.0/releasenotes/">Firefox&nbsp;15</a> で解決</li></ul>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>テキスト選択機能はまだ実装されていません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=695173">Bug&nbsp;695173</a>)</p>
+                      <ul class="status"><li class="unresolved">Firefox&nbsp;14 では未解決</li><li class="resolved">Firefox&nbsp;16 で解決</a></li></ul>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>Android 版 Firefox はシステムの言語設定と同じロケールを使用します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=695565">Bug&nbsp;695565</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>Android&nbsp;2.3 (Gingerbread) 搭載の Tegra&nbsp;2 端末では Flash プラグインが機能しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=703056">Bug&nbsp;703056</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>フォームがまだ完全に機能しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=705201">Bug&nbsp;705201</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>文字サイズの自動拡大機能によって、一部のページで文字サイズが不釣り合いになる場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=707195">Bug&nbsp;707195</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>Adreno 端末では WebGL が動作しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=736123">Bug&nbsp;736123</a>)</p>
+                      <ul class="status"><li class="unresolved">Firefox&nbsp;14 では未解決</li><li class="resolved"><a href="/firefox/android/15.0/releasenotes/">Firefox&nbsp;15</a> で解決</li></ul>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>端末の向きを変えたときに、意図しない挙動になる場合があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=740691">Bug&nbsp;740691</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>複数のチャンネル (Aurora、Beta など) の Firefox がひとつの端末にインストールされていると、Firefox Sync が期待通りに動作しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761206">Bug&nbsp;761206</a>)</p>
+                    </li>
+                    <li>
+                      <span class="tag unresolved">未解決</span>
+                      <p>Android タブレットには対応していません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=739407">Bug&nbsp;739407</a>)</p>
+                      <ul class="status"><li class="unresolved">Firefox&nbsp;14 では未解決</li><li class="resolved"><a href="/firefox/android/15.0/releasenotes/">Firefox&nbsp;15</a> で解決</li></ul>
+                    </li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+              <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+                <section id="sec-try">
+                  <h2>Firefox を試そう</h2>
+                  <ol>
+                    <li><a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">対応機種を確認</a></li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/android/">ダウンロード</a></li>
+                  </ol>
+                </section>
+                <section id="sec-join">
+                  <h2>協力者募集中！</h2>
+                  <p>Firefox を作っている Mozilla プロジェクトには、誰でも様々な形で参加できます。<br><a href="/community/" class="more">Mozilla のコミュニティ</a></p>
+                </section>
+                <section id="sec-support">
+                  <h2>問題を見つけたら</h2>
+                  <ul>
+                    <li><a href="https://support.mozilla.org/ja/products/mobile">Android 版 Firefox サポートのページでナレッジベースの情報を探してみましょう</a></li>
+                    <li><a href="#sec-issues">開発チームがすでに認識しているかどうか、既知の問題を確認しましょう</a></li>
+                    <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi">情報が見当たらない場合は、ぜひバグとして報告してください</a></li>
+                  </ul>
+                </section>
+                <section id="sec-resources">
+                  <h2>関連情報</h2>
+                  <ul>
+                    <!-- <li><a href="https://dev.mozilla.jp/2012/03/firefox-12-site-compatibility/">ウェブ開発者向けの互換性情報</a></li> -->
+                    <li><a href="https://dev.mozilla.jp/2012/07/firefox-14-addon-compatibility/">アドオン開発者向けの互換性情報</a></li>
+                    <li><a href="https://developer.mozilla.org/ja/Firefox_<?= intval($_version) ?>_for_developers">包括的な開発者情報</a></li>
+                    <li><a href="/blog/">Mozilla Japan ブログ</a></li>
+                  </ul>
+                </section>
+              </aside><!-- end #sidebar -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

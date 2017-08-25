@@ -1,0 +1,134 @@
+<?php
+
+$page_title         = 'JAXA 調布航空宇宙センターの Thunderbird 導入事例 | 法人向け情報 | Mozilla Japan';
+$page_description   = '独立行政法人宇宙航空研究開発機構 (JAXA) 調布航空宇宙センターでは、職員用パソコンに Thunderbird が導入されています。なぜ Thunderbird が標準メールソフトとして選ばれたのか、研究開発本部の大川博文氏に話を伺いました。';
+$body_id            = 'profile';
+$body_class         = 'users business profile';
+$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/profiles/' => '導入事例',
+  '/business/profiles/jaxa-chofu/' => 'JAXA 調布航空宇宙センター'
+);
+
+// ヘッダーメニューの構成
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav role="directory" class="outer">
+            <ul class="inner">
+              <li><a href="#interview">インタビュー</a></li>
+              <li><a href="#support">サポート担当者のコメント</a></li>
+              <li><a href="#products">使われている製品</a></li>
+            </ul>
+          </nav>
+          <main>
+            <article>
+              <div id="hero" class="outer">
+                <div class="inner">
+                  <img src="/business/static/images/business/profiles/jaxa-chofu/main-feature.jpg" alt="">
+                </div>
+              </div>
+              <div id="header" class="outer">
+                <div class="inner row">
+                  <header class="col">
+                    <img class="logo" src="/business/static/images/business/profiles/jaxa-chofu/profile.jpg" alt="">
+                    <h1>独立行政法人 宇宙航空研究開発機構</h1>
+                    <p class="caption">通称: JAXA (ジャクサ)</p>
+                    <p class="caption"><a href="http://www.jaxa.jp/">www.jaxa.jp</a></p>
+                  </header>
+                  <div class="col">
+                    <p>宇宙科学研究所 (ISAS)、航空宇宙技術研究所 (NAL)、宇宙開発事業団 (NASDA) というそれぞれ別々の機関が 1 つになり、宇宙航空分野の基礎研究から開発・利用に至るまでを一貫して行う国家機関として 2003 年 10 月に誕生。「空へ挑み、宇宙を拓く」 というコーポレートメッセージのもと、人類の平和と幸福のために役立てるよう、宇宙・航空が持つ大きな可能性を追求し、様々な研究開発に挑戦しています。取材させていただいた調布航空宇宙センターは、航空宇宙技術研究所 (NAL) があった場所で、現在は研究開発本部の本拠地となっています。先進的な航空科学技術の確立や長期的な視野に立った先進的な航空・宇宙分野の基礎・基盤技術の研究開発が行われています。施設内にはスーパーコンピューターや大型試験施設・設備が整備されており、約 500 名の職員が働いています。</p>
+                  </div>
+                </div>
+              </div>
+              <div id="intro" class="outer outer-3">
+                <div class="inner">
+                  <section>
+                    <h2>イントロダクション</h2>
+                    <img src="/business/static/images/business/profiles/jaxa-chofu/photo-intro.jpg" alt="">
+                    <p>JAXA といえば日本の航空宇宙開発を支える科学技術が集結した機関。つくばをはじめ全国各地に事業所があり、東京都調布市の「調布航空宇宙センター」には JAXA のロケットや高速航空機の実験などを行なう様々な施設が設置されています。多くの職員が働き、中にはスーパーコンピューターを扱っている職員もいるそうですが、日々の業務には一般的なパソコンを使っています。事務用端末も職員に 1 人 1 台貸し出されており、その端末にはメールソフトとして Thunderbird がインストールされています。どうして Thunderbird が選ばれたのか、研究職の傍ら、調布航空宇宙センターのインフラのサポート業務を兼任している研究開発本部の大川博文氏にお話を伺いました。</p>
+                    <p><small>※ この記事は、2010 年 2 月の取材に基づいたものです</small></p>
+                  </section>
+                </div>
+              </div>
+              <div id="interview" class="outer outer-2">
+                <div class="inner">
+                  <section class="tabbox">
+                    <header>
+                      <h2 class="highlight">インタビュー</h2>
+                    </header>
+                    <ul role="tablist">
+                      <li><a role="tab" id="tab-interview-1" href="#interview-1">ポイント 1</a></li>
+                      <li><a role="tab" id="tab-interview-2" href="#interview-2">ポイント 2</a></li>
+                      <li><a role="tab" id="tab-interview-3" href="#interview-3">ポイント 3</a></li>
+                      <li><a role="tab" id="tab-interview-4" href="#interview-4">ポイント 4</a></li>
+                    </ul>
+                    <section role="tabpanel" id="interview-1">
+                      <img src="/business/static/images/business/profiles/jaxa-chofu/photo-1.jpg" alt="">
+                      <h3><span>ユーザーを適切にサポートするには</span> <span>メールソフトの統一が不可欠です</span></h3>
+                      <p>「サポート業務を担当する職員は、調布航空宇宙センターでは自分を含めて数名います。自身の研究と同時に業務を担当することになるので、なるべくトラブルの少ないソフトを選ぶ必要がありました。以前は職員が好きなパソコンをいわば、思い思いに勝手に使っていましたが、それではサポート業務が大変になってしまいますから、当時の航空宇宙技術研究所で事務用端末を取りまとめて貸し出すことになったのをきっかけに、ソフトもプリインストールすることになりました」</p>
+                      <p>大川氏らがソフトの選択で重視されたのが、サポート業務の手間がかからない点でした。「当時、メールソフトとして Netscape を使っている職員がいたこともあり、使い勝手の良さやコストが軽減できること、そして今後のサーバー管理などを考えて Netscape Communicator 4.7 を使ってみようということになりました」</p>
+                      <p>その後、2006 年に事務用端末の貸し出しが JAXA 全体で統一されることになり、当初、標準のメールソフトは Outlook Express が選ばれていたのですが、調布航空宇宙センターでは、以前から使い慣れているということもあり Netscape の実質的な後継製品である Thunderbird の併用を提案し、継続して使うことになりました。そのため、大きなトラブルや混乱はほとんどなかったとのこと。</p>
+                      <p>「今年の JAXA 全体の端末の入れ替えの際には、Thunderbird が最初から標準のメールソフトとして選ばれたので、今後も安心して使っていけると思います」</p>
+                    </section>
+                    <section role="tabpanel" id="interview-2">
+                      <img src="/business/static/images/business/profiles/jaxa-chofu/photo-2.jpg" alt="">
+                      <h3><span>万が一を考えて専門家との</span> <span>サポート契約をしました</span></h3>
+                      <p>調布航空宇宙センターでは、今までにメールソフトに関するトラブルはほとんどないものの、万が一の対応がオープンソースの製品では難しいのではないのかという不安を感じていたところ、有償のサポート が受けられることを知り、依頼することにしたそうです。</p>
+                      <p>「トラブルの対処は迅速さが求められますが、自分の業務もあるのであまり時間はかけられません。そこで Thunderbird に詳しい専門家として、Mozilla のサポートパートナーである クリアコード さんにサポートをお願いすることにしました」</p>
+                      <p>サポートの主な目的はトラブルへの対応だが、数としてはそれほど多くないことと、技術的なアドバイスを求めるケースも考えて、発生時ごとの対応がベースとなっています。</p>
+                      <p>「最近では Outlook Express のメールボックスを Thunderbird に切り分ける際の方法をアドバイスしてもらいました。また、Thunderbird 1.0 から 1.5 にバージョンアップした時は、インストーラー形式での配布を行ったのですが、カスタマイズ設定をアドオンの形で提供できるようクリアコードさんに用意いただいたことがありました」</p>
+                    </section>
+                    <section role="tabpanel" id="interview-3">
+                      <img src="/business/static/images/business/profiles/jaxa-chofu/photo-3.jpg" alt="">
+                      <h3><span>必要と思われるアドオンを</span> <span>追加した状態で配布しています</span></h3>
+                      <p>Thunderbird はアドオンの追加や独自の設定によりカスタマイズすることができます。JAXA で導入している Thunderbird は、英語のスペルチェックなどのアドオンがいくつか追加された状態で配布されているそうです。</p>
+                      <p>「Thunderbird を使う職員自身がカスタマイズやアドオンを追加することもありますので、私たちにも『こんなことはできるのか』という質問が寄せられることもあります。そうした質問になるべく答えたいと思っていますが、私たちも専任ではありませんし、機能をすべて把握しているわけではありません。そうした場合に、Thunderbird についてはクリアコードさんに相談して、対応策があるかどうかだけでも教えてもらえるのは、非常に心強くて助かっています」</p>
+                      <p>JAXA で働いている人たちは技術者が多いので、質問内容もかなり込み入った時もあるようですが、そうした場合も専門家からのアドバイスが役立っているということでした。</p>
+                    </section>
+                    <section role="tabpanel" id="interview-4">
+                      <img src="/business/static/images/business/profiles/jaxa-chofu/photo-4.jpg" alt="">
+                      <h3><span>オープンソースと市販ソフトの差は</span> <span>どんどんなくなっている気がします</span></h3>
+                      <p>一般的に、オープンソース製品に対しては市販製品よりもサポート体制があやふやだという声もありますが、「オープンソースでも機能は市販ソフトと比べても遜色がないものが増えていますし、サポートを受けることだってできます」と大川氏。Thunderbird が今までセキュリティも含めて大きなトラブルがなかったことも、オープンソースへの信頼性につながっているのかもしれません。</p>
+                      <p>「理系の研究職の集まりで、情報リテラシーは一般企業に比べると高いほうなので、オープンソースだから不満や不安を感じるというのがあまりないのかもしれません。ソフトに関する情報量も市販ソフトとオープンソースとではそう変わらないので、純粋に機能そのものや安定性でソフトが選ばれるようになっていくと思います」</p>
+                    </section>
+                  </section>
+                </div>
+              </div>
+              <div id="support" class="outer outer-3">
+                <div class="inner">
+                  <section>
+                    <h2>サポート担当者のコメント</h2>
+                    <p>JAXA 調布航空宇宙センターとサポート契約をしている クリアコード によると、「相談がある場合に、再現条件など詳しい情報を合わせて提供いただけるので、調査そのものはスムーズに行うことができています」とのこと。ただし、Thunderbird のバグや仕様上の制限が原因である場合は、運用による問題回避をお願いすることもあるそうです。「そうした場合については、Thunderbird 本体へのフィードバックやバグ報告も合わせて行うことで、製品の品質向上に努めています。当社としても、初めて見聞きするような事例が少なくありませんので、大変勉強になっています」(クリアコード)</p>
+                  </section>
+                </div>
+              </div>
+              <div id="products" class="outer outer-1">
+                <div class="inner">
+                  <section>
+                    <h2 class="highlight">使われている製品</h2>
+                    <ul>
+                      <li><a href="https://www.thunderbird.net/ja/"><img src="/business/static/images/business/thunderbird.black.png" alt="Thunderbird"> <span>400 〜 500 台</span></a></dt>
+                    </ul>
+                    <p>業務で配布している端末 (Windows XP) に標準のメールソフトとしてインストールされている</p>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </main>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/profile-extra.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,217 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = '設定の管理 | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/setting-management/' => '設定の管理'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>設定の管理</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>設定を管理者が管理したい <a name="control-configurations-by-administrator" class="anchor-substitution"></a></h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>FirefoxやThunderbirdには、設定を管理者が管理し、ユーザが自由に変更できないようにするための機能が備わっています。
+この機能は「Mission Control Desktop（MCD）」や「AutoConfig」などと呼ばれています。</p><p>また、アドオンを使うとActive Directoryのグループポリシーで設定を集中管理することもできます。</p><h3 id="cck">ウィザードでの実現 </h3><p>アドオン <a href="https://mike.kaply.com/cck2/">CCK2 Wizard</a>を使用すると、MCD相当の設定を行ったり、それ以上のことをしたりするアドオンまたは設定ファイル群を作成することができます。</p><p>CCK2 Wizardの大まかな利用手順は以下の通りです。</p><ol>
+<li>管理者のPC上のFirefoxに、CCK2 Wizardを通常通りインストールします。</li>
+<li>ツールバー上に追加される「CCK2 Wizard」ボタンをクリックし、ウィザードを起動します。</li>
+<li>「File」→「New」と辿り、カスタマイズ用設定の名前と一意な識別子を入力します。</li>
+<li>ウィザード（設定の入力画面）が出るので、行いたいカスタマイズの内容を決定します。</li>
+<li>ウィザードの最後のページで「Create an Extension」または「Use AutoConfig」ボタンを押下し、カスタマイズ用のファイルを出力します。</li>
+<li>5で「Create an Extension」を選択した場合、アドオンのインストールパッケージが出力されるので、各クライアントにアドオンをインストールします。
+「AutoConfig」を選択した場合、カスタマイズ用ファイルを圧縮したZIPファイルが出力されるので、各クライアントのFirefoxのインストール先にZIPファイルの内容を展開して設定ファイル群をインストールします。</li>
+</ol><h3 id="mcd">MCD用設定ファイルでの実現 </h3><p>以下では、Firefoxの自動アップデートを禁止するという場合を例にとって設定の手順を説明します。</p><h4 id="-">設定方法</h4><p>以下の内容のプレーンテキストファイル <code>autoconfig.js</code> を用意します。</p><pre><code>pref(&quot;general.config.filename&quot;, &quot;autoconfig.cfg&quot;);
+pref(&quot;general.config.vendor&quot;, &quot;autoconfig&quot;);
+pref(&quot;general.config.obscure_value&quot;, 0);
+</code></pre><p>作成した <code>autoconfig.js</code> を、Firefoxのインストール先の <code>defaults/pref/</code> ディレクトリに置きます（Windowsであれば、 <code>C:\Program Files (x86)\Mozilla Firefox\defaults\pref\autoconfig.js</code> など）。</p><p>以下の内容のプレーンテキストファイル <code>autoconfig.cfg</code> を用意します。</p><pre><code>// 1行目は必ずコメントとしてください。
+lockPref(&quot;app.update.enabled&quot;, false);
+</code></pre><p>作成した <code>autoconfig.cfg</code> を、FirefoxまたはThunderbirdのインストール先ディレクトリに置きます（Windowsであれば、 <code>C:\Program Files (x86)\Mozilla Firefox\autoconfig.cfg</code> など）。</p><p>以上で設定は完了です。</p><h4 id="-">確認方法</h4><p>Firefoxを起動してオプション（設定画面）を開き、<code>詳細</code>→<code>更新</code>と辿って、自動更新に関する設定が<code>更新の確認は行わない</code>で固定されグレイアウトされていることを確認して下さい。</p><h4 id="-">詳細情報</h4><p><code>autoconfig.cfg</code> では以下の3つのディレクティブでFirefox・Thunderbirdの設定を管理することができます。</p><ul>
+<li><code>defaultPref(&quot;設定名&quot;, 値)</code>
+：設定を指定した値に変更します。ユーザは設定を自由に変更でき、変更後の値はFirefox・Thunderbirdの終了後も保存されます。</li>
+<li><code>pref(&quot;設定名&quot;, 値)</code>
+：設定を指定した値に変更します。ユーザは設定を一時的に変更できますが、変更後の値はFirefox・Thunderbirdを終了すると失われます。（次回起動時には、<code>autoconfig.cfg</code> で指定した値に戻ります。）</li>
+<li><code>lockPref(&quot;設定名&quot;, 値)</code>
+：設定を指定した値に固定します。ユーザは設定を変更することはできません。</li>
+</ul><p>また、<code>autoconfig.cfg</code> ではJavaScriptの制御構文や環境変数の参照、LDAPサーバからの情報の取得（※Tunderbirdのみ）も利用できます。
+詳しくは以下の情報を参照して下さい。</p><ul>
+<li><a href="https://developer.mozilla.org/ja/docs/MCD/Getting_Started">Mozilla 製品の集中管理 - 基本編 - MCD | MDN</a></li>
+<li><a href="https://developer.mozilla.org/ja/docs/MCD,_Mission_Control_Desktop_AKA_AutoConfig">MCD, Mission Control Desktop AKA AutoConfig | MDN</a></li>
+</ul><p>設定を変更する場合は、新しい <code>autoconfig.cfg</code> で古い <code>autoconfig.cfg</code> を上書きして下さい。</p><p><code>autoconfig.cfg</code> で管理できる設定項目は、about:config（設定エディタ）の一覧に表示される物、もしくは一覧に現れていない隠し設定のみに限られます。
+アドオンの有効・無効の状態、Webサイトごとの機能の利用許可、メニュー項目の表示・非表示などは、<code>autoconfig.cfg</code> では管理できません。</p><p>なお、Firefox 43以前では、設定画面の「プライバシー」パネルに対応する設定を <code>pref()</code> や <code>defaultPref()</code> で変更した場合、設定ダイアログを開いた時の状態が期待通りに初期化されない場合があります。この問題の簡単な回避策としては、アドオン <a href="https://addons.mozilla.org/firefox/addon/history-prefs-modifier/">History Prefs Modifier</a>が利用できます。Firefox 44以降ではこの問題は修正されています。</p><h3 id="group-policy">グループポリシーでの実現 </h3><p>アドオン<a href="https://addons.mozilla.org/firefox/addon/gpo-for-firefox/">GPO For Firefox</a>を使用すると、グループポリシー経由でMCDと同様の設定の集中管理を行えます。</p><h4 id="-">設定の手順</h4><ul>
+<li>各クライアントについては、<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってGPO For Firefoxをインストールします。</li>
+<li>ドメインコントローラについては、<a href="https://addons.mozilla.org/firefox/addon/gpo-for-firefox/">アドオンのダウンロードページ</a>の「You can find an adm file ready to be used for your GPO at the following link.」と書かれた箇所にあるリンクから管理用テンプレートファイル（admファイル）をダウンロードして読み込ませます。
+その後、読み込まれたテンプレートを使って設定を行います。
+例えば、Windows Server 2008R2での手順は以下の通りです。<ol>
+<li>Active Directoryドメインを構築します。</li>
+<li>ドメインの管理者でログインします。</li>
+<li><a href="http://technet.microsoft.com/ja-jp/library/cc731745.aspx" title="ローカル グループ ポリシー エディターを開く">ローカル グループ ポリシー エディターを開く</a>の手順に則って、ローカル グループ ポリシー エディターを起動します。
+（ファイル名を「gpedit.msc」と指定して起動します。）</li>
+<li><a href="http://technet.microsoft.com/ja-jp/library/cc772560.aspx" title="従来の管理用テンプレートを追加または削除する">従来の管理用テンプレートを追加または削除する</a>の手順に則って、テンプレートを読み込ませます。
+（「コンピューターの構成」配下の「管理用テンプレート」を右クリックして「テンプレートの追加と削除」を選択し、firefox.admを指定して追加します。）</li>
+<li>「従来の管理用テンプレート（ADM）」配下に「Mozilla Firefox」が追加されるので、必要な設定を変更します。</li>
+</ol>
+</li>
+</ul><p>以降は、ドメインに参加したWindows PC上でFirefoxを起動する度に、グループポリシーで変更された設定が読み込まれ、反映されるようになります。</p><h4 id="-">注意点</h4><ul>
+<li>上記ページからダウンロードできる管理用テンプレートファイルの内容は、すべて英語となっています。
+日本語で設定を管理したい場合は、管理用テンプレートファイルを自分で翻訳する必要があります。</li>
+<li>管理できる設定項目は、管理用テンプレートファイルに記述されている物のみとなります。
+それ以外の設定を管理したい場合は、管理用テンプレートファイルを自分で編集する必要があります。</li>
+</ul><h4 id="-">管理用テンプレートファイルに無い設定項目の管理について</h4><p>FirefoxやThunderbird自体の更新によって追加・変更・廃止された設定をグループポリシーとして管理できるようにするためには、管理用テンプレートファイルを自分で修正・更新する必要があります。</p><p>管理用テンプレートファイルを編集する際は、MCDでの設定で使用する設定名とその値が、ドメインのメンバとなるWindows PCの以下のレジストリキー以下に書き出されるようにして下さい。</p><ul>
+<li>ユーザ自身による変更を許容しない、管理者が固定する設定（Locked Settings）<ul>
+<li>全ユーザに反映する場合：<code>HKEY_LOCAL_MACHINE\Software\Policies\Mozilla\lockPref</code></li>
+<li>ユーザごとに反映する場合：<code>HKEY_CURRENT_USER\Software\Policies\Mozilla\lockPref</code></li>
+</ul>
+</li>
+<li>ユーザ自身による変更を許容する、初期値の設定（Default Settings）<ul>
+<li>全ユーザに反映する場合：<code>HKEY_LOCAL_MACHINE\Software\Policies\Mozilla\defaultPref</code></li>
+<li>ユーザごとに反映する場合：<code>HKEY_CURRENT_USER\Software\Policies\Mozilla\defaultPref</code></li>
+</ul>
+</li>
+</ul><p>真偽型の設定は、<code>true</code>を整数の<code>1</code>、<code>false</code>を整数の<code>0</code>として書き出して下さい。</p><p>例えば「Firefoxの自動アップデートを禁止する設定を、全ユーザに対して、強制的に反映させる」という場合の設定内容は以下の要領です。</p><ul>
+<li>書き込む先のレジストリキー：<code>HKEY_LOCAL_MACHINE\Software\Policies\Mozilla\lockPref</code></li>
+<li>書き込む値の名前：<code>app.update.enabled</code></li>
+<li>書き込む値のデータ：<code>0</code></li>
+</ul>
+                    </article>
+                    <article id="faq2">
+                      <h2>すべてのクライアントの設定を管理者が一括して変更したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>Active Directoryドメインに参加しているWindows PCでは、<a href="/business/faq/tech/setting-management/#group-policy">グループポリシー</a>によって、管理者が全クライアントの設定を一括して管理・変更することができます。</p><p>グループポリシーを使用しない場合でも、FirefoxやThunderbirdの独自の設定管理機能である<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>では、各クライアントのローカルディスク上に設置した設定ファイルだけでなく、サーバ上に設置した設定ファイルを読み込ませることができます。
+これにより、管理者が1つの設定ファイルを管理するだけで全クライアントの設定を一括して管理・変更するという運用が可能です。</p><p>以下では、設定ファイルを <code>http://internalserver/autoconfig.jsc</code> として提供してFirefoxの自動アップデートを禁止するという場合を例にとってMCDでの設定の手順を説明します。</p><h3 id="-">設定方法</h3><p>以下の内容のプレーンテキストファイル <code>autoconfig.js</code> を用意します。</p><pre><code>pref(&quot;general.config.filename&quot;, &quot;autoconfig.cfg&quot;);
+pref(&quot;general.config.vendor&quot;, &quot;autoconfig&quot;);
+pref(&quot;general.config.obscure_value&quot;, 0);
+</code></pre><p>作成した <code>autoconfig.js</code> を、Firefoxのインストール先の <code>defaults/pref/</code> ディレクトリに置きます（Windowsであれば、<code>C:\Program Files (x86)\Mozilla Firefox\defaults\pref\autoconfig.js</code> など）。</p><p>以下の内容のプレーンテキストファイル <code>autoconfig.cfg</code> を用意します。</p><pre><code>// 1行目は必ずコメントとしてください。
+lockPref(&quot;autoadmin.global_config_url&quot;, &quot;http://internalserver/autoconfig.jsc&quot;);
+</code></pre><p>作成した <code>autoconfig.cfg</code> を、FirefoxまたはThunderbirdのインストール先ディレクトリに置きます（Windowsであれば、<code>C:\Program Files (x86)\Mozilla Firefox\autoconfig.cfg</code> など）。</p><p>以下の内容のプレーンテキストファイル <code>autoconfig.jsc</code> を用意します。</p><pre><code>// 1行目は必ずコメントとしてください。
+lockPref(&quot;app.update.enabled&quot;, false);
+</code></pre><p>次に、上記のURLにてファイルをダウンロード可能なように、設定ファイルの提供用サーバにファイルを設置します。
+また、ファイルは以下のMIME Typeを伴って送信されるように設定します。</p><pre><code>application/x-javascript-config
+</code></pre><p>以上で設定は完了です。</p><h3 id="-">確認方法</h3><p>Firefoxを起動してオプション（設定画面）を開き、<code>詳細</code>→<code>更新</code>と辿って、自動更新に関する設定が<code>更新の確認は行わない</code>で固定されグレイアウトされていることを確認して下さい。</p><h3 id="-">詳細情報</h3><p><code>autoconfig.jsc</code> の書式と設定可能な設定項目の種類は、autoconfig.cfgと同一です。詳細は<a href="/business/faq/tech/setting-management/#control-configurations-by-administrator">設定を管理者が管理したい</a>を参照して下さい。</p><p>なお、<code>autoconfig.jsc</code> はWebサーバでの提供以外に、ローカルファイル、ファイル共有サーバ上のファイルなどの形でも提供できます。以下はすべて有効な指定です。</p><pre><code>// ローカルファイルとして提供する場合（ネットワークドライブをマウントする場合など）
+lockPref(&quot;autoadmin.global_config_url&quot;, &quot;file:///Z:/firefox/autoconfig.jsc&quot;);
+
+// Sambaサーバ、NASなどの上にファイルを設置する場合
+lockPref(&quot;autoadmin.global_config_url&quot;, &quot;file://///file-server/shared/firefox/autoconfig.jsc&quot;);
+</code></pre>
+                    </article>
+                    <article id="faq3">
+                      <h2>一部の設定項目を非表示にして、ユーザが設定を変更できないようにしたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>や<a href="/business/faq/tech/setting-management/#group-policy">グループポリシーによる設定</a>では、管理者がFirefoxやThunderbirdの設定を固定し、ユーザ自身による自由な変更を禁止することができます。また、アドオンを併用することによって、変更できなくした設定を画面上に表示しないようにすることができます。</p><h3 id="-">ウィザードでの実現</h3><p><a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>を使用すると、設定値を変更不可能な状態に固定する機能を含むアドオンを作成することができます。</p><h3 id="mcd-">MCDでの実現</h3><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>機能が提供する <code>lockPref()</code> ディレクティブを使用すると、ユーザによる設定の変更を禁止できます。詳細は<a href="/business/faq/tech/setting-management/#control-configurations-by-administrator">設定を管理者が管理したい</a>を参照して下さい。</p><p><code>lockPref()</code> によって値が固定された設定は、Firefox・Thunderbirdの設定画面上ではグレイアウトして表示されます。</p><p>変更できない状態になっている設定項目をそもそもUI上に表示しないようにするためには、アドオン <a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を使うなどしてUI要素を隠す必要があります。globalChrome.css を使う場合の手順は以下の通りです。</p><ol>
+<li><a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a> をインストールします。</li>
+<li><code>ツール</code>→<code>Web開発</code>→<code>DOM Inspector</code> でDOM Inspectorを起動し、その状態で設定画面を開きます。</li>
+<li>設定ダイアログを操作し、非表示にしたい設定項目が表示された状態にします。</li>
+<li><code>File</code>→<code>Inspect Chrome Document</code>を選択し、設定画面のタイトルと同じ項目を選択します。</li>
+<li>非表示にしたい項目のIDを調べる。</li>
+<li><p>「メモ帳」などのテキストエディタを開き、4で調べたIDを使って項目を非表示にするスタイル指定を記述します。</p>
+<p>以下は Firefoxの設定の「一般」パネルにおける起動時の挙動の設定を非表示にする場合の例。</p>
+<pre><code>@-moz-document url-prefix(chrome://browser/content/preferences/preferences.xul) {
+  #startupGroup {
+    /* display:none はDOMツリーに変化を与えて挙動を壊す恐れがあるため、
+       単に非表示にするのみとする。 */
+    visibility: collapse !important;
+    -moz-user-focus: ignore !important;
+  }
+}
+</code></pre><p>（ <code>@-moz-document</code> は、特定のウィンドウに対してのみスタイル指定を反映させるための記述です。詳細は<a href="http://www.akatsukinishisu.net/wiki.cgi?%40-moz-document">@-moz-document について参考</a>を参照して下さい。）</p>
+</li>
+<li>6で作成した内容を <code>globalChrome.css</code> という名前のプレーンテキストファイルに保存します。</li>
+<li>7で作成したファイルをFirefox（Thunderbird）のインストール先の <code>chrome</code> フォルダに設置します。
+（Windows Vista以降の場合のファイルの設置場所は <code>C:\Program Files (x86)\Mozilla Firefox\chrome\globalChrome.css</code> となる。）</li>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従って<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を導入します。</li>
+</ol><p>なお、設定画面上部の<code>全般</code> <code>タブ</code>などのパネル切り替えボタン自体や、<code>詳細</code>における<code>更新</code>などのタブを非表示にする場合には注意が必要です。
+これらの切り替えボタンやタブを単純に非表示にすると、ボタンやタブとパネルの内容の対応関係が崩れる場合があります。これらの問題の簡単な解決策としては、アドオン <a href="https://addons.mozilla.org/firefox/addon/hide-option-pane/">Hide Option Pane</a>の利用が挙げられます。</p><h3 id="-">グループポリシーでの実現</h3><p><a href="/business/faq/tech/setting-management/#group-policy">グループポリシーによる設定</a>では、ユーザ自身による変更を許容しない設定（Locked Settings）も可能です。</p><p>ただし、グループポリシーとの連携だけでは設定項目は非表示にできません、設定項目を非表示にするためには、MCDの場合と同様に、アドオン <a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を使うなどしてUI要素を隠す必要があります。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>Thunderbirdのアカウント設定を非表示にしたい（管理者が設定を集中管理するので、アカウント設定の画面にアクセスさせたくない）</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>や<a href="/business/faq/tech/setting-management/#group-policy">グループポリシー</a>などの方法でアカウント設定を管理者が管理する際に、ユーザがアカウント設定の画面にアクセスできないようにすることができます。</p><h3 id="-">設定方法</h3><p>アカウント設定画面へのアクセス経路をUI上に表示しないようにするためには、アドオン <a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を使うなどしてメニュー項目を隠す必要があります。globalChrome.css を使う場合の手順は以下の通りです。</p><ol>
+<li><p>「メモ帳」などのテキストエディタを開き、4で調べたIDを使って項目を非表示にするスタイル指定を記述します。</p>
+<pre><code>@-moz-document url-prefix(chrome://messenger/content/) {
+  #menu_accountmgr,
+  #appmenu_accountmgr,
+  #appmenu_newAccountPopupMenuSeparator,
+  #appmenu_newCreateEmailAccountMenuItem,
+  #appmenu_newMailAccountMenuItem,
+  #appmenu_newIMAccountMenuItem,
+  #appmenu_newFeedAccountMenuItem,
+  #appmenu_newAccountMenuItem {
+    display: none !important;
+  }
+}
+@-moz-document url-prefix(chrome://messenger/content/msgAccountCentral.xul) {
+  #AccountsHeader,
+  #AccountSettings.spacer,
+  #AccountSettings,
+  #CreateAccount.spacer,
+  #CreateAccount,
+  #CreateAccounts,
+  #AccountsSection.spacer {
+    display: none !important;
+  }
+}
+</code></pre><p>（ <code>@-moz-document</code> は、特定のウィンドウに対してのみスタイル指定を反映させるための記述です。詳細は<a href="http://www.akatsukinishisu.net/wiki.cgi?%40-moz-document">@-moz-document について参考</a>を参照して下さい。）</p>
+</li>
+<li>1で作成した内容を <code>globalChrome.css</code> という名前のプレーンテキストファイルに保存します。</li>
+<li>2で作成したファイルをThunderbirdのインストール先の <code>chrome</code> フォルダに設置します。
+（Windows Vista以降の場合のファイルの設置場所は <code>C:\Program Files (x86)\Mozilla Thunderbird\chrome\globalChrome.css</code> となる。）</li>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従って<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を導入します。</li>
+</ol>
+                    </article>
+                    <article id="faq5">
+                      <h2>about:config（設定エディタ）の利用を禁止したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span></span></span></span></span></p><p>無用なトラブルを避けるため、ユーザが <code>about:config</code>（設定エディタ）の画面にアクセスできないようにすることができます。</p><h3 id="-">設定方法</h3><p><code>about:config</code> の利用を禁止する最も簡単な方法は、アドオン <a href="https://addons.mozilla.org/firefox/addon/disable-aboutconfig/">Disable about:config</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってDisable about:configを導入すると、<code>about:config</code> へのアクセスが完全に禁止されます。</p><p>また、<a href="/business/faq/tech/setting-management/#cck">CCK2 Wizard</a>でも同様のカスタマイズが可能です。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">設定を管理者が管理したい <a name="control-configurations-by-administrator" class="anchor-substitution"></a></a></li>
+                        <li><a href="#faq2">すべてのクライアントの設定を管理者が一括して変更したい</a></li>
+                        <li><a href="#faq3">一部の設定項目を非表示にして、ユーザが設定を変更できないようにしたい</a></li>
+                        <li><a href="#faq4">Thunderbirdのアカウント設定を非表示にしたい（管理者が設定を集中管理するので、アカウント設定の画面にアクセスさせたくない）</a></li>
+                        <li><a href="#faq5">about:config（設定エディタ）の利用を禁止したい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

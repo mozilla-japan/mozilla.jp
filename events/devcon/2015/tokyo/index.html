@@ -1,0 +1,658 @@
+<?php
+
+$page_title         = 'Firefox Developers Conference 2015 in Tokyo  Hack, Inspect &amp; Ignite | Mozilla Japan';
+
+$page_description   = '2015 年 11 月 15 日開催の Mozilla Japan 主催イベント。アプリケーションプラットフォームとして進化し続けるウェブ開発の最新動向がわかる 1 日です。';
+$body_class         = 'sand';
+$body_id            = 'devcon-2015-tokyo';
+$css                = array('events/devcon-2015-tokyo-20160925');
+$page_image         = "https://www.mozilla.jp/static/images/events/devcon/2015/tokyo/main.png";
+  
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+<section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+  <header>
+    <h1>Firefox Developers Conference 2015 in Tokyo</h1>
+    <h2>Hack - Inspect - Ignite</h2>
+    <div>
+      <span class="date">2015/11/15 10:30 - 18:00</span>
+      <span class="venue">TEPIA Hall</span>
+    </div>
+    <nav>
+       <ul>
+        <li><a href="index.html">Japanese</a></li>
+        <li><a href="index.html.en">English</a></li>
+      </ul>
+    </nav>    
+    <div class="container">
+      <p>
+        Firefox 誕生から 11 年。ウェブのパイオニア Mozilla が「ウェブの今日とこれから」を伝える 1 Day イベントを開催します！
+        今回のキーワードは "Inspect, Hack, Ignite!" 直前に米国で開催される View Source Conference をソースとしつつ、各分野を代表するエンジニア達による先端技術の調査・ハックを経て、ウェブの未来を明るく見通す灯を点火 (Ignite) します。
+      </p>
+      <p>
+        Mozilla Corporation のエンジニアも多数来日するこのイベントでは、最新開発ツールの解説やウェブ開発の現場で今すぐ役立つ実践テクから、テレビや IoT/WoT デバイス向けウェブ開発の最新情報、標準化と実装の最前線まで、幅広いトピックを予定しています。
+        HTML5 のアプリ環境から IoT 時代のプラットフォームへと移りゆく今、ウェブは何処へ向かうのか、ぜひこのイベントでお確かめください。
+      </p>      
+    </div>
+    <div class="container">
+      <p class="report-link">本イベントは終了しました。<a href="report/">当日のレポートはこちら</a></p>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#registration">参加登録</a></li>
+      <li><a href="#keynotes">キーノート</a></li>
+      <li><a href="#sessions">セッション</a></li>
+      <li><a href="#schedule">スケジュール</a></li>
+      <li><a href="#venue">会場</a></li>
+    </ul>
+  </nav>
+  <section id="keynotes">
+    <header>
+      <h2>Keynote</h2>
+    </header>
+    <div class="container">
+      <div class="abstract">
+        <p>
+          日本上陸が待たれる「ウワサのスマホ」対応の Firefox はどうなるのか、他では得られない「Firefox だけ」の体験に注力して新たに導入される機能とは何か？パナソニックの VIERA にも搭載された Firefox OS の次の一手は？Firefox とウェブはこれからどう変わるのか、Mozilla の技術とビジョンをお伝えします！         
+        </p>
+      </div>
+      <aside>
+        <p>このセッションの一部は、英語で行われます (同時通訳つき) 。</p>
+      </aside>            
+      <div class="assets">
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=bnBH5ibsk5M&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+        </ul>
+      </div>
+      <ul class="speaker">
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/chibi-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">瀧田 佐登子</span>
+            <span class="organization">Mozilla Japan</span>
+            <span class="title">代表理事</span>
+            <div class="profile">
+              <p>
+                国内 IT 企業で UNIX・インターネット事業に携わった後、米国 Netscape の開発現場でブラウザーの国際化・日本語化に従事。その後、2004 年に Mozilla Japan を設立し、2006 年代表理事に就任。ブラウザー Firefox や Firefox OS 等 Mozilla の製品や技術、オープンソースの普及啓蒙活動を行う傍ら、慶應義塾大学大学院や中央大学理工学部で講師を務める。
+              </p>
+              <p>
+                日経ウーマン・オブ・ザ・イヤー 2009 リーダー部門受賞。2009 年度日本 OSS 貢献者賞受賞。第 9 回北東アジア OSS 推進フォーラム特別貢献者賞受賞。
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/joe-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Joe Cheng</span>
+            <span class="organization">Mozilla Corporation</span>
+            <span class="title">Product Manager, Firefox OS, Smart TV</span>
+            <div class="profile">
+              <p>
+                2014 年 6 月より Mozilla Taiwan にて Firefox OS 製品のプロダクトマネージャーとして従事。2012 年より Mozilla にて製品開発のマネージャーやプロダクトマネージャーとして努めており、パートナーと密接に関わり合いながらいくつもの Firefox OS 搭載のスマートフォンを発売し、またスマートフォンの枠に収まらない通信デバイスの開発も行った。 
+              </p>
+              <p>
+                2007 年から 2012 年の間はテクニカルアカウントマネージャーやソフトウェアプロダクトマネージャーとして HTC に勤務し、世界初の　Android 搭載電話の商品化にも関わった。モバイルに業界に関わり始めたのは 2006 年に MAVs Lab Inc. に就職してから (2007年まで勤務)。それ以前は南カルフォルニア大学およびブリティッシュコロンビア大学にて電気工学を学んでいた。 
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/marvin-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">Marvin Khoo</span>
+            <span class="organization">Mozilla Corporation</span>
+            <span class="title">Product Marketing Manager, Firefox OS</span>
+            <div class="profile">
+              <p>
+                Firefox OS の現プロダクトマーケティングマネージャー、元プロダクトマネージャー。2013 年より Mozilla。現在は Firefox OS の事業位置づけ(ポジショニング)やマーケティング用のコピーの作成、製品の啓蒙活動や訴えかけなどを行う。モバイル業界には 10 年関わっており、コンシューマー向けの電子機器について精通している。 
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="photo">
+            <img src="/static/images/events/devcon/2015/tokyo/speakers/dynamis-20151023.jpg">
+          </div>
+          <div>
+            <span class="name">浅井 智也</span>
+            <span class="organization">Mozilla Japan</span>
+            <span class="title">モバイル &amp; エコシステムマネージャー</span>
+            <div class="profile">
+              <p>
+                学生時代にウェブ技術文書を翻訳、Firefox 1.0 から Mozilla 製品の日本語リリースを担当。インターネットをすべての人々の利益になる方向へ発展させる Mozilla の目標に共感し、大学院卒業後 Mozilla Japan に参加。
+              </p>
+              <p>
+                オープンプロセスに基づく新しいものづくりを日本に広げるべく、Firefox OS の国内展開やウェブプラットフォームとアプリのエコシステム活性化に努めるほか、夢を見せるエバンジェリストとして、Mozilla 製品や最新ウェブ技術の魅力を伝えている。
+              </p>
+            </div>
+          </div>
+        </li>        
+      </ul>
+    </div>
+  </section>
+
+  <section id="sessions">
+    <header>
+      <h2>Breakout session</h2>
+      <p>
+        午後は個別の技術をより深く掘り下げるブレイクアウトセッションを行います。各時間帯、2 部屋に分かれて 2 セッションをご用意していますので、お好きなトピックの講演にご参加ください。なお、講演内容や講演者が事情により変更になることがございますのでご了承ください。
+      </p>
+    </header>
+    <ol class="container">
+      <li>
+        <div>
+          <div class="container">
+            セッション 1
+            <span class="time">13:15 - 14:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>鉄腕アニメーション！</h3>
+              <div class="abstract">
+                <p>
+                  ウェブアプリは、先に生まれたお兄さんであるネイティブアプリと比べると、ちょっと不慣れな弟のような動きに見られがちです。反応も鈍くて、やっと動きだしてもガタガタ進むので、ユーザーにとっては感動よりも、むしろイライラさせることもしばしばです。しかし、鉄腕アトムに見られるような初期のアニメ制作手法や、できたてホヤホヤの Firefox の開発ツール、そして Web Animations API のような最新のウェブテクノロジーを使うことで、お兄さんに負けないほど格好良くて、なめらかに動くウェブアプリが作れるようになります。皆さんと一緒に、日本をテレビアニメだけでなく、ウェブアニメの大国にして行ければと思います！
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=uyxq_HXK5nI&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                  <li><a href="https://people.mozilla.org/~bbirtles/pres/201511-astro-animation" class="slides">講演資料</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/brian-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">Brian Birtles</span>
+                  <span class="organization">Mozilla Japan</span>
+                  <span class="title">エンジニアリングマネージャー</span>
+                  <div class="profile">
+                    <p>
+                      2005 年にシドニー工科大学ソフト工学部を卒業後、シドニーの日本企業で画像ソフトの開発に従事。シドニーや大阪でウェブ開発者として働いたことがきっかけで、ウェブ・プラットフォーム自体の改善に興味を持つようになり、Firefox の開発には、2004 年から参加。2011 年からは、Mozilla Japan のスタッフとして Firefox のアニメーション機能の開発に従事する傍ら、現在、W3C の CSS と SVG ワーキンググループのメンバーのひとりとしてアニメーションに関わる仕様の編集を行っている。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>
+                Chrome Extensions から見る WebExtensions
+              </h3>
+              <div class="abstract">
+                <p>
+                  Chrome ウェブブラウザーで当初から提供されている Chrome 拡張機能とほぼ同じ環境が WebExtensions という名前で Firefox にも搭載されることになりました。このセッションでは、WebExtensions の基礎、Chrome 拡張機能との違い、開発における注意点などを紹介します。
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=XnZhQv9xctc&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                  <li><a href="https://docs.google.com/presentation/d/1i7Lc1c3a9_v6qEKCNTNmzwsOYa0UDfzvDz87-xHM2YA/pub?start=false&amp;loop=false&amp;delayms=3000" class="slides">講演資料</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/yoichiro-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">田中 洋一郎</span>
+                  <span class="title">Google Developers Expert (Chrome担当)</span>
+                  <div class="profile">
+                    Chrome を担当する Google Developers Expert として、いくつか Chrome 拡張機能や Chrome アプリを開発して公開している。本職ではソーシャルアプリケーションを支えるプラットフォームの仕様策定、設計、実装を行う毎日。書籍「開発者のための Chrome ガイドブック (インプレスジャパン) 」。
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            セッション 2
+            <span class="time">14:15 - 15:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>
+                Inspection &amp; tweak: Firefox を使ったフロント開発
+              </h3>
+              <div class="abstract">
+                <p>
+フロントやウェブサイトの開発に必須のツール。それがブラウザーに付属している開発ツールです。Firefox にももちろん開発ツールが付属しています。サイトやアプリのコードをブラウザーがどのように解釈し実行しているか。それらを把握し、調整を加える機能に Firefox の強みがあります。この講演では Firefox のもつ開発ツールならではの機能を、デモを交えつつ紹介し、その特徴と強みを解説します。
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=SURwejAobqE&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                  <li><a href="http://www.slideshare.net/chikoski/20151114-devtools" class="slides">講演資料</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/chiko-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">清水智公</span>                  
+                  <span class="organization">Mozilla Japan</span>
+                  <span class="title">テクニカルマーケティング</span>
+                  <div class="profile">
+                    <p>
+                      2001年慶應義塾大学政策・メディア研究科修士課程修了。大学在学中よりウェブ開発を行う。慶應義塾インフォメーションテクノロジセンタ、嘉悦大学情報メディアセンターを経て、2013年より Mozilla Japan に参加。
+                    </p>
+                    <p>
+                      現在はFirefox OS / Firefox アプリ開発と開発者ツールを中心にMozilla のテクノロジ、およびウェブ標準技術の普及活動に従事する。                    
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>TV Optimized Web App</h3>
+              <div class="abstract">
+                <p>
+                  テレビにおけるユーザーエクスペリエンスの設計はスマートフォンのそれと大きく 性質が異なってきます。テレビのスクリーンはスマートフォンよりもずと大きい代わりに、アプリの操作はテレビリモコンを介してでしか行えず、マウスやタッチスクリーンによる操作は使えません。このセッションでは、テレビに最適化されたウェブアプリを Firefox OS TV でつくる方法を紹介し、また組み込みアプリが リモコンによるナビゲーションをどのように扱っているかについても説明します。
+                </p>                       
+              </div>
+              <aside>
+                <p>このセッションは、英語で行われます (逐次通訳つき) 。</p>
+              </aside>                          
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=qHFib5lRFsY&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/luke-20151024.jpg">
+                </div>
+                <div>
+                  <span class="name">Luke Chang</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <span class="title">Senior Software Engineer</span>
+                  <div class="profile">
+                    <p>
+                      2013 年 7 月より Mozilla Taiwan にて Firefox OS のフロントエンドエンジニアとして勤務。Gaia のシステムアーキテクチャに明るく、Mozilla のパートナーと密接に関わり、商品の発表前にその技術的課題を解決している。Firefox OS TV プロジェクトにも関わっており、最初のプロトタイプの責任者でもあった。最初の TV 商品の発売後も、現在に至って TV 用にウェブライブラリや機能の最適化を行っている。Mozilla 以前は、様々なプラットフォームにおける入力システムの開発に 5 年以上関わっていた。 
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            セッション 3
+            <span class="time">15:15 - 16:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>Innovation of Web App architecture</h3>
+              <div class="abstract">
+                <p>
+                  ウェブ技術の進化は著しく、今日のフロントエンドのエンジニアはウェブ技術だけでも十分に素晴らしいサイトをつくることが可能になりました。 Mozillaでもすでに、ウェブ技術のみを用いてOS (Firefox OS)を開発するまで発展しましたが、その進歩は永遠に止まりません。本セッションでは、Firefox OS のGaia アーキテクチャの可能性をより拡げるような最新のウェブ技術を紹介し、最新のGaia アーキテクチャ NGAにこれら技術がどのように組み込まれているのかについても説明します。                  
+                </p>
+              </div>
+              <aside>
+                <p>このセッションは英語で行われます (同時通訳つき) 。</p>
+              </aside>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=UP-7Mv-9Wko&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/steve-20151023.jpg">
+                  </div>
+                <div>
+                  <span class="name">Steve Chung</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <span class="title">Engineer</span>
+                  <div class="profile">
+                    <p>
+                      Mozilla Taiwan のフロントエンドエンジニア。 Firefox OS の Gaia アプリプロジェクトの一員として最新のウェブ技術をウェブアプリに落としこむことに従事する。 以前は Android と iOS アプリ用のハイブリッドフロントエンド開発システムの開発を行う。現在は Firefox OS のコアアプリの開発に集中し、ウェブアプリの未来のかたちについて日々考えている。 
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>Porting C/C++ code to Web</h3>
+              <div class="abstract">
+                <p>
+                  Mozilla では Emscripten や asm.js を開発することを通じて既存の C/C++ コードをウェブブラウザーで高速に実行する環境を作ってきました。この Emscripten を利用したものはゲームや Firefox OSでも実際に投入されています。この Emscripten の使用方法から、現在各社で仕様を策定している Web Assembly までを網羅して解説いたします。
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=XKybZiNBSEY&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                  <li><a href="https://docs.google.com/presentation/d/1liKVavDBbcg0w8izutvVopCWKGu5M7EJPvst1JlpN_s/edit#slide=id.p" class="slides">講演資料</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/mkato-20151023.jpg">
+                </div> 
+                <div>
+                  <span class="name">加藤 誠</span>
+                  <span class="organization">Mozilla Japan</span>
+                  <span class="title">テクニカルアドバイザ</span>
+                  <div class="profile">
+                    1998 年に Netscape がオープンソース化した当初より Mozilla プロジェクトに加わり、日本初のコミッターとなったエンジニアの一人。日本タイムシェア株式会社 (現ソラン株式会社) 、マイクロソフト株式会社など様々なソフトウェアベンダーで、製品開発に携わった後、2009 年より一般社団法人 Mozilla Japan にテクニカルアドバイザーとして参加。Mozilla プロダクトの開発を海外のエンジニアと共に行う傍ら、セミナーや勉強会などを通じて、Mozilla のテクノロジーを国内に広く伝える講演なども積極的に行う。
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            セッション 4
+            <span class="time">16:15 - 17:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>
+                The Web for Everyone - Let's fix it!
+              </h3>
+              <div class="abstract">
+                <p>
+                  ウェブを利用する際、使っているデバイスやブラウザーによってユーザーが制限を受けるべきではありません。この講演では、日本のモバイル用ウェブサイトでよく見られる失敗例を取り上げた上で、どんなデバイスにも対応する互換性のあるサイト作りに向けての問題点の特定や、コードやツールによる解決方法についてレクチャーします。また、ウェブ互換性の問題を放置した場合、どうなるかについてもお伝えします。
+                </p>
+              </div>
+              <aside>
+                <p>このセッションは英語で行われます (同時通訳つき) 。</p>
+              </aside>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=pW2eWPQ09MI&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/kerl-20151023.jpg">
+                </div>                
+                <div>
+                  <span class="name">Karl Dubost</span>
+                  <span class="organization">Mozilla Corporation</span>
+                  <span class="title">Web Opener</span>
+                  <div class="profile">
+                    <p>
+                      20 年にわたりウェブ業界に携わっている日本在住のフランス人。ウェブ関連会社、W3C、Opera ソフトウェアでの経験を経て、2 年前よりMozilla で Open Webの推進やウェブの互換性の問題解決に取り組む。
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>ES6 in Practice</h3>
+              <div class="abstract">
+                <p>
+                  今年 6 月に正式公開された ECMAScript 6 は、JavaScript 開発に大きな進化をもたらします。すでにモダンブラウザーでは半数以上の機能が実装され、さらに Babel 等のトランスパイラを組み合わせることで多くの機能を使うことができる状態にあります。また、来年以降も毎年新しい仕様が標準化されていくことが予定されています。このセッションでは、そのような状況に現実のプロジェクトでどう向き合っていくべきか、新しい機能を使ってどのようなコードを書いていくべきかを探っていきます。 
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=iuXC4HIJadY&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                  <li><a href="http://www.slideshare.net/teppeis/es6-in-practice" class="slides">講演資料</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/teppeis-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">佐藤 鉄平 (@teppeis)</span>
+                  <span class="organization">サイボウズ株式会社</span>
+                  <span class="title">グローバル開発本部 副本部長</span>
+                  <div class="profile">
+                    <p>
+                      サイボウズ株式会社にて kintone の開発や開発組織のマネジメントに従事。
+                      WEB+DB PRESS Vol.87 (技術評論社) にて ECMAScript 6 特集を執筆。
+                    </p> 
+                  </div>
+                </div>
+              </div>              
+            </div>          
+          </li>
+        </ul>        
+      </li>
+
+      <li>
+        <div>
+          <div class="container">
+            セッション 5
+            <span class="time">17:15 - 18:00</span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <div class="session">
+              <h3>ウェブ技術の今日とこれから：View Source Conference  レポート</h3>
+              <div class="abstract">
+                <p>
+                  2015 年 11 月。アメリカのポートランドで、Mozilla 主催のイベント View Source Conference が開催されます。このイベントは、フロントエンジニア / ウェブ開発者を対象に、WebVR や Web Assembly といった Mozilla の開発している技術を中心にウェブ技術の最先端とこれからを展望できるイベントとなっています。このセッションでは、View Source Conference で講演されたトピックや、開発者同士の議論、会場の雰囲気などを報告しつつ、ウェブのこれからについて展望します。
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=UmkgC0rlGxU&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/myakura-20151023.jpg">
+                </div>
+                <div>
+                  <span class="name">矢倉 眞隆</span>
+                  <div class="profile">
+                    <p>
+                    「ホームページを作りたい」という思いからHTML, CSSを学び始めるが、ホームページを作るよりそちらの方に興味を持ってしまい、以来HTML, CSS, 各種APIなどのウェブ標準仕様やウェブブラウザーの動向を追いかける毎日をおくる。これまでにHTML5やCSS3に関するブログ記事・雑誌記事の執筆、セミナー・勉強会などでの公演、海外のウェブ開発関連書籍の監訳、ウェブ標準仕様書や海外のブログ記事の翻訳などを行う。いろんなところでmyakura。
+                    </p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </li>
+          <li>
+            <div class="session">
+              <h3>Embedded Web で加速する Web of Things</h3>
+              <div class="abstract">
+                <p>
+                  Web of Things、Internet of Things など様々なキーワードが話題になるが、こういったトレンドにウェブはどう向き合うのだろうか。近年、HTML5 をはじめとしたウェブ技術は、パソコン、スマートフォンから飛び出し、組み込み機器の分野へ進出しようとしている。テレビ機器、ゲームコンソール、カーナビ、デジタルサイネージのような各産業界でもウェブ技術の応用が進もうとしている。そして個人に目を向ければ、Raspberry Pi や CHIRIMEN など、Single Board Computer を使った電子工作も流行っているが、ここにもウェブ技術を持ち込む動きがある。本セッションでは、こういったウェブ技術の応用事例を紹介つつ、標準化の動向について解説し、Web of Things とは何かを探る。
+                </p>
+              </div>
+              <div class="assets">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=b-KuOukHszk&amp;list=PLQ3NXqTa9I-3YSG9wV9qQQSlnu-m34vgG" class="video">動画</a></li>
+                </ul>
+              </div>
+              <div class="speaker">
+                <div class="photo">
+                  <img src="/static/images/events/devcon/2015/tokyo/speakers/futomi-20151023.jpg">                  
+                </div>
+                <div>
+                  <span class="name">羽田野 太巳</span>
+                  <span class="organization">株式会社ニューフォリア</span>
+                  <span class="title">取締役 最高技術責任者</span>
+                  <div class="profile">
+                    <p>
+                      1993年 日本電信電話(株) (NTT) 入社。伝送系エンジニアとして通信系インフラの保守運用を経て、通信系SIとして企業通信系システム設計に従事。1999年 NTTぷららに出向、インターネット接続サービスおよびサーバーのシステム運用、サービス企画に従事し、IPTVサービスの立ち上げに携わる。2004年独立後、(有)futomiを設立し、ウェブ・システム開発の傍ら、ウェブコンサルティングも手がける。
+                    </p>
+                    <p>
+                      HTML5の気運が高まる以前からHTML5の探求を始め、HTML5専門サイト「HTML5.jp」を立ち上げ、HTML5の普及啓蒙に関わり、HTML5関連書籍や雑誌記事執筆も行う。2011年 (株)ニューフォリア取締役 (最高技術責任者) に就任し、ウェブベースのアプリケーション開発やデジタルサイネージ・システムの研究開発の指揮を執る。W3C会員としてウェブの標準化にも携わる。
+                    </p>
+                    <p>
+                      主な著書に『HTML5 Web標準API バイブル』 (ソシム、) 『HTMLとJavaScriptではじめるWindowsストアアプリ開発入門』、『徹底解説 HTML5 APIガイドブック ビジュアル系API編』、『徹底解説HTML5マークアップガイドブック 最終草案対応版』 (秀和システム) 、共著に『HTML5ガイドブック 増補改訂版 (Google Expert Series) 』 (インプレスジャパン) など。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>          
+          </li>
+        </ul>
+      </li>        
+      
+    </ol>    
+  </section>
+
+
+  <section id="schedule">
+    <header>
+      <h2>Schedule</h2>
+    </header>
+    <ol class="container">
+      <li>
+        <span class="time">10:00</span>
+        <span class="content">開場</span>
+        <span class="room">4F ホール</span>
+      </li>
+      <li>
+        <span class="time">10:30 - 12:10</span>
+        <span class="content">キーノート</span>
+        <span class="room">ホール(4F)</span>
+      </li>
+      <li>
+        <span class="time">12:10 - 13:15</span>
+        <span class="content">
+          昼食休憩
+          <span class="note">
+             (各自ご自由にお取りください。ご持参いただき、会場内でお取りいただくことも可能です) 
+          </span>
+        </span>
+        <span class="room"></span>
+      </li>               
+      <li>
+        <span class="time">13:15 - 14:00</span>
+        <span class="content">セッション 1</span>
+        <span class="room">ホール(4F) &amp; ルーム A(B1)</span>
+      </li>
+      <li>
+        <span class="time">14:15 - 15:00</span>
+        <span class="content">セッション 2</span>
+        <span class="room">ホール(4F) &amp; ルーム A(B1)</span>
+      </li>
+      <li>
+        <span class="time">15:15 - 16:00</span>
+        <span class="content">セッション 3</span>
+        <span class="room">ホール(4F) &amp; ルーム A(B1)</span>
+      </li>
+      <li>
+        <span class="time">16:15 - 17:00</span>
+        <span class="content">セッション 4</span>
+        <span class="room">ホール(4F) &amp; ルーム A(B1)</span>
+      </li>
+      <li>
+        <span class="time">17:15 - 18:00</span>
+        <span class="content">セッション 5</span>
+        <span class="room">ホール(4F) &amp; ルーム A(B1)</span>
+      </li>                        
+      <li>
+        <span class="time">18:30 - 20:00</span>
+        <span class="content">懇親会</span>
+        <span class="room">2 階 レストラン (別途要申込)</span>
+      </li>
+    </ol>
+  </section>
+  
+  <section id="venue">
+    <header>
+      <h2>Access</h2>
+    </header>
+    <div class="container">
+      <div id="map-overlay">
+        <h3>会場</h3>
+        <span class="name">TEPIA ホール</span>
+        <span class="address">東京都港区北青山2-8-44</span>
+        <span class="access">東京メトロ銀座線外苑前駅3番出口から徒歩4分</span>
+      </div>
+      <div id="map">
+      </div>
+    </div>
+  </section>
+
+  <section id="registration">
+    <header>
+      <h2>Registration</h2>
+    </header>
+    <div class="container">
+      <table>
+        <tr>
+          <th>日時</th>
+          <td>
+            2015 年 11 月 15 日 (日) 10:30 ～ 18:00  (受付 10:00 ～) 
+            <spanc class="note">別途懇親会も開催いたします</span>
+          </td>
+        </tr>
+        <tr><th>会場</th><td>TEPIA ホール</td></tr>
+        <tr><th>参加費</th><td>無料 <span class="note">懇親会は事前申し込みの上、参加費 1,000 円を当日お支払いいただきます</span></td></tr>
+        <tr>
+          <th>定員</th>
+          <td>
+            300 名
+          </td>
+        </tr>
+        <tr><th>主催</th><td>一般社団法人 Mozilla Japan</td></tr>
+        <tr><th>ハッシュタグ</th><td>#fxdevcon</td></tr>
+        <tr>
+          <th>懇親会</th>
+          <td>
+            懇親会 カンファレンス終了後に 2階レストランにて開催します。 
+            <span class="note">
+              なおカンファレンス参加者のみご参加いただけます。別途、お申し込みが必要です (定員 100 名) 
+            </span>
+          </td>
+        </tr>
+      </table>
+    <!--
+    <a class="registration" href="https://mozilla.doorkeeper.jp/events/33579">参加申し込み</a>
+      <a class="registration" href="https://mozilla.doorkeeper.jp/events/33580">懇親会への参加申し込み</a>
+    -->
+    </div>
+  </section>
+</section>
+<?php
+  
+$extra_footers = <<<EXTRA_FOOTERS
+    <script src="/static/scripts/events/devcon/2015-tokyo.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBL2X57AerrAo8pAZnANImuouuU2qFPk0&amp;callback=initMap" async defer></script>
+EXTRA_FOOTERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

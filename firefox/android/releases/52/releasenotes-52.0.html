@@ -1,0 +1,38 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'android';
+$_version = '52.0';
+$_date = '2017-03-07';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="new">
+              <h4>新機能</h4>
+              <ul class="section-items">
+                <li id="note-786934">
+                  <p>Android の通知バー上に一時停止や再開を行えるメディアコントロールを表示するようにしました。
+これにより、Firefox 上で音声もしくは動画が再生されている間 (特にモバイルデータを消費している場合) に、簡単にコントロールへアクセスしたり、そのメディアの情報を把握したりできるようになります。</p>
+                </li>
+                <li id="note-786930">
+                  <p>APK ファイルサイズを 5 MB 以上削減し、ダウンロードとインストールの高速化を図りました。</p>
+                </li>
+                <li id="note-786921">
+                  <p>安全でない HTTP サイトによる「secure」属性付き Cookie の設定を禁止する Strict Secure Cookies 仕様を実装しました。場合によっては、安全でないサイトが同じベースドメインから発行された既存の「secure」な Cookie と同名の Cookie を設定することも禁止されます。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-786997">
+                  <p><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox.html#firefox<?= $_version ?>">いくつかのセキュリティ問題</a> を修正しました。</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

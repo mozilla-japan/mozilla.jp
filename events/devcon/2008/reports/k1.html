@@ -1,0 +1,102 @@
+<?php
+
+$page_title         = 'Firefox Mobile -The One Web- | レポート | Firefox Developers Conference 2008';
+$body_id            = 'events-devcon-2008-report';
+$body_class         = 'sand news events devcon';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/devcon/2008/' => 'Firefox Developers Conference 2008',
+  '/events/devcon/2008/reports/k1' => 'レポート：基調講演 (1) 「Firefox Mobile -The One Web-」'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      #sidebar { width: 400px; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name">Firefox Developers Conference 2008 Report</h1>
+                <h2 role="presentation">基調講演 (1) 「Firefox Mobile -The One Web-」<br>〜ウェブによって複雑化するモバイル市場に新たなイノベーションを生み出す環境とは〜</strong></h1>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>Firefox Developers Conference 最初の基調講演では、Mozilla Corporation のモバイル担当バイスプレジデントの Jay Sullivan より「Firefox Mobile -The One Web-」というタイトルで、世界に拡大するモバイル市場に向けての取り組みについて話をしました。</p>
+              <h4>ウェブは情報の窓口という原点に</h4>
+              <p>現在、Mozilla ではモバイル市場への対応を進めていますが、私からは対応製品の具体的な仕様や次期リリースといった話ではなく、主に Mozilla の将来的な取り組みについてお話します。</p>
+              <p>ブラウザーが独占的だった状況に対し、Mozilla は Firefox を提供することで、ウェブの世界に新しいイノベーションのカタチを提案してきました。それはユーザーやデベロッパ、コンテンツメーカーにとっても大きな影響を与えたと思っています。同様にモバイルにおいても、ウェブをオープンで標準化された健全なプラットフォームとするため、必要な価値や変化をもたらしたいと考えています。それは我々の使命でもあり、Mozilla ではただ単なるモバイル向けのブラウザーを構築するのではなく、イノベーションのためのプラットフォームとなるものを展開したいと考えています。</p>
+              <p>ウェブにアクセスする方法は、多くの先進国においては今のところデスクトップが主流ですが、国によってそれは違います。日本においてもみんな携帯電話でインターネットにアクセスしていますし、例えばケニアのナイロビでは、銀行口座より携帯電話を持っている人の方が多くなっています。ナイロビでは携帯電話は財布として、銀行としても利用されており、情報にアクセスするにも携帯電話が使われています。</p>
+              <p>そのようにモバイルが生活の中心になってくると、私たちが今デスクトップで経験してるのと同じものをモバイルでも実現できるようにする必要があります。ユーザー、デベロッパ、あるいは使う端末などによって得られる情報に差があってはならないのです。つまり、我々は単なるイノベーションだけでなく、情報を入手しやすくする方法なども合わせて提案しなければならないと考えているのです。</p>
+              <h4>Fennec プロジェクトが目指しているもの</h4>
+              <p>モバイル市場に向けての取り組みとして現在進行中なのが「Fennec」です。「Fennec」というのはFirefox をモバイルデバイスに導入するのを目的としたプロジェクトのコードネームです。単なるモバイル環境への移植というのではなく、Firefox で成功したのと同じコンセプトを、次のデバイス、異なる環境でも実現することを目指しています。</p>
+              <p>しかし、デバイスが異なれば使い方も実装方法も異なってきます。モバイルデバイスでは画面サイズや文字入力の仕方が注目されていますが、位置情報やカメラなどの機能を使ってできることもあります。Fennec の詳しいデモをする前に、モバイルでもデスクトップと同様の体験を可能とするための、いくつかキーとなるアイデアを紹介します。</p>
+              <p>まず、モバイルデバイスでは文字入力が難しいため、最小限のキー入力で操作できるよう、1 文字入力するたびに予測候補を返すスマートバーを実装します。更にパソコンのブラウザーなどと情報共有する Weave という機能を統合し、スマートバーで活用したり、パソコンで見ていたページをそのまますぐモバイルでも見られるようにします。</p>
+              <p>また、スクリーン全体を使ってウェブページを表示します。コントローラは必要なときにだけ表示されるようにすることで、モバイルデバイスの小さな画面でも快適にウェブを見られるようにします。そして、当然ながら、Firefox の特徴であるアドオンについても、デスクトップ同様に使えるようにします。</p>
+              <p>ユーザーインタフェイスについては、タッチスクリーン版とキーボード操作版の 2 つを並行開発しています。プラットフォームについても、Linux ベースの Nokia インターネットタブレットと平行して、Limo という Linux のモバイルコンソーシアムとも協力しているし、Windows Mobile 版や Symbian についても開発を進めています。</p>
+              <h4>業界の仕様標準化への取り組みも視野に</h4>
+              <p>デベロッパがモバイル市場で成功したいと思うならば、多くのモバイル・プラットフォームへの対応が必要になります。しかし、それぞれ開発プログラミングの言語やツールキットも異なっているため、すべてに対応するのは容易ではありません。配信するためにはいろいろなマーケットプレイスの担当者やキャリアの人たちとも交渉しなければならないし、その後も継続して複数のプラットフォームの複数のバージョンに対し、保守やアップグレードが求められるなど、多くの課題をクリアしなければビジネスにならないのです。そのため、現時点でモバイル市場で成功しているのは豊富な資金を持つ企業ばかりで、スタートアップ企業にとっては大きな参入障壁がある市場になってしまっています。</p>
+              <p>こうした問題を解決する方法のひとつとしては、ブラウザーからアプリケーションを配信する方法があります。ユーザーがブラウザーから検索した URL をクリックするだけで、欲しいアプリケーションをダウンロードできるようにすれば、各ストアから承認を得る必要はなくなります。それもワンクリックで、できるだけ簡単に行なえるようにしたほうがいいでしょう。</p>
+              <p>ユーザーインタフェイスも、天気予報の見せ方ひとつとってもデバイスによって表示方法が異なるのが現状です。そうした状況を変えることは Mozilla 単独ではとても対応できませんので、標準化に向けた働きかけを行なう必要があります。すでに一部の団体とは話し合いを始めていますが、今後も様々な標準化団体や企業と協力していきたいと思っています。その結果、数多くのアプリケーションを Gecko や Firefox、Fennec、あるいは Opera などでも使えるようにしたい。つまり、十分に力を持ったデベロッパが、どのようなプラットフォームでも開発に取り組めるよう協力したいと考えています。</p>
+              <h4>妥協せず開発に取り組める環境を提供</h4>
+              <p>Mozilla が目指しているのは、リッチなモバイルアプリケーションを構築できる環境をデベロッパに向けて提供すること。モバイル向けフルブラウザーのアプリケーション開発は、まだやりたいことが十分できないのが実情です。少ないかもしれないけれど、リッチなインタラクティブ・ゲームをモバイルでやりたいといったニーズにも応えることはできるはずなのです。</p>
+              <p>こうした問題は JavaScript の開発技術の向上などによってある程度は解決に向かうだろうと考えています。たとえばモバイルのチームでは、モバイルデバイス向けの技術を開発している ARM のような企業と一緒に技術の最適化にも取り組むといったこともしています。JavaScript はこの 2 年間で改善され、詳しくはお話できませんが、抜本的な変革によって何十倍ものスピードアップを図ろうとしています。こうした技術によって十分な速度が得られるようになれば、開発でもいろいろなことができるようになります。</p>
+              <p>モバイル向けにこれから先どのような機能が登場するかといった例のひとつとして Geode を紹介しましょう。Geode はウェブページがユーザーの位置情報を JavaScript から取得できるようにするもので、Fennec の最初のバージョンにも同様の機能が実装されます。セキュリティやプライバシーは最も大事なものなので、ウェブページがユーザーの位置情報を取得できるかどうか、位置情報を送信する場合でも正確な位置を知らせるのか、おおよその位置を知らせるのか、すべてユーザー自身がコントロールできるようにしています。</p>
+              <p>同じようなアイデアを多くの企業が考えていて、これから新しいサービスがどんどん登場するでしょう。それらに対して、デバイスのスピードやバッテリー、ネットワークが改善されるようになり、将来的にモバイルでもデベロッパは開発で妥協しなくてもよくなるはずだと考えています。</p>
+              <p>大切なのは、ウェブをいかに良い場所にするかを考えること。人が大好きになってくれる、また生活をより良くするようなアプリケーションを実現するには、デベロッパが自分の夢を実現できる環境が必要で、そういう世界をいつも作りたいと思っています。</p>
+              <p>これから先 2 年間でどのようなことが起きるのかはわかりませんが、今までデスクトップで起きたような変革がモバイルの世界にもやってきて、ユーザーにとってクリエイティブなより良い世界が構築できることを願っています。</p>
+              <h3>このセッションの動画を見る</h3>
+              <p><a href="http://www.soi.wide.ad.jp/class/20080048/slides/01/" rel="nofollow" class="movie-play">動画を見る</a></p>
+              <ul>
+                <li>動画の公開期間は 3 ヶ月間となります。(2009 年 4 月 28 日まで)</li>
+                <li>動画配信は WIDE University, School of Internet (SOI) 様のご協力をいただいております。</li>
+                <li>動画を見るには RealPlayer Basic (G2 以上) または RealOne Player が必要です。(<a href="http://www.soi.wide.ad.jp/class/video99.html" rel="nofollow">詳細</a>)</li>
+              </ul>
+              <h3>関連リンク</h3>
+              <ul>
+                <li><a href="/events/devcon/2008/">Firefox Developers Conference 2008</a></li>
+                <li><a href="https://www.mozilla.org/projects/fennec/1.0a1/releasenotes/">Fennec 1.0 Alpha 1</a></li>
+                <li><a href="https://mozillalabs.com/en-US/projects/weave/">Mozilla Labs - Weave</a></li>
+                <li><a href="https://mozillalabs.com/en-US/2008/10/introducing-geode/">Mozilla Labs - Geode</a></li>
+              </ul>
+            </div><!-- end #main-content -->
+            <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+              <h3>写真</h3>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-1.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Mozilla Corporation モバイル担当バイスプレジデントの Jay Sullivan</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-3.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">モバイル用ブラウザーの開発コードネームの「Fennec」はアフリカのサハラ砂漠に生息する小さなキツネで大きな耳が特長</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-4.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">公開されている Fennec アルファ版のトップページ</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-5.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">アプリケーションを開発する場合、現状では複数のプラットフォームに対応しなければ成功できないことが、デベロッパにとって大きな参入障壁になっている</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-6.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">モバイル向けアプリケーションの開発においてはコストやメンテナンスの負荷が製品の質にも影響している</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-7.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Java 開発では抜本的な革新を行なうことで、この 1 年でも大きなスピードアップを図ることができた</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1-2.jpg" width="400" height="300" alt="" itemprop="contentURL">
+              </figure>
+            </aside>
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

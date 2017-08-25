@@ -1,0 +1,203 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 0.9 (One Tree Hill) リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/0.9/releasenotes/' => 'Firefox 0.9 (One Tree Hill)'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 0.9 (One Tree Hill)</span></span></h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+<p style="background-color: #ff9; border: 3px dotted black; padding: .5em;"><strong style="background-color: #fc3;">Firefox の新バージョンがリリースされています</strong>。最新版に関する新着情報とダウンロードは <a href="https://www.mozilla.org/ja/firefox/">こちらから</a> どうぞ。</p>
+<p>Firefox は、ウェブブラウジングをかつてなく効率的にする、フル機能の高速ブラウザーです。Firefox に関する <a href="http://texturizer.net/mozilla/jp/firefox/" rel="nofollow">詳しい情報</a> もご覧ください。</p>
+<p>Firefox 0.9 は <strong>テクノロジープレビュー</strong> です。このソフトウェアは、ほとんどの場合、デフォルトブラウザーとして信頼できるほど十分に機能しますが、そのパフォーマンスや安定性については一切保証できません。これはまだ (バージョンが 1.0 に達していない) リリース前の製品ですので、基幹システムとして信頼すべきではありません。詳しくは <a href="https://www.mozilla.org/ja/MPL/">ライセンス規約</a> をご覧ください。</p>
+
+    </div>
+    <div id="main-content">
+
+<p>このリリースノートには、Firefox 0.9 のリリースに関する <a href="#new">新機能</a>、<a href="#download">ダウンロード</a>、<a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#FAQ">よくある質問</a> などが載っています。Bugzilla にバグを報告する前に、このリリースノートと <a href="http://texturizer.net/mozilla/jp/firefox/bugs.html" rel="nofollow">バグの登録方法</a> をよくお読みください。</p>
+<p>Firefox に関するあなたのフィードバックをお待ちしています。<a href="http://www.mozillazine.org/">MozillaZine</a> によって運営されている <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> にぜひ参加してください。</p>
+
+<!-- 新機能 -->
+<h2><a name="new">新機能</a></h2>
+<p>今回のリリースの新機能をご紹介します。</p>
+<dl class="news">
+  <dt>新しいデフォルトテーマ</dt>
+  <dd>デフォルトテーマがアップデートされ、3 種類すべてのプラットフォームにおいて一貫したアピアランスが提供されるようになりました。Firefox 0.9 の Windows 版には、すっきりと引き締まった新テーマが統合されています。今後のリリースで Linux 版 (GNOME) テーマの微調整も行われます。</dd>
+  <dt>包括的なデータ移行支援</dt>
+  <dd>Firefox への乗り換えがかつてなく簡単になりました。Firefox は、お気に入り、履歴、個人設定、Cookie、パスワードなど、様々なデータを Internet Explorer からインポートできるようになりました。また、Mozilla 1.x、Netscape 4/6/7、Opera からのインポートも可能です。今後のリリースで、Mac OS X 版と Linux 版にも、Safari、OmniWeb、Konqueror といったブラウザーからの移行支援機能が実装されます。</dd>
+  <dt>拡張機能・テーママネージャー</dt>
+  <dd>拡張機能マネージャーとテーママネージャーが新たに加わり、アドオンの管理とアップデートが大変便利になりました。また、Firefox の新バージョンがリリースされるとアップデートを通知してくれる「スマートアップデート機能」も搭載されています。</dd>
+  <dt>ダウンロードサイズの削減</dt>
+  <dd>Firefox の Windows 版インストーラが、わずか 4.7 MB になりました。</dd>
+  <dt>ヘルプ</dt>
+  <dd>新しいオンラインヘルプシステムが利用可能になりました。</dd>
+  <dt>数多くのバグの修正と機能向上</dt>
+  <dd>画像のコピー、オートコンプリート (自動補完) リストから個々のアイテムを削除できる機能、gnome-vfs による GNOME 上での SMB/SFTP サポート、ブックマークや検索機能の改良、その他様々な洗練が、ブラウジング経験をより一層豊かなものにします。</dd>
+</dl>
+<h3>Linux/GTK2 ユーザー向け</h3>
+<dl class="news">
+  <dt>インストーラ</dt>
+  <dd>Firefox の Linux/GTK2 版はインストーラで提供されるようになりました。この新しいインストーラによって、インストールの手順がとても簡単になります。</dd>
+  <dt>ルック＆フィールのアップデート</dt>
+  <dd>現在進められている改良によって、Firefox のメニューなどが GTK2 テーマにより忠実になります。</dd>
+  <dt>Linux/GTK2 版 Talkback</dt>
+  <dd>このクラッシュ報告ツールを利用して Talkback レポートを送信し、クラッシュの原因突き止めにご協力ください。</dd>
+</dl>
+<p>詳しくは <a href="http://www.squarefree.com/burningedge/bigger-picture.html" rel="nofollow">The Burning Edge: Bigger Picture</a> をご覧ください。</p>
+
+<!-- 必要システム構成 -->
+<h2><a name="requirements">必要システム構成</a></h2>
+<p>インストールの前に、お使いのコンピューターが <a href="/firefox/system-requirements/">必要システム構成</a> に合っているか確認してください。</p>
+
+<!-- ダウンロード -->
+<h2><a name="download">ダウンロード</a></h2>
+<p>mozilla.org は、Windows、Linux、Mac OS X 向けのバイナリを提供しています。</p>
+<dl>
+  <dt>Windows</dt>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/FirefoxSetup-0.9.exe" rel="nofollow">インストーラ</a> (4.7 MB)</dd>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/Firefox-win32-0.9.zip" rel="nofollow">ZIP フォーマット</a> (6.0 MB)</dd>
+  <dt>Linux (GTK2+XFT)</dt>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/firefox-0.9-i686-linux-gtk2+xft-installer.tar.gz" rel="nofollow">インストーラ</a> (8.1 MB)</dd>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/firefox-0.9-i686-linux-gtk2+xft.tar.gz" rel="nofollow">tar.gz フォーマット</a> (7.8 MB)</dd>
+  <dt>Mac OS X</dt>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/firefox-0.9-mac.dmg.gz" rel="nofollow">dmg.gz フォーマット</a> (8.5 MB)</dd>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/firefox-0.9-mac.dmg.bz2" rel="nofollow">dmg.bz2 フォーマット</a> (7.5 MB)</dd>
+</dl>
+
+<div style="border: 1px solid #ccc; padding: 0 1em; color: #333; background-color: #f3f3f3;">
+<h3>コントリビューターから提供されたビルド</h3>
+<p>これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合があります。</p>
+<dl>
+  <dt>Solaris x86 (AMD Opteron を含むすべての x86 プロセッサー)</dt>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/contrib/firefox-0.9-i386-pc-solaris2.8.tar.gz" rel="nofollow">tar.gz 形式</a> - Sun 提供のフォルテビルド (<a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/contrib/firefox-0.9-i386-pc-solaris2.8.tar.gz.README" rel="nofollow">Readme</a>) (<a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/contrib/firefox-0.9-i386-pc-solaris2.8.tar.gz.MD5SUM" rel="nofollow">MD5SUM</a>)</dd>
+  <dt>Solaris SPARC</dt>
+  <dd><a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/contrib/firefox-0.9-sparc-sun-solaris2.8.tar.gz" rel="nofollow">tar.gz 形式</a> - Sun 提供のフォルテビルド (<a href="http://aist.ring.gr.jp/archives/net/www/mozilla/firefox/releases/0.9/contrib/firefox-0.9-sparc-sun-solaris2.8.readme" rel="nofollow">Readme</a>)</dd>
+</dl>
+<h3>ローカライズビルド</h3>
+<p><a href="https://www.mozilla.org/projects/l10n/mlp_otherproj.html#firefox">MLP</a> のボランティアによって提供されています。</p>
+<dl>
+  <dt><a href="https://www.mozilla.org/projects/l10n/mlp_otherproj.html#ffox_0.9">現在利用可能な言語</a></dt>
+  <dd>繁体字中国語 (台湾)</dd>
+</dl>
+</div>
+
+<!-- インストール -->
+<h2><a name="install">インストール</a></h2>
+<p>Firefox のインストーラか圧縮アーカイブをダウンロードしたら、以下の手順に従ってインストールしてください。</p>
+<p>最初に、これらのプレビューリリースについては、<strong>まず前のバージョンの Firefox をアンインストールすることを強くお勧めします</strong>。古いバージョンの上に重ねてインストールすると、予測不可能な問題が起きる場合があります。古いバージョンに上書きインストールして、バグを登録しようと思っている場合は、その前に、何も入っていない空のディレクトリーにクリーンインストールを実行してください。</p>
+<h3>Windows</h3>
+<p>インストーラ (<tt class="filename">FirefoxSetup-0.9.exe</tt>) をダブルクリックするとインストールが開始されます。</p>
+<p><strong>注意</strong>: 別の (以前のバージョンの) Firefox に上書きインストールしてはいけません。Firefox 0.9 を Firefox 0.8 と同じフォルダーにインストールしたい場合は、先に Firefox 0.8 をアンインストールしてください。このアップグレードの問題は今後のリリースで修正されます。</p>
+<h3>Mac OS X</h3>
+<p>Firefox の圧縮ディスクイメージをダブルクリックしてマウントします。お使いのブラウザーによっては、イメージが自動的に展開・マウントされる場合もあります。マウントされた Firefox アプリケーションをハードディスクにドラッグしてください。Dock に追加したい場合は、アイコンを Dock にドラッグしてください。</p>
+<h3>Linux/GTK2</h3>
+<p>tarball を展開して、以下のようにインストーラを実行してください。</p>
+<p><code>tar -xzvf firefox-0.9-i686-linux-gtk2+xft.tar.gz<br>cd firefox-0.9-i686-linux-gtk2+xft/<br>./firefox-installer</code></p>
+<h3>その他のプラットフォーム</h3>
+<p>圧縮アーカイブを展開して <tt>firefox</tt> を実行してください。</p>
+
+<!-- アンインストール -->
+<h2>アンインストール</h2>
+<p>Firefox をアンインストールするには、以下の手順に従ってください。</p>
+<h3>Windows</h3>
+<p>[スタート] メニューから [コントロール パネル] を選択してください。パネルが開いたら [プログラムの追加と削除] をダブルクリックしてください。リストの中から &quot;Mozilla Firefox (0.9.)&quot; を見つけて [削除] ボタンをクリックするとアンインストールされます。</p>
+<h3>Mac OS X</h3>
+<p><tt class="filename">Firefox</tt> アプリケーションをゴミ箱にドラッグしてください。</p>
+<h3>その他のプラットフォーム</h3>
+<p><tt class="filename">firefox</tt> フォルダーを削除してください。</p>
+<p>この手順でアンインストールを完了しても、また次に Firefox をインストールする場合を考えて、あなたのプロファイルは削除されず、そのまま保存されます。Firefox の <a href="http://texturizer.net/mozilla/jp/firefox/edit.html#profile" rel="nofollow">プロファイルフォルダー</a> を削除したい場合は、以下の手順に従ってください。</p>
+<h3>Windows</h3>
+<p>Application Data フォルダーを探します。このフォルダーは通常 <tt class="filename">Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data</tt> にあります。Application Data フォルダーは隠しフォルダーなので、Windows エクスプローラでこれらを表示させるよう設定してください。ユーザー名が &quot;Joe&quot; で、Documents and Settings フォルダーが C ドライブにある場合、あなたのプロファイルフォルダーは <tt class="filename">C:&yen;Documents and Settings&yen;Joe&yen;Application Data&yen;Mozilla&yen;Firefox</tt> にあります。この Firefox フォルダーを削除すればプロファイルデータが削除されます。</p>
+<h3>Mac OS X</h3>
+<p>自分のホームフォルダーの中にあるライブラリフォルダーを開き、<tt class="filename">Firefox</tt> フォルダー (<tt class="filename">~/Library/Firefox/</tt>) を削除してください。</p>
+<h3>その他のプラットフォーム</h3>
+<p><tt class="filename">~/.firefox</tt> を削除してください。</p>
+
+<!-- Firefox 0.8 からの注意すべき変更点 -->
+<h2>Firefox 0.8 からの注意すべき変更点</h2>
+<h3>プロファイルフォルダー</h3>
+<p>Firefox 0.9 は、以下の場所にユーザーデータを保存するようになりました。</p>
+<table border="1" cellspacing="0" cellpadding="3" style="font-size: smaller;">
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows</td><td>Documents and Settings&yen;&lt;UserName&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-mac.png" alt=""> Mac OS X</td><td>~/Library/Application Support/Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-linux.png" alt=""> Linux</td><td>~/.mozilla/firefox/</td></tr>
+</table>
+<p>Firefox 0.9 にアップグレードする前に Firefox 0.8 をデフォルトブラウザーとして使っていた場合、プロファイルのデータは新しい場所にコピーされます。古い &quot;Phoenix&quot; フォルダーは後で時間があるときにでも削除してください。</p>
+<h3>ナイトリービルドユーザーへの注意</h3>
+<p>Firefox 0.8 から 0.9 の間に、プロファイルの場所が Application Data&yen;Firefox (Windows)、~/Library/Firefox (Mac OS X) または ~/.firefox (Linux) から上記の場所に変更されました。0.9 を初めて起動する際、プロファイルに関する情報は新しい場所にコピーされますが、データは移動されません。Application Data&yen;Firefox、~/Library/Firefox または ~/.firefox フォルダーを削除してはいけません。このフォルダーにはまだプロファイルが残っており、新しい場所にある profiles.ini ファイルはそれらのプロファイルを参照するようになっているからです。手作業でファ���ルを移動し、profile.ini を編集して、レジストリが新しい場所を指すようにアップデートする必要があります。Firefox 0.8 ユーザーはこれについて心配する必要はありません。この内容は、コミュニティのテスターと、最新のナイトリービルドを追いかけている人たちだけに当てはまるものです。</p>
+<h3>旧バージョンの拡張機能とテーマ</h3>
+<p>(&quot;No XBL Binding for Browser&quot; というエラーが出てブラウザーが起動しない、あるいはテーマが壊れるといった) Firefox 0.8 に見つかったいくつかの問題を防ぐため、初めて 0.9 を起動する際、拡張機能はすべて自動的に無効化されます。また、テーマもデフォルトにリセットされます。拡張機能の API が変更されたため、これまでインストールしていた拡張機能については、Firefox 0.9 と互換性のある新バージョンを探してください。Firefox 0.9 以降、これらのアップデート作業はよりシームレスになるはずです。</p>
+
+<!-- 既知の問題 -->
+<h2><a name="issues">既知の問題</a></h2>
+<p>ここには、Firefox 0.9 に関する既知の問題の一部が載っています。新たにバグを報告する前にこのリストをお読みになり、今後も定期的にチェックするようにしてください (リリースに新しいバグが見つかった場合は更新されます)。</p>
+<ul class="issues">
+  <li>Firefox 0.9 をアクセス権限の限られた場所にインストールした場合、その場所にアクセスできるユーザーがまず最初に Firefox を実行する必要があります。そうすることで、初回起動ファイルがすべて生成されます。アクセス制限のあるユーザーが最初に Firefox を起動してしまうと、それらのファイルが正しく生成されず、アプリケーションが無限再起動ループに突入してしまうという問題があります。この問題は今後のリリースで修正されます。</li>
+  <li><strong>Mac OS X で Firefox のブラウザーウィンドウが表示されない場合</strong>、一度 Cmd+Q で Firefox を終了し、<code>~/Library/Application Support/Firefox/Profiles/default.abc/</code> (abc はランダムな文字列) を開いて <code>localstore.rdf</code> を削除してください。それから Firefox を再起動してください。このとき、ツールバーのカスタマイズ内容やウィンドウの位置など一部の設定が失われます。</li>
+  <li>あるサイトが、他のサイトによって生成された frameset に対してリンクを向けたりフォームを送信することに関して、セキュリティの問題を修正するため、いくつかの変更を行いました。しかし、これらの変更によって、一部のサイトで問題が起きる可能性があります。このフレーム機能を正当に利用しているサイトで問題に遭遇し、今まで通りに使いたい場合は、<code>about:config</code> を使って <code>docshell.frameloadcheck.disabled</code> の値を <code><strong>true</strong></code> に設定すれば、セキュリティチェックを無効化できます。もしこれでも問題が起きるサイトがあれば、バグを登録して、そのサイトの URL を教えてください。</li>
+  <li>Firefox は Mozilla Application Suite から多くのコードを利用しています。Firefox に含まれる問題の多くは、実際には Mozilla のコアコードにおける問題です。ページのコンテンツや接続性に関する問題を発見した場合、それはおそらく Mozilla の問題ですから、Bugzilla では Firefox プロダクトではなく Browser プロダクトに対して報告してください。</li>
+  <li>Windows 版では、メニューやブックマークツールバー上のフォルダーが正しく折り畳まれないことがあります。</li>
+  <li>テーマインストールの [Use this theme] (このテーマを使用する) チェックボックスは正しく機能しませんので、Tools (ツール) メニューから Themes (テーマ) を選択したあと、使いたいテーマを選択し、[Use Theme] をクリックして切り替える必要があります。また、一部のテーマは再起動しないと完全に切り替わらないことがあります。</li>
+  <li>リリース候補 (RC) を含めて、バージョン 0.8 から 0.9 までの間のナイトリービルドを使っている方で、もし Firefox が起動時に無限再起動ループに突入した場合は、プロファイルフォルダーの中にある <strong>extensions フォルダーを削除</strong> するようお勧めします。</li>
+  <li>一部のユーザーから、ダウンロードウィンドウのパフォーマンスに問題があるとの報告が寄せられています。ダウンロードウィンドウの表示が遅いと感じられる場合は <a href="https://www.mozilla.org/products/firefox/releases/dlperfpatch.xpi">このパッチ</a> をインストールしてみてください。</li>
+  <li>拡張機能アップデートとソフトウェアアップデートはまだ十分にテストされていません。このため、いくつかの問題が生じる可能性があります。これらの問題は 1.0 Beta で解決されます。0.9 リリースの時点では、まだ update.mozilla.org にアップデートサービスが用意されていないため、アップデートは利用できません。利用可能なアップデートのステータス通知を見ても、アップデートは「ありません」と表示されるはずです。</li>
+</ul>
+<p>Firefox に関するその他の問題、よくある質問、便利な使い方、一般的なヘルプについては、David Tenser の大変便利なヘルプサイト <a href="http://texturizer.net/firefox/" rel="nofollow">Firefox Help</a> [<a href="http://texturizer.net/mozilla/jp/firefox/" rel="nofollow">日本語版</a>] や、<a href="http://www.mozillazine.org/">MozillaZine</a> によって運営されている <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> をチェックしてください。</p>
+
+<!-- トラブルシューティング -->
+<h2><a name="troubleshooting">トラブルシューティング</a></h2>
+<p>前のバージョンの Firefox からアップグレードする際、あらかじめ <strong>すべての拡張機能を無効に</strong> しておけば、新たにプロファイルを作成する必要はありません。拡張機能を無効にするには、前のバージョンの Firefox を開いて、Tools (ツール) メニューの Options (オプション) を選択し、Extensions (拡張機能) パネルをクリックします。リストからそれぞれの拡張機能をクリックし、Disable Extension (拡張機能を無効にする) を選択してください。すべて無効にしたら OK をクリックして Options ウィンドウを閉じてください。これで安心して新しいバージョンの Firefox をインストールできます。</p>
+<p>Firefox をインストールしたら、前にインストールしていた拡張機能が Firefox の新バージョンに対応しているかどうか確認してから、再度インストールしてください。今後この手順は自動化される予定です。</p>
+<p>前のバージョンの Firebird や Phoenix で拡張機能を有効にしたまま同じプロファイルを使用して問題が起きた場合は、前のバージョンのブラウザーを起動し、拡張機能を無効にしてから、再度新しいバージョンの Firefox を起動してください。</p>
+<p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に新しいプロファイルを作成して問題が再現するかどうか確かめてください。プロファイルを新規作成するには、コマンドライン引数 -P を付けて Firefox を起動し、Manage Profiles (プロファイルを管理) ボタンをクリックして Create Profile (プロファイルを作成) を選択してください。設定ファイル (ブックマーク、保存したパスワードなど) をひとつずつ手作業で移行し、そのたびに問題が再現するかどうか確認してください。特定のプロファイルデータが問題を起こすことが分かった場合は、バグを登録してそのファイルを添付してください。</p>
+
+<!-- よくある質問 -->
+<h2><a name="FAQ">よくある質問</a></h2>
+<dl class="faq">
+  <dt>どのような協力ができますか?</dt>
+  <dd>私たちは少しでも多くの配布経路を必要としています。できる限り多くの友人や家族、同僚を Firefox に乗り換えさせることがあなたの使命です。もしあなたが学生なら、学校で Firefox を配布してください。リリースについて <a href="http://slashdot.org/" rel="nofollow">Slashdot</a> [<a href="http://slashdot.jp/" rel="nofollow">日本語版</a>] やその他のニュースサイトに記事を投稿してください。あなたの blog から情報を流してください。例えばあの Kazaa のように、インターネットを通じた大規模な配布が可能です。Firefox の話題をどんどん広めてください!</dd>
+  <dt>私は別のブラウザーを使っています。なぜなら...</dt>
+  <dd>もしあなたが Firefox を使っていないのなら、開発チームにその理由を教えてください。私たちは <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> に寄せられたフィードバックに目を通しています。</dd>
+  <dt>なぜ私が送ったメールに返事をくれないのですか?</dt>
+  <dd><a href="http://forums.mozillazine.org/?c=4">フォーラム</a> をご利用ください。Firefox チームは常時このフォーラムをチェックしています。私たちは毎日多くのメールを受け取っているので、あなたが送ったメールは見過ごされる可能性もあります。</dd>
+  <dt>テーマとアドオン (拡張機能) はどこで手に入りますか?</dt>
+  <dd>テーマと拡張機能は <a href="https://addons.mozilla.org/ja/firefox/">Mozilla Update</a> からダウンロードできます。</dd>
+  <dt>誰が Firefox の作業をしているのですか?</dt>
+  <dd>現在の開発スタッフは、Ben Goodger (Mozilla Foundation)、Brian Ryner (IBM)、Pierre Chanial、Blake Ross、Dave Hyatt、Benjamin Smedberg、Darin Fisher、そして Mozilla のコードベースに貢献している多数のコミュニティのメンバーです。Asa Dotzler、Leaf Nunes と QA コンタクトチームが、バグの選別、リリース、その他諸々の作業を処理しています。詳しくは Help (ヘルプ) メニューの About Mozilla Firefox (Mozilla Firefox について) に書かれているクレジットをご覧ください。</dd>
+  <dt>Firefox のソースコードはどこにありますか?</dt>
+  <dd>cvs.mozilla.org にあります。Mozilla トランクと mozilla/browser と mozilla/toolkit を組み合わせたものになります。</dd>
+  <dt>Firefox は、ユーザーインターフェイスにちょっとだけ手を加えた、ただの Mozilla では?</dt>
+  <dd>Firefox には数々の独自機能や数え切れないほどの改良を加えており、まったくの別物です。プロジェクト開始以来、すでに 12 万行以上のコードが CVS ディレクトリーに追加、変更されています。</dd>
+  <dt><del>Phoenix</del> Firebird の名称に何が起きたのですか?</dt>
+  <dd>商標の問題から名称を変更する必要がありました。新名称は Firefox です。詳しくは <a href="/press/releases/2004/02/09/">プレスリリース</a> と <a href="https://www.mozilla.org/projects/firefox/firefox-name-faq.html">よくある質問</a> をご覧ください。</dd>
+  <dt>メールクライアントはどこにあるのですか?</dt>
+  <dd>Firefox は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアント <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> を使ってみることをお勧めします。</dd>
+</dl>
+<p>過去のバージョンのリリースノート: <a href="0.1">0.1</a> | <a href="0.2">0.2</a> | <a href="0.3">0.3</a> | <a href="0.4">0.4</a> | <a href="0.5">0.5</a> | <a href="0.6">0.6</a> | <a href="0.6.1">0.6.1</a> | <a href="0.7">0.7</a> | <a href="0.7.1">0.7.1</a> | <a href="0.8">0.8</a></p>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

@@ -1,0 +1,283 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = '自動アップデート | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/auto-update/' => '自動アップデート'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>自動アップデート</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>Firefox・Thunderbirdの自動アップデートを禁止したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">自動アップデート</span></span></span></span></span></p><p>無用なトラブルを避けるため、ユーザが使用中にFirefoxやThunderbirdが自動アップデートを行わないよう設定することができます。</p><h3 id="-">設定方法</h3><p>FirefoxやThunderbirdの自動アップデートを禁止する最も簡単な方法は、アドオン <a href="https://github.com/clear-code/disableupdate/releases">Disable Auto Update</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってDisable Auto Updateを導入すると、以下の機能が完全に無効化されます。</p><ul>
+<li>FirefoxおよびThunderbirdが定期的に自身のアップデート情報を取得する。</li>
+<li>Firefoxが検索エンジンの自動アップデート情報を取得する。</li>
+<li>「オプション」から自動アップデートの設定を変更する。</li>
+</ul><p>また、単に自動アップデート情報の取得処理を無効化するだけであれば、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使って以下の設定を反映することによっても実現可能です。</p><pre><code>lockPref(&quot;app.update.auto&quot;, false);
+lockPref(&quot;app.update.enabled&quot;, false);
+lockPref(&quot;browser.search.update&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq2">
+                      <h2>Firefox・Thunderbirdの自動アップデートについて、メジャーアップデートは禁止し、マイナーアップデートのみ自動で適用したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">自動アップデート</span></span></span></span></span></p><p>FirefoxやThunderbirdのESR版は通常、あるメジャーバージョンのサポートが終了すると、自動アップデート経由で次のメジャーバージョンにアップデートされます。例えばFirefox 17.0.11ESRは、順次Firefox 24ESRへアップデートされます。</p><p>このようなメジャーバージョンの変更を伴う自動アップデートの適用を禁止し、マイナーバージョンの変更のみを適用するよう設定することができます。</p><h3 id="-">設定方法</h3><p>FirefoxやThunderbirdのメジャーアップデートを禁止する最も簡単な方法は、アドオン <a href="https://addons.mozilla.org/firefox/addon/only-minor-update/">Only Minor Update</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってOnly Minor Updateを導入すると、メジャーバージョンが異なるアップデートは適用されないようになります。</p><h3 id="-">注意事項</h3><p>このアドオンは、内部的に <code>app.update.url.override</code> を上書きします。そのため、この設定を用いて自動アップデート情報の提供元を変更するカスタマイズとの併用はできません。
+自動アップデート情報の提供元を変更する場合は、提供する自動アップデート情報の側で、マイナーアップデートの情報のみを提供する形で運用して下さい。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>Firefox・Thunderbirdの自動アップデートの提供タイミングを組織内で制御したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">自動アップデート</span></span></span></span></span></p><p>通常、FirefoxやThunderbirdはMozillaが公式に提供しているアップデート情報に基づいて自動アップデートを行いますが、設定変更により、組織内のサーバなどをアップデート情報の提供元にすることができます。これにより、自動アップデートの適用タイミングを制御できます。</p><h3 id="-">設定方法</h3><p>Firefox 24.1.1ESRが導入済みのクライアントをFirefox 24.2.0ESRに更新するための情報およびファイルを静的なファイルとして提供する場合を例として、手順を説明します。</p><ol>
+<li>アップデート用のアーカイブファイルをMozillaのFTPサーバから入手します。<ul>
+<li>FTPサーバ上には各バージョンのアップデート用差分ファイル、完全アップデート用アーカイブファイルが保存されており、以下のようなURLでダウンロードすることができます。
+<a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.2.0esr/update/win32/ja/">ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.2.0esr/update/win32/ja/</a></li>
+<li>ファイル名に <code>partial</code> と付いている物は差分アップデート用ファイル、<code>completet</code> と付いている物は完全アップデート用ファイルです。差分アップデート用ファイルはファイル名で示されている更新前バージョンに対してのみ適用できます。</li>
+</ul>
+</li>
+<li>1でダウンロードしたファイルを、自組織内からアクセスできるHTTPサーバ上に設置します。
+Sambaサーバ上のファイルにファイルとしてアクセスする形態や、ローカルのファイルシステムにマウントしてファイルとしてアクセスする形態では利用できず、あくまでHTTP経由でダウンロードできる状態にしておく必要があります。</li>
+<li><p>以下のような内容で、自動アップデート情報提供用のXMLファイル <code>update.xml</code> を用意します。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;updates&gt;
+  &lt;update type=&quot;minor&quot;
+          displayVersion=&quot;更新後バージョン番号の表示名&quot;
+          appVersion=&quot;更新後バージョン番号&quot;
+          platformVersion=&quot;更新後バージョン番号&quot;
+          buildID=&quot;更新後バージョンのビルドID&quot;
+          actions=&quot;silent&quot;&gt;
+    &lt;patch type=&quot;complete&quot;
+           URL=&quot;marファイルのダウンロード用URL&quot;
+           hashFunction=&quot;ハッシュ関数の種類&quot;
+           hashValue=&quot;marファイルのハッシュ&quot;/&gt;
+  &lt;/update&gt;
+&lt;/updates&gt;
+</code></pre><p>例えばFirefox 24.2ESRへの更新で、ハッシュをSHA-512で用意するのあれば、以下のようになります。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;updates&gt;
+  &lt;update type=&quot;minor&quot;
+          displayVersion=&quot;24.2.0esr&quot;
+          appVersion=&quot;24.2.0&quot;
+          platformVersion=&quot;24.2.0&quot;
+          buildID=&quot;20131205180928&quot;
+          actions=&quot;silent&quot;&gt;
+    &lt;patch type=&quot;complete&quot;
+           URL=&quot;marファイルのダウンロード用URL&quot;
+           hashFunction=&quot;SHA512&quot;
+           hashValue=&quot;marファイルのSHA-512ハッシュ&quot;/&gt;
+  &lt;/update&gt;
+&lt;/updates&gt;
+</code></pre></li>
+<li><p>3で用意したファイルをクライアント上のローカルファイル、ファイル共有サーバ上のファイル、HTTPサーバ上のファイルのいずれかの形で設置し、クライアントから取得できるようにします。</p>
+</li>
+<li><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使って、文字列型の設定 <code>app.update.url.override</code> の<em>ユーザ設定値</em>に4で設置したファイルのURL文字列を指定します。<ul>
+<li>ローカルファイルやファイル共有サーバ上のファイルである場合は、<code>file:///</code> から始まるファイルURLを指定します。</li>
+<li>MCDを使う場合、ディレクティブとしては <code>lockPref()</code> や <code>defaultPref()</code> ではなく <code>pref()</code> を使用します。</li>
+</ul>
+</li>
+</ol><p>以上で更新情報の提供準備ならびにクライアントの設定は完了です。以後は、サーバ上に設置した <code>update.xml</code> ならびにアップデート用のアーカイブファイルを適宜更新するようにして下さい。</p><p>詳細な情報は<a href="https://developer.mozilla.org/ja/docs/Mozilla/Setting_up_an_update_server">更新サーバの設定 - Mozilla | MDN</a>を参照して下さい。</p><h3 id="-">確認方法</h3><p>以下の通り設定を変更すると、自動アップデートの処理が10秒ごとに行われるようになります。この状態で <code>エラーコンソール</code> もしくは <code>ブラウザコンソール</code> を表示すると、自動アップデート処理の詳細なログが表示されます。更新情報の取得に成功しているかどうか、取得した更新情報の読み込みに成功しているかどうかなどを確認するのに利用できます。</p><ul>
+<li><code>app.update.timerMinimumDelay</code>（整数）：<code>10</code></li>
+<li><code>app.update.promptWaitTime</code>（整数）：<code>1</code></li>
+<li><code>app.update.interval</code>（整数）：<code>10</code></li>
+<li><code>app.update.log</code>（真偽）：<code>true</code></li>
+<li><code>app.update.log.all</code>（真偽）：<code>true</code></li>
+</ul><h3 id="-">注意事項</h3><p>上記手順での設定後は、SSLを使用しない限り、更新情報の提供元自体が正しいかどうか（中間者攻撃を受けていないかどうか）の検証は行われない状態となります。信頼できないネットワークを経由する場合は、SSLを使って安全に更新情報を取得できるようにして下さい。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>自動アップデート機能を使わずにFirefox/Thunderbirdを差分更新したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">自動アップデート</span></p><p>FirefoxやThunderbirdの自動アップデート機能は、通常のインストーラよりも遙かに小さい差分ファイルをダウンロードしてアプリケーションを更新するようになっています。
+この差分更新用のファイルを使った差分更新処理は、自動アップデート機能を使わずとも、任意のタイミングで実行することができます。
+これにより、自動アップデート機能自体は無効にしておきつつ、必要に応じてシステムのログオンスクリプトを使って任意のタイミングでの差分更新を適用する、という形での運用が可能です。</p><h3 id="-">　差分ファイルの入手</h3><p>差分アップデートの適用時には、アップデート用差分ファイルを公式のFTPサイトから入手する必要があります。
+URLの凡例は以下の通りです。</p><pre><code>ftp://ftp.mozilla.org/pub/mozilla.org/[製品名]/releases/[アップデート先バージョン]/update/win32/ja/[製品名]-[アップデート元バージョン]-[アップデート先バージョン].partial.mar
+</code></pre><p>例えばFirefox 30からFirefox 31へアップデートする場合に必要な差分ファイルは以下の場所から入手できます。 </p><pre><code>ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/31.0/update/win32/ja/firefox-30.0-31.0.partial.mar 
+</code></pre><p>差分ファイルによるアップデートを行うには、現在インストールされているFirefoxのバージョンに対応した差分ファイルが必要となります。
+差分ファイルが想定する「アップデート前のバージョン」が現在インストールされているFirefoxのバージョンに一致しない場合、差分アップデートは行えません。</p><p>通常、公式のFTPサイトでは特定バージョンのFirefoxに対して、それ以前のいくつかのバージョンからの差分アップデート用のファイルのみが配布されています。
+差分ファイルが用意されていないパターン、例えばFirefox 25.0からFirefox 31へアップデートするというような、間のバージョンを多数飛ばしたアップデートは原則として行えないものとご理解下さい。</p><h3 id="-">差分更新の適用手順の凡例</h3><p>Firefoxの差分更新用ファイルを用いて際の手順は以下の通りです。 </p><ol>
+<li><p>管理者権限でコマンドプロンプトを起動する。
+Windows XPの場合、Administrator権限のあるユーザで
+コマンドプロンプトを起動する。
+Windows Vista以降の場合、スタートメニューの
+「すべてのプログラム」→「アクセサリ」→「コマンド プロンプト」を
+右クリックして「管理者として実行」を選択する。</p>
+</li>
+<li><p>先の方法で入手した差分アップデート用のファイル
+（firefox-<em>-</em>.partial.mar）を作業ディレクトリに
+「update.mar」というファイル名で配置する。</p>
+<pre><code>&gt; copy firefox-*.partial.mar &quot;&lt;作業ディレクトリのパス&gt;\update.mar&quot;
+</code></pre></li>
+<li><p>Firefoxのインストール先フォルダにあるupdater.exe を
+作業ディレクトリにコピーする。</p>
+<pre><code>&gt; copy &quot;&lt;Firefoxのインストール先フォルダのパス&gt;\updater.exe&quot;
+    &quot;&lt;作業ディレクトリのパス&gt;\updater.exe&quot; 
+</code></pre></li>
+<li><p>作業ディレクトリに配置したupdater.exeを、
+差分アップデート用のファイルがあるディレクトリ（ここでは作業ディレクトリと同じ）のフルパスを第1引数、
+Firefoxのインストール先フォルダのフルパスを第2引数、updater.exeが動作する際の作業フォルダのパス
+（＝Firefoxのインストール先フォルダ）のフルパスを第3引数して渡して起動する。</p>
+<pre><code>&gt; cd &quot;&lt;作業ディレクトリのパス&gt;&quot;
+&gt; &quot;&lt;作業ディレクトリのパス&gt;\updater.exe&quot; &quot;&lt;差分アップデート用のファイルがあるディレクトリのフルパス&gt;&quot; &quot;&lt;Firefoxのインストール先フォルダのフルパス&gt;&quot; &quot;&lt;Firefoxのインストール先フォルダのフルパス&gt;&quot;
+</code></pre></li>
+<li><p>アップデートの適用結果を確認する。
+作業ディレクトリに出力された update.status の内容が
+「succeeded」であれば、アップデートに成功している。
+そうでない場合は、アップデートの適用に失敗している。</p>
+</li>
+<li><p>アンインストール情報を更新する。
+update.log をFirefoxのインストール先フォルダの「uninstall」フォルダ内に、「uninstall.update」というファイル名でコピーする。</p>
+<pre><code>&gt; copy /Y update.log &quot;&lt;Firefoxのインストール先フォルダのパス&gt;\uninstall\uinstall.update&quot;
+</code></pre></li>
+<li><p>アップデートの後処理を実行する。
+Firefoxのインストール先フォルダの「uninstall」フォルダにあるhelper.exe を、「/PostUpdate」オプションを指定して実行する。</p>
+<pre><code>&gt; &quot;&lt;Firefoxのインストール先フォルダのパス&gt;\uninstall\helper.exe&quot; /PostUpdate
+</code></pre><p>これにより、レジストリ内のFirefoxのバージョンなどの情報が更新される。</p>
+</li>
+</ol><p>以上で、差分アップデートの適用は完了です。</p><h3 id="-">差分更新の適用例</h3><p>本項では、例として以下のバージョンにおける差分更新の適用時の具体的な手順を示します。</p><ul>
+<li>現在Firefox 30がインストールされている。</li>
+<li>Firefox 31へアップデートする。</li>
+<li>作業ディレクトリは C:\temp とする。 </li>
+<li><p>Firefoxのインストール先は
+C:\Program Files (x86)\Mozilla Firefox とする。</p>
+</li>
+<li><p>管理者権限でコマンドプロンプトを起動する。</p>
+</li>
+<li><p>差分アップデート用のファイルを作業ディレクトリに
+update.marというファイル名で配置する。</p>
+<pre><code>&gt; copy firefox-30.0-31.0.partial.mar &quot;C:\temp\update.mar&quot;
+</code></pre></li>
+<li><p>Firefoxのインストール先フォルダにあるupdater.exe を
+作業ディレクトリにコピーする。</p>
+<pre><code>&gt; copy &quot;C:\Program Files (x86)\Mozilla Firefox\updater.exe&quot;
+  &quot;C:\temp\updater.exe&quot;
+</code></pre></li>
+<li><p>作業ディレクトリに配置したupdater.exeを、
+作業ディレクトリのフルパスを第1引数、
+Firefoxのインストール先フォルダのフルパスを第2引数と第3引数として渡して
+起動する。</p>
+<pre><code>&gt; cd c:\temp
+&gt; updater.exe &quot;C:\temp&quot; &quot;C:\Program Files (x86)\Mozilla Firefox&quot; &quot;C:\Program Files (x86)\Mozilla Firefox&quot;
+</code></pre></li>
+<li><p>アップデートの適用結果を確認する。</p>
+<pre><code>&gt; type update.status
+</code></pre></li>
+</ul><p>以上で、差分アップデートの適用は完了です。</p>
+                    </article>
+                    <article id="faq5">
+                      <h2>アドオンの自動アップデートの提供タイミングを組織内で制御したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">自動アップデート</span><span class="slash"> / <span><span class="keyword">アドオン</span></span></span></span></span></span></span></p><p>通常、FirefoxやThunderbirdはMozillaが公式に提供しているアドオンのアップデート情報に基づいてアドオンの自動アップデートを行いますが、設定変更により、組織内のサーバなどをアップデート情報の提供元にすることができます。これにより、アドオンの自動アップデートの適用タイミングを制御できます。</p><h3 id="-">設定方法</h3><ol>
+<li><p>以下のような内容で、自動アップデート情報提供用のXMLファイル <code>update.rdf</code> を用意します。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+         xmlns:em=&quot;http://www.mozilla.org/2004/em-rdf#&quot;&gt;
+  &lt;RDF:Description about=&quot;urn:mozilla:extension:アドオンのID&quot;&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;アドオンのバージョン&lt;/em:version&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;対象アプリケーションのID&lt;/em:id&gt;
+                &lt;em:minVersion&gt;最小バージョン&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;最大バージョン&lt;/em:maxVersion&gt;
+                &lt;em:updateLink&gt;XPIファイルのダウンロード用URL&lt;/em:updateLink&gt;
+                &lt;em:updateHash&gt;ハッシュ関数名:XPIファイルのハッシュ値&lt;/em:updateHash&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</code></pre><p>例えばFirefox 24.2ESR向けのアドオンとして<a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a>の更新情報を提供するのであれば以下のようになります。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+         xmlns:em=&quot;http://www.mozilla.org/2004/em-rdf#&quot;&gt;
+  &lt;RDF:Description about=&quot;urn:mozilla:extension:inspector@mozilla.org&quot;&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;2.0.14&lt;/em:version&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;
+                &lt;em:minVersion&gt;24.0&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;24.*&lt;/em:maxVersion&gt;
+                &lt;em:updateLink&gt;http://..../dominspector.xpi&lt;/em:updateLink&gt;
+                &lt;em:updateHash&gt;sha1:ファイルのSHA1ハッシュ&lt;/em:updateHash&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</code></pre></li>
+<li><p>1で用意したファイルをクライアント上のローカルファイル、ファイル共有サーバ上のファイル、HTTPサーバ上のファイルのいずれかの形で設置し、クライアントから取得できるようにします。</p>
+</li>
+<li><a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使って、文字列型の設定 <code>extensions.update.url</code> の値に、2で設置したファイルのURL文字列を指定します。</li>
+</ol><p>以上で更新情報の提供準備ならびにクライアントの設定は完了です。以後は、サーバ上に設置した <code>update.rdf</code> ならびに各アドオンのXPIファイルを適宜更新するようにして下さい。</p><p>詳細な情報は<a href="https://developer.mozilla.org/ja/docs/Extension_Versioning,_Update_and_Compatibility#.E3.82.A2.E3.83.83.E3.83.97.E3.83.87.E3.83.BC.E3.83.88_RDF_.E3.81.AE.E5.BD.A2.E5.BC.8F">Extension Versioning, Update and Compatibility | MDN</a>を参照して下さい。</p><h3 id="-">確認方法</h3><p>以下の通り設定を変更すると、アドオンの自動アップデートの処理が10秒ごとに行われるようになります。この状態で <code>エラーコンソール</code> もしくは <code>ブラウザコンソール</code> を表示すると、自動アップデート処理の詳細なログが表示されます。更新情報の取得に成功しているかどうか、取得した更新情報の読み込みに成功しているかどうかなどを確認するのに利用できます。</p><ul>
+<li><code>app.update.timerMinimumDelay</code>（整数）：<code>10</code></li>
+<li><code>extensions.update.interval</code>（整数）：<code>10</code></li>
+<li><code>extensions.logging.enabled</code>（真偽）：<code>true</code></li>
+</ul><h3 id="-">注意事項</h3><p>上記手順での設定後は、SSLを使用しない限り、更新情報の提供元自体が正しいかどうか（中間者攻撃を受けていないかどうか）の検証は行われない状態となります。信頼できないネットワークを経由する場合は、SSLを使って安全に更新情報を取得できるようにして下さい。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">Firefox・Thunderbirdの自動アップデートを禁止したい</a></li>
+                        <li><a href="#faq2">Firefox・Thunderbirdの自動アップデートについて、メジャーアップデートは禁止し、マイナーアップデートのみ自動で適用したい</a></li>
+                        <li><a href="#faq3">Firefox・Thunderbirdの自動アップデートの提供タイミングを組織内で制御したい</a></li>
+                        <li><a href="#faq4">自動アップデート機能を使わずにFirefox/Thunderbirdを差分更新したい</a></li>
+                        <li><a href="#faq5">アドオンの自動アップデートの提供タイミングを組織内で制御したい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

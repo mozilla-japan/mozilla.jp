@@ -1,0 +1,99 @@
+<?php
+
+$page_title         = 'Mozilla Japan 第 2 回セミナー開催のご案内';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2006/mjseminar2/' => 'Mozilla Japan 第 2 回セミナー'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature { width: auto; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      h3.hidden { position: absolute; left: -9999px; }
+      dl.data dd { margin-bottom: 0; }
+      .program { margin: 0; padding: 0; border-bottom: 1px dashed #ccc; padding: 0; }
+      .program dt { margin: .5em 0 0 0; padding: .5em 0 0 9em; border-top: 1px dashed #ccc; font-weight: bold; }
+      .program dt.first { margin: 0; border: 0; }
+      .program dd { margin: 0 0 .5em 9em; padding: 0; }
+      .program dd.time { margin: -1.6em 0 .5em 0; }
+      .program dd img { margin: -1.6em 0 .5em 1em; width: 100px; height: 100px; float: right; }
+      .meetingpromo img { margin: 0 0 1em 1em; border: 0; float: right; }
+      #mainContent em { font-style: normal; border-bottom: 1px solid #333; }
+      .box { margin: 1em 0; border: 1px solid #999; padding: 0 1em; color: #333; background: #f3f3f3; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">Mozilla Japan 第 2 回セミナー開催のご案内</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <div class="box">
+                <p>本イベントは終了いたしました。多数のご参加ありがとうございました。セミナーと Developer Meeting の内容をまとめた <a href="report">レポート</a> を掲載しましたので、どうぞご覧ください。</p>
+              </div>
+              <p>Mozilla Japan では 3 月 2 日 (木) に、下記の通りセミナーを開催いたします。</p>
+              <p>本セミナーでは、米国 Mozilla Corporation 事業開発担当 VP である John Lilly より Firefox 普及への取り組みおよび今後の製品展開について、また、技術担当 VP の Mike Schroepfer より Firefox と Mozilla の技術に関わる最新情報をお話させていただきます。また、グッデイの下田洋志氏には、Firefox および Thunderbird 用拡張機能の開発ノウハウについてご講演いただきます。</p>
+              <p>皆様のご参加をお待ちしております。</p>
+              <p class="meetingpromo"><a href="meeting"><img src="/static/images/events/2006/mjseminar2/meeting-banner.gif" width="170" height="90" alt="Mozilla Developer Meeting 開催のご案内"></a> なお、同日夜 18:30 からは開発者向けの <strong><a href="meeting">Mozilla Developer Meeting</a></strong> を開催いたします。こちらへのご参加も併せてお待ちしております。(<em>セミナーとは別途お申し込みが必要となります</em>)</p>
+              <dl class="data">
+                <dt>日時</dt>
+                <dd>2006 年 3 日 2 日 (木) 13:15 - 17:00</dd>
+                <dt>会場</dt>
+                <dd>都市センターホテル 5F オリオン<br>東京都千代田区平河町 2-4-1 (<a href="http://www.toshicenter.co.jp/location/j_9000.htm" rel="nofollow">地図</a>)</dd>
+                <dt>主催</dt>
+                <dd>有限責任中間法人 Mozilla Japan</dd>
+              </dl>
+              <h2>プログラム</h2>
+              <dl class="program">
+                <dt class="first">受付</dt>
+                <dd class="time">12:45 - 13:15</dd>
+                <dt>ご挨拶</dt>
+                <dd class="time">13:15 - 13:30</dd>
+                <dd>Mozilla Japan 理事　瀧田 佐登子</dd>
+                <dt>「Mozilla &mdash; その過去・現在・未来」</dt>
+                <dd class="time">13:30 - 14:30</dd>
+                <dd><img src="/static/images/events/2006/mjseminar2/face-john.jpg" alt=""> Mozilla Corporation 事業開発担当バイスプレジデント<br>John Lilly (ジョン・リリー) (<a href="profiles#john" title="講師略歴 - John Lilly">略歴</a>)</dd>
+                <dd>一昨年のリリース以降、世界中で飛躍的な普及を遂げている Firefox について、統計的な動向などを含め、今日までの成功の背景についてお話しします。また、Mozilla が全世界および日本で現在取り組んでいる事柄、そして今後の製品展開や課題について考察します。</dd>
+                <dt>休憩</dt>
+                <dd class="time">14:30 - 14:45</dd>
+                <dt>「Mozilla テクノロジーとコミュニティ」</dt>
+                <dd class="time">14:45 - 15:45</dd>
+                <dd><img src="/static/images/events/2006/mjseminar2/face-mike.jpg" alt=""> Mozilla Corporation 技術担当バイスプレジデント<br>Mike Schroepfer (マイク・シュレーファー) (<a href="profiles#mike" title="講師略歴 - Mike Schroepfer">略歴</a>)</dd>
+                <dd>今年から来年にかけて予定されている、Firefox 2、Firefox 3 や、XULRunner その他のコアテクノロジーも含めた Firefox と Mozilla の技術に関わる最新情報をお話します。また、Mozilla の開発プロセスの移り変わりと、それが貢献者やパートナー、ユーザーにどう影響してきたのかについて講演いたします。</dd>
+                <dt>休憩</dt>
+                <dd class="time">15:45 - 16:00</dd>
+                <dt>「Firefox/Thunderbird 用拡張機能の開発ノウハウ紹介」</dt>
+                <dd class="time">16:00 - 17:00</dd>
+                <dd>株式会社グッデイ<br>下田 洋志 (aka Piro) 氏 (<a href="profiles#shimoda" title="講師略歴 - 下田 洋志 (Piro) 氏">略歴</a>)</dd>
+                <dd>Firefox など XUL ベースのアプリケーション内部の基本的な構造を解説し、拡張機能が「動的なパッチ」であることを理解していただいた上で、実際に拡張機能を開発するにあたっての、改造箇所の特定方法や自作ソースコードの組み込み方、関連 API の調査方法などのノウハウを、実演や既存拡張機能のコードを交えてご紹介します。</dd>
+              </dl>
+              <h3 class="hidden">ご注意</h3>
+              <ul>
+                <li>同時通訳をご用意しております。</li>
+                <li>講演内容等プログラムは変更になる場合がございますのでご了承ください。</li>
+              </ul>
+              <h2>参加要領</h2>
+              <p class="note">本イベントは終了いたしました。多数のご参加ありがとうございました。</p>
+              <!--
+              <dl class="data">
+                <dt>定員</dt>
+                <dd>200 名 (定員に達し次第、受付を締切らせていただきます)</dd>
+                <dt>参加費用</dt>
+                <dd>無料</dd>
+                <dt>お申し込み</dt>
+                <dd>参加申し込みはウェブ上で受け付けています。<strong><a href="seminar-form">申し込みフォーム</a></strong> をご利用ください。<br>受付完了後、セミナー事務局より Email で参加証をお送りします。<br>※ <em>同日夜開催の <a href="meeting">Developer Meeting</a> は別途お申し込みが必要となります</em>。</dd>
+                <dt>申し込み締切日</dt>
+                <dd>2006 年 3 月 1 日 (水)</dd>
+              </dl>
+              -->
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

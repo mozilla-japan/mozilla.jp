@@ -1,0 +1,43 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '53.0.2';
+$_android_version = '53.0.2';
+$_date = '2017-05-05';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787077">
+                  <p>フォームバリデーションエラーや日付選択パネルが正しく表示されるようにしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1341190">Bug 1341190</a>)</p>
+                </li>
+                <li id="note-787076">
+                  <p><a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox.html#firefox<?= $_version ?>">いくつかのセキュリティ問題</a> を修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787078">
+                  <p><code>window.find</code> の非標準 <code>showDialog</code> 引数が無視されるようになりました。(Bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1348409">1348409</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787075">
+                  <p>参考: <a href="/firefox/53.0/releasenotes/">53.0 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

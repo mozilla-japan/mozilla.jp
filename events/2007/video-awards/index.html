@@ -1,0 +1,68 @@
+<?php
+
+$page_title         = '2007 Get Firefox ビデオアワード | イベント情報 | Mozilla Japan';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2007/video-awards/' => '2007 Get Firefox ビデオアワード'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature { width: auto; min-height: 0; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      #main-feature p { margin: 0; font-weight: normal; }
+      #main-content section { margin-bottom: 24px; }
+      #main-content h2 { font-size: 18px; }
+      #sidebar figure { margin-bottom: 16px; text-align: center; }
+      #sidebar figure a { display: block; overflow: hidden; margin-bottom: 4px; height: 160px; }
+      #sidebar figure a img { display: block; width: 100%; height: 100%; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemscope itemtype="http://schema.org/EducationEvent">
+            <header id="main-feature">
+              <h1 itemprop="name">2007 Get Firefox ビデオアワード</h1>
+              <p><time datetime="2007-10-10" itemprop="startDate">2007 年 10 月 10 日</time> 応募開始、<time datetime="2007-12-18" itemprop="endDate">12 月 18 日</time> 発表</p>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <section>
+                <h2>概要</h2>
+                <p itemprop="description">全世界で数億人が利用するウェブブラウザー Firefox の魅力を表現し、さらにそれを使いたくなるようなイメージを持った動画を募集。2 か月間で全国から 100 を超える素晴らしい作品が寄せられました。コンテストの実施には、クリエーターネットワークを運営する株式会社ロフトワークの協力を得ました。また、応募作品には柔軟な著作権を定義できる Creative Commons ライセンスを適用し、ソニー株式会社 (現在は株式会社スプラシア) が運営する動画共有サービス「<a href="http://eyevio.jp/channel_movies/bookmark_99395">eyeVio</a>」上で公開しました。</p>
+              </section>
+              <section>
+                <h2>プレスリリース &amp; ブログ</h2>
+                <ul>
+                  <li><a href="/press/releases/2007/10/10/">Mozilla Japan、Firefox をテーマとしたビデオコンテストを開催</a></li>
+                  <li><a href="/press/releases/2007/12/10/">『2007 GET Firefox ビデオアワード』、応募作品の公開・投票を開始</a></li>
+                  <li><a href="/blog/entry/338/">Get Firefox ビデオアワード、投票締め切り迫る！</a></li>
+                  <li><a href="/press/releases/2007/12/19/">『2007 GET Firefox ビデオアワード』全 103 作品の中からグランプリが決定</a></li>
+                  <li><a href="/blog/entry/345/">Get Firefox ビデオアワード、全作品を公開中です</a></li>
+                  <li><a href="/blog/entry/2493/">Get Firefox ビデオアワードグランプリ受賞のユニットが Firefox 3 の 15 秒 CM に挑戦!</a></li>
+                </ul>
+              </section>
+              <section>
+              </section>
+            </div><!-- end #main-content -->
+            <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+              <figure>
+                <a href="gallery/?screen=home"><img src="/static/images/events/2007/video-awards/scr-home.thumb.jpg" alt=""></a>
+                <figcaption>トップページ</figcaption>
+              </figure>
+              <figure>
+                <a href="gallery/?screen=about"><img src="/static/images/events/2007/video-awards/scr-about.thumb.jpg" alt=""></a>
+                <figcaption>開催概要</figcaption>
+              </figure>
+              <figure>
+                <a href="gallery/?screen=gallery"><img src="/static/images/events/2007/video-awards/scr-gallery.thumb.jpg" alt=""></a>
+                <figcaption>ギャラリー</figcaption>
+              </figure>
+            </aside><!-- end #sidebar -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

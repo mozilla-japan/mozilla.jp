@@ -1,0 +1,274 @@
+#globalheader h1 {
+  width: 0;
+}
+
+#doc {
+  width: 100%;
+}
+
+main {
+  margin-top: 48px !important;
+}
+
+main .inner {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 992px;
+  margin: 0 auto;
+}
+
+main .row {
+  overflow: hidden;
+  margin: 32px 16px;
+}
+
+main .col {
+  float: left;
+  margin: 0 16px;
+  width: 448px;
+}
+
+main .col.full {
+  float: none;
+  width: 928px;
+}
+
+main .col > section:not(:first-of-type) {
+  margin-top: 32px;
+}
+
+#main-feature {
+  margin: 0;
+  padding-top: 320px;
+  color: #FFF;
+  background: #c13832 url(/static/images/about/hero.jpg) no-repeat top center;
+}
+
+#main-feature h1 {
+  margin: 8px 32px;
+  font-size: 40px;
+  text-shadow: none;
+}
+
+#main-content {
+  float: none;
+  margin: 0;
+  width: auto;
+}
+
+#main-content .inner {
+  border-bottom: 1px solid #DDD;
+  background: #FFF;
+}
+
+#toc-outer {
+  color: #FFF;
+  background: #565A5C;
+  text-align: center;
+}
+
+#toc-outer ul {
+  margin: 8px 0;
+}
+
+#toc-outer li {
+  display: inline-block;
+  margin: 0 16px;
+  padding: 0;
+  background: none;
+}
+
+#toc-outer a {
+  color: #FFF;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  main .inner {
+    width: 768px;
+  }
+
+  main .col {
+    width: 352px;
+  }
+
+  main .col.full {
+    width: 736px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #main-feature h1 {
+    margin: 8px 16px;
+  }
+
+  main .row {
+    margin: 16px 0;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  main .inner {
+    width: 640px;
+  }
+
+  main .col,
+  main .col.full {
+    width: 608px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    margin-top: 0 !important;
+  }
+
+  main .row {
+    overflow: visible;
+  }
+
+  main .col {
+    float: none;
+  }
+
+  main .col > section {
+    margin-bottom: 32px;
+  }
+
+  #main-feature {
+    padding-top: 160px;
+    background-size: 1000px 160px;
+  }
+
+  #main-feature h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  main .inner {
+    width: 320px;
+  }
+
+  main .col,
+  main .col.full {
+    width: 288px;
+  }
+
+  #toc-outer li {
+    margin: 0 8px;
+  }
+}
+
+/* About Mozilla */
+
+body#about #intro h2 {
+  font-size: 52px;
+}
+
+body#about #intro h2 span {
+  display: block;
+}
+
+body#about #intro section {
+  margin-top: 16px;
+}
+
+body#about #intro h3 {
+  font-size: 24px;
+}
+
+body#about video {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+
+body#about figure::after {
+  display: block;
+  width: 100%;
+  height: 15px;
+  background: url(/static/images/sandstone/video/shadow.png) no-repeat center top;
+  background-size: contain;
+  content: "";
+}
+
+body#about #links {
+  overflow: hidden;
+  margin: 16px -16px;
+}
+
+body#about #links ul {
+  float: left;
+  margin: 0 16px;
+  width: 208px;
+}
+
+body#about #links li {
+  padding: 8px 0;
+  background: none;
+}
+
+body#about #links li:not(:last-of-type) {
+  border-bottom: 1px solid #E2E2E2;
+}
+
+@media only screen and (max-width: 1023px) {
+  body#about #intro h2 {
+    font-size: 48px;
+  }
+
+  body#about #links {
+    margin: 16px 0;
+  }
+
+  body#about #links ul {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  body#about #links ul:not(:last-of-type) li:last-of-type {
+    border-bottom: 1px solid #E2E2E2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body#about #intro h2 {
+    font-size: 40px;
+  }
+
+  body#about #intro h2 span {
+    display: inline;
+  }
+
+  body#about #intro section {
+    margin: 16px 0;
+  }
+}
+
+/* About Mozilla Japan */
+
+body#japan #announcement {
+  margin: 48px 16px;
+  text-align: center;
+}
+
+body#japan #announcement .col {
+  margin: 0 auto;
+  float: none;
+}
+
+body#japan #announcement a {
+  display: block;
+}
+
+body#japan #announcement img {
+  max-width: 80%;
+  height: auto;
+}
+
+body#japan #announcement span {
+  display: block;
+  margin-top: 16px;
+}

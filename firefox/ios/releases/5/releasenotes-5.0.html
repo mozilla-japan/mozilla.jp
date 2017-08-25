@@ -1,0 +1,51 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'ios';
+$_version = '5.0';
+$_date = '2016-07-26';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="new">
+              <h4>New</h4>
+              <ul class="section-items">
+                <li id="note-786737">
+                  <p>「すべてのタブを閉じる」を間違えて押してしまった際に、タブを復元する「取り消す」ボタンが追加されました。</p>
+                </li>
+                <li id="note-786738">
+                  <p>戻る、もしくは進むボタンを長押しで、履歴を一覧表示するようになりました。</p>
+                </li>
+                <li id="note-786739">
+                  <p>同期されたタブと、履歴が 1 つのパネルにまとめられました。</p>
+                </li>
+                <li id="note-786741">
+                  <p>便利な機能へ簡単にアクセスできるようにメニューを刷新しました。</p>
+                </li>
+                <li id="note-786742">
+                  <p>好きなページに素早くアクセスできる<a href="https://support.mozilla.org/ja/kb/set-homepage-firefox-ios">ホームページ機能</a>を追加しました。</p>
+                </li>
+                <li id="note-786740">
+                  <p>イギリス、ドイツ、フランスのユーザーは <a href="https://www.qwant.com/">Qwant 検索プラグイン</a>をインストールできるようになりました。</p>
+                </li>
+                <li id="note-786743">
+                  <p><a href="https://support.mozilla.org/ja/kb/add-search-engines-firefox-ios">好きなサイトを検索エンジンとして追加できる</a>ようになりました。</p>
+                </li>
+                <li id="note-786744">
+                  <p><a href="https://support.mozilla.org/ja/kb/keyboard-shortcuts-firefox-ios">キーボードショートカット</a>が追加されました。このショートカットは Bluetooth 接続されたキーボードから利用できます。</p>
+                </li>
+                <li id="note-786736">
+                  <p>中国のユーザー向けに以下の機能が追加されました。</p>
+                  <ul>
+                    <li>新しいタブを開くとホームページが表示されるように設定できるようになりました。</li>
+                    <li>トップサイトやパネルを含むホームスクリーンをカスタマイズできるようになりました。</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

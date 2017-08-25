@@ -1,0 +1,50 @@
+<?php
+
+$page_title         = 'Mozilla Japan 主催 コミュニティミーティング';
+$body_class         = 'sand news events';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2004/mjseminar1/meeting' => 'Mozilla Japan 主催 コミュニティミーティング'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen">
+      #main-feature { width: auto; }
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <h1 itemprop="name">Mozilla Japan 主催 コミュニティミーティング</h1>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>Firefox 1.0 のリリース直前、Mozilla Foundation 技術部門のディレクターである Chris Hofmann が来日。Firefox や　Mozilla Foundation についての講演、重要な国際化バグについてのディスカッションを行いました。</p>
+              <p>開催日: 2004 年 11 日 2 日 (火)　渋谷ネクサス 302+303</p>
+              <h2>内容</h2>
+              <pre>
+              --------------------------------------------------------------------
+              18:00 - 18:15    受付　
+              --------------------------------------------------------------------
+              18:15 - 19:15    Firefox / Mozilla Foundation 最新動向 (予定)
+              
+                               Chris Hofmann
+                               Director of Engineering
+                               Mozilla Foundation　　　　　　　　* 逐次通訳付
+              --------------------------------------------------------------------
+              19:15 - 20:15    ディスカッション〜重要な国際化バグ (予定)
+              --------------------------------------------------------------------
+              20:15 - 20:45    質問・フリートーク
+              --------------------------------------------------------------------
+              20:45 - 21:00　　撤収
+              ---------------------------------------------------------------------
+              </pre>
+            </div><!-- end #main-content -->
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

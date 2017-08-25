@@ -1,0 +1,186 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 4 Beta 11 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/4.0b11/releasenotes/' => 'Firefox 4 Beta 11'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">Firefox&nbsp;4 Beta&nbsp;11</span></span> &mdash; <time datetime="2011-02-08" itemprop="datePublished">2011/02/08</time> リリース</h2>
+                </div>
+                <p>Mozilla では、製品開発を進めるにあたって、テスターからのフィードバックを頼りにしています。このため Firefox&nbsp;4 ベータ版には、手軽に利用できる <a href="https://www.mozilla.org/ja/firefox/beta/feedback/">Feedback ボタン</a> を提供する <a href="https://www.mozilla.org/ja/firefox/channel/#privacy">Feedback アドオン</a> を同梱しています。</p>
+                <p>Firefox&nbsp;4 ベータ版でアドオンをテストしたい場合は、まず <a href="https://addons.mozilla.org/ja/firefox/addon/add-on-compatibility-reporter/">Add-on Compatibility Reporter</a> をインストールする必要があります。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+                <section id="sec-whatsnew">
+                  <h2>このベータ版について</h2>
+                  <p>Firefox&nbsp;4 ベータ版は Gecko 2.0 ウェブプラットフォームを基盤としています。今回のベータ版の変更点や既知の問題など、詳しい情報は以下をご覧ください。</p>
+                  <p>今回の Firefox&nbsp;4 ベータ版はある程度安定しており、日常のウェブブラウジングに使用しても差し支えないと考えられます。ただし、実装されている機能は最終版までに変更される可能性はあります。現時点で、まだ多くの <a href="https://addons.mozilla.org/ja/firefox/">アドオン</a> は、今回のベータ版と互換性があるかどうか、それぞれの作者によるテストを受けていません。アドオンの互換性テストに協力したいときは、<a href="https://addons.mozilla.org/ja/firefox/addon/add-on-compatibility-reporter/">Add-on Compatibility Reporter</a> を使ってください。あなたがお気に入りのアドオンの作者に喜ばれることでしょう。</p>
+                  <p>最新ベータ版の変更点、既知の問題、よくある質問について、このリリースノートでよく確認してください。ベータ版に含まれている <a href="https://www.mozilla.org/ja/firefox/beta/feedback/">フィードバックツール</a> を使用して、あなたの考えをお聞かせください。皆さんからのフィードバックに感謝します。</p>
+                </section>
+                <section id="sec-whatsnew2">
+                  <h2>今回の Firefox&nbsp;4 ベータ版の変更点</h2>
+                  <ul class="spaced">
+                    <li>提案されている <a href="http://blog.sidstamm.com/2011/01/opting-out-of-behavioral-ads.html">Do Not Track (DNT) ヘッダー</a> に対応しました。</li>
+                    <li>接続状況メッセージが <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=628654">小さなオーバーレイに表示</a> されるようになりました。</li>
+                    <li>WebGL が <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=578877">Linux でも再度有効化</a> されました。</li>
+                    <li>既定の <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=627301">ホームページデザインが刷新</a> されました。</li>
+                    <li>オフラインモードへの <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620472">自動切り替え機能が廃止</a> されました。</li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/4.0b11/releasenotes/buglist.html">前回のベータ版以降の完全な変更点一覧</a> もご覧ください。</li>
+                 </ul>
+                 <p>他にもこれまでのベータ版で次のような機能が追加されています。</p>
+                 <ul class="spaced">
+                    <li>Firefox&nbsp;4 ベータ版は <a href="https://www.mozilla.org/ja/firefox/beta/all/">76 言語</a> にローカライズされています。</li>
+                    <li><a href="http://shawnwilsher.com/archives/473">ブックマーク・履歴関連のコードを全面的に見直し</a>、ブックマークの処理と起動時間の高速化を図りました。</li>
+                    <li><a href="http://andreasgal.wordpress.com/2010/10/13/compartments/">コンパートメント別ガベージコレクション</a> が有効になり、複雑なアニメーションの表示処理が軽減されました。</li>
+                    <li>デスクトップと <a href="https://www.mozilla.org/ja/firefox/channel/">モバイル</a> デバイス間での <a href="https://www.mozilla.org/ja/firefox/sync/">Firefox Sync</a> のセットアップ手順が大幅に改善されました。</li>
+                    <li>WebGL の表示速度、機能、互換性が改善されました。</li>
+                    <li>アドオンマネージャーがさらに洗練されました。</li>
+                    <li>新しい高速な JavaScript エンジン <a href="https://blog.mozilla.org/dmandelin/2010/09/08/presenting-jagermonkey/">JägerMonkey</a> [イェガーモンキー] を搭載しました。</li>
+                    <li>Windows、Mac、Linux で、WebGL が初期設定で有効になりました。Firefox&nbsp;4 ベータ版で WebGL コンテンツを楽しむには、Windows と Mac の場合、OpenGL 対応のグラフィックスカードが必要となります。Windows と Linux におけるその他グラフィックスカード (特に Intel GPU) への対応は、今後のベータ版で行われる予定です。</li>
+                    <li>特定のレンダリングが <a href="https://hacks.mozilla.org/2010/09/hardware-acceleration/">ハードウェアアクセラレーション</a> を使って処理されるようになりました。Windows&nbsp;XP では Direct3Dx&nbsp;9、Windows&nbsp;Vista と Windows&nbsp;7 では Direct3Dx&nbsp;10、Mac では OpenGL を使用しています。</li>
+                    <li>リガチャ、カーニング、異体字へ対応する <a href="https://hacks.mozilla.org/2010/11/firefox-4-font-feature-support/">OpenType</a> を使用し、ウェブのタイポグラフィを向上させました。</li>
+                    <li><a href="http://blog.oldworld.fr/index.php?post/2010/11/17/HTML5-Forms-Validation-in-Firefox-4">HTML5 フォーム API</a> を実装し、ウェブフォームの開発とバリデーションを容易にします。</li>
+                    <li>新たに提案された <a href="https://wiki.mozilla.org/Audio_Data_API">音声データ API</a> に対応しました。</li>
+                    <li>Windows&nbsp;7 では <a href="https://wiki.mozilla.org/Platform/GFX/Direct2DDemo">Direct2D ハードウェアアクセラレーション</a> が初期設定で有効になりました。</li>
+                    <li>Windows&nbsp;Vista と 7 では Firefox ボタンが新しいデザインになりました。</li>
+                    <li>ウェブサイトが SSL を通じた読み込みを強制できるようにする <a href="http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html">HSTS セキュリティプロトコル</a> へ対応しました。</li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/sync/">Firefox Sync</a> が標準装備されました。</li>
+                    <li>開いているすべてのタブを一覧表示し、並べ替えやグループ化ができる新機能 <a href="http://www.azarask.in/blog/post/designing-tab-candy/">Panorama</a> が追加されました。</li>
+                    <li>より効率的な JavaScript アニメーションを提供する <a href="https://hacks.mozilla.org/2010/08/more-efficient-javascript-animations-with-mozrequestanimationframe/">実験的な API</a> が実装されました。</li>
+                    <li><a href="https://hacks.mozilla.org/2010/08/html5-video-buffered-property-available-in-firefox-4/">HTML5 動画の buffered プロパティ</a> に対応しました。</li>
+                    <li>Windows、Mac、Linux で、初期設定で <a href="https://blog.mozilla.org/faaborg/2010/06/24/why-tabs-are-on-top-in-firefox-4/">タブが最上部に移動されました</a>。</li>
+                    <li>タブを右クリックし、コンテキストメニューから「タブをピン留め」を選択することで、「アプリケーションタブ」に変換できます。</li>
+                    <li>ウェブ開発者は、<a href="https://developer.mozilla.org/ja/CSS/CSS_transitions">CSS トランジション</a> を使用して、コンテンツをアニメーションさせることが可能になりました。</li>
+                    <li>新しい <a href="http://weblogs.mozillazine.org/roc/archives/2010/07/retained_layers.html">Retained Layers</a> レイアウトシステムによって、応答性やスクロール速度が改良されました。</li>
+                    <li><a href="https://blog.mozilla.org/dmandelin/2010/07/19/jagermonkey-update-getting-faster/">JavaScript エンジンの最適化</a> により、JavaScript コードの実行速度が向上しました。</li>
+                    <li>起動時間の短縮とプロセス分離を目的として、<a href="https://developer.mozilla.org/ja/XPCOM/XPCOM_changes_in_Gecko_2.0">XPCOM コンポーネントの登録方法に変更が行われました</a>。</li>
+                    <li>スマートロケーションバーから、<a href="https://www.mozilla.org/ja/firefox/features/">すでに開いているタブを探して切り換える</a> ことが可能になりました。</li>
+                    <li>新しいアドオンマネージャーと拡張機能管理 API が実装されました。(ユーザーインタフェースは最終版までに変更されます)</li>
+                    <li>拡張機能のための外部機能インタフェースである JS-ctypes に関して、大幅な API の改良が行われました。</li>
+                    <li>Windows、Mac、Linux で、停止と再読み込みボタンがひとつのボタンに統合されました。</li>
+                    <li>ブックマークツールバーが初期設定でブックマークボタンに置き換えられました。(好みに応じて元に戻すこともできます)</li>
+                    <li>Windows、Linux、さらに Mac でも、Adobe Flash、Apple QuickTime、Microsoft Silverlight の各プラグインを対象としたクラッシュ防止機能が備わりました。</li>
+                    <li><a href="https://developer.mozilla.org/ja/CSS/-moz-transition">CSS トランジション</a> に一部対応しました。</li>
+                    <li>完全な <a href="https://developer.mozilla.org/ja/WebGL">WebGL</a> 対応が行われました。</li>
+                    <li>Mac で、プラグインが Core Animation レンダリングモデルを使用できるようになりました。このレンダリングモデルに対応したプラグインは、より高速かつ効率的にアニメーションのレンダリングを行うことができます。</li>
+                    <li>HD 形式の HTML5 <a href="https://dev.mozilla.jp/hacksmozillaorg/firefox-youtube-and-webm/">WebM</a> 動画形式にネイティブ対応しました。</li>
+                    <li>ウェブ開発者は、<a href="https://developer.mozilla.org/ja/DOM/Manipulating_the_browser_history#Adding_and_modifying_history_entries">HTML 履歴 API</a> を使用して、ページを再読み込みすることなくロケーションバーを更新できるようになりました。</li>
+                    <li><a href="https://hacks.mozilla.org/2010/05/better-performance-with-lazy-frame-construction/">遅延フレーム構築</a> を実装し、より応答性の高いページのレンダリングを実現しました。</li>
+                    <li>リンクの履歴参照が非同期に行われるようになり、ページ読み込み中の応答性が向上しました。</li>
+                    <li><a href="https://dev.mozilla.jp/2010/04/plugging-the-css-history-leak/">ウェブサイトによってユーザーのブラウジング履歴が取得されるのを防ぐため</a>、CSS :visited セレクタに変更が行われました。</li>
+                    <li>新しい <a href="https://dev.mozilla.jp/hacksmozillaorg/firefox-4-the-html5-parser-inline-svg-speed-and-more/">HTML5 パーサー</a> を搭載しました。</li>
+                    <li>より多くの HTML5 フォームコントロールに対応しました。</li>
+                    <li>ウェブ開発者は、Windows&nbsp;7 マシン上で Firefox ユーザーの <a href="https://developer.mozilla.org/ja/DOM/Touch_events">タッチイベント</a> を取得できるようになりました。</li>
+                    <li>Firefox が重くて数値計算を伴う処理 (グラフィックスやアニメーションなどに使用されているようなコード) を効率的に実行できるようにする <a href="https://blog.mozilla.org/rob-sayre/2010/08/02/mozillas-new-javascript-value-representation/">新しい JavaScript の値表現</a> に対応しました。</li>
+                  </ul>
+                  <p>開発者の皆さんは、<a href="https://developer.mozilla.org/ja/">Mozilla Developer Network</a> で <a href="https://developer.mozilla.org/ja/Firefox_4_for_developers">すべての新機能と変更点</a> を確認できます。</p>
+                </section>
+                <section id="sec-requirements">
+                  <h2>システム要件</h2>
+                  <p>インストールの前に、お使いのコンピューターが <a href="/firefox/4.0/system-requirements/">システム要件</a> を満たしているかどうかご確認ください。</p>
+                </section>
+                <section id="sec-download">
+                  <h2>ダウンロード</h2>
+                  <p>Mozilla では、<a href="https://www.mozilla.org/ja/firefox/beta/all/">Firefox&nbsp;4 ベータ版</a> を Windows、Linux、そして Mac&nbsp;OS&nbsp;X 用に、様々な言語で提供しています。Mozilla によって提供されていない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+                </section>
+                <section id="sec-install">
+                  <h2>インストール</h2>
+                  <p>Firefox&nbsp;4 ベータ版をインストールしても、すでにインストールされている Firefox は上書きされません。すべてのシステムで、ブックマークや閲覧履歴には一切影響ありませんが、拡張機能やその他のアドオンの一部は更新版が提供されるまで動かない可能性があります。</p>
+                </section>
+                <section id="sec-uninstall">
+                  <h2>アンインストール</h2>
+                  <p>Firefox&nbsp;4 ベータ版は、Windows では「スタートメニュー」の「コントロール パネル」から、Mac では「Firefox」アプリケーションを削除することで、Linux では「firefox」フォルダーを削除することで、それぞれ削除できます。</p>
+                  <p>デフォルトでは、Firefox&nbsp;4 ベータ版を削除しても、ブックマーク、閲覧履歴、拡張機能やその他のアドオンは削除されません。これらのデータは、お使いの「プロファイルフォルダー」に保存されており、その場所は [ヘルプ] メニューから [トラブルシューティング情報] を選択することで確認できます。「アプリケーション基本情報」という欄の「プロファイルディレクトリー」の横にあるボタンをクリックすると、お使いのシステムのファイルエクスプローラでプロファイルディレクトリーを開くことができます。</p>
+                  <p>プロファイルを残すと、Firefox&nbsp;4 ベータ版を削除した後にインストールした Firefox は、そのバージョンにかかわらず、このプロファイルフォルダーに保存されているブックマーク、履歴、アドオン、その他のデータが引き続き使用されます。</p>
+                </section>
+                <section id="sec-extensions">
+                  <h2>拡張機能とテーマ</h2>
+                  <p>Firefox の過去のバージョンにインストールされたアドオンは、その作者による Firefox&nbsp;4 ベータ版への対応がまだ行われていない場合があります。アドオンの互換性テストに協力したいときは、<a href="https://addons.mozilla.org/ja/firefox/addon/add-on-compatibility-reporter/">Add-on Compatibility Reporter</a> を使ってください。あなたがお気に入りのアドオンの作者に喜ばれることでしょう。</p>
+                </section>
+                <section id="sec-issues">
+                  <h2>既知の問題</h2>
+                  <p>Firefox&nbsp;4 ベータ版 で確認されている既知の問題を掲載します。これらは今後のバージョンで修正される予定です。</p>
+                  <dl>
+                    <dt>すべてのシステム</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>Beta&nbsp;8 以前の Firefox&nbsp;4 ベータ版にダウングレードすると、ブックマークと履歴に関して多くの非互換性が生じます。Firefox&nbsp;3.6 へダウングレードすることは可能です。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620723">Bug 620723</a>、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=614439">Bug 614439</a>)</li>
+                        <li>米国の人気動画サイト Hulu.com では、ユーザーエージェントの判別を適切に行っていないため、ベータ版使用時にコンテンツが表示されません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=580843">Bug 580843</a>)</li>
+                        <li>一部のユーザーから、Twitter での文字入力が通常より遅くなるとの報告があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=579488">Bug 579488</a>)</li>
+                        <li>一部のユーザーから、Gmail メイン画面上のでのスクロールが通常より遅くなるとの報告があります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=579260">Bug 579260</a>)</li>
+                        <li>Formspring というサイトでは、ユーザーエージェントの判別を適切に行っていないため、ベータ版使用時にコンテンツが表示されません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620344">Bug 620344</a>)</li>
+                        <li>ロックされたプロファイルで Firefox を起動しようとするとクラッシュします。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=573369">Bug 573369</a>)</li>
+                        <li>Android 端末で <a href="https://www.mozilla.org/ja/firefox/sync/">Firefox Sync</a> を使っているユーザーは、最新の <a href="https://www.mozilla.org/ja/firefox/channel/">モバイル向け Firefox&nbsp;4 ベータ版</a> へ更新する必要があります。</li>
+                      </ul>
+                    </dd>
+                    <dt>Mac</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>Mac&nbsp;OS&nbsp;X 10.6 で 64 ビット版 Firefox を使っていると、32 ビット版 Microsoft Silverlight プラグインの読み込みに失敗します。そのため、このプラグインに依存しているサイト (Netflix など) のコンテンツを表示できません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=598406">Bug 598406</a>)</li>
+                        <li>今回のベータ版は PowerPC CPU を搭載した Macintosh ハードウェアで動作しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=587799">Bug 587799</a>)</li>
+                      </ul>
+                    </dd>
+                    <dt>Linux/Unix</dt>
+                    <dd>
+                      <ul class="spaced">
+                        <li>libtotem で QuickTime 動画を再生しているとき、動画コントロールボタンが機能しません。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=625036">Bug 625036</a>)</li>
+                        <li>ビルド要件が変更されたため、ソースコードからコンパイルする場合、gcc とlibstdc++ の新バージョンが必要となります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=578880">Bug 578880</a>)</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </section>
+                <section id="sec-troubleshooting">
+                  <h2>トラブルシューティング</h2>
+                  <ul class="spaced">
+                    <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された「Safe Mode」というショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac&nbsp;OS&nbsp;X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使用されます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+                    <li><p>ユーザープロファイルにインストールした拡張機能 (ウェブページからインストールしたものなど) をアンインストールし、コマンドラインオプション -install-global-extension を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+                    <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に、新しいプロファイルを作成して問題が再現されるかどうかを確認してください。新しいプロファイルを作成するには、-P コマンドライン引数をつけて Firefox を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (ブックマーク、保存されているパスワードなど) をひとつひとつ移行し、そのたびに問題が発生するかを確認してください。特定のプロファイルデータのファイルが問題の原因だと分かったら、バグとして報告して、そのファイルを添付してください。</p></li>
+                  </ul>
+                </section>
+                <section id="sec-faq">
+                  <h2>よくある質問</h2>
+                  <ol class="faq">
+                    <li>プロジェクトに協力したいのですが、どのようなことができますか？<p>Firefox をこれまでになく良いものにするために、フィードバックをできるだけたくさん集められるよう、開発者の皆さんやテストコミュニティからの支援を必要としています。好きな方法で <a href="https://www.mozilla.org/ja/firefox/beta/feedback/">フィードバック</a> をお送りください。</p></li>
+                    <li>拡張機能やテーマ (アドオン) はどこで手に入りますか？<p><a href="https://addons.mozilla.org/ja/firefox/">Firefox アドオン</a> のページをご覧ください。</p></li>
+                    <li>誰が Firefox&nbsp;4 ベータ版を開発しているのですか？<p>非常に多くの人が関わっています。Firefox&nbsp;4 ベータ版に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] を開いて [クレジット] をご覧ください。</p></li>
+                    <li>Firefox&nbsp;4 ベータ版のソースコードはどこにありますか？<p>Firefox&nbsp;4 ベータ版のソースコードは tarball として <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/4.0b11/source/">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(Mercurial)">Mercurial</a> を通じて入手可能です。Firefox 固有のソースは、mozilla-central の browser、toolkit、chrome ディレクトリー以下にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</p></li>
+                    <li>メールクライアントはどこにあるのですか？<p>Firefox&nbsp;4 ベータ版は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアントとして <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> をおすすめします。</p></li>
+                  </ol>
+                </section>
+                <section id="sec-contributedbuilds">
+                  <h2>提供されたビルド</h2>
+                  <p>これらは非公式なビルドで、Mozilla のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。利用可能な提供ビルドは <a href="https://releases.mozilla.org/pub/mozilla.org/firefox/releases/4.0b11/contrib/">FTP サイト</a> から入手可能です。</p>
+                </section>
+                <section id="sec-links">
+                  <h2>関連資料とリンク</h2>
+                  <p>以下のリソースには、Firefox&nbsp;4 ベータ版に関して参考になる情報が載っています。</p>
+                  <ul class="spaced">
+                    <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox サポートページ</a></li>
+                    <li><a href="http://kb.mozillazine.org/">MozillaZine ナレッジベース (英語)</a></li>
+                    <li><a href="https://developer.mozilla.org/ja/Firefox_4_for_developers">開発者情報</a></li>
+                    <li><a href="http://code.google.com/apis/safebrowsing/firefox3_privacy.html" rel="nofollow">Google セーフブラウジングサービスのプライバシーポリシー</a> (フィッシング詐欺・マルウェア警告機能)</li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

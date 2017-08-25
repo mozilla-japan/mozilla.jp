@@ -1,0 +1,176 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = '技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <div id="masthead" class="outer">
+              <div class="inner">
+                <header>
+                  <h1>技術的なよくある質問</h1>
+                  <p>Mozilla 製品の法人内での導入などに関して、特に技術的な点に関してよく寄せられる質問について回答をまとめました。</p>
+                </header>
+              </div>
+            </div>
+            <div class="outer outer-3">
+              <div class="inner">
+                <div id="main-content">
+                  <section id="setting-management">
+                    <h2>設定の管理</h2>
+                    <ul>
+                      <li><a href="setting-management/#faq1">設定を管理者が管理したい <a name="control-configurations-by-administrator" class="anchor-substitution"></a></a></li>
+                      <li><a href="setting-management/#faq2">すべてのクライアントの設定を管理者が一括して変更したい</a></li>
+                      <li><a href="setting-management/#faq3">一部の設定項目を非表示にして、ユーザが設定を変更できないようにしたい</a></li>
+                      <li><a href="setting-management/#faq4">Thunderbirdのアカウント設定を非表示にしたい（管理者が設定を集中管理するので、アカウント設定の画面にアクセスさせたくない）</a></li>
+                      <li><a href="setting-management/#faq5">about:config（設定エディタ）の利用を禁止したい</a></li>
+                    </ul>
+                  </section>
+                  <section id="addons">
+                    <h2>アドオン、プラグイン</h2>
+                    <ul>
+                      <li><a href="addons/#faq1">アドオンの利用を禁止したい（ユーザが任意にアドオンをインストールできないようにしたい）</a></li>
+                      <li><a href="addons/#faq2">特定のアドオンやプラグイン（Javaなど）を常に無効化したい <a name="disable-addons-by-administrator" class="anchor-substitution"></a></a></li>
+                      <li><a href="addons/#faq3">管理者によるアドオンのインストール手順 <a name="install-addons-by-administrator" class="anchor-substitution"></a></a></li>
+                    </ul>
+                  </section>
+                  <section id="multiple-versions">
+                    <h2>複数バージョンの併用</h2>
+                    <ul>
+                      <li><a href="multiple-versions/#faq1">FirefoxやThunderbirdを別のプロファイルで同時に起動したい</a></li>
+                      <li><a href="multiple-versions/#faq2">複数のバージョンのFirefoxやThunderbirdを併用し、同時に起動したい</a></li>
+                    </ul>
+                  </section>
+                  <section id="security">
+                    <h2>情報漏洩対策</h2>
+                    <ul>
+                      <li><a href="security/#faq1">社外サイトへアクセスする機能を全て無効化したい</a></li>
+                      <li><a href="security/#faq2">クラッシュ時の情報を送信させたくない</a></li>
+                      <li><a href="security/#faq3">利用時の統計情報を送信させたくない</a></li>
+                      <li><a href="security/#faq4">フォームのオートコンプリート機能を無効化したい</a></li>
+                      <li><a href="security/#faq5">スマートロケーションバーを無効化したい</a></li>
+                      <li><a href="security/#faq6">パスワードを保存させたくない（パスワードマネージャを無効化したい）</a></li>
+                      <li><a href="security/#faq7">セッション機能を無効化したい</a></li>
+                      <li><a href="security/#faq8">検索エンジン（Googleなど）の候補の推測表示を無効化したい</a></li>
+                      <li><a href="security/#faq9">位置情報取得API（Geolocation）を無効化したい</a></li>
+                    </ul>
+                  </section>
+                  <section id="user-control">
+                    <h2>ユーザが使える機能を制限したい</h2>
+                    <ul>
+                      <li><a href="user-control/#faq1">一部のキーボードショートカットを無効化したい <a name="disable-keyboard-shortcuts" class="anchor-substitution"></a></a></li>
+                      <li><a href="user-control/#faq2">一部のメニュー項目やツールバーボタンなどのUI要素を非表示にしたい <a name="hide-ui-elements" class="anchor-substitution"></a></a></li>
+                      <li><a href="user-control/#faq3">プライベートブラウジング機能を使わせたくない</a></li>
+                      <li><a href="user-control/#faq4">Firefox Syncを使わせたくない</a></li>
+                    </ul>
+                  </section>
+                  <section id="auto-update">
+                    <h2>自動アップデート</h2>
+                    <ul>
+                      <li><a href="auto-update/#faq1">Firefox・Thunderbirdの自動アップデートを禁止したい</a></li>
+                      <li><a href="auto-update/#faq2">Firefox・Thunderbirdの自動アップデートについて、メジャーアップデートは禁止し、マイナーアップデートのみ自動で適用したい</a></li>
+                      <li><a href="auto-update/#faq3">Firefox・Thunderbirdの自動アップデートの提供タイミングを組織内で制御したい</a></li>
+                      <li><a href="auto-update/#faq4">自動アップデート機能を使わずにFirefox/Thunderbirdを差分更新したい</a></li>
+                      <li><a href="auto-update/#faq5">アドオンの自動アップデートの提供タイミングを組織内で制御したい</a></li>
+                    </ul>
+                  </section>
+                  <section id="suppression">
+                    <h2>ユーザを惑わすメッセージを表示させたくない</h2>
+                    <ul>
+                      <li><a href="suppression/#faq1">初回起動時の設定移行ウィザードを表示させたくない</a></li>
+                      <li><a href="suppression/#faq2">アップデート後の「お使いのFirefoxは最新版に更新されました」タブを表示させたくない</a></li>
+                      <li><a href="suppression/#faq3">アップデート後の「Thunderbirdへようこそ」（新着情報）タブを表示させたくない</a></li>
+                      <li><a href="suppression/#faq4">「あなたの権利について」を表示させたくない</a></li>
+                      <li><a href="suppression/#faq5">パフォーマンス情報の自動送信に関するメッセージを表示させたくない</a></li>
+                      <li><a href="suppression/#faq6">プラグインのインストールを促すメッセージを表示させたくない</a></li>
+                      <li><a href="suppression/#faq7">タブを閉じようとしたときの警告を表示させたくない</a></li>
+                    </ul>
+                  </section>
+                  <section id="customize-defaults">
+                    <h2>初期設定の変更</h2>
+                    <ul>
+                      <li><a href="customize-defaults/#faq1">既定のホームページを変更したい</a></li>
+                      <li><a href="customize-defaults/#faq2">初期状態のブックマークの内容を変更したい</a></li>
+                      <li><a href="customize-defaults/#faq3">プロキシの設定を固定・強制したい</a></li>
+                      <li><a href="customize-defaults/#faq4">プロキシを使用しない例外サイト（ドメイン）を指定したい</a></li>
+                      <li><a href="customize-defaults/#faq5">履歴を保存させたくない</a></li>
+                      <li><a href="customize-defaults/#faq6">一定以上の日数が経過した履歴を自動的に消去したい</a></li>
+                      <li><a href="customize-defaults/#faq7">サイトごとの機能の許可をあらかじめ設定しておきたい（位置情報の取得の可否、アドオンのインストールの可否など）</a></li>
+                      <li><a href="customize-defaults/#faq8">ロケーションバーで常に「http://」を表示させたい</a></li>
+                      <li><a href="customize-defaults/#faq9">独自SSL証明書やルート証明書をあらかじめ登録済みの状態にしたい</a></li>
+                    </ul>
+                  </section>
+                  <section id="misc">
+                    <h2>その他便利な機能</h2>
+                    <ul>
+                      <li><a href="misc/#faq1">IMAPフォルダのローカルコピーを一切残させたくない</a></li>
+                      <li><a href="misc/#faq2">Outlookとの連携時にwinmail.datを簡単に開けるようにしたい</a></li>
+                      <li><a href="misc/#faq3">メールアカウント作成ウィザードで特定組織向けのメールアカウントをもっと簡単に作成させたい</a></li>
+                      <li><a href="misc/#faq4">メールアドレス入力欄の2番目以降に不正なアドレスが入力されているときに警告のメッセージを出したい</a></li>
+                      <li><a href="misc/#faq5">ローカルファイルに対するリンクをメール本文中に挿入したい</a></li>
+                      <li><a href="misc/#faq6">Windowsのショートカットを添付できるようにしたい、添付されたWinodwsのショートカットを直接実行したい</a></li>
+                      <li><a href="misc/#faq7">添付ファイルの文字エンコーディングの自動判別をより賢くしたい</a></li>
+                      <li><a href="misc/#faq8">アドレス帳を複数コンピュータ間で同期したい</a></li>
+                      <li><a href="misc/#faq9">初期状態で表示するカラムを変更しておきたい</a></li>
+                    </ul>
+                  </section>
+                  <section id="provisioning">
+                    <h2>カスタマイズ済みのFirefox・Thunderbirdの展開</h2>
+                    <ul>
+                      <li><a href="provisioning/#faq1">アドオンを1つインストールするだけでカスタマイズが完了する、という形で複雑なカスタマイズ内容を展開したい</a></li>
+                      <li><a href="provisioning/#faq2">Firefox・ThunderbirdにMCD（AutoConfig）の設定ファイルをバンドルして展開したい</a></li>
+                      <li><a href="provisioning/#faq3">Firefox・Thunderbirdにアドオンをバンドルして展開したい</a></li>
+                      <li><a href="provisioning/#faq4">FirefoxにJavaやFlashなどのプラグインをバンドルして展開したい</a></li>
+                    </ul>
+                  </section>
+                </div><!-- end #main-content -->
+                <aside id="sidebar">
+                  <nav>
+                    <ul>
+                      <li><a href="setting-management/">設定の管理</a></li>
+                      <li><a href="addons/">アドオン、プラグイン</a></li>
+                      <li><a href="multiple-versions/">複数バージョンの併用</a></li>
+                      <li><a href="security/">情報漏洩対策</a></li>
+                      <li><a href="user-control/">ユーザが使える機能を制限したい</a></li>
+                      <li><a href="auto-update/">自動アップデート</a></li>
+                      <li><a href="suppression/">ユーザを惑わすメッセージを表示させたくない</a></li>
+                      <li><a href="customize-defaults/">初期設定の変更</a></li>
+                      <li><a href="misc/">その他便利な機能</a></li>
+                      <li><a href="provisioning/">カスタマイズ済みのFirefox・Thunderbirdの展開</a></li>
+                    </ul>
+                  </nav>
+                </aside><!-- end #sidebar -->
+              </div>
+            </div>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

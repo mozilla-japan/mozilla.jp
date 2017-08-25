@@ -1,0 +1,143 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = 'その他便利な機能 | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/misc/' => 'その他便利な機能'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>その他便利な機能</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>IMAPフォルダのローカルコピーを一切残させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></p><p>ThunderbirdはIMAPサーバを使用するメールアカウントについて、メールの本文をダウンロードせずヘッダ情報だけをダウンロードする設定が可能です。
+しかしながら、ヘッダ情報はローカルに保存される上、一度表示したメールについては本文のデータもディスクキャッシュ上に保存されるため、情報漏洩対策としてIMAPを使用するという場合には、その設定だけでは目的を十分には達成できません。</p><p>アドオン <a href="https://addons.mozilla.org/thunderbird/addon/clear-imap-local-cache/">IMAPキャッシュの自動消去（Clear IMAP Cache）</a>を導入すると、Thunderbirdを終了する度にダウンロード済みのヘッダ情報とディスクキャッシュを自動的に消去させることができます。
+これによって、情報漏洩対策としての実効性をより高めることができます。</p><h3 id="-">注意事項</h3><p>このアドオンを使うことで完全な情報漏洩対策が実現される、というわけではないことに注意して下さい。
+例えば、ヘッダ情報が保存されているファイルが使用中の場合には、このアドオンではヘッダ情報が消去されない場合があります。</p>
+                    </article>
+                    <article id="faq2">
+                      <h2>Outlookとの連携時にwinmail.datを簡単に開けるようにしたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">アプリケーション連携</span></p><p>Outlookから送信したメールには、<code>winmail.dat</code> というファイルが添付されている場合があります。
+このファイルにはリッチテキスト形式の本文が保存されていますが、Thunderbirdでは内容を閲覧することができません。
+そのため、添付されたwinmail.datをダブルクリック等で開こうとした場合には、ファイルが開かれるのではなくファイルのダウンロード（ファイルとして保存する処理）が開始されます。</p><p><code>winmail.datの内容</code> は、<a href="https://www.google.co.jp/search?q=WinmailOpener">WinmailOpener</a>という別のソフトウェアで閲覧することができます。
+アドオン <a href="https://addons.mozilla.org/thunderbird/addon/winmail-opener-bridge/">Winmail Opener Bridge</a>を導入すると、添付された <code>winmail.dat</code> を開こうとした時に自動的にWinmailOpenerでファイルが開かれるようになります。</p><h3 id="-">注意事項</h3><p>Winmail Opener BridgeにはWinmailOpenerは同梱されていません。利用にあたっては、別途WinmailOpenerをインストールしておく必要があります。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>メールアカウント作成ウィザードで特定組織向けのメールアカウントをもっと簡単に作成させたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Thunderbirdのメールアカウント作成ウィザードでは、Mozilla公式に提供されているISPの情報や、メールサーバに設置された設定情報、一般的なメールサーバの設定の流儀などに従って、メールアドレスとパスワードを入力するだけでメールアカウントを半自動的に作成することができます。
+しかしながら、メールサーバなどの基本的な設定以外の項目（例えばHTMLメールの利用の可否など）は、その後改めて手動で設定する必要があります。</p><p>アドオン <a href="https://addons.mozilla.org/thunderbird/addon/autoconfiguration-hook/">AutoConfiguration Hook</a>を使用すると、あらかじめメールアカウント情報のテンプレートとなる設定ファイルを用意しておくことにより、基本設定以外の項目についてもメールアカウント作成時の初期値を指定することができます。
+また、メールアドレスのローカルパートのみを入力させてメールアカウントを作成できる、特定組織向けのメールアカウント作成専用のウィザードも利用可能になります。</p>
+                    </article>
+                    <article id="faq4">
+                      <h2>メールアドレス入力欄の2番目以降に不正なアドレスが入力されているときに警告のメッセージを出したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">障害回避</span></p><p>Thunderbirdは、メールの宛先が正しいメールアドレスでない場合、メール送信時に警告が表示される仕様になっています。
+しかしながら、2つ目以降の宛先についてはこの確認が行われないという不具合（制限事項）があります。</p><p>アドオン <a href="https://addons.mozilla.org/thunderbird/addon/patch-to-alert-invalid-addr/">不正なアドレスの警告表示パッチ（Patch to Alert Invalid Addresses）</a>を使用すると、2つ目以降の宛先についても最初の宛先と同様の妥当性検証が行われるようになります。</p>
+                    </article>
+                    <article id="faq5">
+                      <h2>ローカルファイルに対するリンクをメール本文中に挿入したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">利便性向上</span></p><p>古いバージョンのThunderbirdでは、メール編集ウィンドウの本文領域にファイルをドラッグ＆ドロップすると、ファイルのURL文字列がその位置に挿入される仕様でした。
+しかしながら、現在のバージョンのThunderbirdでは、この機能は廃止されています。</p><p>アドオン <a href="https://addons.mozilla.org/thunderbird/addon/insert-link-from-local-file/">ローカルファイルからのリンク挿入（Insert Link from Local File）</a>を導入すると、古いバージョンのThunderbirdと同様に、ファイルのドロップ位置にそのファイルのURLを挿入できるようになります。
+挿入されたURLは、受信者側ではリンクとして利用することができます。</p><p>これによって、社内でのメールのやりとりにおいて、ファイルを添付する代わりに共有フォルダに置きURLだけをやりとりする、といった使い方が容易になります。</p>
+                    </article>
+                    <article id="faq6">
+                      <h2>Windowsのショートカットを添付できるようにしたい、添付されたWinodwsのショートカットを直接実行したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">利便性向上</span></p><p>Thunderbirdでは、Windowsのショートカットファイルをメールに添付することができません。
+また、添付されたショートカットファイルを受信した場合にも、それを直接開くことはできず、一旦ファイルとして保存してから改めて開く必要があります。</p><p>アドオン <a href="https://github.com/clear-code/openshortcuts/releases">Windowsショートカットの直接実行（Open Windows Shortcuts Directly）</a>を導入すると、ショートカットをメール編集ウィンドウの宛先領域周辺にドラッグ＆ドロップすることによってファイルとしてそのまま添付できるようになります（※メニューからの操作でコモンダイアログから選択した場合は、ショートカットのリンク先の実体ファイルが添付されます）。
+また、ショートカットが添付されたメールについては、ショートカットをダブルクリックするなどの操作によりリンク先の実体ファイルを直接開けるようになります。</p><p>これによって、社内でのメールのやりとりにおいて、ファイルを添付する代わりに共有フォルダに置きショートカットだけをやりとりする、といった使い方が容易になります。</p>
+                    </article>
+                    <article id="faq7">
+                      <h2>添付ファイルの文字エンコーディングの自動判別をより賢くしたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">利便性向上</span></p><p>Thunderbirdでは、プレーンテキスト形式のファイルを添付する際にファイルの文字エンコーディングを自動判別し、ヘッダ情報に含めるようになっています。
+しかしながら、この自動判別があまり正確でないため、Shift_JISやEUC-JPのテキストファイルを添付した場合に受信者側で文字化けして表示される事があります。</p><p>アドオン <a href="https://addons.mozilla.org/thunderbird/addon/attachemnt-encoding-detecto/">添付ファイルの文字エンコーディングの自動判別（Attachemnt Encoding Detector）</a>を導入することにより、上記処理における文字エンコーディングの自動判別において言語別の自動判別器が使われるようになり、文字化けの発生を低減することができます。</p>
+                    </article>
+                    <article id="faq8">
+                      <h2>アドレス帳を複数コンピュータ間で同期したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">利便性向上</span></p><p>Thunderbirdでは、LDAPアドレス帳機能によって、ディレクトリサーバ内に格納されている情報をアドレス帳として参照することができます。
+しかしながら、この機能にはいくつかの制限事項があります。</p><ul>
+<li>LDAPアドレス帳への書き込みはできません。読み込みのみの利用となります。</li>
+<li>ディレクトリサーバに接続する際のユーザをWindowsのログオンユーザと連携させること（シングルサインオン）はできません。</li>
+</ul><p>LDAPアドレス帳ではないアドレス帳の共有または同期を可能にする方法として、アドオン <a href="https://addons.mozilla.org/thunderbird/addon/addressbooks-synchronizer/">Addressbooks Synchronizer</a>の使用が挙げられます。
+このアドオンを使用すると、例えば以下のような運用も可能となります。</p><ul>
+<li>アドレス帳をIMAPサーバ上にメールの添付ファイルとして保存し、複数PC間でアドレス帳を同期する。</li>
+<li>アドレス帳をHTTPまたはFTPサーバ上に設置しておき、複数ユーザ・複数PCから読み込み専用の共有アドレス帳として参照する。</li>
+</ul>
+                    </article>
+                    <article id="faq9">
+                      <h2>初期状態で表示するカラムを変更しておきたい</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span></p><p>Thunderbirdのスレッドペインでは、初期状態でどのカラムを表示しておくかが決め打ちになっており、例えば「重要度」のようなカラムをすべてのフォルダ・すべてのアカウントで最初から表示された状態にしておきたいと思っても、管理者がそれを全クライアントに反映する事はできません。</p><p>アドオン<a href="https://addons.mozilla.org/thunderbird/addon/set-default-columns/">Set Default Columns</a>を使用すると、初期状態で表示しておくカラムを<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>の設定ファイルなどからカスタマイズすることができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>で、「重要度」のカラムを初期状態で表示するようにする設定例です。</p><pre><code>lockPref(&quot;extensions.set-default-columns@clear-code.com.columns&quot;, [
+  &quot;priorityCol&quot;, // 追加したカラム
+  &quot;threadCol&quot;,
+  &quot;threadCol&quot;,
+  &quot;attachmentCol&quot;,
+  &quot;flaggedCol&quot;,
+  &quot;subjectCol&quot;,
+  &quot;unreadButtonColHeader&quot;,
+  &quot;senderCol&quot;,
+  &quot;junkStatusCol&quot;,
+  &quot;dateCol&quot;,
+  &quot;locationCol&quot;
+].join(&quot;,&quot;));
+</code></pre><p>既に1度でも内容を表示した事があるフォルダについては、最後に内容を表示した時の表示カラムの状態が記憶されています。
+ここで設定した既定の表示カラムを反映するためには、カラム行の右端のアイコンをクリックしてメニューから「初期状態に戻す」を選択する必要があります。</p>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">IMAPフォルダのローカルコピーを一切残させたくない</a></li>
+                        <li><a href="#faq2">Outlookとの連携時にwinmail.datを簡単に開けるようにしたい</a></li>
+                        <li><a href="#faq3">メールアカウント作成ウィザードで特定組織向けのメールアカウントをもっと簡単に作成させたい</a></li>
+                        <li><a href="#faq4">メールアドレス入力欄の2番目以降に不正なアドレスが入力されているときに警告のメッセージを出したい</a></li>
+                        <li><a href="#faq5">ローカルファイルに対するリンクをメール本文中に挿入したい</a></li>
+                        <li><a href="#faq6">Windowsのショートカットを添付できるようにしたい、添付されたWinodwsのショートカットを直接実行したい</a></li>
+                        <li><a href="#faq7">添付ファイルの文字エンコーディングの自動判別をより賢くしたい</a></li>
+                        <li><a href="#faq8">アドレス帳を複数コンピュータ間で同期したい</a></li>
+                        <li><a href="#faq9">初期状態で表示するカラムを変更しておきたい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

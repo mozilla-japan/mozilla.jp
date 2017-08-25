@@ -1,0 +1,4 @@
+*.html~
+includes/events/*.json
+includes/products/product_details_json
+.DS_Store

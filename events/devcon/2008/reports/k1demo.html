@@ -1,0 +1,124 @@
+<?php
+
+$page_title         = 'Firefox のモバイルプロジェクト「Fennec」デモ | レポート | Firefox Developers Conference 2008';
+$body_id            = 'events-devcon-2008-report';
+$body_class         = 'sand news events devcon';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/devcon/2008/' => 'Firefox Developers Conference 2008',
+  '/events/devcon/2008/reports/k1demo' => 'レポート：Firefox のモバイルプロジェクト「Fennec」デモ'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name">Firefox Developers Conference 2008 Report</h1>
+                <h2 role="presentation">Firefox のモバイルプロジェクト「Fennec」デモ</h2>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>今回の Firefox Developers Conference では、Mozilla Corporation のモバイル担当技術責任者である Christian Sejersen より、モバイル向け Firefox の「Fennec」が紹介されました。ここではそのデモの内容をご紹介します。</p>
+              <h4>Firefox の機能をより簡単に使いやすく</h4>
+              <p>「Fennec」は現在アルファ版が公開されており、米国で発売されているスマートフォン「Nokia N810」にインストールできます。デスクトップでの使用も可能で、Windows、Mac OS X、Linux 版が公開されています。今回のデモはデスクトップ版を使って行なわれましたが、基本的なスピードやユーザーインタフェイスはモバイル版と変わりありません。スタートアップ画面も同じで、ここからすべての操作ができるようになっています。</p>
+              <p>右下に「drag this way for controls」とある左向き矢印の方向に画面全体をスライドさせると、右端にブックマークやアドオンなど様々な機能をコントロールするためのボタンが表示されます。デザインや基本的な操作は Firefox と同じで、それぞれクリックするとさらに右側に表示されるメニュー画面から、拡張機能やテーマ、Java などプラグインの設定、ダウンロードの履歴表示、セキュリティ設定といったことができるようになっています。</p>
+              <p>反対に「drag this way for your tab」と書かれた通り画面全体を右へスライドさせると、左端にタブ画面がサムネイルで表示されます。各タブは並べ替えたり削除も簡単にできるようになっています。</p>
+              <p>Fennec の最大の特長であり重要な機能といえるのが、Firefox と同じく様々なアドオンやテーマが使えるようになっていることです。作成方法も公開されていて、Firefox のアドオンを作っている人であればすぐにでも作成でき、ユーザーによって作られたアドオンがすでにいくつか公開されています。</p>
+              <h4>フルブラウジングでの快適な操作を目指す</h4>
+              <p>Fennec はできるだけキー入力時の手間を減らすことで、モバイル環境での操作性を高めようとしています。入力バーは通常の検索をはじめ、URL 入力の自動補完や履歴からサイトを探すことができ、ブックマーク登録も簡単です。セキュリティ面にも十分配慮しており、アクセス先のサイト情報や警告もきちんと表示されるようにしており、Paypal などのオンライン支払いサービスも安心して利用できます。</p>
+              <p>フルブラウジングを快適にするため、アクセスした時にサイトが設定しているサイズで画面が表示されていても、ダブルタップすると画面の幅に合わせて表示でき、拡大縮小はオフラインでも可能になっています。上下左右自由自在に画面がスクロールできるのはもちろん、スクロールを続けている時はメニューバーを消して画面いっぱいにコンテンツを表示するといったこともできます。</p>
+              <p>モバイル環境における新しいユーザーインタフェイスの開発については、モバイルプロジェクト全体の課題としており、たとえば、Mozilla Labs で開発中の Ubiquity の導入なども検討しています。また、Fennec に関しては次の開発バージョンではタッチスクリーン入力以外への対応を予定しています。</p>
+              <h3>このセッションの動画を見る</h3>
+              <p><a href="http://www.soi.wide.ad.jp/class/20080048/slides/01/" rel="nofollow" class="movie-play">動画を見る</a></p>
+              <ul>
+                <li>動画の公開期間は 3 ヶ月間となります。(2009 年 4 月 28 日まで)</li>
+                <li>動画配信は WIDE University, School of Internet (SOI) 様のご協力をいただいております。</li>
+                <li>動画を見るには RealPlayer Basic (G2 以上) または RealOne Player が必要です。(<a href="http://www.soi.wide.ad.jp/class/video99.html" rel="nofollow">詳細</a>)</li>
+              </ul>
+              <h3>関連リンク</h3>
+              <ul>
+                <li><a href="/events/devcon/2008/">Firefox Developers Conference 2008</a></li>
+                <li><a href="https://wiki.mozilla.org/Mobile">Mozilla Mobile Project</a></li>
+                <li><a href="https://www.mozilla.org/projects/fennec/1.0a1/releasenotes/">Fennec 1.0 Alpha 1</a></li>
+                <li><a href="https://mozillalabs.com/en-US/projects/ubiquity/">Mozilla Labs - Ubiquity</a></li>
+              </ul>
+            </div><!-- end #main-content -->
+            <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+              <h3>写真</h3>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-1.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Mozilla Corporation モバイル担当技術責任者の Christian Sejersen による Fennec のデモ</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-2.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">カンファレンス会場では Fennec が搭載された「Nokia N810」の実機が参加者の注目を集めていた</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-5.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">スタートアップ画面は入力バーやコントロール画面の表示が書かれているだけのシンプルなもので、基本的な操作はこの画面から行なうようになっている</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-6.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">画面全体を左にスライドすると右側にブックマークや環境設定をコントロールするためのボタンが表示される</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-8.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">アドオンの設定などはボタンをクリックすると右側に表示されるメニュー画面から行なえる</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-11.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">オプションにはコンテンツやプライバシー、セキュリティの設定が含まれている</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-12.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">画面全体を右にスライドすると右側にタブ画面のサムネイル一覧が表示される</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-23.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Fennec 向けのアドオンは作成方法が公開されていて今後も続々と数が増えていく予定</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-15.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Firefox ではお馴染みの、入力されたテキストや URL から過去の履歴を自動的に表示される機能も採用されている</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-16.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">よく見るページを一覧表示したところ</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-17.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">ブックマーク登録ではタグ情報なども保存できる</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-19.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Paypal のようなセキュアなページも安心して使えるようセキュリティ対応にも力を入れている</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-20.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">サイトにアクセスしてから画面をダブルタップすると、画面に合わせてリサイズできる</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-21.jpg" width="280" height="210" alt="" itemprop="contentURL">
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-14.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">ブラウジングをする時はメニューバーなどを非表示にして、画面いっぱいにコンテンツを表示するといったこともできる</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/k1demo-22.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">表示画面イメージ</figcaption>
+              </figure>
+            </aside>
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

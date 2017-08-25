@@ -1,0 +1,198 @@
+<?php
+
+$page_type          = 'ItemPage';
+$page_title         = 'Firefox 1.0.3 リリースノート';
+$body_id            = 'firefox-relnotes';
+$body_class         = 'sky firefox desktop relnotes version';
+$css                = array('sandstone/product-relnotes'); // 最終更新日は /includes/functions.inc.php で管理
+$breadcrumbs        = array(
+  'https://www.mozilla.org/ja/firefox/' => 'Firefox ブラウザー',
+  'https://www.mozilla.org/ja/firefox/desktop/' => 'デスクトップ版',
+  '/firefox/releases/' => 'リリースノート',
+  '/firefox/1.0.3/releasenotes/' => 'Firefox 1.0.3'
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup" role="heading" aria-level="1">
+                  <h1 role="presentation" itemprop="name"><em>Firefox</em> <em>リリースノート</em></h1>
+                  <h2 role="presentation"><span itemprop="about" itemscope itemtype="http://schema.org/Product"><span itemprop="name">バージョン 1.0.3</span></span></h2>
+                </div>
+                <p itemprop="description">Firefox は、ウェブブラウジングをかつてなく効率的にする、フル機能の高速ブラウザーです。詳しくは <a href="https://www.mozilla.org/ja/firefox/">製品情報ページ</a> をご覧ください。</p>
+              </header><!-- end #main-feature -->
+              <div id="main-content" itemprop="articleBody">
+
+<p>このリリースノートには、Firefox 1.0.3 に関する <a href="#new">新機能</a>、<a href="#download">ダウンロード</a>、<a href="#install">インストール方法</a>、<a href="#issues">既知の問題</a>、<a href="#FAQ">よくある質問</a> などが載っています。<a href="https://bugzilla.mozilla.org/">Bugzilla</a> にバグを報告する前に、このリリースノートと <a href="https://developer.mozilla.org/ja/Bug_writing_guidelines">バグの登録方法</a> をよくお読みください。</p>
+<p>Firefox に関するあなたのフィードバックをお待ちしています。<a href="http://www.mozillazine.org/">MozillaZine</a> によって運営されている <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> にぜひ参加してください。</p>
+
+<h2><a name="new">1.0.3 の新機能と改良点</a></h2>
+<p>Firefox 1.0.3 は、消費者の皆さんに安全なインターネット体験を提供するという私たちの取り組みの一環として、セキュリティの向上を図ったアップデートです。すべてのユーザーに対し、この最新版へのアップグレードを推奨します。</p>
+<p>Firefox 1.0.3 の新機能と改良点をご紹介します。</p>
+<ul>
+  <li>いくつかの <a href="http://www.mozilla-japan.org/security/known-vulnerabilities/firefox10.html#firefox1.0.3">セキュリティ問題の修正</a></li>
+  <li>アップデートプロセスを改良するための修正</li>
+</ul>
+<h2><a name="downloadandinstall">ダウンロードとインストール</a></h2>
+<h3><a name="requirements">必要システム構成</a></h3>
+<p>インストールの前に、お使いのコンピューターが <a href="/firefox/1.0/system-requirements/">必要システム構成</a> を満たしているか確認してください。</p>
+<h3><a name="download">ダウンロード</a></h3>
+<p>mozilla.org は、Windows、Linux、Mac OS X 版の Firefox を様々な言語で提供しています。Firefox の最新版を入手するには <a href="https://www.mozilla.org/ja/firefox/">GetFirefox.jp</a> を訪れるか <a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/">FTP サイト</a> を参照してください。mozilla.org が提供していない、他のシステム・言語向けのビルドについては、このページの最後にある「提供されたビルド」の項目をご覧ください。</p>
+<h3><a name="install">インストール</a></h3>
+<p>Firefox をダウンロードしたら、以下の手順に従ってインストールしてください。</p>
+<h4>Windows</h4>
+<p>インストーラ (<tt class="filename">Firefox Setup 1.0.3.exe</tt>) をダブルクリックするとインストールが開始されます。</p>
+<h4>Mac OS X</h4>
+<p>ダウンロードしたディスクイメージ (<tt class="filename">Firefox 1.0.3.dmg</tt>) をダブルクリックして Finder で開き、Firefox アプリケーションをハードディスクにドラッグしてください。Dock に追加したい場合は、アイコンを Dock にドラッグしてください。</p>
+<p>Firefox 1.0 の場合は、圧縮ディスクイメージ (<tt class="filename">Firefox 1.0.dmg.gz</tt>) をダブルクリックして展開・マウントします。お使いのブラウザーによっては、イメージが自動的に展開・マウントされる場合もあります。マウントされたディスクイメージをダブルクリックして Finder で開き、Firefox アプリケーションをハードディスクにドラッグしてください。<strong>ディスクイメージ内のアイコンをダブルクリックしてはいけません</strong>。Firefox アプリケーションは、起動する前に必ず、ディスクイメージからハードディスクにドラッグしてください。Dock に追加したい場合は、アイコンを Dock にドラッグしてください。</p>
+<h4>Linux/GTK2</h4>
+<p>tarball を展開して、以下のようにインストーラを実行してください。</p>
+<p><code>tar -xzvf firefox-1.0.3.installer.tar.gz<br>cd firefox-installer<br>./firefox-installer</code></p>
+<p>実行可能ファイルの起動を設定する Nautilus をお持ちの場合は、firefox-installer をダブルクリックするだけです。</p>
+<h4>その他のプラットフォーム</h4>
+<p>圧縮アーカイブを展開して <tt>firefox</tt> を実行してください。</p>
+<h3><a name="uninstall">アンインストール</a></h3>
+<p>Firefox をアンインストールするには、以下の手順に従ってください。</p>
+<h4>Windows</h4>
+<p>[スタート] メニューから [コントロール パネル] を選択してください。パネルが開いたら [プログラムの追加と削除] をダブルクリックしてください。リストの中から &quot;Mozilla Firefox (1.0.3)&quot; を見つけて [削除] ボタンをクリックするとアンインストールが開始されます。</p>
+<h4>Mac OS X</h4>
+<p><tt class="filename">Firefox</tt> アプリケーションをゴミ箱にドラッグしてください。</p>
+<h4>その他のプラットフォーム</h4>
+<p><tt class="filename">firefox</tt> フォルダーを削除してください。</p>
+<p>これらの手順でアンインストールを完了しても、また次に Firefox をインストールする場合を考えて、あなたのプロファイルは削除されず、そのまま保存されます。Firefox のプロファイルを削除したい場合は、以下の「プロファイルフォルダー」の項目に書かれているフォルダーを削除してください。なお、一度プロファイルを削除してしまうと、ブックマークや保存されたパスワード、個人設定、その他のデータがすべで消去されてしまいますので、次に Firefox を使う場合は新しいプロファイルで起動することになります。</p>
+<h2>その他の情報</h2>
+<h3><a name="profilefolder">プロファイルフォルダー</a></h3>
+<p>Firefox は、以下の場所にユーザーデータを保存します。</p>
+<table border="1" cellspacing="0" style="font-size: smaller;">
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows 2000/XP</td><td>Documents and Settings&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows NT</td><td>WINNT&yen;Profiles&yen;&lt;ユーザー名&gt;&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-win.png" alt=""> Windows 98/ME</td><td>Windows&yen;Application Data&yen;Mozilla&yen;Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-mac.png" alt=""> Mac OS X</td><td>~/Library/Application Support/Firefox</td></tr>
+  <tr><td><img src="/static/images/general/platforms/icon-linux.png" alt=""> Linux/Unix</td><td>~/.mozilla/firefox/</td></tr>
+</table>
+<p>Firefox 1.0 にアップグレードする前に Firefox 0.8 をデフォルトブラウザーとして使っていた場合、プロファイルのデータは新しい場所にコピーされます。古い &quot;Phoenix&quot; フォルダーは後で時間があるときにでも削除してください。</p>
+<h3><a name="extensions">拡張機能とテーマ</a></h3>
+<p>Firefox の新バージョンにアップグレードする際、お使いの拡張機能やテーマは、Firefox の新バージョンと互換性があること、または、互換性のある新しい拡張機能やテーマが提供されていることが確認されるまで、すべて無効化されます。これは、Firefox がバージョンごとに変更点を含んでおり、その変更された部分の機能を統合した一部の拡張機能やテーマは、Firefox の新バージョンで使うと問題を引き起こす可能性があるためです。お気に入りの拡張機能やテーマがアップデートされておらず、Firefox の新バージョンと互換性がない場合は、作者に連絡を取ってアップデートするよう促してください。</p>
+<p>この拡張機能やテーマの自動アップデートは、Firefox 0.8 以下のバージョンから Firefox 1.0 にアップグレードする際には適用されません。古い拡張機能やテーマは 1.0 起動時に無効化されますので、そういった場合、ユーザーは手作業で 1.0 と互換性のあるバージョンを再インストールしなくてはなりません。</p>
+<p>(&quot;No XBL Binding for Browser&quot; というエラーが出てブラウザーが起動しない、あるいはテーマが壊れるといった) Firefox 0.8 に見つかったいくつかの問題を防ぐため、1.0 に移行する際、拡張機能はすべて自動的に無効化されます。これまで 0.9 または 1.0PR を使っていた場合は、1.0 を初めて起動した際、addons.mozilla.org に接続し、新しい互換性のある拡張機能を探します。もし見つかれば、ダウンロード、インストールします。0.8 を使っていた場合は、新しい互換性のあるバージョンをご自身で探してください。</p>
+<h3><a name="otherchanges">その他の変更</a></h3>
+<ul>
+  <li>Linux では、Firefox はテキストボックスのキーバインドについて GTK の設定に従うようになりました。そのため、Ctrl+文字 を押すと、せりふ読み上げのようなテキスト編集ショートカットの代わりに、アプリケーションのショートカットが起動します。詳しくは <a href="http://kb.mozillazine.org/Emacs_Keybindings_%28Firefox%29">こちらのドキュメント</a> をご覧ください。</li>
+</ul>
+<h2><a name="issues">既知の問題</a></h2>
+<p>ここには、Firefox 1.0 に関する既知の問題の一部が載っています。新たにバグを報告する前にこのリストをご覧になり、今後も定期的にチェックするようにしてください (リリースに新しいバグが見つかった場合は更新されます)。</p>
+<h3>すべての OS</h3>
+<ul>
+  <li><p>Firefox 1.0.3 のインストールを開始する前に、インストール先に指定したディレクトリーが空で、過去のバージョンの Firefox が含まれていないことを確認してください。</p></li>
+  <li><p>マルチユーザーシステムで、Firefox をアクセス制限のある場所にインストールした場合、その場所にアクセス可能なユーザーがまず最初に Firefox を起動する必要があります。そうすることで、初回起動ファイルがすべて生成されます。この作業を行わないと、インストールされた場所に書き込み権限を持たないユーザーが Firefox を起動しようとした場合、Firefox が必要とする初回起動ファイルが正しく生成されません。</p></li>
+  <li><p>アップグレードの際、拡張機能やテーマはすべて無効化されます。これは問題ではありませんが、見た目にはそのように受け取られる場合もあります (そのため、ここに書かれているのですが)。詳しくは上の「拡張機能とテーマ」をご覧ください。</p></li>
+  <li><p>ソフトウェアアップデートではプロキシ認証が要求されないため、プロキシ経由で接続している場合は失敗します (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=259429">該当バグ</a>)。解決策は、ブラウザーでウェブページを開いてプロキシサーバーにログインしてから、ソフトウェアアップデートを実行してください。</p></li>
+  <li><p>ソフトウェアアップデートは、Firefox がインストールされている場所に書き込み権限のないユーザーが実行すると失敗します。これは、ソフトウェアアップデートがその場所にあるファイルを置き換え・作成する必要があるためです。</p></li>
+  <li><p>ヘルプドキュメントに、「新しいウィンドウを開くリンクはすべて次の場所に開く (リンクと同じタブまたはウィンドウ/新しいタブ)」という「シングルウィンドウモード」オプションに関する記述がありますが、この機能に問題が見つかったため、リリース直前に無効化されました。ヘルプのこの項目は無視してください。シングルウィンドウモードを有効にするには (クラッシュする場合がありますので自己責任でお願いします)、設定コンソール (ロケーションバーに "about:config" と入力して Enter キーを押すと開きます) で <code>browser.tabs.showSingleWindowModePrefs</code> の値を <strong>true</strong> に設定してください。</p></li>
+</ul>
+<h3>Windows</h3>
+<ul>
+  <li><p>共有マシンで、アクセス権の限られたユーザーが、自分の書き込み権限のある場所に Firefox をインストールした場合でも、マイナスの副作用が発生する場合があります (デフォルトブラウザーその他のキーが正しく設定されないなど)。それでもブラウザーは使えます。アクセス権の限られたユーザーがインストールする場合、アクセス制限のある場所や共有の場所にインストールしてはいけません。インストールに失敗する可能性があります。</p></li>
+  <li><p>一部の古い Adobe Acrobat Reader プラグインで PDF ファイルを開いたあと、Firefox がハングする場合があります。このような問題に遭遇したときは、<a href="http://www.adobe.com/jp/products/acrobat/readstep2.html" rel="nofollow">最新のプラグイン</a> が必要です。</p></li>
+  <li><p>Windows 98 では、アプリケーションアイコンが Windows の窓のアイコンになります。</p></li>
+</ul>
+<h3>Mac OS X</h3>
+<ul>
+  <li><p><strong>Firefox をディスクイメージから実行しないでください</strong>。万が一実行してしまうと、無限再起動ループが起こってしまいます (Dock 内で Firefox のアイコンが跳ねたり消えた���を繰り返す現象が見られます)。この無限ループを止めるには、ターミナルを開いて &quot;killall firefox-bin&quot; と入力してください。それから再度、書き込み権限のある場所に Firefox をインストールしてください。アクセス制限のあるマルチユーザーシステムにインストールする場合は、管理者として共有の場所にインストールしてください。そうすれば、すべてのユーザーがアクセス可能になります。</p></li>
+  <li><p><strong>Firefox のブラウザーウィンドウが表示されない場合</strong>、一度 Cmd+Q で Firefox を終了し、<code>~/Library/Application Support/Firefox/Profiles/<var>xxxxxxxx</var>.default/</code> (<var>xxxxxxxx</var> はランダムな文字列) を開いて <code>localstore.rdf</code> を削除してください。それから Firefox を再起動してください。このとき、ツールバーのカスタマイズ内容やウィンドウの位置など一部の設定が失われます。</p></li>
+</ul>
+<h3>Linux/Unix システム</h3>
+<ul>
+  <li><p>パスに空白を含む場所に Firefox をインストールすると、デフォルトブラウザーに設定できず、起動時に毎回確認ダイアログが表示されてしまいます。解決策は、パスに空白を含まない場所にインストールしてください。</p></li>
+  <li><p>GNOME との統合は Fedora Core 3 では正しく機能しません。Fedora Core 3 ユーザーは、<a href="http://download.fedora.redhat.com/pub/fedora/linux/core/2/i386/os/Fedora/RPMS/linc-1.0.3-3.1.i386.rpm" rel="nofollow">linc-1.0.3-3.1.i386.rpm</a> をダウンロード・インストールする必要があります。この RPM をインストールしたら、Firefox をインストールしたディレクトリーで次のコマンドを実行してください (書き込み権限が必要です)。</p><p><code>touch .autoreg</code></p><p>次に Firefox を起動したときから GNOME 統合が有効になります。</p></li>
+</ul>
+<h3>ウェブページの表示</h3>
+<ul>
+  <li><p>Firefox は、他の Mozilla 製品と同じ Gecko レンダリングエンジンを採用しています。ウェブサイトが正しく表示されない問題に遭遇した場合、それは Firefox 自体ではなく Gecko の問題である可能性が高いと言えます。そういった問題は <a href="https://bugzilla.mozilla.org/">Bugzilla</a> の (Firefox プロダクトではなく) Core プロダクトに報告してください。技術的な知識をお持ちの場合は、シンプルなテストケースを作成していただくと、そのバグが注目を集めやすくなります。</p></li>
+</ul>
+<p>Firefox に関するその他の問題、よくある質問、便利な使い方、一般的なヘルプについては、David Tenser の大変便利なヘルプサイト <a href="https://support.mozilla.org/ja/products/firefox">Firefox Help</a> や、<a href="http://www.mozillazine.org/">MozillaZine</a> によって運営されている <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> をチェックしてください。</p>
+<p>設定コンソール (ロケーションバーに "about:config" と入力して Enter キーを押すと開きます) では、ベテランユーザーが Firefox の設定を直接管理できます。このシステムは、自分が何をしているか分かっている人だけが使うべきもので、値の変更を誤ると、問題が起きたり、最悪の場合 Firefox が起動しなくなる場合もあります。手作業で Firefox をカスタマイズするには、ヘルプサイトなどをよく参考にしてください。</p>
+<h2><a name="troubleshooting">トラブルシューティング</a></h2>
+<ul>
+  <li><p>設計が悪い、あるいは互換性のない拡張機能を使うと、頻繁にクラッシュしたり、ページの読み込みが遅くなるなど、ブラウザーに問題を引き起こす可能性があります。ブラウザーの一部機能が使えない、ブラウザーが起動しない、ウィンドウの表示がおかしい、パフォーマンスが低下した、などの問題に遭遇した場合、拡張機能やテーマが原因となっている可能性があります。そのようなときは、ブラウザーをセーフモードで再起動してください。Windows では、スタートメニュー内に作成された "Safe Mode" ショートカットを使うか、<code>firefox.exe -safe-mode</code> で起動してください。Linux では <code>./firefox -safe-mode</code> で起動してください。Mac OS X では、ターミナルを開いて以下のコマンドを実行してください。</p><p><code>cd /Applications/Firefox.app/Contents/MacOS/<br>./firefox-bin -safe-mode</code></p><p>セーフモードで起動すると、拡張機能はすべて無効化され、デフォルトテーマが使われます。問題の原因となった拡張機能やテーマを無効化してから、通常通り起動してください。</p></li>
+  <li><p>ユーザープロファイルにインストールした拡張機能をアンインストールし (ウェブページからインストールしたものなど)、コマンドラインオプション -install-global-extension を使ってすべてのユーザープロファイルにインストールしたい場合は、コマンドラインオプションを付けてインストールする前に、一度ブラウザーを再起動し、その拡張機能の痕跡が残るプロファイルの拡張機能データソースを一掃する必要があります。そうしないと、拡張機能リスト内のエントリーがおかしくなり、目的の拡張機能をグローバルにインストールできなくなる場合があります。</p></li>
+  <li><p>ブックマーク、ダウンロード、ウィンドウの配置、ツールバー、履歴、その他の設定に関して不可解な問題に遭遇した場合は、バグを報告する前に新しいプロファイルを作成して、問題が再現するかどうか確かめてください。プロファイルを新規作成するには、コマンドラインオプション -p を付けて Firefox を起動し、[新しいプロファイルの作成] ボタンをクリックしてください。設定ファイル (ブックマーク、保存したパスワードなど) をひとつずつ手作業で移行し、そのたびに問題が再現するかどうか確認してください。特定のプロファイルデータが問題を起こすことが分かった場合は、バグを登録してそのファイルを添付してください。</p></li>
+</ul>
+<h2><a name="FAQ">よくある質問</a></h2>
+<dl class="faq">
+  <dt>どのような協力ができますか?</dt>
+  <dd>私たちは少しでも多くの配布経路を必要としています。できる限り多くの友人や家族、同僚を Firefox に乗り換えさせることがあなたの使命です。もしあなたが学生なら、学校で Firefox を配布してください。リリースについて <a href="http://slashdot.org/" rel="nofollow">Slashdot</a> [<a href="http://slashdot.jp/" rel="nofollow">日本語版</a>] やその他のニュースサイトに記事を投稿してください。あなたのブログから情報を流してください。例えばあの Kazaa のように、インターネットを通じた大規模な配布が可能です。<a href="http://www.spreadfirefox.com/">Firefox の話題をどんどん広めてください!</a></dd>
+  <dt>私は別のブラウザーを使っています。なぜなら...</dt>
+  <dd>もしあなたが Firefox を使っていないのなら、開発チームにその理由を教えてください。私たちは <a href="http://forums.mozillazine.org/?c=4">Firefox フォーラム</a> に寄せられたフィードバックに目を通しています。</dd>
+  <dt>なぜ私が送ったメールに返事をくれないのですか?</dt>
+  <dd><a href="http://forums.mozillazine.org/?c=4">フォーラム</a> をご利用ください。Firefox チームは常時このフォーラムをチェックしています。私たちは毎日多くのメールを受け取っているので、あなたが送ったメールは見過ごされる可能性もあります。</dd>
+  <dt>テーマとアドオン (拡張機能) はどこで手に入りますか?</dt>
+  <dd>テーマと拡張機能は <a href="https://addons.mozilla.org/ja/firefox/">Mozilla Update</a> からダウンロードできます。</dd>
+  <dt>誰が Firefox の作業をしているのですか?</dt>
+  <dd>非常に多くの人が関わっています。Firefox に貢献している人たちの一覧を見るには、[ヘルプ] メニューの [Mozilla Firefox について] に書かれているクレジットをご覧ください。</dd>
+  <dt>Firefox のソースコードはどこにありますか?</dt>
+  <dd>Firefox 1.0 のソースコードは tarball として <a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0/source/firefox-1.0-source.tar.bz2">ダウンロード</a> できます。最新の開発コードは <a href="https://developer.mozilla.org/ja/Mozilla_Source_Code_(CVS)">cvs</a> を通じて入手可能です。Firefox 固有のソースは &quot;mozilla/browser&quot; と &quot;mozilla/toolkit&quot; と &quot;mozilla/chrome&quot; にあります。詳しくは <a href="https://developer.mozilla.org/ja/Build_Documentation">ビルド方法</a> に従ってください。</dd>
+  <dt>メールクライアントはどこにあるのですか?</dt>
+  <dd>Firefox は、お使いのシステムでどのアプリケーションがデフォルトのメールクライアントになっていても、それと併せて使うことができますが、Firefox ブラウザーにぴったりな、Mozilla の次世代メールクライアント <a href="https://www.thunderbird.net/ja/">Mozilla Thunderbird</a> を使ってみることをお勧めします。</dd>
+  <dt>Firefox のスペルは? 短縮形は?</dt>
+  <dd>Firefox のスペルは F-i-r-e-f-o-x です。最初の文字だけが大文字になります (例えば、FireFox や FireFOX、FIRE FOX など、多くの人がそうだと思い込んでいるものはすべて間違いです)。好ましい短縮形は「Fx」か「fx」です。</dd>
+</dl>
+<h2><a name="links">その他の関連資料とリンク</a></h2>
+<p>以下のリソースには、Firefox に関する役に立つ情報が載っています。</p>
+<ul>
+  <li><a href="https://support.mozilla.org/ja/products/firefox">Firefox Help</a></li>
+  <li><a href="http://kb.mozillazine.org/Mozilla_Firefox">MozillaZine ナレッジベース</a> (英語)</li>
+  <li><a href="https://www.mozilla.org/projects/firefox/">プロジェクト情報</a></li>
+</ul>
+<h2>提供されたビルド</h2>
+<p>これらは非公式なビルドで、mozilla.org のビルドとは設定が異なる場合があります。また、特定のプラットフォーム向けに最適化、テストされている場合もあります。それぞれの説明をご覧ください。</p>
+<h3><a name="othersystems">その他のシステム</a></h3>
+<p>mozilla.org によって公式に提供されている 3 種類以外のプラットフォーム向けビルドは <a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/">FTP サイト</a> にあります。</p>
+<dl>
+  <dt>Solaris (Sun 北京チーム提供)</dt>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.10-gtk2+xft.tar.bz2">firefox-i386-pc-solaris2.10-gtk2+xft.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.10-gtk2+xft.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.10-gtk2+xft.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8-gtk2.tar.bz2">firefox-i386-pc-solaris2.8-gtk2.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8-gtk2.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8-gtk2.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8.tar.bz2">firefox-i386-pc-solaris2.8.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i386-pc-solaris2.8.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.10-gtk2+xft.tar.bz2">firefox-sparc-sun-solaris2.10-gtk2+xft.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.10-gtk2+xft.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.10-gtk2+xft.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8-gtk2.tar.bz2">firefox-sparc-sun-solaris2.8-gtk2.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8-gtk2.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8-gtk2.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8.tar.bz2">firefox-sparc-sun-solaris2.8.tar.bz2</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-sparc-sun-solaris2.8.tar.bz2.MD5SUM">MD5SUM</a>)</dd>
+  <dt>Java Desktop System (Sun 北京チーム提供)</dt>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds2-gtk2+xft.tar.gz">firefox-i686-pc-linux-gnu-jds2-gtk2+xft.tar.gz</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds2-gtk2+xft.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds2-gtk2+xft.tar.gz.MD5SUM">MD5SUM</a>)</dd>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds3-gtk2+xft.tar.gz">firefox-i686-pc-linux-gnu-jds3-gtk2+xft.tar.gz</a>
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds3-gtk2+xft.readme">Readme</a>)
+     (<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-i686-pc-linux-gnu-jds3-gtk2+xft.tar.gz.MD5SUM">MD5SUM</a>)</dd>
+  <dt>OS/2 (IBM Corporation 提供)</dt>
+  <dd><a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib/firefox-os2-1.0.3.zip">tar.gz 形式</a>
+     (<a href="http://www.innotek.de/products/gccos2/download/gccos2download_e.html" rel="nofollow">GCC ランタイムライブラリ</a> の libc0.5 をベースとしたバージョンが必要です)</dd>
+</dl>
+<h3><a name="otherlanguages">ローカライズビルド</a></h3>
+<p>多くのローカライズビルドが、<a href="https://wiki.mozilla.org/L10n:Localization_Teams">協力者</a> を代表して、mozilla.org によって作成、配布されています。私たちが提供している公式ビルドの一覧は、<a href="https://www.mozilla.org/ja/firefox/">GetFirefox.jp</a> を訪れるか、<a href="https://www.mozilla.org/ja/firefox/all/">すべてのシステムと言語</a> を参照してください。</p>
+<p>Firefox 1.0.3 の公式ローカライズとして認定されていないビルドは、<a href="http://ftp.mozilla-japan.org/pub/mozilla.org/firefox/releases/1.0.3/contrib-localized/">FTP サイト</a> を参照してください。</p>
+<br><br>
+<p>過去のバージョンのリリースノート: <a href="0.1">0.1</a> | <a href="0.2">0.2</a> | <a href="0.3">0.3</a> | <a href="0.4">0.4</a> | <a href="0.5">0.5</a> | <a href="0.6">0.6</a> | <a href="0.6.1">0.6.1</a> | <a href="0.7">0.7</a> | <a href="0.7.1">0.7.1</a> | <a href="0.8">0.8</a> | <a href="0.9">0.9</a> | <a href="0.9.1">0.9.1/0.9.2</a> | <a href="0.9.3">0.9.3</a> | <a href="0.10">1.0 Preview Release</a> | <a href="1.0">1.0</a> | <a href="1.0.1">1.0.1</a> | <a href="1.0.2">1.0.2</a></p>
+
+              </div><!-- end #main-content -->
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

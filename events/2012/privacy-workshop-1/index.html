@@ -1,0 +1,121 @@
+<?php
+
+$page_title         = '「オンラインプライバシー勉強会」レポート〜行動追跡の現状とブラウザー業界の動向〜';
+$page_description   = 'Mozilla Japan は 2012 年 4 月 20 日、東京都内のセミナールームにて「オンラインプライバシー勉強会」を開催しました。まず Mozilla Japan でテクニカルマーケティングを担当する浅井智也が、オンライン プライバシー問題の歴史と行動追跡の現状、対応策の動向などについて解説。その後、勉強会参加者を交えた質疑応答・意見交換が行われました。ここではその概要をレポートします。';
+$og_type            = 'article';
+$body_id            = 'privacy-workshop-1';
+$body_class         = 'sand news events workshop';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/2012/privacy-workshop-1/' => 'オンラインプライバシー勉強会'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main article { overflow: hidden; }
+      #main h1, #main h2, #main h3 { height: auto; line-height: 1.4; }
+      #main-feature { width: auto; min-height: 120px; }
+      #main-feature h1 { font-size: 36px; }
+      #main-content > section { margin: 32px 0; }
+      #main-content > section > section { margin: 16px 0; }
+      #main-content h2 { font-size: 20px; }
+      #main-content h3 { font-size: 14px; }
+      #main-content section section h3:before { content: "■ "; }
+      #sidebar h2 { position: absolute; left: -99999px; }
+      #sidebar figure { margin-bottom: 16px; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article role="article" itemscope itemtype="http://schema.org/Article">
+              <header id="main-feature">
+                <div class="hgroup">
+                  <h1 itemprop="name">「オンラインプライバシー勉強会」レポート</h1>
+                  <h2 role="presentation">〜行動追跡の現状とブラウザー業界の動向〜</h2>
+                </div>
+              </header><!-- end #main-feature -->
+              <div id="main-content">
+                <p itemprop="description"><?= $page_description ?></p>
+                <section itemprop="articleBody">
+                  <div class="hgroup">
+                    <h2>基調セッション「行動追跡の現状とブラウザー業界の動向」</h2>
+                    <h3 role="presentation">一般社団法人 Mozilla Japan テクニカルマーケティング 浅井智也</h3>
+                  </div>
+                  <section>
+                    <h3>不安感をもたれているターゲティング広告</h3>
+                    <p>オンラインプライバシーは、広告会社や広告出稿企業、テクノロジー企業など、多岐にわたる人々に関係する問題です。ここではインターネットユーザーの視点から、この問題を考えていきたいと思います。</p>
+                    <p>インターネットでは様々な情報がオンライン収集されていますが、その中でも個人情報を直接利用しているサービスについては特に注意が必要です。今回は特に気にされる方も多くなってきている行動ターゲティングと属性ターゲティングを中心に取り上げます。行動ターゲティング広告では (サードパーティ) Cookie に設定した ID でユーザーを識別し、サイトの閲覧履歴や購買履歴、サービス利用履歴を収集、そのデータに基づいて広告を配信します。属性ターゲティングは個人の性別や年齢などの属性情報に基づいた広告を配信するもので、SNS のように多くの個人情報を扱うサービスでは、家族構成や勤務先など詳細にターゲットを絞り込んだ広告が容易に出せることが増えています。それ自体では個人を特定できない情報であっても、他の情報と組み合わさることで、個人を特定できる場合があります。</p>
+                    <p>情報を集めること自体が、必ずしも悪い結果に結びつくわけではありません。サービス提供者はきめ細かい情報を集めることで、利用者に最適なサービスを提供できるようになります。しかし詳細な個人情報に基づくサービスは「気持ち悪い」と感じるユーザーが少なくないことも確かであり、プライバシー情報が不当に流用されるのではないかという懸念も指摘されています。</p>
+                  </section>
+                  <section>
+                    <h3>DoubleClick の事例から得られた教訓</h3>
+                    <p>この問題に最初にぶつかったのが DoubleClick です。この会社は行動ターゲティング広告会社でしたが、1999 年にオンライン通販企業 Abacus Direct を買収しました。そして翌年には「行動ターゲティング広告で使用する Cookie の匿名 ID を通販で得られる名前や住所と紐づける」と発表。これが集団訴訟を引き起こし、連邦取引委員会 (FTC) による調査へと発展しました。結果は集団訴訟に全面敗北、有力な取引先も失い、株価も半分になったのです。</p>
+                    <p>ここから業界が得た教訓は「匿名だから収集が許容されている情報と個人特定情報を結びつけてはならない」ということです。仮に社内データベースだけの処理だとしても、これらをユーザーに無断で結びつけてはなりません。さらに匿名でも情報収集を拒否できる、オプトアウト手段の提供も必要です。</p>
+                    <p>オプトアウト手段としてはオプトアウト Cookie によるものが一般的ですが、いくつかの問題があります。まずサービス毎、端末やブラウザー毎の設定が必要であるため、ユーザーの手間がかかります。またオプトアウト設定の保持期間がサービス提供者によって異なりますが、中には 1 ヶ月など極端に短いケースもあり、期限が切れると再設定する必要があります。そしてそもそも情報収集されていることをユーザーが知らないとオプトアウトできません。</p>
+                    <p>それでは、Cookie を無効化や頻繁に削除すればいいのかといえば、これも解決策にはなり得ません。SNS のボタンなど、Cookie がないと動作しない機能が増えてきているからです。また Cookie を削除しても他の場所でも ID を保持し、Cookie を自動的に復元する Ever Cookie といわれる手法も使われています。</p>
+                    <p>このように Cookie だけでは現実的・実質的な解決ができません。オンラインプライバシーの問題を解決していくには、サービス提供側の透明性と、ユーザーによる制御方法の確立が必要です。</p>
+                  </section>
+                  <section>
+                    <h3>米国で進みつつある「Do Not Track (DNT)」の普及</h3>
+                    <p>そのためのアプローチとして、米国では FTC 主導で始まった「Do Not Track (DNT)」のが業界に広がりつつあります。米国では以前から、勧誘電話をオプトアウトする「Do Not Call」というものがありましたが、DNT はオンライン行動追跡のオプトアウトを実現するものです。DNT は 2010 年 12 月に FTC が提起し、業界団体は自主ガイドラインの策定を始めました。また今年 2 月にはホワイトハウスも「消費者プライバシー権利章典」の草案を発表し DNT の実現を求めています。</p>
+                    <p>DNT の実現方法は大きく 3 つに分けられるでしょう。個別オプトアウト方式、ブラックリスト方式、一括オプトアウト方式です。ただし個別オプトアウト方式は、オプトアウト Cookie で分かったように、現実的な解決策にはなりません。</p>
+                    <p>ブラックリスト方式は、行動追跡サイトリストに載った広告やサービスへのアクセスや Cookie 送信を遮断します。ブラウザー側の実装だけでサイト側の対応が不要であり、実現が容易というメリットがある反面、行動追跡されないだけでなく、広告が表示されなかったり SNS 機能が動作しなかったりする場合があるのはやりすぎではないかという指摘や、誰がリストを維持管理するのかという議論があります。また、リスト管理される既知の有名サービス以外は行動追跡が許されるのかという問題も残ります。</p>
+                    <p>これに対して一括オプトアウト方式は、オプトアウトしたいユーザーがすべてのサイトに対してアクセス時に意思表明するものです。サービス提供側がユーザーの意志に応じた対応をする必要があり、普及には時間がかかります。その一方でリストの維持管理は不要であるし、すべてのサイトを対象にできます。</p>
+                    <p>現在ブラウザーや米広告業界が広く対応を進めているのは、DNT HTTP ヘッダーによる一括オプトアウト方式です。DNT という HTTP 送信ヘッダーを新しく定義し、未設定であれば「ユーザーの意思表示なし」、<code>DNT: 0</code> であれば「追跡許可を表明」、<code>DNT: 1</code> であれば「追跡拒否を表明」とサイト側が判断し、それに応じた対応を行います。</p>
+                  </section>
+                  <section>
+                    <h3>主流は DNT ヘッダー、欧州ではオプトインに向かう可能性も</h3>
+                    <p>DNT ヘッダーに対しては、2011 年 3 月に AP News Registry が大手では初対応し、業界団体 DAA も同じ頃に対応への模索を開始しました。同年5月には Chitika なども対応。現在ではホワイトハウスの推進もあり主要な業界団体が対応を表明しています。テクノロジー企業でも例えば Yahoo! も全世界での対応を表明しています。</p>
+                    <p>ブラウザー側では、まず最初に Firefox が DNT ヘッダーに標準対応。Internet Explorer は当初ブラックリスト方式を提案・導入していましたが、すぐに DNT ヘッダーにも対応。Safari は DNT ヘッダーに標準対応していますが、標準では表示されない開発者メニューの中にあります。Google は Chrome 用にブラックリスト方式のアドオンを公開しましたが、標準では DNT に対応していません。DNT ヘッダーについては現在別のアドオンが必要ですが、年内には標準対応すると見込まれています。</p>
+                    <p>このように米国では業界による自主規制で DNT ヘッダーのオプトアウト方式に対応する方向へ進んでいます。これに対し欧州では、まだ各国での立法化まで進んでいませんが、EU 全体のデータ保護規則で、ユーザーからのオプトインを必須とすると定めています。つまり明示的な許可がない限り、追跡禁止ということです。</p>
+                    <p>日本では総務省の「ライフログ活用サービス WG」で検討が進められ、2010 年 5 月に第二次提言が公開されています。ここでは個人情報保護法の適用についても議論されており、個人識別性のない情報だけを集めている限り法規制の対象外、という結論に至っています。今後の産業発展の可能性を確保するため、法律などで規制することはせず、透明性の確保など6項目の&quot;配慮原則&quot;を業界に対して提示し、自主的ガイドラインの策定を求めています。</p>
+                  </section>
+                  <section>
+                    <h3>行動追跡を可視化するツールも提供</h3>
+                    <p>Mozilla では DNT ヘッダーに関する取り組みの他、Collusion というアドオンも提供しています。これはサードパーティ Cookie を埋め込んだサイトを線で繋いでビジュアル表示するものであり、どのようなサイトから行動追跡されているのかが一目でわかります。またサードパーティ Cookie が検出された時に「パシャ」というカメラのシャッター音を出すこともできます。このアドオンを使うことで、日常的にどの程度行動追跡されているか実感できます。</p>
+                    <p>プライバシーはインターネットにおける重要課題です。単に規制や制限すればよいわけでもなく、すべての人が安心してインターネットを利用できると同時に、健全なビジネスやよりよりサービスが発達していけるよう、業界の枠を越えて議論を進めていくべきだと思います。今回の勉強会もその 1 つですが、Mozilla もブラウザーへの実装や可視化ツールの提供など技術的な取り組みはもちろん、社会的な議論を盛り上げていく役割も果たしていきたいと思います。</p>
+                  </section>
+                </section>
+                <section>
+                  <h2>多様な発言が飛び交った意見交換</h2>
+                  <p>勉強会の後半で行われた質疑応答と意見交換では、前半の講演内容を受け、多様な意見が飛び交いました。参加者の中には広告関係者も多く、「ユーザーが敏感になりすぎると広告モデルが成立しないのではないか」という危惧や、「行動追跡サイトの多さはむしろこの業界の健全性を示しているのではないか」という声が聞かれました。また広告主の立場から「広告主こそオンライン広告の仕組みをもっと理解すべきだ」という意見も出てきました。</p>
+                  <p>その一方で、広告関連サイトのエンジニアからは、収集されたデータを適切にコントロールすることの難しさや、どこからがプライバシー侵害になるのかの線引きが見えにくい等の指摘もありました。DNT への対応についても、コード修正を組み込むことの手間やそれに伴う制限を考えれば、すぐに導入することは難しいという声が上がりました。</p>
+                  <p>このようなオンラインプライバシーへの対応の難しさを指摘する意見がある一方で、オンラインプライバシーを真剣に考えることが、オンライン広告をより面白いものにするきっかけになるのではないかという興味深い指摘や、より大きなコントロール力をユーザーに与えるべきではないかという意見も出てきました。またユーザーのリテラシー向上の重要性を指摘する声もありました。</p>
+                  <p>実に多様な意見がありましたが、全体的な印象としては「オンラインプライバシーの問題は、より多くの人々が情報を共有して真剣に考えるべき問題である」という点で、共通認識があったように感じます。その上で、立場や意識の異なる参加者同士が意見交換を行ったことで、より深い議論ができたのではないかと思います。</p>
+                  <p>オンラインプライバシーに関しては、今後日本でも議論が深まっていくはずです。参加者からも、継続的な情報提供を望む声が上がっていました。Mozilla Japan ではこれからもこのような勉強会等の活動を通じて、より多くの方が議論に参加できる環境作りに貢献していきたいと考えています。</p>
+                </section>
+                <section>
+                  <h2><a href="http://www.slideshare.net/dynamis/privacy-dnt">今回の資料はこちら</a></h2>
+                </section>
+                <section>
+                  <h2>関連リンク</h2>
+                  <ul>
+                    <li><a href="/static/docs/firefox/dnt-guide.pdf">Mozilla の Do Not Track 実装ガイド (日本語版)</a></li>
+                    <li><a href="https://www.mozilla.org/ja/firefox/dnt/">Mozilla の Do Not Track 機能解説ページ (英語サイト)</a></li>
+                    <li><a href="http://wired.jp/2012/03/02/ted-mozilla-collusion/">TED 2012：あなたの“監視者”を可視化する新アドオン (WIRED.jp)</a></li>
+                    <li><a href="https://www.mozilla.org/ja/collusion/">Collusion アドオン特設ページ</a></li>
+                    <li><a href="https://addons.mozilla.org/ja/firefox/addon/collusion/">Collusion アドオン掲載ページ</a></li>
+                  </ul>
+                </section>
+              </div><!-- end #main-content -->
+              <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+                <h2>写真</h2>
+                <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                  <img src="/static/images/events/2012/privacy-workshop-1/pht1.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                </figure>
+                <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                  <img src="/static/images/events/2012/privacy-workshop-1/pht2.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                </figure>
+                <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                  <img src="/static/images/events/2012/privacy-workshop-1/pht3.jpg" width="280" height="210" alt="" itemprop="contentURL">
+                </figure>
+              </aside>
+            </article>
+          </div><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

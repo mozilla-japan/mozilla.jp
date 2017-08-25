@@ -1,0 +1,353 @@
+<?php
+
+$page_type          = 'QAPage'; // https://schema.org/QAPage
+$page_title         = '情報漏洩対策 | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$body_id            = 'tech-faq';
+$body_class         = 'users business faq tech';
+$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
+$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+
+$breadcrumbs        = array(
+  '/business/' => '法人向け情報',
+  '/business/faq/' => 'よくある質問',
+  '/business/faq/tech/' => '技術的なよくある質問',
+  '/business/faq/tech/security/' => '情報漏洩対策'
+);
+
+$header_nav = array(
+    "法人向け情報" => "/business/",
+    "導入事例" => "/business/profiles/",
+    "サポート" => "/business/support/",
+    "よくある質問" => "/business/faq/"
+);
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <nav class="outer">
+            <ul class="inner">
+              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
+            </ul>
+          </nav>
+          <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <article>
+              <div id="masthead" class="outer">
+                <div class="inner">
+                  <header>
+                    <h1>情報漏洩対策</h1>
+                  </header>
+                </div>
+              </div>
+              <div class="outer outer-3">
+                <div class="inner">
+                  <div id="main-content">
+                    <article id="faq1">
+                      <h2>社外サイトへアクセスする機能を全て無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>Firefoxにはネットワーク上のサーバと連携する機能が多数含まれています。情報漏洩対策その他の理由から外部ネットワークへの意図しない通信を行わないようにしたい場合には、各機能を無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>// アプリケーション自体の自動更新のURL
+lockPref(&quot;app.update.url&quot;, &quot;&quot;);
+lockPref(&quot;app.update.url.details&quot;, &quot;&quot;);
+lockPref(&quot;app.update.url.manual&quot;, &quot;&quot;);
+
+// プラグインのブロック時などの詳細説明のURL
+lockPref(&quot;app.support.baseURL&quot;, &quot;&quot;);
+// Webサイトの互換性情報のURL
+lockPref(&quot;breakpad.reportURL&quot;, &quot;&quot;);
+// about:homeに表示するアドバイス情報の取得元URL
+lockPref(&quot;browser.aboutHomeSnippets.updateUrl&quot;, &quot;&quot;);
+
+// Webサービスとの連携
+// Webフィード用のサービス
+lockPref(&quot;browser.contentHandlers.types.0.uri&quot;, &quot;&quot;);
+lockPref(&quot;browser.contentHandlers.types.1.uri&quot;, &quot;&quot;);
+pref(&quot;browser.contentHandlers.types.2.uri&quot;, &quot;&quot;);
+pref(&quot;browser.contentHandlers.types.3.uri&quot;, &quot;&quot;);
+pref(&quot;browser.contentHandlers.types.4.uri&quot;, &quot;&quot;);
+pref(&quot;browser.contentHandlers.types.5.uri&quot;, &quot;&quot;);
+// IRC用のサービス
+lockPref(&quot;gecko.handlerService.schemes.irc.0.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.irc.1.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.irc.2.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.irc.3.uriTemplate&quot;, &quot;&quot;);
+lockPref(&quot;gecko.handlerService.schemes.ircs.0.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.ircs.1.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.ircs.2.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.ircs.3.uriTemplate&quot;, &quot;&quot;);
+// メール用のサービス
+lockPref(&quot;gecko.handlerService.schemes.mailto.0.uriTemplate&quot;, &quot;&quot;);
+lockPref(&quot;gecko.handlerService.schemes.mailto.1.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.mailto.2.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.mailto.3.uriTemplate&quot;, &quot;&quot;);
+// カレンダー用のサービス
+lockPref(&quot;gecko.handlerService.schemes.webcal.0.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.webcal.1.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.webcal.2.uriTemplate&quot;, &quot;&quot;);
+pref(&quot;gecko.handlerService.schemes.webcal.3.uriTemplate&quot;, &quot;&quot;);
+
+// オートコレクト用辞書の取得先URL
+lockPref(&quot;browser.dictionaries.download.url&quot;, &quot;&quot;);
+
+// 位置情報サービスの説明用URL
+lockPref(&quot;browser.geolocation.warning.infoURL&quot;, &quot;&quot;);
+// 位置情報をWi-Fiアクセスポイントから取得するためのURL
+lockPref(&quot;geo.wifi.uri&quot;, &quot;&quot;);
+
+// SSLの有無が混在しているページでの警告文のURL
+lockPref(&quot;browser.mixedcontent.warning.infoURL&quot;, &quot;&quot;);
+
+// 検索プロバイダ（検索エンジン）の自動更新を無効化
+lockPref(&quot;browser.search.update&quot;, false);
+
+// Google Safe Browsing機能
+lockPref(&quot;browser.safebrowsing.enabled&quot;, false);
+lockPref(&quot;browser.safebrowsing.malware.enabled&quot;, false);
+lockPref(&quot;browser.safebrowsing.gethashURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.keyURL&quot;, &quot;&quot;);  // Firefox 38用
+lockPref(&quot;browser.safebrowsing.malware&quot;, &quot;&quot;);  // Firefox 38用
+lockPref(&quot;browser.safebrowsing.malware.reportURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportErrorURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportGenericURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportMalwareErrorURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportMalwareURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportPhishURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.reportURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.updateURL&quot;, &quot;&quot;);
+lockPref(&quot;browser.safebrowsing.warning.infoURL&quot;, &quot;&quot;);  // Firefox 38用
+lockPref(&quot;browser.safebrowsing.appRepURL&quot;, &quot;&quot;);
+
+// 検索プロバイダ（検索エンジン）の取得元URL
+lockPref(&quot;browser.search.searchEnginesURL&quot;, &quot;&quot;);
+
+// 統計情報送信用の機能
+lockPref(&quot;datareporting.healthreport.service.enabled&quot;, false);
+lockPref(&quot;datareporting.healthreport.uploadEnabled&quot;, false);
+lockPref(&quot;datareporting.healthreport.about.reportUrl&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.about.reportUrlUnified&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.documentServerURI&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.infoURL&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.policy.dataSubmissionEnabled&quot;, false);
+
+// Webアプリケーションのインストールを許可するドメイン
+lockPref(&quot;dom.mozApps.signed_apps_installable_from&quot;, &quot;&quot;);
+
+// 危険なアドオンのブロックリスト
+lockPref(&quot;extensions.blocklist.enabled&quot;, false);
+lockPref(&quot;extensions.blocklist.detailsURL&quot;, &quot;&quot;);
+lockPref(&quot;extensions.blocklist.itemURL&quot;, &quot;&quot;);
+lockPref(&quot;extensions.blocklist.url&quot;, &quot;&quot;);
+
+// Mozilla Add-onsから新しいアドオンを検索するのを禁止
+lockPref(&quot;extensions.getAddons.get.url&quot;, &quot;&quot;);
+lockPref(&quot;extensions.getAddons.getWithPerformance.url&quot;, &quot;&quot;);
+lockPref(&quot;extensions.getAddons.recommended.url&quot;, &quot;&quot;);
+lockPref(&quot;extensions.getAddons.search.browseURL&quot;, &quot;&quot;);
+lockPref(&quot;extensions.getAddons.search.url&quot;, &quot;&quot;);
+
+// アドオンの自動更新
+lockPref(&quot;extensions.update.enabled&quot;, false);
+lockPref(&quot;extensions.update.background.url&quot;, &quot;&quot;);
+lockPref(&quot;extensions.update.url&quot;, &quot;&quot;);
+// Firefoxのアップデート後に行われるアドオンの互換性確認を併せて無効化する。
+// （そうしないと、アドオンの互換性確認でFirefoxがフリーズしてしまう）
+lockPref(&quot;extensions.showMismatchUI&quot;, false);
+
+// アドオンマネージャから新しいアドオンを探すためのURL
+lockPref(&quot;extensions.webservice.discoverURL&quot;, &quot;&quot;);
+
+// パッチ、組み込みのアドオンの更新
+lockPref(&quot;extensions.systemAddon.update.url&quot;, &quot;&quot;);
+
+// プラグインのインストール情報、更新情報の取得元URL
+lockPref(&quot;pfs.datasource.url&quot;, &quot;&quot;);
+lockPref(&quot;plugins.update.url&quot;, &quot;&quot;);
+
+// UIツアー
+lockPref(&quot;browser.uitour.themeOrigin&quot;, &quot;&quot;);
+lockPref(&quot;browser.uitour.url&quot;, &quot;&quot;);
+
+// マルチプロセスモードのフィードバックを促すメッセージ
+lockPref(&quot;app.feedback.baseURL&quot;, &quot;&quot;);
+
+// Firefox Sync
+lockPref(&quot;services.sync.account&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.username&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.jpake.serverURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.privacyURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.serverURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.statusURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.syncKeyHelpURL&quot;, &quot;&quot;);
+lockPref(&quot;services.sync.termsURL&quot;, &quot;&quot;);
+
+// Firefox Sync向けモバイルアプリの宣伝リンク
+lockPref(&quot;identity.mobilepromo.android&quot;, &quot;&quot;);
+lockPref(&quot;identity.mobilepromo.ios&quot;, &quot;&quot;);
+
+// アドオンの署名義務化に関するメッセージ
+lockPref(&quot;xpinstall.signatures.devInfoURL&quot;, &quot;&quot;);
+
+// SNS連携機能
+lockPref(&quot;social.enabled&quot;, false);  // Firefox 38用
+lockPref(&quot;social.activeProviders&quot;, &quot;&quot;);  // Firefox 45用
+lockPref(&quot;social.directories&quot;, &quot;&quot;);
+lockPref(&quot;social.shareDirectory&quot;, &quot;&quot;);
+lockPref(&quot;social.remote-install.enabled&quot;, false);  // Firefox 45用
+lockPref(&quot;social.share.activationPanelEnabled&quot;, false);  // Firefox 45用
+lockPref(&quot;social.toast-notifications.enabled&quot;, false);  // Firefox 45用
+lockPref(&quot;social.whitelist&quot;, &quot;&quot;);
+
+// スタートページ
+lockPref(&quot;startup.homepage_welcome_url&quot;, &quot;&quot;);
+lockPref(&quot;startup.homepage_welcome_url.additional&quot;, &quot;&quot;);
+
+// クラッシュレポーターの関連情報
+lockPref(&quot;toolkit.crashreporter.infoURL&quot;, &quot;&quot;);
+
+// 利用状況の統計情報の送信先
+lockPref(&quot;toolkit.telemetry.enabled&quot;, false);
+lockPref(&quot;toolkit.telemetry.infoURL&quot;, &quot;&quot;);
+lockPref(&quot;toolkit.telemetry.server&quot;, &quot;&quot;);
+// 統計情報の送信に関するメッセージの無効化
+if (typeof getPref(&quot;toolkit.telemetry.prompted&quot;) == &quot;boolean&quot;)
+  clearPref(&quot;toolkit.telemetry.prompted&quot;);
+lockPref(&quot;toolkit.telemetry.prompted&quot;, 2);
+lockPref(&quot;toolkit.telemetry.rejected&quot;, true);
+
+// ツールバーカスタマイズのヒントにおける詳細情報へのリンク
+lockPref(&quot;browser.customizemode.tip0.learnMoreUrl&quot;, &quot;&quot;);
+
+// タイルのパフォーマンス情報
+lockPref(&quot;browser.newtabpage.enhanced&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq2">
+                      <h2>クラッシュ時の情報を送信させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></p><p>FirefoxやThundebirdがクラッシュすると、通常はクラッシュレポーターが起動し、開発者達が問題を解決するための手がかりとしてクラッシュ時の詳しい情報をサーバに送信します。また、送信された情報は公開され、誰でも見ることができます。この仕組みによって機密情報が不用意に流出してしまわないように、クラッシュレポーター自体を無効化することができます。</p><h3 id="-">送信される情報の内容</h3><p>どのような情報がクラッシュレポートに付随して送信されるかは、<a href="http://www.mozilla.jp/legal/privacy/firefox/">プライバシーポリシー</a>を参照して下さい。送信される内容には、例えば以下のような情報が含まれます。</p><ul>
+<li>Firefoxのバージョン、使用言語、使用テーマ、インストールされた日時、起動時間など</li>
+<li>OSの種類、バージョン、メモリのサイズ、メモリの空き状況など</li>
+<li>インストールされているアドオンのIDとバージョンの一覧</li>
+<li>クラッシュ時の例外とスタックトレース</li>
+</ul><p>端的にいうと、場合によっては個人や組織の特定に繋がりうる情報が含まれることがあります。例えば組織内専用に開発したアドオンを使用している場合、そのアドオンのIDは送信される情報に含まれることとなります。</p><h3 id="-">設定方法</h3><p>クラッシュレポーターを無効化する方法は複数あります。</p><h4 id="windows-">Windowsのレジストリを使用する</h4><p>Windowsのレジストリキー <code>HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Crash Reporter</code> または <code>HKEY_CURRENT_USER\Software\Mozilla\Firefox\Crash Reporter</code> について、DWORD型の値 <code>SubmitCrashReport</code> を作成し、データを <code>0</code> に設定します。</p><h4 id="os-x-">OS Xのアプリケーションごとの設定を使用する</h4><p><code>Mozilla Crash Reporter</code> の設定 <code>submitReport</code> について、値を<code>false</code> にします。</p><h4 id="linux-">Linuxのユーザ固有の設定を使用する</h4><p><code>~/.mozilla/firefox/Crash Reports/crashreporter.ini</code> の位置に以下の内容のテキストファイルを置きます。</p><pre><code>[Crash Reporter]
+SubmitReport＝0
+</code></pre><h4 id="-">環境変数を使用する場合</h4><p>環境変数 <code>MOZ_CRASHREPORTER_DISABLE</code> の値を <code>1</code> に設定した状態でFirefoxを起動するとクラッシュレポータが無効化されます。この指定は上記の設定よりも優先され、どのプラットフォームにおいても利用できます。</p>
+                    </article>
+                    <article id="faq3">
+                      <h2>利用時の統計情報を送信させたくない</h2>
+                      <p class="keywords">キーワード <span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></p><p>Firefoxには、利用時におけるメモリの使用状況などの性能に関する統計情報を収集してサーバに送信する機能が含まれています。この仕組みは初期状態で無効化されており、ユーザの確認の上で有効化されますが、最初から無効の状態に固定しておくことができます。</p><h3 id="-">送信される情報の内容</h3><p>どのような情報が統計情報として送信されるかは、<a href="http://www.mozilla.jp/legal/privacy/firefox/#telemetry">プライバシーポリシー</a>を参照して下さい。個人や組織の特定に繋がりうる情報としては、統計情報に付随してIPアドレスが送信されます。</p><h3 id="-">設定方法</h3><p>以下は、統計情報を送信しない設定で固定する場合の、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>if (typeof getPref(&quot;toolkit.telemetry.prompted&quot;) == &quot;boolean&quot;)
+  clearPref(&quot;toolkit.telemetry.prompted&quot;);
+lockPref(&quot;toolkit.telemetry.prompted&quot;, 2);
+lockPref(&quot;toolkit.telemetry.rejected&quot;, true);
+lockPref(&quot;datareporting.healthreport.service.enabled&quot;, false);
+lockPref(&quot;datareporting.healthreport.uploadEnabled&quot;, false);
+lockPref(&quot;datareporting.healthreport.about.reportUrl&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.about.reportUrlUnified&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.documentServerURI&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.healthreport.infoURL&quot;, &quot;&quot;);
+lockPref(&quot;datareporting.policy.dataSubmissionEnabled&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq4">
+                      <h2>フォームのオートコンプリート機能を無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>Firefoxのオートコンプリート機能（テキストボックスに入力した内容を保存しておき、次回以降の入力を省略する機能）は無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>// Webページ上のフォーム要素、およびWeb検索バーのオートコンプリート機能の無効化
+lockPref(&quot;browser.formfill.enable&quot;, false);
+</code></pre><p>なお、この設定を反映しても、既に保存されている入力履歴の削除までは行われません。</p>
+                    </article>
+                    <article id="faq5">
+                      <h2>スマートロケーションバーを無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>Firefoxのスマートロケーションバー機能（ロケーションバーから過去の閲覧履歴等を検索する機能）は無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>// スマートロケーションバーのオートコンプリート機能の無効化
+lockPref(&quot;browser.urlbar.autocomplete.enabled&quot;, false);
+lockPref(&quot;browser.urlbar.maxRichResults&quot;, -1);
+lockPref(&quot;browser.urlbar.suggest.history&quot;, false);
+lockPref(&quot;browser.urlbar.suggest.bookmark&quot;, false);
+lockPref(&quot;browser.urlbar.suggest.openpage&quot;, false);
+</code></pre><p>なお、この設定を反映しても、既に保存されている入力履歴や閲覧履歴の削除までは行われません（単に表示されなくなります）。</p>
+                    </article>
+                    <article id="faq6">
+                      <h2>パスワードを保存させたくない（パスワードマネージャを無効化したい）</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>FirefoxおよびThunderbirdのパスワードマネージャ機能は無効化することができます。</p><h3 id="-">設定方法</h3><p>パスワードマネージャの利用を禁止する最も簡単な方法は、アドオン <a href="https://addons.mozilla.org/firefox/addon/do-not-save-password/">Do Not Save Password</a>を使うことです。
+<a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従ってDo Not Save Passwordを導入すると、以下の効果を得ることができます。</p><ul>
+<li>パスワードマネージャ機能を無効化し、パスワードの保存を禁止する。</li>
+<li>既にパスワードマネージャに保存されてしまっているパスワードをすべて消去する。</li>
+</ul><p>また、既に保存されてしまっているパスワードについては特に削除しなくてもよい（それ以後のパスワードの保存を禁止するのみでよい）のであれば、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>などを使って以下の設定を反映することによってパスワードマネージャを無効化できます。</p><pre><code>lockPref(&quot;signon.rememberSignons&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq7">
+                      <h2>セッション機能を無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>Firefoxのセッション関連機能はある程度まで無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>// Firefox起動時の表示ページの設定。
+// 3にすると前回セッションの復元となるので、それ以外を選択する。
+lockPref(&quot;browser.startup.page&quot;, 0);
+// Firefoxやアドオンの更新後の再起動などでの1回だけのセッション復元を禁止する
+lockPref(&quot;browser.sessionstore.resume_session_once&quot;, false);
+// クラッシュからの復帰時の自動的なセッション復元を禁止する
+lockPref(&quot;browser.sessionstore.max_resumed_crash&quot;, -1);
+lockPref(&quot;browser.sessionstore.resume_from_crash&quot;, false);
+// 閉じたタブを開き直す機能を無効化する
+lockPref(&quot;browser.sessionstore.max_tabs_undo&quot;, 0);
+// 閉じたウィンドウを開き直す機能を無効化する
+lockPref(&quot;browser.sessionstore.max_windows_undo&quot;, 0);
+// フォームの入力内容などのプライバシー情報を保存させない
+lockPref(&quot;browser.sessionstore.privacy_level&quot;, 2);
+lockPref(&quot;browser.sessionstore.privacy_level_deferred&quot;, 2);
+</code></pre><p>この設定により、ディスク上に保存されるセッション情報は最小限の物となります。</p><h3 id="-">注意事項</h3><p>現在のバージョンのFirefoxでは、セッション管理機構自体を無効化することはできません。
+<code>about:home</code> での「以前のセッションを復元」機能のために、前回のセッション情報は常にディスク上に保存されます。</p><p>セッションを一切保存しないようにすることはできませんが、<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を使うなどしてボタンを非表示にして、セッションを復元する手段へのアクセスを禁じることはできます。globalChrome.css を使う場合の手順は以下の通りです。</p><ol>
+<li><p>「メモ帳」などのテキストエディタを開き、以下のスタイル指定を記述します。</p>
+<pre><code>@-moz-document url-prefix(&quot;chrome://browser/content/browser.xul&quot;) {
+  #historyRestoreLastSession,
+  #appMenuRestoreLastSession {
+    visibility: collapse !important;
+    -moz-user-focus: ignore !important;
+  }
+}
+@-moz-document url-prefix(&quot;about:home&quot;),
+               url-prefix(&quot;chrome://browser/content/abouthome/aboutHome.xhtml&quot;) {
+  *|*#restorePreviousSessionSeparator,
+  *|*#restorePreviousSession,
+  *|*[id=&quot;restorePreviousSessionSeparator&quot;],
+  *|*[id=&quot;restorePreviousSession&quot;] {
+    display: none !important;
+  }
+}
+</code></pre><p>（ <code>@-moz-document</code> は、特定のウィンドウに対してのみスタイル指定を反映させるための記述です。詳細は<a href="http://www.akatsukinishisu.net/wiki.cgi?%40-moz-document">@-moz-document について参考</a>を参照して下さい。）</p>
+</li>
+<li>1で作成した内容を <code>globalChrome.css</code> という名前のプレーンテキストファイルに保存します。</li>
+<li>2で作成したファイルをFirefoxのインストール先の <code>chrome</code> フォルダに設置します。
+（Windows Vista以降の場合のファイルの設置場所は <code>C:\Program Files (x86)\Mozilla Firefox\chrome\globalChrome.css</code> となる。）</li>
+<li><a href="/business/faq/tech/addons/#install-addons-by-administrator">管理者によるアドオンのインストール手順</a>に従って<a href="https://addons.mozilla.org/firefox/addon/globalchromecss/">globalChrome.css</a>を導入します。</li>
+</ol><p>ただしこの場合においても、単にユーザーが手動操作でセッションを復元できなくなるだけであり、ディスク上にはセッション情報が依然として保存される状態であることにはご注意下さい。</p>
+                    </article>
+                    <article id="faq8">
+                      <h2>検索エンジン（Googleなど）の候補の推測表示を無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>FirefoxのWeb検索バーはGoogleなどの検索における検索語句の候補の表示に対応していますが、この機能は無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;browser.search.suggest.enabled&quot;, false);
+</code></pre>
+                    </article>
+                    <article id="faq9">
+                      <h2>位置情報取得API（Geolocation）を無効化したい</h2>
+                      <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">導入時初期設定</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">情報漏洩対策</span></span></span></span></span></span></span></p><p>Firefoxは地図などのWebサービスに対して現在位置の情報を通知する機能を含んでいますが、この機能は無効化することができます。</p><h3 id="-">設定方法</h3><p>以下は、<a href="/business/faq/tech/setting-management/#mcd">MCD（AutoConfig）</a>での設定例です。</p><pre><code>lockPref(&quot;geo.enabled&quot;, false);
+</code></pre>
+                    </article>
+                  </div><!-- end #main-content -->
+                  <aside id="sidebar">
+                    <nav role="directory">
+                      <ul>
+                        <li><a href="#faq1">社外サイトへアクセスする機能を全て無効化したい</a></li>
+                        <li><a href="#faq2">クラッシュ時の情報を送信させたくない</a></li>
+                        <li><a href="#faq3">利用時の統計情報を送信させたくない</a></li>
+                        <li><a href="#faq4">フォームのオートコンプリート機能を無効化したい</a></li>
+                        <li><a href="#faq5">スマートロケーションバーを無効化したい</a></li>
+                        <li><a href="#faq6">パスワードを保存させたくない（パスワードマネージャを無効化したい）</a></li>
+                        <li><a href="#faq7">セッション機能を無効化したい</a></li>
+                        <li><a href="#faq8">検索エンジン（Googleなど）の候補の推測表示を無効化したい</a></li>
+                        <li><a href="#faq9">位置情報取得API（Geolocation）を無効化したい</a></li>
+                      </ul>
+                    </nav>
+                  </aside><!-- end #sidebar -->
+                </div>
+              </div>
+            </article>
+          </main>
+<?php 
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

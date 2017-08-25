@@ -1,0 +1,81 @@
+<?php
+
+$page_title         = '組込ウェブブラウザーの可能性 -non PC, non Mobile の Firefox- | レポート | Firefox Developers Conference 2008';
+$page_description   = 'このパネルディスカッションでは、ネットワークの普及によりゲーム機やカーナビなど、様々なデバイスにウェブブラウザーが組み込まれはじめていることをふまえ、今後どのような方面へ拡がっていく可能性があるのかを、パネリストのみなさんに意見を交わしていただきました。';
+$body_id            = 'events-devcon-2008-report';
+$body_class         = 'sand news events devcon';
+$breadcrumbs        = array(
+  '/events/' => 'イベント情報',
+  '/events/devcon/2008/' => 'Firefox Developers Conference 2008',
+  '/events/devcon/2008/reports/a1' => 'レポート: 組込ウェブブラウザーの可能性 -non PC, non Mobile の Firefox-'
+);
+$extra_headers      = <<<EXTRA_HEADERS
+    <style type="text/css" media="screen,tv">
+      #main-feature h1 { height: auto; font-size: 36px; line-height: 1.2; }
+      #sidebar { width: 400px; }
+    </style>
+EXTRA_HEADERS;
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+
+?>
+          <section id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <header id="main-feature">
+              <div class="hgroup" role="heading" aria-level="1">
+                <h1 role="presentation" itemprop="name">Firefox Developers Conference 2008 Report</h1>
+                <h2 role="presentation">パネルディスカッション「組込ウェブブラウザーの可能性 -non PC, non Mobile の Firefox-」<br>〜デバイスへのブラウザー対応はどこまで可能か？〜</h2>
+              </div>
+            </header><!-- end #main-feature -->
+            <div id="main-content">
+              <p>&lt;参加パネリスト&gt;<br>竹岡 尚三 氏 (株式会社アックス 代表取締役社長)<br>大山 弘樹 氏 (有限会社構築屋 代表取締役社長)<br>Christian Sejersen (Mozilla Corporation モバイル担当技術責任者)<br>&lt;モデレーター&gt;<br>水越 賢治 氏 (有限会社エムブイシステムズ 取締役社長)</p>
+              <p>パネルディスカッション「組込ウェブブラウザーの可能性 -non PC, non Mobile の Firefox-」では、ネットワークの普及によりゲーム機やカーナビなど、様々なデバイスにウェブブラウザーが組み込まれはじめていることをふまえ、今後どのような方面へ拡がっていく可能性があるのかを、パネリストのみなさんに意見を交わしていただきました。アックスの竹岡尚三氏はシャープのザウルスの開発などに関わってこられた業界では著名な方で、組込みシステム技術協会の理事をはじめ、Linux コンソーシアムや日本エンベデッド・リナックス・コンソーシアムの理事などもしておられます。構築屋の大山弘樹氏はカーナビの開発などに携わる一方で、インターネット協会では Java 研究部会の部会長などをしておられます。このように今回は、デバイス系コミュニティに関わっている方々に参加いただくことで、一般にあまり知られることがない組込み業界の現状についても意見を聞くことができました。</p>
+              <h2>パイオニアを目指すにはオープン性が不可欠</h2>
+              <p>ウェブブラウザーの組込みが進んでいる分野としては携帯電話市場があり、まず最初に Mozilla でのモバイル市場への対応状況が紹介されました。モバイル向け Firefox の開発プロジェクトである Fennec は、ノキアのスマートフォンに搭載して実用化が進められているほか、Limo 以外の Symbian や Windows Mobile にも対応する予定です。さらに Fennec は携帯電話のみならず、あらゆるモバイル市場への対応を目指しており、その中にはカーナビやゲーム機なども含まれています。</p>
+              <p>iPhone や日本のキャリアへの対応は、市場が閉鎖的な方向にあるため現時点での対応は難しいとしつつも、「世界のパイオニアになるためには Android のようにオープン性があったほうが有利。Mozilla としてもオープン性を支持する方向で、アプリケーションはデベロッパの方々から提供していただき、ミドルウェアの構築に主眼を置いていきたい」とコメント。また、すでに Gecko エンジンが、DVD プレイヤーやヨーロッパの航空会社の機内エンターティメントシステムにも採用されているといった事例から、「我々が知らないところで Mozilla が採用される機会はもっとあるかもしれない」と、ブラウザーが様々な分野で注目を集めていることを強調しました。</p>
+              <h2>コントロールのためにブラウザーの仕様を変える</h2>
+              <p>国内のカーナビゲーションもケータイ同様にインターネット対応が進んでいます。すでにほとんどのカーナビにブラウザーが搭載されていますが、自社サイトをきれいに見せたり、音声対応にするなど、各社が独自の仕様にしているため、気がつかない場合もあるようです。「カーナビでは、安全面に主眼を置かなければならいので、ブラウザーの振る舞いをコントロールしなければならい。この振る舞いは、各国、地域などにより法律や自主規制まちまちなので、きめ細やかなコントロールが必要」と大山氏はコメントしています。「カーナビの中にはメモリーも CPU もふんだんで、グラフィックボードを搭載しているものもあるのでブラウザーを使って何でもできそうですが、基本的なところでは、画面を走ってる時に見えなくしたり、夜は暗くしなければいけない。そうした機能を簡単に組み込める必要があります」</p>
+              <p>ホンダのインターナビのように、VICS が近距離しか対応していないため、サーバー側で道路状況を予測しながら情報提供するといった、カーナビのシステムとブラウザーの機能をうまく組み合わせた商品もあり、今後もカーナビ市場は、ブラウザーに対するリクエストが最も大きい、マキシマムなジャンルであるということもあらためて指摘されました。</p>
+              <p>他にも、ブラウザーは搭載されているがエンドユーザーにはわからないケースとしては、家電製品やセットトップボックスなどがあります。具体的には、地デジのチューナにはブラウザーが入っているけれども、わざわざ拡張してテレビ番組表を見せるようしたり、だいたいがコンテンツやアクセスをコントロールするために仕様が変えられているのが現状だという指摘もありました。</p>
+              <p>Sejersen からの「ヨーロッパではセットトップボックスに Firefox が搭載されているがアクセスはコントロールはしていない。どうして日本は違うのか」という質問に対しては、「組込みの文化の中にすべてコントロールしたいマインドがあのではないか」といった意見や、「メーカーはポータルサイト構築がうまくできないので、すべてをコントロールしてユーザーを囲い込みたいという思いが強いのかもしれない」といった意見が出されました。</p>
+              <p>「一方でメーカーも JavaScript がいろいろな対応ができるようになってきたことがわかっ���きたので、ブラウザーを見直しているところかもしれない。「インターネットを見るためのデバイスといしては、PND (Personal Navigation Device) は元からそうした発想で作られているので、今後は JavaScript 対応になったほうがいいのではないか」という竹岡氏からのコメントもありました。</p>
+              <p>さらに、「もし Fennec がコンテンツのコントロールができるアドオンなどが入れられる仕様であれば、日本市場で採用される可能性はある」かという質問については、「メーカーは開発がオープンなほうが楽だと思いながらも、対応できる技術者の確保やコストの面の課題もあり、これからの市場拡大が問題」「組込みの世界はどうぞ勝手にお使いくださいではなく、一緒にやりましょうという思いがなければうまくいかないだろう」という現実的な意見が寄せられました。</p>
+              <p>最後に「今までほとんどの時間を Fennec の準備にかけてきたので、これからは組込みに関わってる人達とも話する機会を持ちたい」という Sejersen のコメントでパネルディスカッションは締めくくられました。</p>
+              <h3>関連リンク</h3>
+              <ul>
+                <li><a href="/events/devcon/2008/">Firefox Developers Conference 2008</a></li>
+                <li><a href="http://www.axe-inc.co.jp/" rel="nofollow">株式会社アックス</a></li>
+                <li><a href="http://www.kochikuya.com/" rel="nofollow">有限会社構築屋</a></li>
+                <li><a href="http://www.mvs.co.jp/" rel="nofollow">有限会社エムブイシステムズ</a></li>
+                <li><a href="https://www.mozilla.org/projects/fennec/1.0a1/releasenotes/">Fennec 1.0 Alpha 1</a></li>
+              </ul>
+            </div><!-- end #main-content -->
+            <aside id="sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+              <h3>写真</h3>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a1-1.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">会場風景</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a1-2.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <img src="/static/images/events/devcon/2008/a1-3.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">今回のパネルディスカッションでは組込み系のコミュニティからパネリストを招き、ブラウザー対応の現状と今後の方向性について語り合いました。</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a1-4.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">Mozilla Corporation モバイル担当技術責任者の Christian Sejersen からは「飛行機のエンターティメントシステムなど、我々の知らないところで Gecko エンジンがが採用されており、Fennec も幅広い対応ができるよう開発を進めている」といった話が紹介されました。</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a1-5.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">組込み業界はもとより Linux や Java 関連のコミュニティでも活躍されている竹岡尚三氏。「守秘義務がある業界なので一般の人が知る機会は少ないけれど、ブラウザーの普及は意外に進んでいます」</figcaption>
+              </figure>
+              <figure role="img" itemscope itemtype="http://schema.org/ImageObject">
+                <img src="/static/images/events/devcon/2008/a1-6.jpg" width="400" height="300" alt="" itemprop="contentURL">
+                <figcaption itemprop="description">有限会社構築屋の大山弘樹氏は、「カーナビにはすでにブラウザーが搭載されているが、法規制などで自由度を上げるのは難しい」など主にカーナビ業界に関するコメントをいただきました。</figcaption>
+              </figure>
+            </aside>
+          </section><!-- end #main -->
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

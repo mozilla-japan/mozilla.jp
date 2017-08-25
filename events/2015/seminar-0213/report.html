@@ -1,0 +1,538 @@
+<?php
+  $page_title         = 'アプリ提供事業者向け Firefox OS セミナー';
+  $page_description   = 'Mozilla Japan は 2015 年 2 月 13 日、東京都内のセミナーループにて「アプリ提供事業者向け Firefox OS セミナー」を開催します。Mozilla Japan から 企業様に Firefox OS アプリを開発していただくためのセミナーになります。';
+  $body_id            = 'seminar-20150213-report';
+  $css                = array('events/2015-seminar0213-report-2016042701');
+  $js                 = array('events/seminars/business.js');
+  $body_class         = 'sand events';
+  $breadcrumbs        = array(
+    '/events/' => 'イベント情報',
+    '/events/2015/seminar-0213/' => 'アプリ提供事業者向け Firefox OS セミナー',
+    '/events/2015/seminar-0213/report.html' => 'イベントレポート',
+  );
+  @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
+  ?>
+<header>
+  <section id="lead">
+    <h1>
+      <span class="main-title"><em>「アプリ提供事業者向け</em> <em>Firefox OS セミナー」</em><em>レポート</em></span>
+      <span class="sub-title">Firefox OS の可能性とアプリ開発のノウハウ</span>
+      <span class="date">2015 年 2 月 13 日・東京</span>
+    </h1>
+    <p>2015 年 2 月 13 日、Mozilla Japan は、東京都内で「<a href="./">アプリ提供事業者向け Firefox OS セミナー</a>」を開催しました。</p>
+    <p>au ブランドの Firefox OS スマートフォンの発売や、パナソニックの Firefox OS 搭載テレビの発表などにより、一段と注目が集まる Firefox OS。</p>
+    <p>
+      今回のセミナーは、その名のとおり、これまで iOS や Android のアプリを開発してきた企業はもちろんのこと、
+      ウェブサイトやウェブサービスの開発に関わってきたウェブコンテンツサービス事業者のエンジニアやデザイナーの方々に向けての Firefox OS セミナーです。
+      HTML5 や JavaScript ベースといったウェブ標準技術で開発ができ、IoT/WoT とも親和性の高い Firefox OS アプリ開発の利点や、
+      アプリ配信マーケットである Firefox Marketplace への登録方法などを包括的に紹介しました。
+    </p>
+    <p>当日の会場は、ほぼ満席となり、あらためて Firefox OS の注目度の高さと熱気を感じることができたセミナーでした。</p>
+    <p>
+      セミナーでは、Mozilla Japan のマーケティングマネージャーである安江 秀介が、まず Firefox OS の概要として、その位置付けと可能性について解説。
+      続いて、Mozilla Japan 技術部のソフトウエアエンジニアである吉永 満太朗が、具体的な Firefox OS アプリの開発方法について解説しました。
+      最後に、Mozilla Japan のテクニカルマーケティング 清水 智公が、アプリ配信マーケットである Firefox Marketplace での公開・レビュー・マネタイズ方法などについて、詳しく説明しました。
+    </p>
+    <p>
+      また、特別ゲストとして、パナソニック株式会社 AVC ネットワークス社の植月 浩二氏が登壇し、2014 年 12 月に提供が開始された、
+      Firefox OS を搭載した HTML5 対応の CATV 向けセットトップボックスについて紹介しました。
+    </p>
+    <p>
+      このレポートでは、セミナーの様子と内容をできるだけ詳しく紹介します。セミナーの熱気を感じると共に、Firefox OS アプリの開発にチャレンジする参考にしてください。
+    </p>
+  </section>
+  <nav id="fixed-menu">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#lead">トップ</a></li>
+      <li><a href="#overview">Firefox OS 概要</a></li>
+      <li><a href="#apps">Firefox OS アプリ開発</a></li>
+      <li><a href="#marketplace">Firefox Marketplace</a></li>
+      <li><a href="#q-and-a">質疑応答</a></li>
+      <li><a href="#summary">まとめ</a></li>
+    </ul>
+  </nav>      
+</header>
+<section id="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+  <section id="overview">
+    <h2>Firefox OS 概要</h2>
+    <p class="spaker">一般社団法人 Mozilla Japan マーケティングマネージャー　安江 秀介</p>
+    <p>
+      最初に登壇した、Mozilla Japan のマーケティングマネージャーである安江 秀介は、「Mozilla は、"世界中の誰もが、インターネット経験の恩恵を公平に享受できるようにすること"を目指した非営利団体です。全世界で約 1200 名が所属しており、そのうち約 600 名が開発にかかわる技術者です」と、Mozilla の成り立ちから説明を始めました。
+    </p>
+    <p>
+Mozilla は、ウェブブラウザーである Firefox などインターネット経験を支えるソフトウェアを、オープンソースソフトウェアとして開発しており、その開発体制も、コミュニティをベースとした、とてもオープンなものになっています。日本でも、グローバライゼーションの一部として多くの方が参加してくれており、技術的なことだけでなく、ドキュメントの作成や翻訳などに、多くの方が貢献してくれています。
+    </p>
+
+    <figure>
+      <div class="figure">
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/101_DSC06171.jpg"><img src="/static/images/events/2015/seminar-0213/report/101_DSC06171.jpg"></a>
+        </p>
+      </div>
+      <figcaption>
+        <p class="figcaption">Mozilla Japan マーケティングマネージャー　安江 秀介</p>
+      </figcaption>
+    </figure>
+    <h3>Firefox OS の始まり</h3>
+    <p>Firefox OS は、これまでデスクトップ PC 中心だったオープンなインターネット体験をさらに拡張していくものです。ウェブを OS の基盤にすることで、クローズドで、特定の企業の思惑に影響を受けてしまいがちだったモバイルのエコシステムを壊して、次の数十億人の人たちにオープンなウェブ環境の恩恵を届けようとしています。</p>
+
+    <p>Firefox OS は、すでに 29 ヶ国 16キャリアでスマートフォンに採用されています。たとえば、新興国・発展途上国向けに、25ドル端末という形で、低価格スマートフォンが供給されています。日本でも、2014 年 12 月に、16 番目のキャリアとして、KDDI から auブランドで Fx0 が発売されました。</p>
+
+    <figure>
+      <div class="figure">
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_08.png"><img src="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_08.png"></a>
+        </p>
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_11.png"><img src="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_11.png"></a>
+        </p>
+      </div>
+    </figure>
+
+    <h3>すべてがウェブ技術で構成された Firefox OS アプリのメリット</h3>
+
+    <p>Firefox OS の特徴は、すべてがウェブ技術で構成されていることです。</p>
+
+    <p>HTML と Javascript という一般的なウェブ技術により、比較的容易にアプリを開発することができます。開発環境の構築も簡単ですし、Firefox OS 以外にも、Android 版 Firefox やデスクトップ版 Firefox で同じアプリを動かすことができるというクロスプラットフォーム性も確保しています。スマートフォンに搭載される標準アプリのソースコードも公開するというように、極めて高いオープン性を持っています。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_14.png"><img src="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_14.png"></a></p>
+      </div>
+    </figure>
+
+    <p>すでに Firefox OS では、facebook や Twitter、LINE、ホットペッパー、ジョルテ、ナビタイムといった定番アプリが、様々な企業・開発者から提供されています。スペインの大手通信キャリア「テレフォニカ」が提供している Firefox OS スマートフォンには、LINE アプリが標準搭載されているそうです。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_15.png"><img src="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_15.png"></a></p>
+      </div>
+    </figure>
+
+    <div class="note">
+      <p>
+        Firefox OS アプリにはデスクトップ版や Android 版から利用できるものもある：
+        <a href="https://marketplace.firefox.com/">https://marketplace.firefox.com/</a>
+      </p>
+    </div>
+
+    <h3>Firefox OS 対応で広がる IoT/WoT</h3>
+    <p>さらに、Firefox OS であれば、スマートフォンやデスクトップ用途以外に、今後の普及が期待される IoT/WoT (モノのインターネット化：Internet of Things、モノのウェブ化：Web of Things)  といった分野にも、同様のウェブ技術による開発手法で対応することが可能となっています。</p>
+
+    <p>たとえば、先日の CES2015 で公開されたパナソニック Firefox OS 搭載テレビや、KDDI が配布している Firefox OS を搭載した HDMIドングル型開発ボード「<a href="http://opensource.kddi.com/owb/">Open Web Board</a>」、スティック型映像ストリーミング端末「<a href="http://www.matchstick.tv/">Matchstick</a>」、小型ボードコンピューターをコミュニティベースで開発する「<a href="https://www.facebook.com/groups/305208196333685/">MozOpenHardware</a>」など、すでに多くの取り組みがあります。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_16.png"><img src="/static/images/events/2015/seminar-0213/report/s01_20150213-AboutFirefoxOS_16.png"></a></p>
+      </div>
+    </figure>
+
+
+    <h3>Firefox OS 搭載の CATV 向けセットトップボックスが登場</h3>
+
+    <p>ここで安江は、特別ゲストを紹介しました。パナソニック株式会社 AVC ネットワークス社の植月 浩二氏 (STB ネットワーク BU 企画グループ 商品企画チーム　チームリーダー) です。</p>
+
+    <p>国内世帯数約 5200 万のうち約 800 万世帯が、ケーブルテレビなどを通じて、アニメ・スポーツ・海外ドラマといった趣味嗜好性の高い映像コンテンツを楽しむ有料多チャンネル放送サービスを利用しています。</p>
+
+    <p>パナソニックでは、このような有料多チャンネル放送サービスのために、Firefox OS を搭載した HTML5 対応の CATV 向けセットトップボックス「<a href="http://panasonic.biz/broad/catv/product/settop/tz-hdt620/">TZ-HDT620/TZ-HDT621 シリーズ</a>」(<a href=http://panasonic.biz/broad/catv/product/settop/tz-hdt620/">http://panasonic.biz/broad/catv/product/settop/tz-hdt620/</a>) を 2014 年 12 月から提供しています。</p>
+
+    <p>植月氏は、「2015 年 5 月には、アプリジャムを開催して、このセットトップボックスの上で動かすアプリについて、皆様からアイデアを出していただく機会を設ける予定です。パナソニックでは、Firefox OS のようなオープンでグローバルのエコシステムの上で、より便利で楽しくゆたかな生活を提供していきたいと考えています」と語りました。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/102_DSC06201.jpg"><img src="/static/images/events/2015/seminar-0213/report/102_DSC06201.jpg"></a></p>
+      </div>
+      <figcaption>
+        <p class="figcaption">パナソニック株式会社 AVC ネットワークス社　植月 浩二氏</p>
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <section id="apps">
+    <h2>Firefox OS アプリ開発のご紹介</h2>
+    <p class="speaker">一般社団法人 Mozilla Japan 技術部　ソフトウエアエンジニア　吉永 満太朗</p>
+    <p>続いてのセッションでは、Mozilla Japan 技術部のソフトウエアエンジニアである吉永 満太朗が、Firefox OS アプリの具体的な作成手順と注意すべき事項について解説しました。</p>
+
+    <p>吉永は、まず会場の参加者に「自社でウェブコンテンツやサービスをお持ちの方は?」と問いかけました。参加者の半分ほどが、自社コンテンツを持っていることが分かると、「Firefox OS は、その自社コンテンツをそのまま Firefox OS アプリに作り変えることができます」と、その開発ハードルの低さを強調しました。</p>
+
+    <figure>
+      <div class="figure">
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/201_DSC06207.jpg"><img src="/static/images/events/2015/seminar-0213/report/201_DSC06207.jpg"></a>
+        </p>
+      </div>
+      <figcaption>
+        <p class="figcaption">
+          Mozilla Japan 技術部 ソフトウエアエンジニア　吉永 満太朗
+        </p>
+      </figcaption>
+    </figure>
+
+    <h3>Firefox OS アプリの構成</h3>
+
+    <p>Firefox OS は、とてもシンプルなものになっています。Darvik の上で VM が動くとか、カーネル上で直接アプリが動くといったものではありません。</p>
+    
+    <p>Firefox OS は、シンプルに 3 つのレイヤーで構成されています。</p>
+    <p>まず、モバイルデバイスの上に「Gonk」(ゴンク) という、Linux カーネルをベースとした低水準のオペレーティングシステムがあり、その上に「Gecko」(ゲッコー) という Firefox と共通のブラウザーエンジンがあります。このおかげで、デスクトップ版 Firefox や Android 版 Firefox と、ほぼ同じ機能・ほぼ同じ画面を利用することができます。そして、その上に「Gaia」(ガイア) と呼ぶ、ユーザーインタフェース層があります。Firefox OS の起動後にスクリーンに表示されるものは、たとえばロック画面・ホーム画面・電話など、すべて この Gaiaで動作しています。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_05.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_05.png"></a></p>
+      </div>
+    </figure>
+
+    <p>Gaia では、すべてのアプリが、HTML・CS・JavaScript というウェブ標準技術で実装されています。Object C や Java のコードを書く必要はありません。たとえば、スマートフォンの画面に表示されるバッテリーの残量も、専用の API を通じて、JavaScript で取得してステータスバーに表示しています。カメラなどのデバイスも、JavaScript で制御しています。</p>
+    
+    <p>デバイスの情報を取得するような Web API の一部にはアクセス権が必要になりますが、それ以外は一般的なウェブアプリと同じになっているそうです。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_06.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_06.png"></a></p>
+      </div>
+    </figure>
+
+    <h3>ウェブ標準のスキルとツールで開発できる Firefox OS アプリ</h3>
+
+    <p>Firefox OS アプリを開発するために必要なスキルは、JavaScript とHTML/CSS というウェブ標準技術だけです。そのために、これまでウェブサイトやウェブサービスを開発してきたようなウェブ制作会社であれば、比較的容易にアプリを開発できます。</p>
+
+    <p>アプリ開発に必要なツールも、デスクトップ版 Firefox に Web IDE として付属しています (Firefox 34 以降)。Android の SDK や Xcode などをあらためて導入することなく、Web IDE に付属のシミュレータやデバッカなどを利用することができます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_09.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_09.png"></a></p>
+      </div>
+    </figure>
+
+    <p>また、一般的なウェブサービス開発に利用される開発ツールや JavaScript ライブラリなどのツールチェインも、環境に合わせて制限なく利用できます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_12.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_12.png"></a></p>
+      </div>
+    </figure>
+
+    <p>シミュレータでは、カメラなどスマートフォン端末が持つ機能をそのまま呼び出すことができません。その代わり、デスクトップ版 Firefox から USB ケーブルでスマートフォン端末の実機を呼び出すことができます。この機能を使えば、シミュレータではデバックできないカメラなどの機能も動作確認できます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_11.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_11.png"></a></p>
+      </div>
+    </figure>
+
+
+    <h3>ホスト型とパッケージ型、2 種類の Firefox OS アプリ</h3>
+
+    <p>Firefox OS アプリは、大きく 2 つに分類できます。ひとつは、「ホスト型」(Hosted) と呼ばれる、ウェブ読み込み方式のアプリです。もうひとつは、「パッケージ型」(Packaged) と呼ばれる、インストール方式のアプリで、従来のスマートフォンのアプリに相当します。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_16.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_16.png"></a></p>
+      </div>
+    </figure>
+
+    <p>ホスト型アプリは、ウェブサーバーにアップされていて、毎回ダウンロードして動作します。そのため、一般的なウェブサービスと動作や権限は同じになっています。スマートフォンにアイコンを登録したり、オフライン時の動作を考慮したアプリも作成可能です。ただし、誰でもアプリを公開できることから、利用できる API が限定されます。</p>
+
+    <p>パッケージ型アプリは、ウェブサービスを構成する HTML/CSS/JavaScript を ZIP 圧縮して配布します。デバイスにアクセスする API を利用するためには、配布時に、Firefox Marketplace の審査を受ける必要があります。Firefox Marketplace はアプリを審査し、条件を満たしていると判断されれば、秘密鍵を使ってその ZIP ファイルにデジタル署名を行います。これにより、潜在的なセキュリティ、プライバシー、機能の問題に関して慎重な審査が行われたというさらなる保証をアプリのユーザーに提供できます。</p>
+
+
+    <h3>マニフェストには、アプリの情報・設定を記述する</h3>
+
+    <p>どちらのアプリの場合も、HTML/CSS/JavaScript と各種リソースファイル、アプリマニフェスト(manifest.webapp) というアプリの属性情報ファイルにより構成されています。</p>
+
+    <p>Firefox OS アプリのアプリマニフェストは、アプリ名や開発者名、アイコン、アプリの説明といった、アプリに関する情報を記載した JSON ファイルです。このファイルに設定を追加することで、たとえば「戻る/進む」ボタンを表示したり、画面の回転などのオプション指定も可能です。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_18.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_18.png"></a></p>
+      </div>
+    </figure>
+
+    <p>さらに、パッケージ型アプリの場合は、HTML/CSS/JavaScript とアプリマニフェス(manifest.webapp) を ZIP 圧縮し、これに package.manifest (https://developer.mozilla.org/ja/Apps/Packaged_apps) というミニマニフェストをセットにします。</p>
+
+
+    <h3>WebAPI を利用する特権(パーミッション)を取得する</h3>
+
+    <p>スマートフォン端末が持つ機能やデータを利用するには、Firefox OS の WebAPI を呼び出します。このWebAPIにより、端末のハードウェアの違いなどを吸収します。</p>
+
+    <p>WebAPI を利用するには、API ごとに特権 (パーミッション) をアプリマニフェストで要求します。Firefox OS のアプリは、どのようなパーミッションを持つかによって、特権アプリと認証アプリに分かれます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_25.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_25.png"></a></p>
+      </div>
+    </figure>
+
+    <p>なお、Firefox OS のバージョンごとに使える API が異なるので注意が必要です。たとえば、Firefox OS バージョン 2.0 以降、カメラは、特権アプリでも利用可能になっています。</p>
+
+    <h3>ホスト型とパッケージ型、どちらの種類を選ぶべきか</h3>
+
+    <p>では、Firefox OS アプリを開発するとき、ホスト型とパッケージ型、どちらを選ぶべきでしょうか。「すでにウェブアプリを持っていて、ウェブ側を変更したくない場合はホスト型を選ぶといいでしょう。ホスティングに費用をかけたくない場合や、サーバーに情報を蓄積する必要がない場合は、パッケージ型を選ぶといいでしょう。また、カメラやデバイスの情報などを利用する場合も、パッケージ型アプリを選ぶ必要があります」と、吉永は説明しました。</p>
+
+    <div class="note">
+      <p>Firefox OS アプリの開発手順や詳細情報は、Mozilla の開発ドキュメントでも紹介しています。</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/ja/Apps/Quickstart">クイックスタート</a></li>
+        <li><a href="https://developer.mozilla.org/ja/docs/Web/Tutorials">チュートリアル</a></li>
+        <li><a href="https://developer.mozilla.org/ja/Apps/Manifest">アプリマニフェスト</a></li>
+        <li><a href="https://developer.mozilla.org/ja/docs/WebAPI">WebAPI</a></li>
+        <li><a href="https://developer.mozilla.org/ja/Marketplace/Options/Packaged_or_hosted_">パッケージ型 or ホスト型</a></li>
+      </ul>
+    </div>
+
+    <h3>Firefox OS アプリの開発 Tips</h3>
+
+    <p>終盤では、Firefox OS アプリの開発 Tips と注意事項を説明しました。</p>
+
+    <p>まず、Firefox OS だけでなく、iOS や Android でも動作するクロスプラットフォームなアプリを開発したい場合、<a href="http://cordova.apache.org/">Apache Cordova</a> を利用するといいでしょう。</p>
+
+    <p>これは、PhoneGap とも呼ばれるオープンソースのモバイルアプリ開発フレームワークで、HTML/CSS/JavaScript により、ワンソースで複数のプラットフォームのモバイルアプリを開発できます。</p>
+
+    <p>ただし、プラットフォームごとに利用できる API が異なるので注意が必要です。たとえば、Android ではステータスバーをカスタマイズできますが、Firefox OS では未サポートです。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_28.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_28.png"></a></p>
+      </div>
+    </figure>
+
+    <p>次に、オンライン/オフライン時の対応について説明しました。</p>
+
+    <p>モバイル端末なので、オンライン/オフラインといった状態を考慮する必要があります。たとえば、電車の中に入ってオフラインになった場合、サーバーと通信できなくなることが考えられます。</p>
+
+    <p>そこで、Firefox OS では、オンライン/オフラインのイベントを JavaScript で提供しています。</p>
+
+    <p>オフラインのイベントが発生したら、ユーザーの入力などはいったんローカルストレージやアプリケーションキャッシュに一時避難させて、端末のなかに保存しておきます。そして、オンラインのイベントが発生したら、その情報をサーバーに飛ばすといったことで、オンライン/オフライン対応が比較的簡単に実現できます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_30.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_30.png"></a></p>
+      </div>
+    </figure>
+
+    <p>続いて、CSP (<a href="https://developer.mozilla.org/ja/Apps/CSP">Content Security Policy</a>) について説明しました。</p>
+
+    <p>CSP は、クロスサイトスクリプティングなどのセキュリティの脅威から保護するための機構です。先ほどのアプリの種類では、パッケージ型の特権アプリ・内部アプリに、この CSP が適用されます。そして、CSP では、リモートスクリプトやインラインスクリプト・eval・関数コンストラクターなどが禁止されています。</p>
+
+    <p>この CSP の制限は、ゆるくすることができません。もしも CSP が原因でアプリが思うように動作しない場合、フレームワークで eval などを利用していないか確認してみましょう。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_31.png"><img src="/static/images/events/2015/seminar-0213/report/s02_20150213-FirefoxOSApps_31.png"></a></p>
+      </div>
+    </figure>
+
+    <p>最後に、シミュレータのハードなどによる制限について、説明しました。</p>
+
+    <p>シミュレータには、ほかのモバイル開発環境と同じく、ハードなどによる制限があります。たとえば、メモリー容量や CPU 速度などは、実機と異なります。また、MP3/AAC/H.264/WebM など、動作環境によって利用できないコーデックがあります。それから、Network Information / Proximity / Ambient Light など、非対応な API があります。</p>
+
+    <p>これらの動作確認は、WebIDE で接続した実機により行うことになります。</p>
+
+    <p>ここまで説明してきたように Firefox OS アプリの開発は、Firefox 自体があれば、すぐに始めることができます。既存のウェブコンテンツにアプリマニフェストを追加するだけで、アプリ化できるのです。</p>
+
+    <p>Mozilla Japan では、Firefox OS コミュニティといっしょに、Firefox OS 勉強会やアプリ開発のハンズオンセミナーなどを開催しています。さらに詳しい情報や実際の開発などを体験してみたい方は、ぜひ、そちらにもご参加ください。</p>
+  </section>
+
+  <section id="marketplace">
+    <h2>Firefox Marketplace：公開、レビュー、そして管理</h2>
+    <p class="speaker">　一般社団法人　Mozilla Japan テクニカルマーケティング　清水 智公</p>
+    <p>最後のセッションでは、Mozilla Japan のテクニカルマーケティング 清水 智公が、アプリ配信マーケットである <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> での公開・レビュー・マネタイズ方法などについて説明しました。</p>
+
+    <p>清水は、マーケットプレイスの話の前に、より広く、アプリの公開の話から説明を始めました。</p>
+
+    <p>「スマートフォンでは、マーケットプレイスとかアプリストアから、アプリを入れるのが普通だと、皆さんは思っているかも知れません。ですが、私たち Mozilla は、Firefox というブラウザーを作っている集団です。ですから、ウェブの世界を中心にして、それをアプリの世界に持ち込むというように考えています。</p>
+
+    <p>前のセッションで吉永が説明したように、Firefox OS のアプリには、ホスト型とパッケージ型の 2 種類があります。ホスト型というのは、要するにウェブサービスです。</p>
+
+    <p>オープンなウェブの世界では、ウェブサービスを作ったら、どこかに登録したり、誰かの許可を得る必要はありません。だから、ホスト型アプリや、特に特権を必要としないパッケージ型アプリを作った場合は、それをマーケットプレイスに登録する必要はありません。たとえば、自分が作ったアプリを社内だけで使う場合や、友達だけに公開したいといった場合には、そのページアドレスを教えるだけでいいのです」</p>
+
+    <p>このように前置きした上で、開発者にとっての Firefox Marketplace の具体的な利用方法を説明しました。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/301_DSC06216.jpg"><img src="/static/images/events/2015/seminar-0213/report/301_DSC06216.jpg"></a></p>
+      </div>
+      <figcaption>
+        <p class="figcaption">Mozilla Japan テクニカルマーケティング　清水 智公</p>
+      </figcaption>
+    </figure>
+
+    <h3>Firefox Marketplace は、ユーザーとアプリが出会う場所</h3>
+
+    <p><a href="https://marketplace.firefox.com/">Firefox Marketplace</a> は、Firefox OS やデスクトップ版 Firefox から利用できるアプリストアです。ウェブサービスを使ってもらいたい場合、検索して見つけてもらえばいいのですが、そのために一番効率がいいのが、Firefox Marketplace になります。</p>
+
+    <p>Firefox Marketplace は、アクセスするデバイスに合わせたレイアウトで、アプリの情報を表示します。オススメのアプリを試したり、アプリを検索したりというように、一般的なアプリストアの機能を備えています。「インストール」ボタンをクリックすれば、そのアプリをインストールすることもできます。</p>
+
+    <figure>
+      <div class="figure">
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_07.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_07.png"></a>
+        </p>
+        <p>
+          <a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_08.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_08.png"></a>
+        </p>
+      </div>
+    </figure>
+
+    <h3>アプリの登録情報と手順</h3>
+
+    <p>開発したアプリをFirefox Marketplace に登録する手順は、次のようになります。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_14.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_14.png"></a></p>
+      </div>
+    </figure>
+
+    <p>このとき、開発したアプリを登録するには、次の情報が必要になります。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_13.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_13.png"></a></p>
+      </div>
+    </figure>
+
+    <p>アプリの登録情報として、機能・特徴を正確に表現した最低1枚以上のスクリーンショットが必要になります。これは、動作しているデバイスが写っていたり、操作する指やロゴなどがいっしょに写っていたりしてはいけません。</p>
+
+    <p>アプリの機能と特徴を分かりやすく確実にユーザーに伝えるため、このようなスクリーンショットを登録することになっているそうです。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_34.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_34.png"></a></p>
+      </div>
+    </figure>
+    
+    <h3>アプリのレビュー</h3>
+
+    <p>Firefox Marketplace にアプリを登録すると、公開される前に審査(レビュー)がありますが、8 割のアプリが、1 週間以内にレビューされるそうです。</p>
+
+    <p>「私が、個人で公開した音楽プレイヤーは、2 時間半ほどでレビューが完了しました」(清水)</p>
+
+    <p>レビューでは、「セキュリティ」「プライバシー」「コンテンツ」「機能」「ユーザービリティ」といった項目で審査が行われます。</p>
+
+    <p>たとえば、アプリ の登録時にはプライバシーポリシーを明示する必要がありますが、すでにウェブサービスを提供しているなら、そのプライバシーポリシーへのリンクを入力するだけで構いません。何もプライバシー情報を取っていないなら「This app collects no personal data」と書けばいいそうです。</p>
+
+    <p>Mozilla は、ユーザーのプライバシーをとても大事に考えています。とはいえ、開発者は大げさに構える必要はありません。プライバシー情報を取る場合は取ると明示しましょう、ということです。</p>
+
+    <p>コンテンツのレビューでは、ユーザーをだましたり、暴力を助長するものでないこと。ユーザービリティのレビューでは、「戻る」ボタンに依存せず、独自のナビゲーションを実装していること、といった条件で審査します。</p>
+
+    <p>特に、特権アプリでは、WebAPI を使って、スマートフォン端末が抱える様々な情報を利用できるので、厳密な CSP(Content Security Policy) を適用し、コードレビューをしっかりやっています。たとえば、WebAPI を使えば、ギャラリの写真を取得して、それを匿名掲示板に勝手に投稿し続けるといったアプリを開発することが、技術的には可能です。そのようなアプリがマーケットプレイスを通じて広がることがないよう、アプリのレビューをしっかりやっているのです。</p>
+
+    <div class="note">
+      <p>レビュー条件は、下記でも詳しく説明しています。</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/ja/Apps/Marketplace_review_criteria">Marketplace レビュー要件</a></li>
+        <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/Apps/Guide">レビューワーズガイド</a></li>
+        <li><a href="https://wiki.mozilla.org/Marketplace/Reviewers/Apps/Guide/SecReviewTraining">セキュリティレビュートレーニング</a></li>
+      </ul>
+    </div>
+
+    <h3>登録・公開したアプリの管理とマネタイズ</h3>
+
+    <p>Firefox Marketplace のレビューを通過すると、いよいよアプリが公開されます。Firefox Marketplace では、そのダッシュボード画面で、「ステータス管理」「バージョンアップ」「統計」「チーム」といった便利なアプリ管理機能を利用できます。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_53.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_53.png"></a></p>
+      </div>
+    </figure>
+
+    <p>また、収益化の方法として「有料版の販売(プレミアム)」「アップグレードの促進」「アプリ内購入」「広告」といったモデルに対応しています。</p>
+
+    <p>これらの収益化の機能は、Mozilla から外部の決済サービスプロバイダーに委託されているため、アプリの登録とは別に、決済アカウントの登録が必要になります。</p>
+
+    <figure>
+      <div class="figure">
+        <p><a href="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_63.png"><img src="/static/images/events/2015/seminar-0213/report/s03_20150213-Marketplace_63.png"></a></p>
+      </div>
+      <figcaption>
+        <p class="figcaption">
+          <a href="https://developer.mozilla.org/ja/Apps/Tutorials/General/Profiting_from_your_app">アプリからの収益 - アプリセンター | MDN</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <p>アプリ内購入では、アプリのなかでアイテムなどに課金することができます。基本的な流れは、有料アプリと同じですが、利用する API として「MozPay」と「fxPay」を選択できます。</p>
+
+    <p>「MozPay」は、すでにアプリ管理サーバーを持っている場合に利用します。「fxPay」は、Firefox Marketplace の管理機能を利用し、独自のアプリ管理サーバーを持っていない方々にオススメの API となっています。</p>
+
+    <p>Firefox Marketplace は、ユーザーにアプリを見つけてもらうための場所です。ですから、Firefox Marketplace にアプリを登録するときは、ユーザーにとって、よりよい情報を提供していただければと思っています。ユーザーをだましてアプリを使わせるのではなく、これは価値のあるアプリだと、きちんと説明して、使ってもらうようにしていただければ、Firefox Marketplace は、皆さんのアプリをいつでも歓迎します。</p>
+
+    <p>Mozilla の考え方は、ユーザーを第一にしているために、このような設計になっています。</p>
+
+    <p>その点だけ気を付けていただければ、それ以外のポイントについては、他のスマートデバイスのマーケットプレイスより、ゆるい条件になっています。先ほど説明したレビューでも、こんなビジネスをしてはいけないとか、こんなマネタイズをしてはいけないという条件は、ほとんど出てこなかったと思います。ぜひ、Firefox Marketplace をご活用ください。</p>
+  </section>
+
+  <section id="q-and-a">
+    <h2>セミナーでの質疑応答</h2>
+
+    <h3>Android 版 Firefox とデスクトップ版 Firefox によるリモートデバッグ</h3>
+
+    <p class="question"">PC と Android を USB ケーブルで接続した場合、デスクトップ版 Firefox から Android 版 Firefox に接続してリモートデバックできますか？ その場合、なにか制限はありますか？</p>
+
+    <p class="answer">その組み合わせでリモートデバックできます。機能的には、特に制限はありません。
+      デスクトップ側で Firefox 36 以降、モバイルデバイス側で Firefox 35 以降の組み合わせで、接続方法が変更になっています(Firefox 36 は、2015 年 2 月現在の開発版にあたります)。</p>
+
+    <p class="cf"><a href="https://developer.mozilla.org/ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">WebIDE による Android 版 Firefox のデバッグ - 開発ツール | MDN</a></p>
+
+    <h3>Firefox OS アプリの難読化</h3>
+
+    <p class="question">アプリを公開した場合、HTML/CSS/JavaScript のソースコードは、ユーザーから見られますか？</p>
+
+    <p class="answer">Firefox Marketplace からインストールしたパッケージ型アプリは、ソースコードが見えません。しかし、シミュレータなどを通じて、ファイルをダウンロードして解凍すれば、アプリのソースコードを読むことができます。アプリのソースコードを隠したい場合は、通常のウェブサービスと同様に、難読化しておくことになります。</p>
+
+    <h3>決済サービスのアカウントについて</h3>
+
+    <p class="question">アプリなどを購入する場合、決済サービスのアカウントがユーザーにも必要になりますか？</p>
+
+    <p class="answer">決済サービスのアカウントは、必要ありません。Firefox アカウントだけで、Firefox Marketplace を利用できます。</p>
+
+
+    <h3>国内の決済サービスについて</h3>
+
+    <p class="question">Firefox Marketplace の課金サービスは、日本国内の決済サービスにも対応していますか？</p>
+
+    <p class="answer">2015 年 2 月現在、Firefox Marketplace で利用できる決済プロバイダーは、Bango のみですが、他の決済プロバイダーも Firefox Marketplace でサポートされる予定です。国内の決済については、発表があるまでお待ちください。</p>
+
+    <p class="cf"><a href="https://developer.mozilla.org/ja/Marketplace/Publishing/Pricing/Payment_Accounts">決済アカウント - Mozilla | MDN</a></p>
+  </section>
+
+  <section id="summary">
+    <h2>Firefox OS の可能性</h2>
+
+    <p>今回のセミナーに参加して印象的だったのは、やはり Firefox OS アプリ開発のハードルの低さです。
+      iOS や Android アプリの開発であれば、プログラミング言語もふくめて新しく覚えることがたくさんありますが、Firefox OS の場合は、IT エンジニアにとって必須の知識となりつつある HTML/CSS/JavaScript で開発できるというのは、インパクトがありました。</p>
+
+    <p>また、同じアプリが、Firefox OS デバイスだけでなく、デスクトップ版 Firefox や Android 版 Firefox でも動作するというは、今回初めて知りました。すでに、iOS 版 Firefox もアナウンスされており、ますますマルチプラットフォーム環境として Firefox OS は注目の存在だと感じました。</p>
+
+    <p>すでに、iPhone や Android などのスマートフォンが広く普及しており、正直なところ、スマートフォンに限っていえば、Firefox OS は周回遅れのような印象を持っている人も多いと思います。しかし、IoT/WoT によるモノづくりなど、ますます IT 技術の活用分野が広がっていくなかで、オープンなウェブ標準技術によるソフトウェア開発という考え方は、極めて大きな可能性を秘めています。</p>
+
+    <p>そのスタートのきっかけとして、Firefox OS のアプリ開発にチャレンジしてみては、いかがでしょうか。</p>
+    <p>(テクニカルライタ－ 可知 豊)</p>
+  </section>
+
+  <section id="see-also">
+    <h2>関連リンク</h2>
+    <ul>
+      <li><a href="/events/2015/seminar-0213/">セミナー情報と、当日の発表スライド</a></li>
+      <li>講演の録画
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=2WwiUsmsVZU&feature=youtu.be">Firefox OS 概要</a> (YouTube)</li>
+          <li><a href="https://www.youtube.com/watch?v=XxbJvXNV3Vc&feature=youtu.be">Firefox OS アプリ開発方法について</a> (YouTube)</li>
+          <li><a href="https://www.youtube.com/watch?v=PBK0PbYqbTo&feature=youtu.be">Firefox Marketplace：公開、レビュー、そして管理</a> (YouTube)</li>
+        </ul>
+      </li>
+      <li><a href="http://panasonic.biz/broad/catv/product/settop/tz-hdt620/">Panasonic TZ-HDT620/TZ-HDT621シリーズ</a></li>
+      <li><a href="https://www.mozilla.org/ja/firefox/os/">Firefox OS</a></li>
+      <li><a href="https://marketplace.firefox.com/">Firefox Marketplace</a></li>
+      <li><a href="https://developer.mozilla.org/ja/">Mozilla Developer Network</a></li>
+      <li><a href="http://fxos.org/">コミュニティ主催の勉強会情報</a></li>
+    </ul>
+  </section>
+</section>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
+
+?>

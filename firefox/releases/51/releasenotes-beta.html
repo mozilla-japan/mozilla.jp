@@ -1,0 +1,53 @@
+<?php
+
+$_channel = 'beta';
+$_platform = 'desktop';
+$_version = '51.0';
+$_date = '2016-11-16';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="new">
+              <h4>新機能</h4>
+              <ul class="section-items">
+                <li id="note-786865">
+                  <p>WebGL2 が利用できるようになりました。</p>
+                </li>
+                <li id="note-786864">
+                  <p>ベラルーシ語 [be] ロケールを削除しました。</p>
+                </li>
+                <li id="note-786829">
+                  <p>submit イベントが発生しないフォームでもログイン情報を保存できるようなりました。</p>
+                </li>
+                <li id="note-786826">
+                  <p>GPU アクセラレーションが利用できない方の動画再生パフォーマンスが向上しました。</p>
+                  <ul>
+                    <li>CPU 利用率が低下しました</li>
+                    <li>フルスクリーン再生での体験が向上しました</li>
+                  </ul>
+                </li>
+                <li id="note-786822">
+                  <p>拡大・縮小表示した際に、その倍率がロケーションバーへ表示されるようになりました。</p>
+                </li>
+                <li id="note-786821">
+                  <p>プロンプトに表示されている保存前のパスワードを確認できるようなりました。</p>
+                </li>
+                <li id="note-786820">
+                  <p><a href="https://xiph.org/flac/">FLAC (Free Lossless Audio Codec)</a> でエンコードされた音声データを再生できるようなりました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-786824">
+                  <p>Linux 版：コンテンツの描画に Skia を利用するようになりました。</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

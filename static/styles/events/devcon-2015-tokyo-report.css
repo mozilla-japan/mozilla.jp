@@ -1,0 +1,155 @@
+body {
+  background: #000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8) 800px),
+              url(/static/images/events/devcon/2015/tokyo/report/background.jpg) no-repeat fixed center top,
+              rgba(0, 0, 0, .8) !important;
+}
+
+#doc {
+  width: 100%;
+  color: rgba(255, 255, 255, .9);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+}
+
+.inner {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.inner > * {
+  margin: 16px;
+}
+
+.inner > section {
+  margin: 80px 16px;
+}
+
+#nav-main-menu {
+  display: none !important;
+}
+
+article h1 {
+  font-size: 40px;
+}
+
+article header {
+  margin: 32px 0;
+  text-align: center;
+}
+
+article h3 {
+  font-size: 24px;
+}
+
+article a:link,
+article a:visited,
+article a:hover,
+article a:focus,
+article a:active {
+  color: #ed5c55 !important;
+}
+
+article section section {
+  overflow: hidden;
+  margin: 32px 0;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+}
+
+article img:not(:first-of-type) {
+  margin-top: 32px;
+}
+
+article .assets {
+  margin: 1em 0 0;
+  padding: 0;
+}
+
+article .assets li {
+  display: inline-block;
+  margin: 0 1em 0 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+}
+
+article .assets a::before {
+  margin-right: .5em;
+  font-family: FontAwesome, sans-serif;
+}
+
+article .assets a.video::before {
+  content: "\F03D";
+}
+
+article .assets a.slides::before {
+  content: "\F15B";
+}
+
+@media only screen and (min-width: 1024px) {
+  #main-header h1 span {
+    display: block;
+  }
+
+  article figure {
+    width: 448px;
+  }
+
+  article figure ~ * {
+    margin: 0 480px 16px 0;
+  }
+
+  article section section:nth-child(even) figure ~ * {
+    margin: 0 0 16px 480px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .inner {
+    width: 768px;
+  }
+
+  article figure {
+    width: 352px;
+  }
+
+  article figure ~ * {
+    margin: 0 384px 16px 0;
+  }
+
+  article section section:nth-child(even) figure ~ * {
+    margin: 0 0 16px 384px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #main-header h1 {
+    margin: 200px 0 80px;
+  }
+
+  article figure {
+    float: right;
+  }
+
+  article section section:nth-child(even) figure {
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .inner {
+    width: 100%;
+  }
+
+  #main-header h1 {
+    margin: 40px 0;
+    font-size: 32px;
+  }
+
+  article figure {
+    margin: 32px 0;
+  }
+}

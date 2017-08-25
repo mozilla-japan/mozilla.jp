@@ -1,0 +1,304 @@
+################################################################################
+# 基本設定
+################################################################################
+
+AddDefaultCharset UTF-8
+AddType application/x-httpd-php .php .html
+AddType application/xml .rdf .xml
+AddType image/x-icon .ico
+AddType text/javascript .js
+AddType text/vtt .vtt
+DirectoryIndex index.php index.html index.xml 01.html
+Options +FollowSymLinks +MultiViews -Indexes
+RewriteEngine On
+
+################################################################################
+# セキュリティ
+################################################################################
+
+Header always append Strict-Transport-Security max-age=31536000
+Header always append X-Content-Type-Options nosniff
+Header always append X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options "ALLOW-FROM https://secure.mozilla.jp"
+Header always append Content-Security-Policy " \
+default-src 'self'; \
+connect-src 'self' https://*.typekit.net; \
+script-src 'self' https://use.typekit.net https://www.google-analytics.com https://maps.googleapis.com https://amara.org; \
+style-src 'self' 'unsafe-inline' https://use.typekit.net; \
+font-src 'self' data: https://use.typekit.net; \
+child-src https://www.youtube-nocookie.com https://www.youtube.com https://amara.org; \
+img-src *; \
+media-src *; "
+
+################################################################################
+# パフォーマンス向上
+################################################################################
+
+<Files ~ "^(prefetch|redirector)\.php$">
+# Google の検索結果に dmoz から取得した説明文を表示しない (SEO)
+Header always append X-Robots-Tag "noodp"
+</Files>
+
+# gzip 圧縮を使用
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# キャッシュの有効期限を明示
+ExpiresActive On
+## 画像、CSS、JavaScript など、デフォルトは 1 年 = 事実上無期限
+ExpiresDefault "access plus 1 year"
+## ページは 24 時間
+ExpiresByType text/html "access plus 1 day"
+## RSS フィードは 30 分
+ExpiresByType application/xml "access plus 30 minutes"
+
+# Etag を使わない
+FileETag None
+
+################################################################################
+# リダイレクト - 正規化
+# 以下、リダイレクトに関する注意事項については Intranet の記事を参照
+# https://secure.mozilla.jp/intranet/WebDev/mozilla.jp/Redirects
+################################################################################
+
+# ホスト名の統一
+RewriteCond %{HTTP_HOST}                                    ^mozilla\.jp$
+RewriteRule (.*)                                            https://www.mozilla.jp/$1 [R=permanent,L]
+
+# URL 正規化 (大文字を小文字に)
+RewriteRule ^Firefox(.*)                                    /firefox$1 [R=permanent]
+RewriteRule ^Thunderbird(.*)                                /thunderbird$1 [R=permanent]
+
+# リリースノートなどは物理パスと異なる場所にあり、内部リライトを行っているので
+# 以下のような工夫が必要
+## 末尾のスラッシュがなければ付ける (例: /firefox/10.0/releasenotes → /firefox/10.0/releasenotes/)
+## index.html が付いていれば外す (例: /firefox/10.0/releasenotes/index.html → /firefox/10.0/releasenotes/)
+RewriteRule ^(firefox(?:/android|/ios)?|thunderbird)/([\d\.]+(?:(?:b|beta|rc|esr)\d*)?)/(\w+)(/index\.html)?$          /$1/$2/$3/ [R=permanent]
+## バージョン名ディレクトリーへのアクセスはリリースノートへ (例: /firefox/10.0/ → /firefox/10.0/releasenotes/)
+RewriteRule ^(firefox(?:/android|/ios)?|thunderbird)/([\d\.]+(?:(?:b|beta|rc|esr)\d*)?)/?$                             /$1/$2/releasenotes/ [R=permanent]
+
+################################################################################
+# mozilla.org へのリダイレクト
+################################################################################
+
+# Firefox
+RewriteRule ^products/firefox(/?|/.+)$                                          https://www.mozilla.org/ja/firefox$1 [R=permanent,L]
+RewriteRule ^products/download                                                  https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox(?:/?|/index\.html)$                                        https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/landing(?:/?|/.+)$                                         https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/(?:download|update|upgrade|new|fx|ie|fb|banners)/?$        https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/(?:happy|speed|bookmarks|try|independent)/?$               https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/download/(?:update|unsupported)(?:/?|/.+)$                 https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/(?:uninstall(-thanks)?|install-feedback)(?:/?|/.+)$        https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/faq(?:/?|/.+)$                                             https://www.mozilla.org/ja/firefox/ [R=permanent,L]
+RewriteRule ^firefox/(?:channels?|preview|early_releases|rc|RC)(?:/?|/.+)$      https://www.mozilla.org/ja/firefox/channel/ [R=permanent,L]
+RewriteRule ^mobile/aurora(?:/?|/.+)$                                           https://www.mozilla.org/ja/firefox/channel/ [R=permanent,L]
+RewriteRule ^firefox/(?:android/)?beta/?$                                       https://www.mozilla.org/ja/firefox/channel/ [R=permanent,L]
+RewriteRule ^firefox/(?:all(?:\.html|/?)?|download/all/?|locales/?)$            https://www.mozilla.org/ja/firefox/all/ [R=permanent,L]
+RewriteRule ^firefox/(beta|aurora|developer|organizations)/all(?:/?|/.+)$       https://www.mozilla.org/ja/firefox/$1/all/ [R=permanent,L]
+RewriteRule ^firefox/(?:all-(?:beta|rc)(?:\.html)?|(?:download/)?beta/?)$       https://www.mozilla.org/ja/firefox/beta/all/ [R=permanent,L]
+RewriteRule ^business/downloads/all(?:/?|/.+)$                                  https://www.mozilla.org/ja/firefox/organizations/all/ [R=permanent,L]
+RewriteRule ^firefox/(?:download/)?(?:aurora|developer)(?:/?|/.+)$              https://www.mozilla.org/ja/firefox/developer/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?webdev(?:/?|/.+)$                                     https://www.mozilla.org/ja/firefox/developer/ [R=permanent,L]
+RewriteRule ^firefox/(?:family|products?)(?:/?|/.+)$                            https://www.mozilla.org/ja/firefox/products/ [R=permanent,L]
+RewriteRule ^(?:products/?|projects(?:/?|/.+))$                                 https://www.mozilla.org/ja/firefox/products/ [R=permanent,L]
+RewriteRule ^firefox/features/?$                                                https://www.mozilla.org/ja/firefox/desktop/ [R=permanent,L]
+RewriteRule ^firefox/desktop(/(?:fast|trust|customize))?(?:/?|/.+)$             https://www.mozilla.org/ja/firefox/desktop$1 [R=permanent,L]
+RewriteRule ^firefox/(?:performance|underthehood)(?:/?|/.+)$                    https://www.mozilla.org/ja/firefox/desktop/fast/ [R=permanent,L]
+RewriteRule ^firefox/security/?$                                                https://www.mozilla.org/ja/firefox/desktop/trust/ [R=permanent,L]
+RewriteRule ^firefox/(?:customize|addons)/?$                                    https://www.mozilla.org/ja/firefox/desktop/customize/ [R=permanent,L]
+RewriteRule ^firefox/(sync|hello|pocket|installer-help)(?:/?|/.+)$              https://www.mozilla.org/ja/firefox/$1/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?dnt(?:/?|/.+)$                                        https://www.mozilla.org/ja/firefox/dnt/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?mobile/sync(?:/?|/.+)$                                https://www.mozilla.org/ja/firefox/sync/ [R=permanent,L]
+RewriteRule ^firefox/(?:features/)?geolocation(?:/?|/.+)$                       https://www.mozilla.org/ja/firefox/geolocation/ [R=permanent,L]
+RewriteRule ^(?:m|firefox)/ios/?$                                               https://www.mozilla.org/ja/firefox/ios/ [R=permanent,L]
+RewriteRule ^m(/.*)?$                                                           https://www.mozilla.org/ja/firefox/android/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?(?:mobile|android)/?$                                 https://www.mozilla.org/ja/firefox/android/ [R=permanent,L]
+RewriteRule ^firefox/android/(?:beta/)?faq/?$                                   https://www.mozilla.org/ja/firefox/android/ [R=permanent,L]
+RewriteRule ^firefox/(\d+)\.0a2/(.*)                                            https://www.mozilla.org/ja/firefox/$1.0a2/$2 [R=permanent,L]
+RewriteRule ^firefox/android/(\d+)\.0a2/(.*)                                    https://www.mozilla.org/ja/firefox/android/$1.0a2/$2 [R=permanent,L]
+RewriteRule ^firefox/android/aurora(.*)                                         https://www.mozilla.org/ja/firefox/android/aurora$1 [R=permanent,L]
+RewriteRule ^firefox/([^/+])/auroranotes(?:/?|/.+)$                             https://www.mozilla.org/ja/firefox/$1/auroranotes/ [R=permanent,L]
+RewriteRule ^firefox/([\w\.]+)/(firstrun|whatsnew|details)(?:/?|/.+)$           https://www.mozilla.org/ja/firefox/$1/$2/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?personas/?$                                           https://support.mozilla.org/ja/kb/use-themes-change-look-of-firefox [R=permanent,L]
+RewriteRule ^firefox/tiles(?:/?|/.+)$                                           https://support.mozilla.org/ja/kb/about-tiles-new-tab [R=permanent,L]
+RewriteRule ^\(ja\)/firefox/uninstall(?:/?|/.+)$                                https://support.mozilla.org/ja/kb/uninstall-firefox-from-your-computer [R=permanent,L]
+RewriteRule ^firefox/(?:security/)?phishing-protection(?:/?|/.+)$               https://support.mozilla.org/ja/kb/how-does-phishing-and-malware-protection-work [R=permanent,L]
+RewriteRule ^firefox/(?:all-older(?:\.html)?|(?:download|locales)/older/?)$     https://support.mozilla.org/ja/kb/install-older-version-of-firefox [R=permanent,L]
+RewriteRule ^firefox/search(?:/?|/.+)$                                          https://support.mozilla.org/ja/kb/use-search-bar-firefox [R=permanent,L]
+RewriteRule ^firefox/livebookmarks(?:/?|/.+)$                                   https://support.mozilla.org/ja/kb/live-bookmarks [R=permanent,L]
+RewriteRule ^firefox/security/identity(?:/?|/.+)$                               https://support.mozilla.org/ja/kb/how-do-i-tell-if-my-connection-is-secure [R=permanent,L]
+RewriteRule ^firefox/(?:central|tips|tour|releases/whatsnew)(?:/?|/.+)$         https://support.mozilla.org/ja/kb/get-started-firefox-overview-main-features [R=permanent,L]
+RewriteRule ^firefox/android/devices(?:/?|/.+)$                                 https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device [R=permanent,L]
+RewriteRule ^(?:firefox/)?mobile/platforms(?:/?|/.+)$                           https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device [R=permanent,L]
+RewriteRule ^firefox/addons/install(?:/?|/.+)$                                  https://support.mozilla.org/ja/kb/find-and-install-add-ons-add-features-to-firefox [R=permanent,L]
+RewriteRule ^firefox/technology(?:/?|/.+)$                                      https://developer.mozilla.org/ja/docs/Web [R=permanent,L]
+RewriteRule ^(?:firefox/marketplace|apps)(?:/?|/.+)$                            https://marketplace.firefox.com/ [R=permanent,L]
+RewriteRule ^firefox/(its-an-attack|its-a-trap)(?:\.html)$                      https://www.itisatrap.org/firefox/$1.html [R=permanent,L]
+
+# Firefox OS
+RewriteRule ^(?:firefox/os/devices/)?flame(?:/?|/.+)$                           https://developer.mozilla.org/ja/docs/Mozilla/B2G_OS/Phone_guide/Flame [R=permanent,L]
+RewriteRule ^(?:mwc|firefoxos|firefox/(?:b2g|os))(?:/?|/.+)$                    https://developer.mozilla.org/ja/docs/Mozilla/B2G_OS [R=permanent,L]
+
+# Thunderbird
+RewriteRule ^products/thunderbird(/?|/.*)                                       https://www.thunderbird.net/ja/ [R=permanent,L]
+RewriteRule ^thunderbird(/download)?/?$                                         https://www.thunderbird.net/ja/ [R=permanent,L]
+RewriteRule ^thunderbird/features/?$                                            https://www.thunderbird.net/ja/features/ [R=permanent,L]
+RewriteRule ^thunderbird/(?:channels?|preview|early_releases|rc|RC)/?$          https://www.thunderbird.net/ja/channel/ [R=permanent,L]
+RewriteRule ^thunderbird/(?:all(?:\.html|/?)?|download/all/?|locales/?)$        https://www.thunderbird.net/ja/all/ [R=permanent,L]
+RewriteRule ^thunderbird/(?:all-(?:beta|rc)(?:\.html)?|(?:download/)?beta/?)$   https://www.thunderbird.net/ja/beta/all/ [R=permanent,L]
+RewriteRule ^thunderbird/(?:download/)?earlybird/?$                             https://www.thunderbird.net/ja/earlybird/all/ [R=permanent,L]
+RewriteRule ^thunderbird/(?:all-older(?:\.html)?|(?:download|locales)/older/?)$ https://www.thunderbird.net/ja/all/ [R=permanent,L]
+RewriteRule ^thunderbird/([\w\.]+)/(start|whatsnew|details)(?:/?|/.+)$          https://www.thunderbird.net/ja/$1/$2/ [R=permanent,L]
+
+# サポート
+RewriteRule ^(?:(?:firefox|thunderbird)/)?support/community                     https://support.mozilla.org/ja/kb/get-community-support [R=permanent,L]
+RewriteRule ^support/(firefox|thunderbird)(?:/?|/.+)$                           https://support.mozilla.org/ja/products/$1 [R=permanent,L]
+RewriteRule ^(firefox|thunderbird)/(?:support|help)(?:/?|/.+)$                  https://support.mozilla.org/ja/products/$1 [R=permanent,L]
+RewriteRule ^support(/?|/.+)$                                                   https://support.mozilla.org/ja/ [R=permanent,L]
+
+# リーガル
+RewriteRule ^(?:about/)?legal/?$                                                https://www.mozilla.org/ja/about/legal/ [R=permanent,L]
+RewriteRule ^privacy(?:-policy)?(?:/?|/.+)$                                     https://www.mozilla.org/ja/privacy/ [R=permanent,L]
+RewriteRule ^legal/privacy/?$                                                   https://www.mozilla.org/ja/privacy/ [R=permanent,L]
+RewriteRule ^legal/privacy/japan/?$                                             - [G,L]
+RewriteRule ^legal/privacy/(firefox|thunderbird)(?:/?|/.+)$                     https://www.mozilla.org/ja/privacy/$1/ [R=permanent,L]
+RewriteRule ^(firefox|thunderbird)/legal/privacy(?:/?|/.+)$                     https://www.mozilla.org/ja/privacy/$1/ [R=permanent,L]
+
+# セキュリティ
+RewriteCond %{REQUEST_URI} !^/security/known-vulnerabilities(/?|/.*)$
+RewriteRule ^security(/?|/.*)$                                                  https://www.mozilla.org/ja/security$1 [R=permanent,L]
+
+# その他
+RewriteRule ^(?:firefox/security/)?plugincheck(?:/?|/.+)$                       https://www.mozilla.org/ja/plugincheck/ [R=permanent,L]
+RewriteRule ^(?:lightbeam|collusion)(?:/?|/.+)$                                 https://www.mozilla.org/ja/lightbeam/ [R=permanent,L]
+RewriteRule ^firefox/brand(?:/?|/.+)$                                           https://www.mozilla.org/ja/styleguide/ [R=permanent,L]
+RewriteRule ^mission(?:/?|/.+)$                                                 https://www.mozilla.org/ja/mission/ [R=permanent,L]
+RewriteRule ^about/contact(?:/?|\.html)$                                        https://www.mozilla.org/ja/contact/ [R=permanent,L]
+RewriteRule ^about/licensing(?:/?|\.html)$                                      https://www.mozilla.org/ja/foundation/licensing/ [R=permanent,L]
+RewriteRule ^about/(?:timeline|history)(?:/?|/.+)$                              https://www.mozilla.org/ja/about/history/ [R=permanent,L]
+RewriteRule ^about/(governance|partnerships)(?:/?|/.+)$                         https://www.mozilla.org/ja/about/$1/ [R=permanent,L]
+RewriteRule ^(?:about|foundation)/annualreport(/20\d\d)?(/\w+)?/?$              https://www.mozilla.org/ja/foundation/annualreport$1$2/ [R=permanent,L]
+RewriteRule ^newsletter(?:/?|/.+)$                                              https://www.mozilla.org/ja/newsletter/ [R=permanent,L]
+RewriteRule ^press(?:/?|/.+)$                                                   https://blog.mozilla.org/press/ [R=permanent,L]
+RewriteRule ^about/logo/?$                                                      https://blog.mozilla.org/press/media-library/ [R=permanent,L]
+RewriteRule ^persona/developer-faq(?:/?|/.+)$                                   https://developer.mozilla.org/ja/docs/Mozilla/Persona/FAQ [R=permanent,L]
+RewriteRule ^persona(?:/?|/.+)$                                                 https://developer.mozilla.org/ja/docs/Mozilla/Persona [R=permanent,L]
+RewriteRule ^community/directory\.html\??.*                                     https://wiki.mozilla.org/Websites/Directory [R=permanent,L]
+RewriteRule ^careers?(?:/?|/.+)$                                                https://careers.mozilla.org/ [R=permanent,L]
+RewriteRule ^about/careers(?:\.html|/?)$                                        https://careers.mozilla.org/ [R=permanent,L]
+
+################################################################################
+# 内部リダイレクト
+################################################################################
+
+# ビジネス
+RewriteRule ^business/(?:downloads|resources)(?:/?|/.+)$                        /business/ [R=permanent,L]
+RewriteRule ^(?:(?:firefox|thunderbird)/)?organizations?(?:/?|/.+)$             /business/ [R=permanent,L]
+
+# 製品
+RewriteRule ^(firefox|thunderbird)/releases/([01][\d\.]+)(\.html)?$             /$1/$2/releasenotes/ [R=permanent,L]
+RewriteRule ^firefox/system-requirements-v3\.([56])                             /firefox/3.$1/system-requirements/ [R=permanent,L]
+RewriteRule ^firefox/system-requirements-v([2-4])                               /firefox/$1.0/system-requirements/ [R=permanent,L]
+RewriteRule ^(?:firefox/)?(?:mobile/)?(?:home|iphone)                           /blog/entry/9902/ [R=permanent,L]
+
+# イベント・キャンペーン
+RewriteRule ^events/(20\d\d)/(?:fx)?devcon(/.*)?                                /events/devcon/$1$2 [R=permanent,L]
+RewriteRule ^events/2011/fxdevcon-osaka/?$                                      /events/devcon/2011/osaka/ [R=permanent,L]
+RewriteRule ^firefoxlive(?:/?|/.+)$                                             /blog/entry/7488/ [R=permanent,L]
+RewriteRule ^firefoxflicks(?:/?|/.+)$                                           /blog/entry/10326/ [R=permanent,L]
+
+# ブログ
+RewriteRule ^blog/category/(firefox|thunderbird)-\d+/$                          /blog/category/$1/ [R=permanent,L]
+RewriteRule ^blog/archive/(20\d\d)/\d\d/$                                       /blog/archive/$1/ [R=permanent,L]
+
+# その他
+RewriteRule ^users/?$                                                           / [R=permanent,L]
+RewriteRule ^firefox/(?:about|organic|public)/?$                                /about/ [R=permanent,L]
+RewriteRule ^about/(?:whatis)?mozilla(?:\.html|/)?$                             /about/ [R=permanent,L]
+RewriteRule ^about/japan(?:\.html)?$                                            /about/japan/ [R=permanent,L]
+RewriteRule ^about/(?:get-involved|participate)(?:/?|/.+)$                      /community/ [R=permanent,L]
+RewriteRule ^(?:manyfaces|contribute|firefox/community)(?:/?|/.+)$              /community/ [R=permanent,L]
+
+################################################################################
+# 外部リダイレクト
+################################################################################
+
+# セキュリティ
+RewriteRule ^security/known-vulnerabilities/(firefox|firefox-os|thunderbird|seamonkey|older-vulnerabilities)/?$ http://www.mozilla-japan.org/security/known-vulnerabilities/$1.html [R=permanent,L]
+RewriteRule ^security/known-vulnerabilities/(firefox|thunderbird)-esr/?         http://www.mozilla-japan.org/security/known-vulnerabilities/$1ESR.html [R=permanent,L]
+RewriteRule ^security/known-vulnerabilities/(firefox|thunderbird|seamonkey)-(1|2|3).(0|1|2|5|6|7)/? http://www.mozilla-japan.org/security/known-vulnerabilities/$1$2$3.html [R=permanent,L]
+RewriteRule ^security/known-vulnerabilities/(?:mozilla-)?suite/?                http://www.mozilla-japan.org/security/known-vulnerabilities/suite17.html [R=permanent,L]
+RewriteRule ^security/known-vulnerabilities/?                                   http://www.mozilla-japan.org/security/known-vulnerabilities/ [R=permanent,L]
+
+# その他
+RewriteRule ^(?:firefox/)?videos?(?:/?|/.+)$                                    https://www.youtube.com/user/MozillaJP [R=permanent,L]
+RewriteRule ^firefox/connect(?:/?|/.+)$                                         https://twitter.com/mozillajp [R=permanent,L]
+RewriteRule ^(?:(?:firefox/)?students(?:/?|/.+)|st/?)$                          http://fxstudent.tumblr.com/ [R=permanent,L]
+RewriteRule ^events/?$                                                          https://mozilla.doorkeeper.jp/ [R=permanent,L]
+RewriteRule ^blog/feed/?$                                                       https://medium.com/feed/mozilla-japan [R=permanent,L]
+
+################################################################################
+# リダイレクト専用 URL の解決
+################################################################################
+
+# イベント・キャンペーン
+RewriteRule ^(?:events/)?vision/?$                                              /events/vision/2012/ [R=permanent,L]
+RewriteRule ^(?:events/)?devcon/?$                                              /events/devcon/2015/tokyo/ [R=permanent,L]
+RewriteRule ^(?:events/)?open-web-day(/index\.html.*|/?)$                       /events/2014/open-web-day$2 [R=permanent,L]
+RewriteRule ^(?:events/)?open-web-day/en(?:/?|/.+)$                             /events/2014/open-web-day/index.html.en [R=permanent,L]
+RewriteRule ^FirefoxOSinJapan/?$                                                /events/2014/foxkeh/ [NC,R=permanent,L]
+
+# 製品
+RewriteRule ^(?:firefox|thunderbird)/latest/releasenotes/?$                     /includes/redirector.php [L]
+RewriteRule ^(?:firefox(?:/android|/ios)?|mobile|thunderbird)(?:/beta)?/notes/?$  /includes/redirector.php [L]
+RewriteRule ^(?:firefox|thunderbird)/(?:download/)?system-requirements          /includes/redirector.php [L]
+
+################################################################################
+# 内部リライトルール (リダイレクトせず、URL と異なる物理パスを表示させる)
+# 各ルールのフラグに [R] が付いていないことに注意
+################################################################################
+
+# /static/ 以下のファイルを更新した場合は、HTML/CSS に書かれているファイル名の
+# 末尾に YYYYMMDD 形式の日付もしくはバージョンを付けること。上記 ExpiresDefault の
+# 指定通り、これらのファイルはブラウザー側で 1 年間キャッシュされるため、通常は
+# ファイル名を変更しない限りブラウザーに表示されるファイルは更新されないことに注意。
+# ただし、以下の RewriteRule のおかげで、実際のファイルをリネームする必要はない。
+# (例: /static/styles/covehead/home-20110816 = /static/styles/covehead/home.css)
+# (例: /static/scripts/lib/jquery/jquery-1.6.2.js = /static/scripts/lib/jquery/jquery.js)
+RewriteRule ^static/([a-z]+)/(.*)-(\d{8,10})(\.([a-z0-9]{2,4}))?$               /static/$1/$2$4 [L]
+RewriteRule ^static/scripts/lib/(.*)-([\d\.]+)\.js$                             /static/scripts/lib/$1.js [L]
+RewriteRule ^(.+)/static/(styles|scripts)/(.+)\-[0-9]+$                         $1/static/$2/$3 [L]
+
+# 製品関連
+RewriteRule ^(?:firefox(?:/android|/ios)?|thunderbird)/(?:\d+\.\d+(\.\d+)*(?:(?:beta|b|rc|esr)\d*)?)/(?:[\w\-]+)/$  /includes/redirector.php [L]
+RewriteRule ^firefox/whatsnew/?$                                                /firefox/releases/latest/whatsnew.html [L]
+RewriteRule ^thunderbird/release/start/?$                                       /thunderbird/releases/latest/start.html [L]
+RewriteRule ^thunderbird/beta/start/?$                                          /thunderbird/releases/beta/start.html [L]
+
+# favicon
+RewriteRule ^(firefox|thunderbird)/(?:.*/)?favicon\.ico$                        /static/images/$1/favicon-32.ico [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule favicon\.ico$                                                       /static/images/global/favicon.ico [L]
+
+################################################################################
+# 先読みスクリプト
+################################################################################
+
+# すべての HTML ファイルを処理
+Action init /includes/prefetch.php
+AddHandler init .html
+
+# CSS/JavaScript ファイルを最小化
+Action minify /includes/minify.php
+AddHandler minify .css .js
+
+################################################################################
+# エラーページ
+################################################################################
+
+ErrorDocument 403 /includes/prefetch.php?error=403
+ErrorDocument 404 /includes/prefetch.php?error=404
+ErrorDocument 410 /includes/prefetch.php?error=410
