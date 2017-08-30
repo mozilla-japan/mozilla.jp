@@ -45,9 +45,6 @@
                   <li><a href="https://medium.com/mozilla-japan">Medium</a></li>
                   <li><a href="https://twitter.com/mozillajp">Twitter</a></li>
                   <li><a href="https://www.facebook.com/mozillajapan">Facebook</a></li>
-                  <li><a href="https://www.youtube.com/user/MozillaJP">YouTube</a></li>
-                  <li><a href="https://www.flickr.com/photos/mozillajp">Flickr</a></li>
-                  <li><a href="https://www.facebook.com/foxkeh.jp">フォクすけ</a></li>
                 </ul>
               </li>
               <li><a href="/about/"><strong>Mozilla</strong> について</a>
