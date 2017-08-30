@@ -54,7 +54,7 @@
             </ul>
           </nav>
           <div id="copyright">
-            <p>Copyright &#169; <span itemprop="copyrightYear">2004</span>&#8211;<?=date('Y');?> <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Mozilla Japan</span></span>. All rights reserved. <?php if (!empty($extra_footer_links)): echo $extra_footer_links; endif; ?></p>
+            <p>Copyright &#169; <span itemprop="copyrightYear">2004</span>&#8211;<?=date('Y');?> <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Mozilla Japan Community</span></span>. All rights reserved. <?php if (!empty($extra_footer_links)): echo $extra_footer_links; endif; ?></p>
           </div>
         </div><!-- end #globalfooter -->
       </footer><!-- end #pagefooter -->
