@@ -107,8 +107,8 @@
     text-align: center;
   }
 
-  #products,
-  #community {
+  #community,
+  #supporters {
     background-color: #EEE;
     background-image: url(/static/images/home/stripe-lightgray.png);
   }
@@ -168,8 +168,8 @@
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  #products,
-  #community {
+  #community,
+  #supporters {
     background-image: url(/static/images/home/stripe-lightgray@2x.png);
     background-size: 4px 4px;
   }
