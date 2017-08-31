@@ -246,29 +246,3 @@ body#about #links li:not(:last-of-type) {
     margin: 16px 0;
   }
 }
-
-/* About Mozilla Japan */
-
-body#japan #announcement {
-  margin: 48px 16px;
-  text-align: center;
-}
-
-body#japan #announcement .col {
-  margin: 0 auto;
-  float: none;
-}
-
-body#japan #announcement a {
-  display: block;
-}
-
-body#japan #announcement img {
-  max-width: 80%;
-  height: auto;
-}
-
-body#japan #announcement span {
-  display: block;
-  margin-top: 16px;
-}

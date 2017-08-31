@@ -218,7 +218,7 @@ RewriteRule ^blog/archive/(20\d\d)/\d\d/$                                       
 RewriteRule ^users/?$                                                           / [R=permanent,L]
 RewriteRule ^firefox/(?:about|organic|public)/?$                                /about/ [R=permanent,L]
 RewriteRule ^about/(?:whatis)?mozilla(?:\.html|/)?$                             /about/ [R=permanent,L]
-RewriteRule ^about/japan(?:\.html)?$                                            /about/japan/ [R=permanent,L]
+RewriteRule ^about/japan(?:\.html|/)?$                                          /about/ [R=permanent,L]
 RewriteRule ^about/(?:get-involved|participate)(?:/?|/.+)$                      /community/ [R=permanent,L]
 RewriteRule ^(?:manyfaces|contribute|firefox/community)(?:/?|/.+)$              /community/ [R=permanent,L]
 
