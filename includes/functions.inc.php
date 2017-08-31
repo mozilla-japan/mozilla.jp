@@ -7,6 +7,7 @@ class MJ
   // CSS (特に複数のページで使い回すもの) の最終更新日を集中管理
   // 20141223 20140512
   public $css = array(
+    'business/main' => 2017083020,
     'covehead/global' => 2017011823,
     'sandstone/global' => 2017011808,
     'sandstone/about' => 2017072519,
@@ -20,13 +21,12 @@ class MJ
     'events/vision-2012' => 20130823,
     'events/report' => 2016042701,
     'events/tech-talks' => 2016113022,
-    '/business/static/styles/main' => 2017031500
   );
 
   public $js = array(
+    'business/main' => 2016092818,
     'mj/global' => 2016092818,
     'home/pager' => 201351200,
-    '/business/static/scripts/main' => 2016092818,
   );
 
   public $products;

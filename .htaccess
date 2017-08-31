@@ -195,7 +195,7 @@ RewriteRule ^about/careers(?:\.html|/?)$                                        
 ################################################################################
 
 # ビジネス
-RewriteRule ^business/(?:downloads|resources)(?:/?|/.+)$                        /business/ [R=permanent,L]
+RewriteRule ^business/(?:downloads|profiles|resources|support)(?:/?|/.+)$       /business/ [R=permanent,L]
 RewriteRule ^(?:(?:firefox|thunderbird)/)?organizations?(?:/?|/.+)$             /business/ [R=permanent,L]
 
 # 製品

@@ -1,0 +1,398 @@
+body {
+  background: #FFF;
+}
+
+#nav-main-menu > li > a:link,
+#nav-main-menu > li > a,
+#nav-main-menu > li > a:visited,
+#nav-main-menu > li > a:hover {
+  color: #111;
+  margin: 22px 0 14px 14px;
+  font-size: 14px;
+}
+
+#doc > nav {
+  background-color: #7EB9E5;
+  padding: 16px 0;
+  width: auto;
+}
+
+#doc > nav .inner {
+  margin: 0 auto;
+}
+
+#doc > nav > ul > li > a:link,
+#doc > nav > ul > li > a,
+#doc > nav > ul > li > a:visited {
+  color: #FFF;
+  cursor: pointer;
+}
+
+#doc > nav > ul > li {
+  position: relative;
+  float: left;
+  padding: 0 20px 0 0;
+  background: none;
+}
+
+#masthead {
+  background: linear-gradient(#0078CD, #0096DB);
+  color: #FFF;
+}
+
+#masthead .inner {
+  padding-right: 240px;
+  min-height: 160px;
+}
+
+#masthead h1 span {
+  display: block;
+}
+
+#masthead a:link,
+#masthead a:hover,
+#masthead a:focus,
+#masthead a:active,
+#masthead a:visited {
+  color: #002147;
+}
+
+#pageheader {
+  background: #006FC8;
+}
+
+#globalheader {
+  padding-bottom: 20px;
+}
+
+#doc {
+  width: 100%;
+}
+
+#pagefooter {
+  background: #F5F5F5;
+}
+
+#doc .outer {
+  position: relative;
+  overflow: hidden;
+}
+
+#doc .inner {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 40px auto;
+  width: 960px;
+}
+
+#doc h2 {
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+#doc h2.highlight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#doc h2.highlight::before {
+  display: inline-block;
+  margin-right: 8px;
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  content: "";
+}
+
+#doc header h2 ~ p {
+  text-align: center;
+}
+
+#doc .inner .row {
+  overflow: hidden;
+}
+
+#doc .inner .col {
+  float: left;
+  box-sizing: border-box;
+  padding: 16px;
+  width: 480px;
+}
+
+#doc .inner .col.narrow {
+  width: 320px;
+}
+
+.outer-1 {
+  background: linear-gradient(#C9E1F5, #EEEEEE);
+}
+
+.outer-2 {
+  color: #FFF;
+  background-color: #0097DB;
+}
+
+.outer-2 h2,
+.outer-2 h3,
+.outer-2 h4 {
+  text-shadow: none;
+}
+
+.outer-2 a:link,
+.outer-2 a:hover,
+.outer-2 a:focus,
+.outer-2 a:active,
+.outer-2 a:visited {
+  color: #002147;
+}
+
+.outer-3 {
+  background-color: #F5F5F5;
+}
+
+@media only screen and (min-width: 1280px) {
+  #doc > nav > ul {
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #doc .inner {
+    width: 720px;
+  }
+
+  #doc .inner .col {
+    width: 360px;
+  }
+
+  #doc .inner .col.narrow {
+    width: 240px;
+  }
+
+  #masthead .inner {
+    padding-right: 200px;
+  }
+
+  #masthead .inner::after {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #nav-main-menu > li > a:link,
+  #nav-main-menu > li > a,
+  #nav-main-menu > li > a:visited,
+  #nav-main-menu > li > a:hover {
+    color: #FFF;
+  }
+
+  #doc > nav {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #doc .inner .col {
+    float: none;
+    margin: 16px 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #doc .inner .col.narrow {
+    width: 100%;
+  }
+
+  #masthead .inner {
+    padding-right: 0;
+    min-height: 0;
+  }
+
+  #masthead .inner::after {
+    display: none;
+  }
+
+  #masthead h1 span {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  #doc .inner  {
+    width: 608px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #doc .inner {
+    width: 288px;
+  }
+}
+
+/* Landing */
+
+body#landing #esr h2::before {
+  background-image: url(/static/images/business/esr-life-cycle.png);
+}
+
+body#landing #esr img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+body#landing #download section h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+body#landing #download section section {
+  text-align: center;
+}
+
+body#landing #download li {
+  padding: 0;
+  background: none;
+}
+
+body#landing #support h2::before {
+  background-image: url(/static/images/business/esr-user.png);
+}
+
+body#landing #support section section {
+  overflow: hidden;
+  margin: 32px 0 0;
+  padding: 0 0 0 224px;
+}
+
+body#landing #support section figure {
+  display: block;
+  float: left;
+  margin: 0 0 0 -224px;
+  border: 1px solid #DDD;
+  padding: 20px;
+  width: 160px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #FFF;
+}
+
+body#landing #support section figure img {
+  width: 160px;
+  height: auto;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 639px) {
+  body#landing #overview .col section {
+    padding: 136px 0 0 0;
+    background-position: center top;
+  }
+
+  body#landing #support section section {
+    padding: 0;
+  }
+
+  body#landing #support section figure {
+    float: none;
+    margin: 10px auto;
+  }
+
+  body#landing #support section h3 {
+    text-align: center;
+  }
+}
+
+/* FAQ */
+
+body#faq .questions {
+     -moz-column-count: 2;
+  -webkit-column-count: 2;
+          column-count: 2;
+       -moz-column-gap: 32px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+}
+
+body#faq .questions > section {
+  margin: 0 0 32px;
+     page-break-inside: avoid;
+  -webkit-break-inside: avoid;
+          break-inside: avoid;
+}
+
+body#faq .questions h3 {
+  font-size: 24px;
+}
+
+body#faq .questions h4 {
+  font-size: 20px;
+}
+
+body#faq #footnotes aside {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  body#faq .questions {
+       -moz-column-count: 1;
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+/* Tech FAQ */
+
+body#tech-faq #main-content h2 {
+  text-align: left;
+}
+
+body#tech-faq #main-content h3,
+body#tech-faq #main-content h4 {
+  margin-top: 1em;
+}
+
+body#tech-faq #main-content > section:not(:first-child),
+body#tech-faq #main-content > article:not(:first-child) {
+  margin-top: 32px;
+  border-top: 1px solid #E5E5E5;
+  padding-top: 32px;
+}
+
+body#tech-faq #sidebar ul {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+body#tech-faq #sidebar li {
+  border-top: 1px solid #E5E5E5;
+  padding: 8px 0;
+  background: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body#tech-faq #masthead ~ .outer .inner {
+    width: 752px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #main-content {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main-content > section {
+    margin: 0;
+  }
+}

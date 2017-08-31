@@ -1,21 +1,13 @@
 <?php
 
-$page_title         = 'Mozilla Japan 法人向け情報 — Firefox の事例と関連情報';
-$page_description   = 'Mozilla 製品は、優れた安全性、生産性、拡張性が評価され、多くの企業、行政機関、教育機関などで導入が進んでいます。ここでは、導入事例を含め、Firefox の採用を検討されている法人の皆様に役立つ情報を提供します。';
+$page_title         = '法人向け情報 | Mozilla Japan コミュニティポータル';
+$page_description   = '企業や公共機関、教育機関等の法人で Firefox を使う場合のお役立ち情報をまとめました。';
 $body_id            = 'landing';
 $body_class         = 'users business landing';
-$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+$css                = array('business/main'); // 最終更新日は /includes/functions.inc.php で管理
 
 $breadcrumbs        = array(
   '/business/' => '法人向け情報'
-);
-
-// ヘッダーメニューの構成
-$header_nav = array(
-    "法人向け情報" => "/business/",
-    "導入事例" => "/business/profiles/",
-    "サポート" => "/business/support/",
-    "よくある質問" => "/business/faq/"
 );
 
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
@@ -23,10 +15,9 @@ $header_nav = array(
 ?>
           <nav role="directory" class="outer">
             <ul class="inner">
-              <li><a href="#overview">法人利用について</a></li>
-              <li><a href="#esr">延長サポート版とは</a></li>
-              <li><a href="#download">ダウンロード</a></li>
-              <li><a href="#faq">もっと詳しく</a></li>
+              <li><a href="/business/">法人向け情報 ホーム</a></li>
+              <li><a href="/business/faq/">よくある質問</a></li>
+              <li><a href="/business/faq/tech/">技術的な質問</a></li>
             </ul>
           </nav>
           <main>
@@ -34,46 +25,15 @@ $header_nav = array(
               <div class="inner">
                 <header>
                   <h1>法人向け情報</h1>
-                  <p>Mozilla では、Firefox を一括導入し集中管理している企業や教育機関、公共機関、その他法人での利用者向けに、サポート期間を約 1 年とした延長サポート版を提供しています。集中管理やカスタマイズ方法などシステム管理者向け情報や法人向けサポートサービス、導入事例について紹介します。</p>
+                  <p>企業や公共機関、教育機関等の法人で Firefox を使う場合のお役立ち情報をまとめました。</p>
                 </header>
               </div>
             </div>
-            <div id="overview" class="outer outer-1">
+            <div id="esr" class="outer outer-1">
               <div class="inner">
                 <section>
                   <header>
-                    <h2 class="highlight">Firefox の法人利用について</h2>
-                  </header>
-                  <div class="row">
-                    <div class="col">
-                      <p>Firefox は、最高のパフォーマンスと高度な機能を備えあらゆる最新のウェブサービスを快適に利用できるブラウザーです。柔軟なカスタマイズや集中管理が可能で、長期間安心して使える <a href="#esr">延長サポート版</a> をご利用いただくことでセキュリティも確保でき、法人のご利用シーンにおいても最適です。</p>
-                    </div>
-                    <div class="col">
-                      <p>法人利用をご検討の皆様向けに、<a href="/business/profiles/">導入事例</a> の他、一括導入や集中管理に必要なカスタマイズや法人利用実績のあるツールキット、アドオンなどの情報を <a href="/business/faq/tech/">こちらのページ</a> でご紹介しています。技術的なサポートが必要な場合は Mozilla Japan もしくはパートナー企業による <a href="/business/support/">法人向けサポートサービス</a> をご利用いただけます。</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <section id="link-profiles">
-                        <h3><a href="/business/profiles/">導入事例を確認</a></h3>
-                        <p>Mozilla 製品が組織内でどのように活用されているか、企業、行政機関、教育機関などの具体的な導入事例を、担当者のインタビューを交えてご紹介します。</p>
-                      </section>
-                    </div>
-                    <div class="col">
-                      <section id="link-support">
-                        <h3><a href="/business/support/">サポートサービスを確認</a></h3>
-                        <p>Mozilla Japan による Firefox の法人向けサポートサービスと、Mozilla 製品のサポートを行うサポートパートナー企業とその業務内容、サポート体制をご紹介します。</p>
-                      </section>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-            <div id="esr" class="outer">
-              <div class="inner">
-                <section>
-                  <header>
-                    <h2 class="highlight">延長サポート版 (ESR) とは</h2>
+                    <h2 class="highlight">Firefox の延長サポート版 (ESR)</h2>
                   </header>
                   <div class="row">
                     <div class="col">
@@ -89,7 +49,7 @@ $header_nav = array(
                       </ul>
                     </div>
                   </div>
-                  <p><a href="/business/static/images/business/release-overview-52@2x.png?201706"><img src="/business/static/images/business/release-overview-52.png?201706" srcset="/business/static/images/business/release-overview-52@2x.png?201706 1.5x" alt="Firefox 52 ESR リリーススケジュール" width="672" height="336"></a></p>
+                  <p><a href="/static/images/business/release-overview-52@2x.png?201706"><img src="/static/images/business/release-overview-52.png?201706" srcset="/static/images/business/release-overview-52@2x.png?201706 1.5x" alt="Firefox 52 ESR リリーススケジュール" width="672" height="336"></a></p>
                 </section>
               </div>
             </div>
@@ -98,10 +58,10 @@ $header_nav = array(
                 <section>
                   <header>
                     <h2>ダウンロード</h2>
-                    <p>法人向け延長サポート版 (ESR) はこちらからダウンロードできます。個人でご利用の方は <a href="https://www.mozilla.org/ja/firefox/">通常版の Firefox</a> をご利用ください。</p>
+                    <p>Firefox の法人向け延長サポート版 (ESR) はこちらからダウンロードできます。個人でご利用の方は <a href="https://www.mozilla.org/ja/firefox/">通常版の Firefox</a> をご利用ください。</p>
                   </header>
                   <section>
-                    <h3><img src="/business/static/images/business/firefox.esr.png" alt=""></h3>
+                    <h3><img src="/static/images/business/firefox.esr.png" alt="Firefox ESR"></h3>
                     <section>
                       <h4>最新バージョン (ESR <?= Firefox::ESR_RELEASE_MAJOR_VERSION_NUM ?>) の日本語版と英語版</h4>
                       <ul>
@@ -122,45 +82,49 @@ $header_nav = array(
                 </section>
               </div>
             </div>
-            <div id="faq" class="outer outer-3">
+            <div id="support" class="outer outer-3">
+              <div class="inner">
+                <section>
+                  <header>
+                    <h2 class="highlight">法人向け有償サポートサービス</h2>
+                    <p>法人で Firefox や Thunderbird を利用する際の一括導入支援やカスタマイズ、集中管理やインシデントごとのサポートを希望される方向けに、法人向け有償サポートサービスを提供している企業をご紹介します (五十音順)。サポートの詳しい内容は各社にお問い合わせください。なお、個人利用者向けのサポートは行っていませんのでご注意ください。</p>
+                  </header>
+                  <section>
+                    <figure><img src="/static/images/business/clearcode.logo.png" alt=""></figure>
+                    <h3>株式会社クリアコード</h3>
+                    <p>企業・官公庁・学校向けに Firefox、Thunderbird の導入支援およびサポートを行われています。Firefox 用の動画再生プラグインや、ツールバーなどのアドオンの開発や、Mozilla テクノロジーを活用した各種組込機器向けブラウザーなどの開発もされています。<br>詳しくは <a href="https://www.clear-code.com/services/mozilla/menu.html">株式会社クリアコードのサイト</a> をご覧ください。</p>
+                  </section>
+                  <section>
+                    <figure><img src="/static/images/business/cyaan.logo.png" alt=""></figure>
+                    <h3>シアン合同会社</h3>
+                    <p>Internet Explorer に依存したシステムを考慮した Firefox への移行、導入支援、運用サポートをはじめ、Firefox をターゲットとしたウェブシステム開発を行われています。大手建設不動産業の法人向けに Firefox とアドオンをパッケージ化し、営業支援システムのフロントエンドとして活用してもらうといった事例があるそうです。<br>詳しくは <a href="http://cyaan.co.jp/?page_id=35">シアン合同会社のサイト</a> をご覧ください。</p>
+                  </section>
+                  <section>
+                    <figure><img src="/static/images/business/digitalstacks.logo.png" alt=""></figure>
+                    <h3>株式会社 Digital Stacks</h3>
+                    <p>要件に応じてカスタマイズや運用方法の策定、Firefox の導入から運用までをサポートされています。金融機関などの法人向けに Firefox の大規模な導入・運用実績もあるそうです。<br>詳しくは <a href="https://www.digitalstacks.net/products-firefox-esr">株式会社 Digital Stacks のサイト</a> をご覧ください。</p>
+                  </section>
+                  <section>
+                    <figure><img src="/static/images/business/miraclelinux.logo.png" alt=""></figure>
+                    <h3>ミラクル・リナックス株式会社</h3>
+                    <p>企業や行政、教育機関など、法人で利用するブラウザーとして Firefox を推奨されており、「Mozilla Firefox 法人向けサポート」として使用方法、機能、不具合へのお問い合わせやソースコードレベルでの調査、不具合対応や機能追加のためのアドオン開発などのサービスを提供されています。またセキュリティ強化の観点から Firefox を活用した社内システム構築の提案もされています。<br>詳しくは <a href="https://www.miraclelinux.com/lp/mozilla-support">ミラクル・リナックス株式会社のサイト</a> をご覧ください。</p>
+                  </section>
+                </section>
+              </div>
+            </div>
+            <div id="faq" class="outer">
               <div class="inner">
                 <section>
                   <header>
                     <h2>もっと詳しく</h2>
+                    <p>Firefox や Thunderbird のライセンス、動作環境、サポート、リリースなど、一般的な情報については <a href="/business/faq/">よくある質問ページ</a> をご覧ください。カスタマイズ、集中管理、機能制限の方法などは <a href="/business/faq/tech/">技術的な質問ページ</a> で説明しています。</p>
                   </header>
-                  <div class="row">
-                    <section class="col narrow" id="faq-support">
-                      <h3><span>ESR の技術サポートは</span><span>どこで受けられますか？</span></h3>
-                      <p>技術サポートが必要な場合は、<a href="/business/support/">法人向けサポート</a> をご検討ください。なお、ESR は機能的には同じバージョンの通常版と同一です。一般的な情報に関しては、<a href="https://support.mozilla.org/ja/">Mozilla のサポートサイト</a> をご覧ください。</p>
-                    </section>
-                    <section class="col narrow" id="faq-details">
-                      <h3><span>ESR について</span><span>詳しく知りたいのですが？</span></h3>
-                      <p>ESR のライセンス、動作環境、サポート、リリースなど、一般的な情報については <a href="/business/faq/">よくある質問ページ</a> をご覧ください。</p>
-                    </section>
-                    <section class="col narrow" id="faq-events">
-                      <h3><span>法人利用に関して詳しく</span><span>知る機会はありますか？</span></h3>
-                      <p>Mozilla Japan では <a href="#upcoming-events">法人向け Firefox 導入セミナーを開催しています</a>。法人利用に関して詳しく知っていただく機会としてご利用ください。<a href="https://mozilla.doorkeeper.jp/">Doorkeeper の Mozilla コミュニティ</a> に登録いただければ、今後ご案内をお送りします。</p>
-                    </section>
-                    <section class="col narrow" id="faq-android">
-                      <h3><span>モバイル版 Firefox の</span> <span>ESR はありますか？</span></h3>
-                      <p>Android 版 Firefox や iOS 版の Firefox に ESR はありません。延長サポート版の提供は Windows、Mac、Linux 版のみです。</p>
-                    </section>
-                    <section class="col narrow" id="faq-thunderbird">
-                      <h3><span>Thunderbird に</span> <span>ESR はありますか？</span></h3>
-                      <p>Thunderbird はバージョン 24 から通常版と ESR が統合されました。通常版でも ESR と同様、メジャーアップデートは 1 年に 1 度となります。<a href="https://www.thunderbird.net/ja/">通常版をご利用ください</a>。</p>
-                    </section>
-                    <section class="col narrow" id="faq-customize">
-                      <h3><span>自社の要件に合わせて</span><span>カスタマイズしたい</span></h3>
-                      <p>Firefox や Thunderbird のカスタマイズ、集中管理、機能制限の方法などは <a href="/business/faq/tech/">技術的なよくある質問ページ</a> で説明しています。また、<a href="/business/support/">法人向けサポート</a> のページで、カスタマイズサービスを提供している会社を紹介しています。</p>
-                    </section>
-                  </div>
                 </section>
               </div>
             </div>
           </main>
 <?php
 
-@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
 
 ?>

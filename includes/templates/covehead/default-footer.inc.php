@@ -27,9 +27,6 @@
               </li>
               <li><a href="/business/">法人向け情報</a>
                 <ul>
-                  <li><a href="/business/">延長サポート版</a></li>
-                  <li><a href="/business/profiles/">導入事例</a></li>
-                  <li><a href="/business/support/">サポート</a></li>
                 </ul>
               </li>
               <li><a href="/community/">コミュニティ</a>

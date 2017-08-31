@@ -1,12 +1,12 @@
 <?php
 
 $page_type          = 'QAPage'; // https://schema.org/QAPage
-$page_title         = '自動アップデート | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan';
-$page_description   = 'Mozilla 製品の法人内での導入などに関して、よく寄せられる質問について回答をまとめました。ライセンス、サポート、リリース状況などについて不明な点があるときは、まずこちらをご覧ください。';
+$page_title         = '自動アップデート | 技術的なよくある質問 | 法人向け情報 | Mozilla Japan コミュニティポータル';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、特に技術的な点に関してよく寄せられる質問について回答をまとめました。';
 $body_id            = 'tech-faq';
 $body_class         = 'users business faq tech';
-$css                = array('/business/static/styles/main', 'lib/highlightjs/github.min.css');
-$js                 = array('/business/static/scripts/main.js', 'lib/highlightjs/highlight.pack.js');
+$css                = array('business/main', 'lib/highlightjs/github.min.css');
+$js                 = array('business/main', 'lib/highlightjs/highlight.pack.js');
 
 $breadcrumbs        = array(
   '/business/' => '法人向け情報',
@@ -15,19 +15,13 @@ $breadcrumbs        = array(
   '/business/faq/tech/auto-update/' => '自動アップデート'
 );
 
-$header_nav = array(
-    "法人向け情報" => "/business/",
-    "導入事例" => "/business/profiles/",
-    "サポート" => "/business/support/",
-    "よくある質問" => "/business/faq/"
-);
-
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
 
 ?>
           <nav class="outer">
             <ul class="inner">
-              <li><a href="/business/faq/">一般的な質問</a></li>
+              <li><a href="/business/">法人向け情報 ホーム</a></li>
+              <li><a href="/business/faq/">よくある質問</a></li>
               <li><a href="/business/faq/tech/">技術的な質問</a></li>
             </ul>
           </nav>
@@ -124,7 +118,7 @@ Sambaサーバ上のファイルにファイルとしてアクセスする形態
 この差分更新用のファイルを使った差分更新処理は、自動アップデート機能を使わずとも、任意のタイミングで実行することができます。
 これにより、自動アップデート機能自体は無効にしておきつつ、必要に応じてシステムのログオンスクリプトを使って任意のタイミングでの差分更新を適用する、という形での運用が可能です。</p><h3 id="-">　差分ファイルの入手</h3><p>差分アップデートの適用時には、アップデート用差分ファイルを公式のFTPサイトから入手する必要があります。
 URLの凡例は以下の通りです。</p><pre><code>ftp://ftp.mozilla.org/pub/mozilla.org/[製品名]/releases/[アップデート先バージョン]/update/win32/ja/[製品名]-[アップデート元バージョン]-[アップデート先バージョン].partial.mar
-</code></pre><p>例えばFirefox 30からFirefox 31へアップデートする場合に必要な差分ファイルは以下の場所から入手できます。 </p><pre><code>ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/31.0/update/win32/ja/firefox-30.0-31.0.partial.mar 
+</code></pre><p>例えばFirefox 30からFirefox 31へアップデートする場合に必要な差分ファイルは以下の場所から入手できます。 </p><pre><code>ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/31.0/update/win32/ja/firefox-30.0-31.0.partial.mar
 </code></pre><p>差分ファイルによるアップデートを行うには、現在インストールされているFirefoxのバージョンに対応した差分ファイルが必要となります。
 差分ファイルが想定する「アップデート前のバージョン」が現在インストールされているFirefoxのバージョンに一致しない場合、差分アップデートは行えません。</p><p>通常、公式のFTPサイトでは特定バージョンのFirefoxに対して、それ以前のいくつかのバージョンからの差分アップデート用のファイルのみが配布されています。
 差分ファイルが用意されていないパターン、例えばFirefox 25.0からFirefox 31へアップデートするというような、間のバージョンを多数飛ばしたアップデートは原則として行えないものとご理解下さい。</p><h3 id="-">差分更新の適用手順の凡例</h3><p>Firefoxの差分更新用ファイルを用いて際の手順は以下の通りです。 </p><ol>
@@ -143,7 +137,7 @@ Windows Vista以降の場合、スタートメニューの
 <li><p>Firefoxのインストール先フォルダにあるupdater.exe を
 作業ディレクトリにコピーする。</p>
 <pre><code>&gt; copy &quot;&lt;Firefoxのインストール先フォルダのパス&gt;\updater.exe&quot;
-    &quot;&lt;作業ディレクトリのパス&gt;\updater.exe&quot; 
+    &quot;&lt;作業ディレクトリのパス&gt;\updater.exe&quot;
 </code></pre></li>
 <li><p>作業ディレクトリに配置したupdater.exeを、
 差分アップデート用のファイルがあるディレクトリ（ここでは作業ディレクトリと同じ）のフルパスを第1引数、
@@ -201,7 +195,7 @@ Firefoxのインストール先フォルダのフルパスを第2引数と第3�
                       <p class="keywords">キーワード <span class="keyword">機能制限</span><span class="slash"> / <span><span class="keyword">集中管理</span><span class="slash"> / <span><span class="keyword">自動アップデート</span><span class="slash"> / <span><span class="keyword">アドオン</span></span></span></span></span></span></span></p><p>通常、FirefoxやThunderbirdはMozillaが公式に提供しているアドオンのアップデート情報に基づいてアドオンの自動アップデートを行いますが、設定変更により、組織内のサーバなどをアップデート情報の提供元にすることができます。これにより、アドオンの自動アップデートの適用タイミングを制御できます。</p><h3 id="-">設定方法</h3><ol>
 <li><p>以下のような内容で、自動アップデート情報提供用のXMLファイル <code>update.rdf</code> を用意します。</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
          xmlns:em=&quot;http://www.mozilla.org/2004/em-rdf#&quot;&gt;
   &lt;RDF:Description about=&quot;urn:mozilla:extension:アドオンのID&quot;&gt;
     &lt;em:updates&gt;
@@ -226,7 +220,7 @@ Firefoxのインストール先フォルダのフルパスを第2引数と第3�
 &lt;/RDF:RDF&gt;
 </code></pre><p>例えばFirefox 24.2ESR向けのアドオンとして<a href="https://addons.mozilla.org/firefox/addon/dom-inspector-6622/">DOM Inspector</a>の更新情報を提供するのであれば以下のようになります。</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+&lt;RDF:RDF xmlns:RDF=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
          xmlns:em=&quot;http://www.mozilla.org/2004/em-rdf#&quot;&gt;
   &lt;RDF:Description about=&quot;urn:mozilla:extension:inspector@mozilla.org&quot;&gt;
     &lt;em:updates&gt;
@@ -270,14 +264,14 @@ Firefoxのインストール先フォルダのフルパスを第2引数と第3�
                         <li><a href="#faq5">アドオンの自動アップデートの提供タイミングを組織内で制御したい</a></li>
                       </ul>
                     </nav>
+                    <p>このページに記載している技術情報は <a href="https://github.com/mozilla-japan/enterprise/blob/master/FAQ.md">GitHub レポジトリ上のファイル</a> を元に生成しています。よくある質問と回答の更新、追加にご協力いただける方は、<a href="https://github.com/mozilla-japan/enterprise/issues">同レポジトリの Issues</a> に報告されるか、直接プルリクエストをお送りください。</p>
                   </aside><!-- end #sidebar -->
                 </div>
               </div>
             </article>
           </main>
-<?php 
+<?php
 
-@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
 
 ?>

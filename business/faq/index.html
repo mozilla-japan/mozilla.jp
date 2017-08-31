@@ -1,22 +1,14 @@
 <?php
 
 $page_type          = 'QAPage'; // https://schema.org/QAPage
-$page_title         = 'よくある質問 | 法人向け情報 | Mozilla Japan';
-$page_description   = '企業および行政、教育機関などの皆様向けに、Mozilla Japan のサポートパートナーより、導入支援をはじめとする各種サービスを有償にて提供しています。対象製品は、ブラウザの Firefox およびメールソフトの Thunderbird です。';
+$page_title         = 'よくある質問 | 法人向け情報 | Mozilla Japan コミュニティポータル';
+$page_description   = 'Mozilla 製品の法人内での導入などに関して、よくある質問とその回答をまとめました。';
 $body_id            = 'faq';
 $body_class         = 'users business faq';
-$css                = array('/business/static/styles/main'); // 最終更新日は /includes/functions.inc.php で管理
+$css                = array('business/main'); // 最終更新日は /includes/functions.inc.php で管理
 $breadcrumbs        = array(
   '/business/' => '法人向け情報',
   '/business/faq/' => 'よくある質問',
-);
-
-// ヘッダーメニューの構成
-$header_nav = array(
-    "法人向け情報" => "/business/",
-    "導入事例" => "/business/profiles/",
-    "サポート" => "/business/support/",
-    "よくある質問" => "/business/faq/"
 );
 
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-header.inc.php';
@@ -24,11 +16,8 @@ $header_nav = array(
 ?>
           <nav role="directory" class="outer">
             <ul class="inner">
-              <li><a href="#general">一般</a></li>
-              <li><a href="#licensing">ライセンス</a></li>
-              <li><a href="#requirements">動作環境</a></li>
-              <li><a href="#support">サポート</a></li>
-              <li><a href="#releases">リリース</a></li>
+              <li><a href="/business/">法人向け情報 ホーム</a></li>
+              <li><a href="/business/faq/">よくある質問</a></li>
               <li><a href="/business/faq/tech/">技術的な質問</a></li>
             </ul>
           </nav>
@@ -37,35 +26,8 @@ $header_nav = array(
               <div class="inner">
                 <header>
                   <h1>よくある質問</h1>
-                  <p>Mozilla 製品の法人内での導入などに関してよく寄せられる質問について回答をまとめました。</p>
+                  <p>Mozilla 製品の法人内での導入などに関して、よくある質問とその回答をまとめました。</p>
                 </header>
-              </div>
-            </div>
-            <div id="general" class="outer outer-3">
-              <div class="inner">
-                <section>
-                  <header>
-                    <h2>一般</h2>
-                  </header>
-                  <div class="questions">
-                    <section>
-                      <h3>Mozilla の会社概要を教えてください</h3>
-                      <p>Mozilla は営利企業ではなく、非営利の公益法人です。1998 年、米国 Netscape 社がインターネット統合ソフト「Netscape Communicator」をオープンソース化するにあたり、Mozilla という任意団体が設立されました。その後 2003 年に米国 Mozilla Foundation として独立し、翌 2004 年には日本支部 Mozilla Japan が設立されました。Mozilla は、世界中のすべての人にとってのオンライン体験向上を目的として、無償のオープンソース製品および関連技術の開発に力を注いでいます。詳しくは <a href="/about/">Mozilla について</a> をご覧ください。</p>
-                    </section>
-                    <section>
-                      <h3>無料のソフトウェアを企業内で使用しても大丈夫なのですか？</h3>
-                      <p>無料ソフトの中には信頼性の低いものもあると言われていますが、Mozilla 製品は Netscape 社の商用製品を基に作られており、実体のある法人が責任を持って開発からリリースまで主導しているため、品質は商用製品と遜色ありません。Mozilla は健全な財政基盤を確立し、世界で数百名の従業員を擁しており、今後も安心してお使いいただけます。<a href="https://www.mozilla.org/ja/firefox/">ブラウザの Firefox</a> と <a href="https://www.thunderbird.net/ja/">メールソフトの Thunderbird</a> は 2004 年にリリースされ、現在それぞれ 30%、10% の市場シェアを占めており <sup>1</sup>、グッドデザイン賞をはじめ国内外で多数の受賞歴を誇ります。また日頃からメディアにも多数の関連記事が掲載されています。</p>
-                    </section>
-                    <section>
-                      <h3>Mozilla 製品は法人利用が可能なのですか？</h3>
-                      <p>Firefox や Thunderbird は当初から生産性の向上を掲げて開発されており、法人向けの機能やサポートも提供されているため、個人だけでなく法人での利用にも適しています。実際に、上場企業や官公庁をはじめ、多くの法人で導入されていますが、その一部を <a href="/business/profiles/">導入事例</a> でご覧いただけます。<a href="#licensing">下記の通り</a>、法人内で利用される場合もライセンス費用は発生しません。</p>
-                    </section>
-                    <section>
-                      <h3>Mozilla 製品の法人利用について詳しく知りたい</h3>
-                      <p>一般的な製品情報や使用法については <a href="https://support.mozilla.org/ja/">Mozilla のサポートサイト</a>をご覧ください。ESR も同じバージョンの通常版と機能的には同一です。法人内での導入に際する技術的な質問については <a href="/business/faq/tech/">技術的なよくある質問</a> をご覧ください。また、Mozilla Japan では <a href="#upcoming-events">法人向け Firefox 導入セミナーを開催しています</a>。法人利用に関して詳しく知っていただく機会としてご利用ください。セミナーやイベントについては <a href="https://mozilla.doorkeeper.jp/">Doorkeeper の Mozilla コミュニティ</a> に登録いただければ今後、ご案内をお送りします。</p>
-                    </section>
-                  </div>
-                </section>
               </div>
             </div>
             <div id="licensing" class="outer outer-1">
@@ -76,20 +38,16 @@ $header_nav = array(
                   </header>
                   <div class="questions">
                     <section>
-                      <h3>Mozilla 製品は無料ですか？</h3>
-                      <p>Firefox や Thunderbird は、組織内で一括導入される場合も無料でご利用いただけます。試用期間も設けていませんし、ユーザ登録も必要ありません。アップデートも無料です。導入に際してサポートが必要でしたら、<a href="/business/support/">有償サービス</a> 契約をご検討いただき、パートナー各社に見積もりをご依頼ください。</p>
-                    </section>
-                    <section>
-                      <h3>私の会社に Firefox を使っている社員がいるのですが、ライセンス的に問題ありませんか？</h3>
-                      <p>Firefox は、個人で業務に利用される場合も無料ですので、ご自由にお使いください。Mozilla に確認を取っていただく必要はありません。</p>
+                      <h3>企業で利用する場合も Mozilla 製品は無料ですか？</h3>
+                      <p>Firefox や Thunderbird は、組織内で一括導入される場合も無料で利用できます。試用期間も設定されていませんし、ユーザー登録も必要ありません。更新も無料です。導入に際してサポートが必要でしたら、各社から提供されている <a href="/business/#support">有償サービス</a> 契約も利用可能です。また企業内ではなく、個人で業務に利用されている場合も無料です。</p>
                     </section>
                     <section>
                       <h3>ライセンス契約書はどこにありますか？</h3>
-                      <p>Firefox や Thunderbird は無償のオープンソースソフトウェアであり、一般的なエンドユーザライセンス契約書 (EULA) は用意していません。ただし、「あなたの権利について」という文書で、ソースコードのライセンス、商標の規定、プライバシーポリシー、サービス利用規約について説明しています。これは Firefox のロケーションバーに「about:rights」と入力すると見ることができます。</p>
+                      <p>Firefox や Thunderbird は無償のオープンソースソフトウェアであり、一般的なエンドユーザーライセンス契約書 (EULA) は用意されていません。ただし、「あなたの権利について」という文書で、ソースコードのライセンス、商標の規定、プライバシーポリシー、サービス利用規約について説明があります。これは、「Firefox について」あるいは「Thunderbird について」を開き、「あなたの権利について」のリンクを辿ると見ることができます。</p>
                     </section>
                     <section>
                       <h3>海外への輸出規制について教えてください</h3>
-                      <p>Firefox、Thunderbird ともにソースコードが公開されているオープンソースソフトウェアであり、パラメータシートの提出は必要なく、EAR にも該当しません。<a href="http://www.meti.go.jp/policy/anpo/kanri/kankei-horei/ekimu/bouekigaisyorei/main.html#12">貿易関係貿易外取引等に関する省令 第九条</a> 五項ニおよび <a href="http://www.ecfr.gov/cgi-bin/text-idx?node=ap15.2.734_112.1">Commerce and Foreign Trade - Part 734</a> の Appendix Question G(1) をご参照ください。</p>
+                      <p>Firefox、Thunderbird ともにソースコードが公開されているオープンソースソフトウェアであり、パラメータシートの提出は必要なく、EAR にも該当しません。<a href="http://www.meti.go.jp/policy/anpo/kanri/kankei-horei/ekimu/bouekigaisyorei/main.html#12">貿易関係貿易外取引等に関する省令 第九条</a> 五項ニおよび <a href="http://www.ecfr.gov/cgi-bin/text-idx?node=ap15.2.734_112.1">Commerce and Foreign Trade - Part 734</a> の Appendix Question G(1) を参照してください。</p>
                     </section>
                     <section>
                       <h3>製品をカスタマイズして配布しても構わないのですか？</h3>
@@ -99,16 +57,16 @@ $header_nav = array(
                         <ul>
                           <li>会社で、社内のパソコンに、業務を効率化するアドオンを追加した Firefox を導入したい。</li>
                           <li>大学で、新入生全員に配布するノートパソコンに、あらかじめ Firefox と Thunderbird をインストールしておきたい。</li>
-                          <li>システムインテグレータが、クライアントから Thunderbird のカスタマイズを依頼されて、納品することになった。</li>
+                          <li>システムインテグレーターが、クライアントから Thunderbird のカスタマイズを依頼されて、納品することになった。</li>
                         </ul>
                       </section>
-                      <p>次のように第三者に配布する場合は、<a href="https://www.mozilla.org/ja/foundation/trademarks/distribution-policy/">Mozilla 商標ポリシー</a> の制約があり、Mozilla の承認が必要です。詳しくは <a href="mailto:enterprise@mozilla-japan.org">Mozilla Japan</a> までお問い合わせください。</p>
+                      <p>次のように第三者に配布する場合は、<a href="https://www.mozilla.org/ja/foundation/trademarks/distribution-policy/">Mozilla 商標ポリシー</a> の制約があり、米国 Mozilla の承認が必要です。詳しくは <a href="https://www.mozilla.org/ja/about/partnerships/">Mozilla Corporation</a> までお問い合わせください。</p>
                       <section>
                         <h4>カスタマイズが制限される例</h4>
                         <ul>
                           <li>ポータルサイトで、自社サービスを便利に利用できるツールバーを組み込んだ Firefox を配布したい。</li>
                           <li>自社で開発しているパソコンに、ホームページやブックマークを変更した Firefox を搭載したい。</li>
-                          <li>インターネットプロバイダで、あらかじめ設定を組み込んだ Thunderbird を会員向けに配布したい。</li>
+                          <li>インターネットプロバイダーで、あらかじめ設定を組み込んだ Thunderbird を会員向けに配布したい。</li>
                         </ul>
                       </section>
                     </section>
@@ -125,7 +83,7 @@ $header_nav = array(
                   <div class="questions">
                     <section>
                       <h3>Firefox と Thunderbird の動作環境を教えてください</h3>
-                      <p>Windows、Mac、Linux に対応しており、機能はいずれの OS でもほぼ同等です。詳しい動作環境は以下のページをご確認ください。</p>
+                      <p>Windows、macOS、Linux に対応しており、機能はいずれの OS でもほぼ同等です。詳しい動作環境は以下のページをご覧ください。</p>
                       <ul>
                         <li><a href="/firefox/system-requirements/">Firefox システム要件</a></li>
                         <li><a href="/thunderbird/system-requirements/">Thunderbird システム要件</a></li>
@@ -133,15 +91,15 @@ $header_nav = array(
                     </section>
                     <section>
                       <h3>64 ビット版 OS に対応していますか？</h3>
-                      <p>はい。Firefox は通常版と ESR いずれも 32 ビット版と 64 ビット版の両方を提供しています。Thunderbird は 32 ビット版のみですが、64 ビット環境でもご利用いただけます。</p>
+                      <p>はい。Firefox は通常版と ESR いずれも 32 ビット版と 64 ビット版が提供されています。Thunderbird は 32 ビット版のみですが、64 ビット環境でも利用可能です。</p>
                     </section>
                     <section>
                       <h3>どの言語に対応していますか？</h3>
-                      <p><a href="https://www.mozilla.org/ja/firefox/all/">Firefox は 80 以上</a>、<a href="https://www.thunderbird.net/ja/all/">Thunderbird は 50 以上</a> の言語に対応しています。各言語版は、すべての OS で同時にリリースされます。英語版が先にリリースされ日本語版が遅れる、あるいは Windows 版と Mac 版のリリース時期が異なるといったことはありませんので、バージョン管理も容易です。</p>
+                      <p><a href="https://www.mozilla.org/ja/firefox/all/">Firefox は 90 以上</a>、<a href="https://www.thunderbird.net/ja/all/">Thunderbird は 50 以上</a> の言語に対応しています。各言語版は、すべての OS で同時にリリースされます。英語版が先にリリースされ日本語版が遅れる、あるいは Windows 版と macOS 版のリリース時期が異なるといったことはありませんので、バージョン管理も容易です。</p>
                     </section>
                     <section>
                       <h3>モバイル版の Firefox もあると聞いたのですが？</h3>
-                      <p>スマートフォンとタブレットの両方に最適化した <a href="https://www.mozilla.org/ja/firefox/ios/">iOS 版 Firefox</a> と <a href="https://www.mozilla.org/ja/firefox/android/">Android 版 Firefox</a> を公開しています。デスクトップ版と変わらない安全性、生産性、拡張性を提供します。ブックマークやタブなど、ブラウザ環境を <a href="https://www.mozilla.org/ja/firefox/sync/">安全に同期できる機能</a> も標準装備しています。</p>
+                      <p>スマートフォンとタブレットの両方に最適化した <a href="https://www.mozilla.org/ja/firefox/ios/">iOS 版 Firefox</a> と <a href="https://www.mozilla.org/ja/firefox/android/">Android 版 Firefox</a> が公開されています。デスクトップ版と変わらない安全性、生産性、拡張性を提供します。ブックマークやタブなど、ブラウザー環境を <a href="https://www.mozilla.org/ja/firefox/features/sync/">安全に同期できる機能</a> も標準装備となっています。</p>
                     </section>
                   </div>
                 </section>
@@ -156,35 +114,28 @@ $header_nav = array(
                   <div class="questions">
                     <section>
                       <h3>法人向けサポートはありますか？</h3>
-                      <p>Mozilla Japan およびサポートパートナー各社で有償の <a href="/business/support/">法人向けサポート</a> を提供しており、必要なサービスをご利用いただけます。</p>
-                    </section>
-                    <section>
-                      <h3>電話サポートやオンサイトサポートはありますか？</h3>
-                      <p>Mozilla Japan による <a href="/business/support/">法人向けサポート</a> では原則としてメールでの対応としておりますが、サポートパートナー各社によるサービス契約内容によっては、電話サポートやオンサイトサポートを受けられる場合もあります。サポートサービスを提供しているパートナーにご相談ください。</p>
+                      <p>法人利用者向けに有償で Firefox や Thunderbird のサポートを提供している会社があり、契約次第では電話サポートやオンサイトサポートも受けられます。詳しくは <a href="/business/#support">サービス提供各社</a> にお問い合わせください。</p>
                     </section>
                     <section>
                       <h3>サポート用のドキュメントはどこですか？</h3>
-                      <p>一般的なサポート情報に関しては、<a href="https://support.mozilla.org/ja/">Mozilla のサポートサイト</a> をご覧ください。ESR も同じバージョンの通常版と機能的には同一です。集中管理の方法、アドオンやプラグインの管理、複数バージョンの併用、情報漏洩対策、機能の制限やカスタマイズなど、法人内での導入に際する技術的な質問については別途、<a href="/business/faq/tech/">技術的なよくある質問</a> としてまとめています。</p>
+                      <p>一般的なサポート情報に関しては、<a href="https://support.mozilla.org/ja/">Mozilla のサポートサイト</a> をご覧ください。ESR も同じバージョンの通常版と機能的には同一です。集中管理の方法、アドオンやプラグインの管理、複数バージョンの併用、情報漏洩対策、機能の制限やカスタマイズなど、法人内での導入に際する技術的な質問については別途、<a href="/business/faq/tech/">技術的な質問</a> がまとめられています。</p>
+                      <p>その他、<a href="https://www.clear-code.com/blog/category/mozilla.html">株式会社クリアコードのブログ (ククログ)</a> には、Firefox や Thunderbird のカスタマイズを中心に技術情報が多く掲載されています。</p>
                     </section>
                     <section>
                       <h3>Internet Explorer にしか対応していないサイトがあります</h3>
-                      <p>Internet Explorer (IE) は Firefox の導入後も引き続き併用いただけます。また、Firefox に <a href="https://addons.mozilla.org/ja/firefox/addon/ie-tab-2-ff-36/">IE Tab 2</a> というサードパーティ製のアドオンを追加すれば、普段は Firefox を使用しながら、信頼できる IE 専用サイトだけ IE のレンダリングエンジンに切り換えて、Firefox 上でシームレスに表示することもできます。このアドオンは業務利用も含めて自由に配布・使用できるライセンスで公開されています。</p>
+                      <p>Internet Explorer (IE) は Firefox の導入後も引き続き併用できますので、必要に応じて使い分けてください。</p>
                     </section>
                     <section>
                       <h3>他の製品からの移行は簡単ですか？</h3>
-                      <p>Firefox、Thunderbird ともに移行支援機能を搭載していますので、既存のブックマークやメールボックスを数クリックで取り込むことができます。標準で対応していない移行元の製品についても、サードパーティ製のツールを使用するか、<a href="/business/support/">法人向けサポート</a> の導入支援によって対応できる場合があります。</p>
+                      <p>Firefox、Thunderbird ともに移行支援機能を搭載していますので、既存のブックマークやメールボックスを数クリックで取り込むことができます。標準で対応していない移行元の製品についても、サードパーティ製のツールを使用するか、<a href="/business/#support">法人向けサポート</a> の導入支援によって対応できる場合があります。</p>
                     </section>
                     <section>
                       <h3>製品の環境を集中管理する方法はありますか？</h3>
-                      <p>Firefox も Thunderbird も、Netscape 製品の「Mission Control Desktop」に由来する <a href="/business/faq/tech/setting-management/">集中管理機能</a> を備えており、エンドユーザに変更させたくない設定項目にロックを掛けることも可能です。</p>
+                      <p>Firefox、Thunderbird ともに <a href="/business/faq/tech/setting-management/">集中管理機能</a> を備えており、エンドユーザーに変更させたくない設定項目にロックを掛けることも可能です。</p>
                     </section>
                     <section>
                       <h3>古いバージョンはどこからダウンロードできますか？</h3>
-                      <p>サポート終了済みとなっている古いバージョンの Firefox や Thunderbird のダウンロードは <a href="https://releases.mozilla.org/">releases.mozilla.org</a> のアーカイブビルドからダウンロードしていただけます。<a href="https://releases.mozilla.org/pub/firefox/releases/">Firefox のリリース版ビルド一覧</a> および <a href="https://releases.mozilla.org/pub/thunderbird/releases/">Thunderbird のリリース版ビルド一覧</a> の配下にそれぞれバージョン番号、プラットフォーム、言語ロケールコード (Windows と Linux の場合は ja、Mac の場合は ja-JP-mac) のディレクトリを順に辿って目的のバージョンをダウンロードしてください。例えば Firefox 45.0 の Windows 32 ビット版の日本語インストーラは <a href="https://releases.mozilla.org/pub/firefox/releases/45.0/win32/ja/">こちらのディレクトリ</a> になります。</p>
-                    </section>
-                    <section>
-                      <h3>Microsoft Windows Installer (MSI) はありますか？</h3>
-                      <p>現時点では提供していません。</p>
+                      <p>サポートが終了している古いバージョンは、既知のセキュリティ脆弱性を抱えていることも多く常用を避けるべきですが、検証目的で入手したい場合は <a href="https://releases.mozilla.org/">releases.mozilla.org</a> のアーカイブビルドからダウンロードできます。<a href="https://releases.mozilla.org/pub/firefox/releases/">Firefox のリリース版ビルド一覧</a> および <a href="https://releases.mozilla.org/pub/thunderbird/releases/">Thunderbird のリリース版ビルド一覧</a> の配下にそれぞれバージョン番号、プラットフォーム、言語ロケールコード (Windows と Linux の場合は ja、macOS の場合は ja-JP-mac) のディレクトリーを順に辿って目的のバージョンをダウンロードしてください。</p>
                     </section>
                   </div>
                 </section>
@@ -199,11 +150,11 @@ $header_nav = array(
                   <div class="questions">
                     <section>
                       <h3>製品のサポート期間はどのくらいですか？</h3>
-                      <p>Mozilla では現在、メジャーアップデートとセキュリティアップデートを区別しない最新版を、原則として 6 〜 8 週間ごとに提供しています。新機能や高速化、セキュリティ・安定性の改善を盛り込んだ新バージョンを、迅速かつ定期的にお届けするため、このような「高速リリースサイクル」を採用しました。これとは別に、サポート期間を約 1 年とし、その間セキュリティアップデートのみ配信する <a href="/business/#esr">法人向け延長サポート版 (ESR)</a> も提供しています。エンドユーザのデスクトップ環境を集中管理しており、社内アプリケーションの動作検証を必要とする企業や大学、公共機関などでは、ESR の導入をご検討ください。</p>
+                      <p>現在は、メジャーアップデートとセキュリティアップデートを区別しない最新版が、原則として 6 〜 8 週間ごとに提供されています。新機能や高速化、セキュリティ・安定性の改善を盛り込んだ新バージョンを、迅速かつ定期的に届けるため、このような「高速リリースサイクル」が採用されています。これとは別に、サポート期間を約 1 年とし、その間セキュリティアップデートのみ配信する <a href="/business/#esr">法人向け延長サポート版 (ESR)</a> も提供されています。エンドユーザーのデスクトップ環境を集中管理しており、社内アプリケーションの動作検証を必要とする企業や大学、公共機関などでは、ESR の導入を検討されると良いでしょう。</p>
                     </section>
                     <section>
                       <h3>製品のベータ版は公開されていますか？</h3>
-                      <p>メジャーバージョンの公開前には、アルファ版とベータ版をそれぞれ数回に分けて一般に公開しています。ベータ版で事前に動作検証を済ませていただき、正式版リリース後早期にアップデートを実施していただければと思います。アルファ版は、Firefox の場合は「Aurora」、Thunderbird の場合は「Earlybird」という名称を付けており、正式版リリースの 12 〜 16 週間前に公開します。ベータ版は、正式版リリースの 6 〜 8 週間前に公開します。</p>
+                      <p>ベータ版は正式版リリースの 6 〜 8 週間前に公開されます。ベータ版で事前に動作検証を済ませ、正式版リリース後早期に更新を実施されることをお勧めします。</p>
                       <ul>
                         <li><a href="https://www.mozilla.org/ja/firefox/channel/">Firefox プレビューリリース</a></li>
                         <li><a href="https://www.thunderbird.net/ja/channel/">Thunderbird プレビューリリース</a></li>
@@ -211,35 +162,39 @@ $header_nav = array(
                     </section>
                     <section>
                       <h3>マイナーアップデートはどのようなタイミングで提供されますか？</h3>
-                      <p>セキュリティ問題の修正を含むマイナーバージョンは、原則として 6 〜 8 週間ごとに提供しています。いわゆるゼロデイ脆弱性が確認された場合は、スケジュールに関係なく修正版を公開します。Firefox や Thunderbird は OS と統合されていないため、修正とテストにかかる時間も短く、非常に迅速な対応を特長としています。</p>
+                      <p>セキュリティ問題の修正を含むマイナーバージョンは、原則として 6 〜 8 週間ごとに提供されています。いわゆるゼロデイ脆弱性が確認された場合は、スケジュールに関係なく修正版が公開されます。Firefox や Thunderbird は OS と統合されていないため、修正とテストにかかる時間も短く、非常に迅速な対応が可能となっています。</p>
                     </section>
                     <section>
-                      <h3>新しいバージョンが出るたびにアップデートしなければならないのでしょうか？</h3>
-                      <p>マイナーバージョンアップでは主にセキュリティ脆弱性や安定性の問題が修正されます。安心してインターネットをお使いいただくため、できるだけ速やかにアップデートを適用していただくようお願いします。メジャーバージョンには、高速化や様々な機能強化が含まれていますので、アップデートをお勧めします。<a href="/business/#esr">法人向け延長サポート版</a> の場合、旧バージョンのサポートは 12 〜 16 週間後に終了しますので、メジャーバージョンリリース後、早期にアップデートを検討していただければ幸いです。</p>
+                      <h3>新しいバージョンが出るたびに更新しなければならないのでしょうか？</h3>
+                      <p>マイナーバージョンアップでは主にセキュリティ脆弱性や安定性の問題が修正されます。安心してインターネットをお使いいただくため、できるだけ速やかに更新を適用してください。メジャーバージョンには、高速化や様々な機能強化が含まれていますので、更新をお勧めします。<a href="/business/#esr">法人向け延長サポート版</a> の場合、旧バージョンのサポートは 12 〜 16 週間後に終了しますので、メジャーバージョンリリース後、早期に更新を検討されることをお勧めします。</p>
                     </section>
                     <section>
-                      <h3>アップデートを無効にしたいのですが？</h3>
-                      <p>組織内に導入する Mozilla 製品のアップデートを無効にすることは可能ですが、完全にアップデートを禁止することは、セキュリティ上非常に危険ですのでお勧めしません。情報処理部門で検証を行ってからアップデートを有効にしたい場合や、メジャーアップデートの適用を保留したい場合などは、更新管理サーバを社内に置く方法や差分更新ファイルを手動で適用する方法もあります。詳しくは <a href="/business/faq/tech/auto-update/">技術的な質問ページ</a> をご覧ください。</p>
+                      <h3>更新を無効にしたいのですが？</h3>
+                      <p>組織内に導入する Mozilla 製品の更新を無効にすることは可能ですが、完全に更新を禁止することは、セキュリティ上非常に危険ですのでお勧めしません。IT 部門で検証を行ってから更新を有効にしたい場合や、メジャー更新の適用を保留したい場合などは、更新管理サーバを社内に置く方法や差分更新ファイルを手動で適用する方法もあります。詳しくは <a href="/business/faq/tech/auto-update/">技術的な質問ページ</a> をご覧ください。</p>
+                    </section>
+                    <section>
+                      <h3>Microsoft Windows Installer (MSI) はありますか？</h3>
+                      <p>現時点では提供されていません。</p>
+                    </section>
+                    <section>
+                      <h3>モバイル版 Firefox の ESR はありますか？</h3>
+                      <p>Android 版 Firefox や iOS 版の Firefox に ESR はありません。延長サポート版の提供は Windows、Mac、Linux 版のみです。</p>
+                    </section>
+                    <section>
+                      <h3>Thunderbird の ESR はありますか？</h3>
+                      <p>Thunderbird はバージョン 24 から通常版と ESR が統合されました。通常版でも ESR と同様、メジャーアップデートは 1 年に 1 度となります。<a href="https://www.thunderbird.net/ja/">通常版をご利用ください</a>。</p>
                     </section>
                     <section>
                       <h3>リリース情報はどこで入手できますか？</h3>
-                      <p>製品のリリース情報は <a href="https://medium.com/mozilla-japan">Mozilla Japanese Community Medium</a> に投稿します。米国 Mozilla が主宰する <a href="https://wiki.mozilla.org/Enterprise">法人ユーザワーキンググループ</a> (英語) では、法人の IT 担当者や Mozilla の開発者が Mozilla 製品の導入に関する意見を交換できるよう、<a href="https://mail.mozilla.org/listinfo/enterprise">メーリングリスト</a> (英語) を設けています。すべて英語の情報となりますが、関心のある方はご参加ください。また、Thunderbird に関する議論に特化したメーリングリスト <a href="https://wiki.mozilla.org/Thunderbird/tb-enterprise">tb-enterprise</a> (英語) もあります。<a href="/business/support/">法人向けサポート</a> を購入した法人では、契約次第で電話やファクスによる通知を受けられる場合もありますので、パートナーにご相談ください。今後のリリーススケジュールは <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Mozilla Wiki</a> (英語) に掲載していますが、日程が変更されることもありますのでご了承ください。</p>
+                      <p>製品のリリース情報は <a href="/firefox/releases/">Firefox のリリースノート</a> や <a href="/thunderbird/releases/">Thunderbird のリリースノート</a> をご覧ください。米国 Mozilla が主宰する <a href="https://wiki.mozilla.org/Enterprise">法人ユーザーワーキンググループ</a> (英語) では、法人の IT 担当者や Mozilla の開発者が Mozilla 製品の導入に関する意見を交換できるよう、<a href="https://mail.mozilla.org/listinfo/enterprise">メーリングリスト</a> (英語) が設けられています。すべて英語の情報となりますが、関心のある方は参加してみてはどうでしょうか。また、Thunderbird に関する議論に特化したメーリングリスト <a href="https://wiki.mozilla.org/Thunderbird/tb-enterprise">tb-enterprise</a> (英語) もあります。<a href="/business/#support">法人向けサポート</a> を購入した法人では、契約次第で電話やファクスによる通知を受けられる場合もありますので、契約先にご相談ください。今後のリリーススケジュールは <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Mozilla Wiki</a> (英語) に掲載していますが、日程が変更されることもあります。</p>
                     </section>
                   </div>
                 </section>
               </div>
             </div>
-            <div id="footnotes" class="outer outer-3">
-              <div class="inner">
-                <aside role="note">
-                  <p>1. Firefox の市場シェアは、<time datetime="2011-05">2011 年 5 月</time>現在、StatCounter 調べ。Thunderbird の市場シェアは、<time datetime="2009-02">2009 年 2 月</time>現在、アイシェア調べ。</p>
-                </aside>
-              </div>
-            </div>
           </main>
 <?php
 
-@include_once $_SERVER['DOCUMENT_ROOT'] . '/business/includes/events.inc.php';
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/default-footer.inc.php';
 
 ?>
