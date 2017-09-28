@@ -1,0 +1,88 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '56.0';
+$_android_version = '56.0';
+$_date = '2017-09-28';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper">
+              <p>今回のリリースでは、Firefox Screenshots、Send Tabs などの機能によってユーザー体験を向上しつつ、改良された (検索も可能となった) 設定画面によってブラウザーの管理機能も強化しました。また、11 月に公開される今年最大のリリースに向けた漸進的なパフォーマンス改善も含まれています。</p>
+            </div>
+            <div class="section-wrapper" id="new">
+              <h4>新機能</h4>
+              <ul class="section-items">
+                <li id="note-787253">
+                  <p>ブラウザー上で直接スクリーンショットを撮影、保存、共有できる <a href="https://screenshots.firefox.com/#tour">Firefox Screenshots</a> 機能を正式公開しました。</p>
+                </li>
+                <li id="note-787255">
+                  <p><a href="https://support.mozilla.org/ja/kb/automatically-fill-your-address-forms">住所入力フォームの自動補完</a> に対応しました。(現時点では英語版・米国のみ)</p>
+                </li>
+                <li id="note-787256">
+                  <p>設定画面を以下のように改良しました。</p>
+                  <ul>
+                    <li>特定の設定を素早く見つけられるよう、検索バーを追加しました。</li>
+                    <li>設定をより簡単に見渡せるよう、設定項目を再編成しました。</li>
+                    <li>各種の選択肢や、それらがどうブラウジング影響するのかをより深く理解できるよう、説明文を見直しました。</li>
+                    <li><a href="https://blog.mozilla.org/netpolicy/2017/09/06/making-privacy-transparent/">更新されたプライバシー通知</a> や <a href="https://blog.mozilla.org/futurereleases/2017/09/06/data-just-living/">データ収集方針</a> に沿って、データ収集の選択肢を改めました。</li>
+                  </ul>
+                </li>
+                <li id="note-787254">
+                  <p>背面で開かれたタブ内のメディアを、タブが選択されるまで自動再生しないようにしました。</p>
+                </li>
+                <li id="note-787277">
+                  <p>iOS/Android 版 Firefox へタブを送信できる Firefox Sync の <a href="https://www.mozilla.org/ja/firefox/features/send-tabs/">Send Tabs</a> 機能を改良するとともに、Firefox アカウントを作成していないユーザーもこの機能を発見できるようにしました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787257">
+                  <p>文字エンコーディングコンバーターを、Rust 言語で書かれた <a href="https://encoding.spec.whatwg.org/">エンコーディング標準</a> 準拠の新実装と置き換えました。</p>
+                </li>
+                <li id="note-787258">
+                  <p><a href="https://www.franziskuskiefer.de/post/aes-gcm-speedup/">AES-GCM</a> 向けのハードウェアアクセラレーションを追加しました。</p>
+                </li>
+                <li id="note-787259">
+                  <p>セーフブラウジングプロトコルをバージョン 4 へ更新しました。</p>
+                </li>
+                <li id="note-787260">
+                  <p>更新のダウンロードファイルサイズを約 20% 削減しました。</p>
+                </li>
+                <li id="note-787261">
+                  <p>更新ダウンロードの検証における安全性を改善しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="developer">
+              <h4>開発者</h4>
+              <ul class="section-items">
+                <li id="note-787262">
+                  <p>開発ツール内の <a href="https://medium.com/mozilla-tech/master-css-grid-with-firefox-devtools-e3420a8d58fd">CSS グリッドツール</a> にレイアウトパネルを追加しました。</p>
+                </li>
+              </ul>
+              <a class="mdn-icon more" rel="external" href="https://developer.mozilla.org/ja/Firefox/Releases/56">開発者情報</a>
+            </div>
+            <div class="section-wrapper" id="known">
+              <h4>未解決</h4>
+              <ul class="section-items">
+                <li id="note-787278">
+                  <p>リモートデスクトップ接続 (RDP) 上で Windows 版 Firefox を実行しているユーザーは、強化されたセキュリティ制限の影響で音声の再生が無効化されていることに気が付くかもしれません。今後のバージョンで修正されるまで <a href="https://support.mozilla.org/ja/kb/i-cant-play-audio-remote-desktop-connection">この問題を緩和する方法</a>を Firefox ヘルプ で紹介しています。</p>
+                </li>
+                <li id="note-787247">
+                  <p>RelevantKnowledge アドウェアがインストールされていた場合、起動時にクラッシュします。Firefox ヘルプに役立つ <a href="https://support.mozilla.org/ja/kb/troubleshoot-firefox-issues-caused-malware">削除方法</a> が載っています。</p>
+                </li>
+                <li id="note-787276">
+                  <p>Lenovo IdeaPad ラップトップ上で「OneKey Theater」ソフトウェアがインストールされていた場合、Windows 7 上の 64 ビット版 Firefox が起動時にクラッシュします。解決するには <a href="https://www.mozilla.org/ja/firefox/all/">32 ビット版 Firefox を再インストール</a> してください。</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
