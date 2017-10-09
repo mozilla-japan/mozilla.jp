@@ -1,0 +1,35 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '52.4.1';
+$_android_version = '52.0';
+$_date = '2017-10-09';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787293">
+                  <p>macOS 10.13 上でのカラーピッカー使用時のクラッシュを修正しました。</p>
+                </li>
+                <li id="note-787292">
+                  <p>macOS 10.13 上での動画再生時のクラッシュを修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="known">
+              <h4>未解決</h4>
+              <ul class="section-items">
+                <li id="note-787280">
+                  <p>「最近の履歴を消去」で「キャッシュ」や「ウェブサイトのオフライン作業用データ」を選択しても、保存されているすべてのデータが消去されません。(<a href="https://bugzilla.mozilla.org/1047098">Bug 1047098</a>)</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
