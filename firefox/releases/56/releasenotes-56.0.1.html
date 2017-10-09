@@ -1,0 +1,49 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '56.0.1';
+$_android_version = '56.0';
+$_date = '2017-10-09';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787289">
+                  <p>AVX 対応が不完全な Windows 7 システム上で、Intel ドライバー使用時に D3D11 をブロックするようにしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1403353">Bug 1403353</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787291">
+                  <p>64 ビット版 Windows 上で 32 ビット版 Firefox を使用している場合、安定性やセキュリティの高い 64 ビット版 Firefox へ自動的に移行されます。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="known">
+              <h4>未解決</h4>
+              <ul class="section-items">
+                <li id="note-787278">
+                  <p>リモートデスクトップ接続 (RDP) 上で Windows 版 Firefox を実行しているユーザーは、強化されたセキュリティ制限の影響で音声の再生が無効化されていることに気が付くかもしれません。今後のバージョンで修正されるまで <a href="https://support.mozilla.org/ja/kb/i-cant-play-audio-remote-desktop-connection">この問題を緩和する方法</a>を Firefox ヘルプ で紹介しています。</p>
+                </li>
+                <li id="note-787247">
+                  <p>RelevantKnowledge アドウェアがインストールされていた場合、起動時にクラッシュします。Firefox ヘルプに役立つ <a href="https://support.mozilla.org/ja/kb/troubleshoot-firefox-issues-caused-malware">削除方法</a> が載っています。</p>
+                </li>
+                <li id="note-787276">
+                  <p>Lenovo IdeaPad ラップトップ上で「OneKey Theater」ソフトウェアがインストールされていた場合、Windows 7 上の 64 ビット版 Firefox が起動時にクラッシュします。解決するには <a href="https://www.mozilla.org/ja/firefox/all/">32 ビット版 Firefox を再インストール</a> してください。</p>
+                </li>
+                <li id="note-787281">
+                  <p>macOS High Sierra におけるバグにより、全画面表示モードで一部問題が発生しています。</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
