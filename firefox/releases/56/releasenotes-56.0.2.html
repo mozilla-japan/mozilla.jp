@@ -1,0 +1,33 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '56.0.2';
+$_android_version = '56.0';
+$_date = '2017-10-26';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787304">
+                  <p>ユーザー設定に応じてフォームの自動保管が完全に無効化されるようにしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1404531">Bug 1404531</a>)</p>
+                </li>
+                <li id="note-787303">
+                  <p>Windows 7 上での動画関連のクラッシュを修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1409141">Bug 1409141</a>)</p>
+                </li>
+                <li id="note-787302">
+                  <p>64 ビット版 GSSAPI 認証の判別を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1409275">Bug 1409275</a>)</p>
+                </li>
+                <li id="note-787301">
+                  <p>終了時のクラッシュを修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1404105">Bug 1404105</a>)</p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
