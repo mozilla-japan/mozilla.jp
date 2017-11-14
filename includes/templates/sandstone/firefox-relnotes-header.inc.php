@@ -80,9 +80,6 @@ if ($_platform !== 'desktop') {
             </div>
             <div class="description">
               <h2>バージョン <?= $_version ?> &mdash; <?= str_replace('-', '/', $_date) ?> より <?= $_channel_label ?> チャンネルユーザーへ提供開始</h2>
-<? if ($_platform !== 'ios'): ?>
-              <p>このバージョンに貢献いただいた <a href="https://blog.mozilla.org/community/firefox-<?= $_intver ?>-new-contributors/">新しい Mozillia コミュニティメンバー</a> 全員にこの場を借りて感謝します。</p>
-<? endif; ?>
             </div>
           </div>
         </div>
