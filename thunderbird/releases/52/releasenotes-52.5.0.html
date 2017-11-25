@@ -1,7 +1,7 @@
 <?php
 
-$_version = '52.4.0';
-$_date = '2017-10-09';
+$_version = '52.5.0';
+$_date = '2017-11-23';
 
 $page_type          = 'ItemPage';
 $page_title         = 'Thunderbird ' . $_version . ' リリースノート';
@@ -30,21 +30,25 @@ $breadcrumbs        = array(
                 <section id="sec-whatsnew">
                   <h2>このバージョンでの変更点</h2>
                   <ul>
-                    <li id="note-787287">
+                    <li id="note-787063">
                       <span class="tag new">新機能</span>
-                      <p>Thunderbird 52 ではメーリングリスト投稿への返信に新たな挙動が採用されました。それは「メーリングリストへ返信する際、Reply-To ヘッダーを無視して From ヘッダーのアドレスへ返信を送る」というものでした。新たに追加された設定 <code>mail.override_list_reply_to</code> を使用することで、従来の挙動へ戻すことができます。</p>
+                      <p>Charter/Spectrum IMAP 対応の改善: Charter の IMAP サービスを判別し、特別な <code>SELECT</code> コマンドをサーバーへ送信するようにしました。末尾に <code>force_select</code> が付いた様々な設定値を参照することで、それらのサービスで自動判別が働いているかどうかを確認できます。</p>
                     </li>
-                    <li id="note-787286">
+                    <li id="note-787295">
                       <span class="tag fixed">修正</span>
-                      <p>特定の状況で (画像と非画像添付ファイルが混在している場合)、オフライン用に同期されていない IMAP フォルダーに保管されているメッセージ内の添付画像が一部欠けて表示されてしまう問題を修正しました。</p>
+                      <p>複数のベースフォルダーにまたがった検索フォルダー内でメッセージをクリックすると、別のメッセージが既読となってしまう場合がある問題を修正しました。</p>
                     </li>
-                    <li id="note-787239">
+                    <li id="note-787296">
                       <span class="tag fixed">修正</span>
-                      <p>IMAP で UIDs &gt; 0x7FFFFFFF が適切に処理されない問題を修正しました。</p>
+                      <p>接続に問題があった場合に正しいサーバー名を表示するよう IMAP の警告を修正しました。</p>
                     </li>
-                    <li id="note-787288">
+                    <li id="note-787297">
                       <span class="tag fixed">修正</span>
-                      <p>様々な <a href="https://www.mozilla.org/en-US/security/known-vulnerabilities/thunderbird/#thunderbird52.4">セキュリティ問題</a> を修正しました。</p>
+                      <p>設定された POP サーバーが見つからなかった場合に接続の問題を明示するよう POP の警告を修正しました。</p>
+                    </li>
+                    <li id="note-787361">
+                      <span class="tag fixed">修正</span>
+                      <p>様々な <a href="https://www.mozilla.org/en-US/security/known-vulnerabilities/thunderbird/#thunderbird52.5">セキュリティ問題</a> を修正しました。</p>
                     </li>
                   </ul>
                 </section>
