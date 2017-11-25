@@ -9,7 +9,7 @@ class MJ
   public $css = array(
     'business/main' => 2017083020,
     'covehead/global' => 2017011823,
-    'sandstone/global' => 2017011808,
+    'sandstone/global' => 2017112501,
     'sandstone/about' => 2017072519,
     'sandstone/community' => 2017011608,
     'sandstone/endorsements' => 2014122401,

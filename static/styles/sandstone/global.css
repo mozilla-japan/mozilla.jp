@@ -475,13 +475,15 @@ abbr, acronym {
 #nav-firefox h1 > a {
 	width: 185px;
 	height: 70px;
-  background: url('/static/images/firefox/logos/header-logo-wordmark.png') no-repeat scroll 0 0 transparent;
+  background: url('/static/images/firefox/logos/firefox-logo-wordmark.png') no-repeat scroll 0 0 transparent;
+  background-size: contain;
 }
 
 #nav-thunderbird h1 > a {
 	width: 260px;
 	height: 72px;
-  background: url("/static/images/thunderbird/logos/header-logo-wordmark.png") no-repeat scroll 0 0 transparent;
+  background: url("/static/images/thunderbird/logos/thunderbird-logo-wordmark.png") no-repeat scroll 0 0 transparent;
+  background-size: contain;
 }
 
 /*
@@ -2793,15 +2795,11 @@ a.button:visited {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
 
 #nav-firefox h1 > a {
-  -webkit-background-size: 185px 70px;
-  background-size: 185px 70px;
-  background-image: url('/static/images/firefox/logos/header-logo-wordmark@2x.png');
+  background-image: url('/static/images/firefox/logos/firefox-logo-wordmark@2x.png');
 }
 
 #nav-thunderbird h1 > a {
-  -webkit-background-size: 260px 72px;
-  background-size: 260px 72px;
-  background-image: url('/static/images/thunderbird/logos/header-logo-wordmark@2x.png');
+  background-image: url('/static/images/thunderbird/logos/thunderbird-logo-wordmark@2x.png');
 }
 
 } /* end media query */
