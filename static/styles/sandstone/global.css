@@ -475,7 +475,7 @@ abbr, acronym {
 #nav-firefox h1 > a {
 	width: 185px;
 	height: 70px;
-  background: url('/static/images/firefox/logos/firefox-logo-wordmark.png') no-repeat scroll 0 0 transparent;
+  background: url('/static/images/firefox/logos/firefox-logo-wordmark.png?v=201711') no-repeat scroll 0 0 transparent;
   background-size: contain;
 }
 
@@ -2795,7 +2795,7 @@ a.button:visited {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
 
 #nav-firefox h1 > a {
-  background-image: url('/static/images/firefox/logos/firefox-logo-wordmark@2x.png');
+  background-image: url('/static/images/firefox/logos/firefox-logo-wordmark@2x.png?v=201711');
 }
 
 #nav-thunderbird h1 > a {

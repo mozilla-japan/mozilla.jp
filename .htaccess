@@ -279,7 +279,7 @@ RewriteRule ^thunderbird/release/start/?$                                       
 RewriteRule ^thunderbird/beta/start/?$                                          /thunderbird/releases/beta/start.html [L]
 
 # favicon
-RewriteRule ^(firefox|thunderbird)/(?:.*/)?favicon\.ico$                        /static/images/$1/favicon-32.ico [L]
+RewriteRule ^(firefox|thunderbird)/(?:.*/)?favicon\.ico$                        /static/images/$1/favicon-32.ico?v=201711 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule favicon\.ico$                                                       /static/images/global/favicon.ico [L]
 

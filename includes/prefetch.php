@@ -48,8 +48,8 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . $file_path) && $file_path !== '/.hta
 /* favicon の設定 */
 
 if (strpos($file_path, '/firefox/') === 0) {
-  $favicon = '/static/images/firefox/favicon-32.ico';
-  $page_image = '/static/images/firefox/logos/logo-only-128.png';
+  $favicon = '/static/images/firefox/favicon-32.ico?v=201711';
+  $page_image = '/static/images/firefox/logos/logo-only-128.png?v=201711';
 } else if (strpos($file_path, '/thunderbird/') === 0) {
   $favicon = '/static/images/thunderbird/favicon-32.ico';
   $page_image = '/static/images/thunderbird/logos/logo-only-128.png';
