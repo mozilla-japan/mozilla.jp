@@ -1,0 +1,32 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'android';
+$_version = '57.0.1';
+$_desktop_version = '57.0.1';
+$_date = '2017-11-29';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787374">
+                  <p>ページ遷移直後に読み込み停止ボタンが表示されない問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1414838">Bug 1414838</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787378">
+                  <p>参考: <a href="/firefox/android/57.0/releasenotes/">57.0 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

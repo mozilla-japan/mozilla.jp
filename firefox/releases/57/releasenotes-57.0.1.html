@@ -1,0 +1,46 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '57.0.1';
+$_android_version = '57.0.1';
+$_date = '2017-11-29';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787372">
+                  <p>一部の AMD ビデオカード使用時に YouTube などの動画サイトで動画の配色が歪む問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1417442">Bug 1417442</a>)</p>
+                </li>
+                <li id="note-787373">
+                  <p>プロファイルのパスに非 ASCII 文字が含まれていた場合に生じる prefs.js の問題を修正しました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1420427">Bug 1420427</a>)</p>
+                </li>
+                <li id="note-787376">
+                  <p>Intel HD Graphics 3000 を搭載した Mac で Google マップを表示した際に生じるクラッシュを修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="changed">
+              <h4>変更点</h4>
+              <ul class="section-items">
+                <li id="note-787377">
+                  <p>RealPlayer の無償版プレーヤーに関連付けられ、Firefox 上でパフォーマンス問題を引き起こすことが判明しているクライアントライブラリーの注入をブロックするようにしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1418535">Bug 1418535</a>)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787370">
+                  <p>参考: <a href="/firefox/57.0/releasenotes/">57.0 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
