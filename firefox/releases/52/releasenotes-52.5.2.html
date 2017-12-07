@@ -1,0 +1,32 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '52.5.2';
+$_android_version = '52.0';
+$_date = '2017-12-07';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787384">
+                  <p>様々な <a href="https://www.mozilla.org/security/known-vulnerabilities/firefox-esr/#firefoxesr52.5.2">セキュリティ問題</a> を修正しました。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787385">
+                  <p>参考: <a href="/firefox/52.5.0/releasenotes/">52.5.0 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>

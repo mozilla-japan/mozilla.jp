@@ -1,0 +1,35 @@
+<?php
+
+$_channel = 'release';
+$_platform = 'desktop';
+$_version = '57.0.2';
+$_android_version = '57.0.1';
+$_date = '2017-12-07';
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-header.inc.php';
+
+?>
+            <div class="section-wrapper" id="fixed">
+              <h4>修正点</h4>
+              <ul class="section-items">
+                <li id="note-787382">
+                  <p>Firefox を起動時にクラッシュさせる G Data Endpoint Security の旧バージョンをブロックしました。(Windows のみ) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1421991">Bug 1421991</a>)</p>
+                </li>
+                <li id="note-787383">
+                  <p>WebGL と D3D9 に関するリグレッションを修正しました。(Windows のみ)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="section-wrapper" id="">
+              <h4></h4>
+              <ul class="section-items untagged">
+                <li id="note-787381">
+                  <p>参考: <a href="/firefox/57.0.1/releasenotes/">57.0.1 リリースノート</a></p>
+                </li>
+              </ul>
+            </div>
+<?php
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/templates/sandstone/firefox-relnotes-footer.inc.php';
+
+?>
