@@ -3,7 +3,6 @@
 @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/json.inc.php';
 
 require_once dirname(__FILE__) . "/redirect_destination.inc.php";
-require_once dirname(__FILE__) . "/../lib/chromephp/ChromePhp.php";
 
 $json_files = array("firefox" => "product_details_json/firefox_versions.json",
                     "thunderbird" => "product_details_json/thunderbird_versions.json",

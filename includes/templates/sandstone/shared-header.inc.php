@@ -7,7 +7,6 @@ $css                = empty($css)               ? array()           : $css;
 $js                 = empty($js)                ? array()           : $js;
 $language           = empty($language)          ? "ja"              : $language;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/lib/chromephp/ChromePhp.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/path.inc.php";
 
 if (!empty($meta_robots)) {

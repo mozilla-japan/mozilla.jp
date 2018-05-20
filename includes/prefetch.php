@@ -2,16 +2,7 @@
 require_once dirname(__FILE__) . '/config.inc.php';
 require_once dirname(__FILE__) . '/products/details.inc.php';
 require_once dirname(__FILE__) . '/functions.inc.php';
-require_once dirname(__FILE__) . '/redirector/helper.inc.php';
 require_once dirname(__FILE__) . '/error-helper.inc.php';
-
-function is_releasenotes($url){
-    return preg_match('#^/(firefox|thunderbird)(/android|ios)?/\d+(\.\d+)*(beta|esr)?/(releasenotes|system-requirements)#', $url);
-}
-
-function build_mozillaorg_url_from($path){
-    return "https://www.mozilla.org/en-US/$path";
-}
 
 
 $mj = new MJ();
@@ -36,8 +27,6 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . $file_path) && $file_path !== '/.hta
   $canonical_url = 'https://www.mozilla.jp';
   $canonical_url .= ($pos === false) ? $_SERVER['REQUEST_URI'] : substr($_SERVER['REQUEST_URI'], 0, $pos);
   unset($pos);
-} elseif (is_releasenotes($_SERVER['REQUEST_URI'])) {
-    MJ\Redirector\to(build_mozillaorg_url_from($_SERVER['REQUEST_URI']));
 } else {
     $_GET['error'] = MJ\Error\normalize_error_code($file_path);
     MJ\Error\send_error_header(intval($_GET['error']));

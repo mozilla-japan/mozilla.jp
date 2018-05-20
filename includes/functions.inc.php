@@ -13,9 +13,6 @@ class MJ
     'sandstone/about' => 2017072519,
     'sandstone/community' => 2017011608,
     'sandstone/endorsements' => 2014122401,
-    'sandstone/product-relnotes' => 2016042701,
-    'sandstone/product-relnotes-sand' => 2017073100,
-    'sandstone/product-sysreq' => 2016042701,
     'portala/base' => 2017073117,
     'tabzilla/tabzilla' => 2017011808,
   );

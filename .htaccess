@@ -34,11 +34,6 @@ media-src *; "
 # パフォーマンス向上
 ################################################################################
 
-<Files ~ "^(prefetch|redirector)\.php$">
-# Google の検索結果に dmoz から取得した説明文を表示しない (SEO)
-Header always append X-Robots-Tag "noodp"
-</Files>
-
 # gzip 圧縮を使用
 AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
 BrowserMatch ^Mozilla/4 gzip-only-text/html
@@ -70,14 +65,6 @@ RewriteRule (.*)                                            https://www.mozilla.
 # URL 正規化 (大文字を小文字に)
 RewriteRule ^Firefox(.*)                                    /firefox$1 [R=permanent]
 RewriteRule ^Thunderbird(.*)                                /thunderbird$1 [R=permanent]
-
-# リリースノートなどは物理パスと異なる場所にあり、内部リライトを行っているので
-# 以下のような工夫が必要
-## 末尾のスラッシュがなければ付ける (例: /firefox/10.0/releasenotes → /firefox/10.0/releasenotes/)
-## index.html が付いていれば外す (例: /firefox/10.0/releasenotes/index.html → /firefox/10.0/releasenotes/)
-RewriteRule ^(firefox(?:/android|/ios)?|thunderbird)/([\d\.]+(?:(?:b|beta|rc|esr)\d*)?)/(\w+)(/index\.html)?$          /$1/$2/$3/ [R=permanent]
-## バージョン名ディレクトリーへのアクセスはリリースノートへ (例: /firefox/10.0/ → /firefox/10.0/releasenotes/)
-RewriteRule ^(firefox(?:/android|/ios)?|thunderbird)/([\d\.]+(?:(?:b|beta|rc|esr)\d*)?)/?$                             /$1/$2/releasenotes/ [R=permanent]
 
 ################################################################################
 # mozilla.org へのリダイレクト
@@ -199,9 +186,6 @@ RewriteRule ^business/(?:downloads|profiles|resources|support)(?:/?|/.+)$       
 RewriteRule ^(?:(?:firefox|thunderbird)/)?organizations?(?:/?|/.+)$             /business/ [R=permanent,L]
 
 # 製品
-RewriteRule ^(firefox|thunderbird)/releases/([01][\d\.]+)(\.html)?$             /$1/$2/releasenotes/ [R=permanent,L]
-RewriteRule ^firefox/system-requirements-v3\.([56])                             /firefox/3.$1/system-requirements/ [R=permanent,L]
-RewriteRule ^firefox/system-requirements-v([2-4])                               /firefox/$1.0/system-requirements/ [R=permanent,L]
 RewriteRule ^(?:firefox/)?(?:mobile/)?(?:home|iphone)                           /blog/entry/9902/ [R=permanent,L]
 
 # イベント・キャンペーン
@@ -238,14 +222,9 @@ RewriteRule ^(?:(?:firefox/)?students(?:/?|/.+)|st/?)$                          
 RewriteRule ^events/?$                                                          https://mozilla.doorkeeper.jp/ [R=permanent,L]
 RewriteRule ^blog/feed/?$                                                       https://medium.com/feed/mozilla-japan [R=permanent,L]
 
-################################################################################
-# リダイレクト専用 URL の解決
-################################################################################
-
-# 製品
-RewriteRule ^(?:firefox|thunderbird)/latest/releasenotes/?$                     /includes/redirector.php [L]
-RewriteRule ^(?:firefox(?:/android|/ios)?|mobile|thunderbird)(?:/beta)?/notes/?$  /includes/redirector.php [L]
-RewriteRule ^(?:firefox|thunderbird)/(?:download/)?system-requirements          /includes/redirector.php [L]
+# 製品リリースノートなど (キャッチオール)
+RewriteRule ^firefox/(.*)/$                                                     https://www.mozilla.org/ja/firefox/$1/ [R=permanent,L]
+RewriteRule ^thunderbird/(.*)/$                                                 https://www.thunderbird.net/ja/thunderbird/$1/ [R=permanent,L]
 
 ################################################################################
 # 内部リライトルール (リダイレクトせず、URL と異なる物理パスを表示させる)
@@ -262,12 +241,6 @@ RewriteRule ^(?:firefox|thunderbird)/(?:download/)?system-requirements          
 RewriteRule ^static/([a-z]+)/(.*)-(\d{8,10})(\.([a-z0-9]{2,4}))?$               /static/$1/$2$4 [L]
 RewriteRule ^static/scripts/lib/(.*)-([\d\.]+)\.js$                             /static/scripts/lib/$1.js [L]
 RewriteRule ^(.+)/static/(styles|scripts)/(.+)\-[0-9]+$                         $1/static/$2/$3 [L]
-
-# 製品関連
-RewriteRule ^(?:firefox(?:/android|/ios)?|thunderbird)/(?:\d+\.\d+(\.\d+)*(?:(?:beta|b|rc|esr)\d*)?)/(?:[\w\-]+)/$  /includes/redirector.php [L]
-RewriteRule ^firefox/whatsnew/?$                                                /firefox/releases/latest/whatsnew.html [L]
-RewriteRule ^thunderbird/release/start/?$                                       /thunderbird/releases/latest/start.html [L]
-RewriteRule ^thunderbird/beta/start/?$                                          /thunderbird/releases/beta/start.html [L]
 
 # favicon
 RewriteRule ^(firefox|thunderbird)/(?:.*/)?favicon\.ico$                        /static/images/$1/favicon-32.ico?v=201711 [L]
