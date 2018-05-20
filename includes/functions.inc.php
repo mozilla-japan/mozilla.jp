@@ -30,11 +30,6 @@ class MJ
    */
   public function __construct()
   {
-    $this->products = array(
-      'firefox' => new Firefox,
-      'fxandroid' => new FirefoxAndroid,
-      'thunderbird' => new Thunderbird
-    );
   }
 
   /*
