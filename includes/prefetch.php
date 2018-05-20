@@ -1,6 +1,5 @@
 <?php
 require_once dirname(__FILE__) . '/config.inc.php';
-require_once dirname(__FILE__) . '/products/details.inc.php';
 require_once dirname(__FILE__) . '/functions.inc.php';
 require_once dirname(__FILE__) . '/error-helper.inc.php';
 
