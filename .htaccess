@@ -205,8 +205,6 @@ RewriteRule ^firefox/system-requirements-v([2-4])                               
 RewriteRule ^(?:firefox/)?(?:mobile/)?(?:home|iphone)                           /blog/entry/9902/ [R=permanent,L]
 
 # イベント・キャンペーン
-RewriteRule ^events/(20\d\d)/(?:fx)?devcon(/.*)?                                /events/devcon/$1$2 [R=permanent,L]
-RewriteRule ^events/2011/fxdevcon-osaka/?$                                      /events/devcon/2011/osaka/ [R=permanent,L]
 RewriteRule ^firefoxlive(?:/?|/.+)$                                             /blog/entry/7488/ [R=permanent,L]
 RewriteRule ^firefoxflicks(?:/?|/.+)$                                           /blog/entry/10326/ [R=permanent,L]
 
@@ -243,13 +241,6 @@ RewriteRule ^blog/feed/?$                                                       
 ################################################################################
 # リダイレクト専用 URL の解決
 ################################################################################
-
-# イベント・キャンペーン
-RewriteRule ^(?:events/)?vision/?$                                              /events/vision/2012/ [R=permanent,L]
-RewriteRule ^(?:events/)?devcon/?$                                              /events/devcon/2015/tokyo/ [R=permanent,L]
-RewriteRule ^(?:events/)?open-web-day(/index\.html.*|/?)$                       /events/2014/open-web-day$2 [R=permanent,L]
-RewriteRule ^(?:events/)?open-web-day/en(?:/?|/.+)$                             /events/2014/open-web-day/index.html.en [R=permanent,L]
-RewriteRule ^FirefoxOSinJapan/?$                                                /events/2014/foxkeh/ [NC,R=permanent,L]
 
 # 製品
 RewriteRule ^(?:firefox|thunderbird)/latest/releasenotes/?$                     /includes/redirector.php [L]

@@ -18,9 +18,6 @@ class MJ
     'sandstone/product-sysreq' => 2016042701,
     'portala/base' => 2017073117,
     'tabzilla/tabzilla' => 2017011808,
-    'events/vision-2012' => 20130823,
-    'events/report' => 2016042701,
-    'events/tech-talks' => 2016113022,
   );
 
   public $js = array(
