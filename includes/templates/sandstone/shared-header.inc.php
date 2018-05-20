@@ -52,19 +52,12 @@ echo $shared_html_head['link'];
 ?>
     <link rel="canonical" href="<?= $canonical_url ?>">
     <link rel="shortcut icon" href="<?= $favicon ?>">
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="/static/styles/sandstone/global-ie8.css" media="print,screen">
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
 <?php
   foreach ($css as $href) {
     $with_serial = MJ\Path\add_serial_number($href, $mj->css);
     $full_path = MJ\Path\expand_path($with_serial, '/static/styles');
     echo '    <link rel="stylesheet" type="text/css" href="' . $full_path . '" media="print,screen">' . PHP_EOL;
   }
-?>
-    <!--<![endif]-->
-<?php
 
 if (!empty($extra_headers)) {
   echo $extra_headers . PHP_EOL;

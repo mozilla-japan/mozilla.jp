@@ -51,13 +51,7 @@ if (strpos($file_path, '/firefox/') === 0) {
 ob_start();
 
 ?>
-    <!--[if lt IE 9]>
-    <script src="/static/scripts/lib/iebugfix/IE9.js"></script>
-    <script src="/static/scripts/lib/jquery/jquery-1.12.4.min.js"></script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
     <script src="/static/scripts/lib/jquery/jquery-3.1.0.min.js"></script>
-    <!--<![endif]-->
     <script src="https://use.typekit.net/qkb6mkb.js"></script>
     <script src="/static/scripts/mj/global-<?= $mj->js['mj/global'] ?>.js"></script>
 <?php

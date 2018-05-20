@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * CSS や JavaScript ファイルからコメントや空白、改行を取り除いて最小化する。
  * .htaccess の Action によって呼び出す。開発時は $enabled を false に。
@@ -81,7 +81,7 @@ class MinifyCore
       $this->enabled = false;
       $this->cache->enabled = false;
     }
-    
+
     // URL 末尾が -min.js や -min.css の場合は、最小化せず、キャッシュもスキップ
     //substr( $file, strlen( $file ) - 7 ) === '-min.js'
     if (preg_match('/\\.(css|js)$/', $this->file->path)) {
@@ -133,7 +133,7 @@ class MinifyCore
       $headers = apache_request_headers();
 
       // ブラウザー側にキャッシュが存在した場合は、単純に Not Modified ヘッダーを返して終了
-      if (isset($headers['If-Modified-Since']) && 
+      if (isset($headers['If-Modified-Since']) &&
           strtotime($headers['If-Modified-Since']) === $this->cache->modified) {
         header($_SERVER['SERVER_PROTOCOL'] . ' 304 Not Modified');
 
@@ -150,7 +150,7 @@ class MinifyCore
     }
 
     // 設定を確認し、必要ならば複数のファイルをひとつにまとめる
-    $files = (array_key_exists($this->file->path, $this->combined)) 
+    $files = (array_key_exists($this->file->path, $this->combined))
            ? $this->combined[$this->file->path] : array($this->file->path);
 
     ob_start();
@@ -202,8 +202,6 @@ class MinifyJS extends MinifyCore
 
   // すでに圧縮されているファイル
   public $minified = array(
-    '/static/scripts/lib/iebugfix/IE9.js',
-    '/static/scripts/lib/jquery/jquery.bpopup-0.5.1.min.js'
   );
 
   // ひとつに統合するファイル
