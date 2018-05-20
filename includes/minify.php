@@ -207,7 +207,6 @@ class MinifyJS extends MinifyCore
   // ひとつに統合するファイル
   public $combined = array(
     '/static/scripts/mj/global.js' => array(
-      '/static/scripts/lib/bowser/bowser.js',
       '/static/scripts/lib/jquery/jquery.aria.js',
       '/static/scripts/mj/global.js'
     )
