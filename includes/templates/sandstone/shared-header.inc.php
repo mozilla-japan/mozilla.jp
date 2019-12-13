@@ -56,6 +56,9 @@ echo $shared_html_head['link'];
   foreach ($css as $href) {
     $with_serial = MJ\Path\add_serial_number($href, $mj->css);
     $full_path = MJ\Path\expand_path($with_serial, '/static/styles');
+    if (substr($full_path, -3) != '.css') {
+      $full_path = $full_path . '.css';
+    }
     echo '    <link rel="stylesheet" type="text/css" href="' . $full_path . '" media="print,screen">' . PHP_EOL;
   }
 
