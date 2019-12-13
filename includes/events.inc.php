@@ -46,6 +46,9 @@ class Events
   function get_cache()
   {
     global $mj;
+    if (!$mj) {
+      return [];
+    }
 
     // キャッシュマネージャーを取得。有効期限はデフォルトの 1 時間
     $caches = $mj->get_cache_manager();
@@ -65,6 +68,9 @@ class Events
 
     // データを取得し配列へ展開
     foreach ($source as $type => $path) {
+      if (!file_exists($_SERVER['DOCUMENT_ROOT'] . $path)) {
+        continue;
+      }
       $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path);
 
       if ($data && $list = json_decode($data)) {
