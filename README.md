@@ -8,7 +8,7 @@
    $ sudo apt install apache2 libapache2-mod-php
    ```
    
-2. `/etc/apache2/sites-available/mozilla.jp.cong` を以下の内容で作成する。
+2. `/etc/apache2/sites-available/mozilla.jp.conf` を以下の内容で作成する。
    
    ```
    <VirtualHost *:50080>
