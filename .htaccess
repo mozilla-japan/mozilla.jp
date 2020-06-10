@@ -86,7 +86,7 @@ RewriteRule ^firefox/(?:android/)?beta/?$                                       
 RewriteRule ^firefox/(?:all(?:\.html|/?)?|download/all/?|locales/?)$            https://www.mozilla.org/ja/firefox/all/ [R=permanent,L]
 RewriteRule ^firefox/(beta|aurora|developer|organizations)/all(?:/?|/.+)$       https://www.mozilla.org/ja/firefox/$1/all/ [R=permanent,L]
 RewriteRule ^firefox/(?:all-(?:beta|rc)(?:\.html)?|(?:download/)?beta/?)$       https://www.mozilla.org/ja/firefox/beta/all/ [R=permanent,L]
-RewriteRule ^business/downloads/all(?:/?|/.+)$                                  https://www.mozilla.org/ja/firefox/organizations/all/ [R=permanent,L]
+RewriteRule ^business/downloads/all(?:/?|/.+)$                                  https://www.mozilla.org/ja/firefox/enterprise/#download [R=permanent,L]
 RewriteRule ^firefox/(?:download/)?(?:aurora|developer)(?:/?|/.+)$              https://www.mozilla.org/ja/firefox/developer/ [R=permanent,L]
 RewriteRule ^(?:firefox/)?webdev(?:/?|/.+)$                                     https://www.mozilla.org/ja/firefox/developer/ [R=permanent,L]
 RewriteRule ^firefox/(?:family|products?)(?:/?|/.+)$                            https://www.mozilla.org/ja/firefox/products/ [R=permanent,L]
