@@ -1,3 +1,7 @@
+[www.mozilla.jp](https://www.mozilla.jp/) は静的サイトに移行しました。新しいレポジトリは [www.mozilla.jp](https://github.com/mozilla-japan/www.mozilla.jp) です。これは旧一般社団法人 Mozilla Japan から引き継いだ古い PHP サイトのアーカイブです。
+
+* * *
+
 # ローカル環境での動かし方
 
 ## Apache 2.4 on Ubuntu 18.04LTS
